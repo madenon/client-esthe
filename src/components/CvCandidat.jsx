@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
+import  { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { User, Phone, MapPin, Briefcase, GraduationCap, Send, Camera, FileCheck, CheckCircle2 } from 'lucide-react';
+import { User,  Briefcase, GraduationCap, Send, Camera, FileCheck, CheckCircle2 } from 'lucide-react';
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 

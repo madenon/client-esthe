@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { MapPin, MessageCircle, Heart, Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
 
