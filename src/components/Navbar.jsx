@@ -34,7 +34,7 @@ const Navbar = () => {
   {/* Texte du Logo */}
   <div className="flex flex-col">
     <div className="flex items-baseline gap-1">
-      <span className="font-black text-2xl tracking-tighter uppercase text-white">
+      <span className="font-black text-2xl tracking-tighter  text-white">
         Goor
       </span>
       <span className="font-black text-2xl tracking-tighter uppercase text-blue-500">
