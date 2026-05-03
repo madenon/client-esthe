@@ -28,7 +28,7 @@ const HomePage = () => {
       <section className="px-6 py-12 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black mb-4">
-            Goor<span className="text-blue-600">.com</span> <span className="font-light text-slate-400 italic">Recrute !</span>
+            Goor<span className="text-blue-600"></span> <span className="font-light text-slate-400 italic">Recrute !</span>
           </h2>
           <div className="inline-flex items-center gap-2 bg-[#e8fbf3] text-[#00b67a] px-4 py-1.5 rounded-full border border-[#00b67a]/20 mb-10">
             <CheckCircle size={14} />
@@ -75,17 +75,17 @@ const HomePage = () => {
                         <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
                             <Globe size={18} />
                         </div>
-                        <h4 className="font-black text-xs uppercase tracking-widest">À propos de Goor.com</h4>
+                        <h4 className="font-black text-xs uppercase tracking-widest">À propos de Goor</h4>
                       </div>
                       <button className="flex items-center gap-2 text-[10px] font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full hover:bg-blue-100 transition-colors">
                         <Volume2 size={14} /> Écouter
                       </button>
                    </div>
                    <p className="text-slate-500 text-sm leading-relaxed mb-6">
-                    Le nom de domaine <span className="font-bold text-[#1e293b]">Goor.com</span> est un nom puissant et polyvalent qui évoque un sentiment de force, d'innovation et de vision d'avenir. Avec seulement quatre lettres et une syllabe, il est concis et facile à retenir, ce qui le rend idéal pour connecter les talents du secteur de la beauté et de l'esthétique en Côte d'Ivoire.
+                    Le nom de domaine <span className="font-bold text-[#1e293b]">Goor</span> est un nom puissant et polyvalent qui évoque un sentiment de force, d'innovation et de vision d'avenir. Avec seulement quatre lettres et une syllabe, il est concis et facile à retenir, ce qui le rend idéal pour connecter les talents du secteur de la beauté et de l'esthétique en Côte d'Ivoire.
                    </p>
                    <p className="text-slate-500 text-sm leading-relaxed italic">
-                    Goor.com est une page blanche qui ne demande qu'à être remplie de créativité et d'ingéniosité, offrant des possibilités infinies pour la croissance de votre carrière ou de votre salon.
+                    Goor est une page blanche qui ne demande qu'à être remplie de créativité et d'ingéniosité, offrant des possibilités infinies pour la croissance de votre carrière ou de votre salon.
                    </p>
                 </div>
 
