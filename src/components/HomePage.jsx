@@ -29,7 +29,7 @@ const HomePage = () => {
       <section className="px-6 py-12 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-black text-[#1e293b] mb-4">
-            Goor<span className="text-blue-600">.com</span> <span className="font-light">est là pour vous !</span>
+            Goor<span className="text-blue-600"> Recrute !</span> <span className="font-light">est là pour vous !</span>
           </h2>
           <div className="inline-flex items-center gap-2 bg-[#e8fbf3] text-[#00b67a] px-4 py-1.5 rounded-full border border-[#00b67a]/20 mb-10">
             <CheckCircle size={14} />
