@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Accueil', href: '/' },
-    { name: 'RECRUTEMENT', href: '/recruteur' },
+    // { name: 'RECRUTEMENT', href: '/recruteur' },
     // { name: 'Créateur de CV gratuit', href: '/cv-candidat' },
     { name: 'À propos', href: '/a-propos' },
     { name: 'Contact', href: '/contact' },
