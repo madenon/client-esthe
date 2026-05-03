@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Page d'accueil - Mot-clé : Plateforme emploi beauté CI -->
+  <url>
+    <loc>https://goor-recrutement.ci/</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Filtre Tresse / Tissage - Emploi tresseuse Abidjan -->
+  <url>
+    <loc>https://goor-recrutement.ci/offres/tresse-tissage</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Filtre Onglerie - Emploi prothésiste ongulaire Abidjan -->
+  <url>
+    <loc>https://goor-recrutement.ci/offres/onglerie-gel</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Filtre Barber - Emploi barber Abidjan -->
+  <url>
+    <loc>https://goor-recrutement.ci/offres/barber-coupe-homme</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Filtre Pose Perruque - Job wig styling CI -->
+  <url>
+    <loc>https://goor-recrutement.ci/offres/pose-perruque</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Filtre Massage - Emploi masseuse Abidjan -->
+  <url>
+    <loc>https://goor-recrutement.ci/offres/massage-bien-etre</loc>
+    <lastmod>2026-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
