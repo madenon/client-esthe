@@ -65,10 +65,10 @@ const Blog = () => {
                 <h3 className="text-xl font-bold text-slate-800 mb-3 leading-tight group-hover:text-blue-600 transition-colors">
                     {item.title}
                 </h3>
-                <p className="text-slate-500 text-sm leading-relaxed mb-6 italic line-clamp-3">
-                    "{item.description}"
-                </p>
-                
+               {/* Remplacez l'ancien bloc <p> par celui-ci */}
+<p className="text-slate-500 text-sm leading-relaxed mb-6 italic">
+  "{item.description}"
+</p>
                 <div className="flex items-center gap-2 text-slate-400 text-[11px] font-bold uppercase mb-6">
                   <MapPin size={14} className="text-blue-500" />
                   {item.location}
