@@ -16,15 +16,6 @@ const Blog = () => {
   likes: 89, 
   price: "Prix à débattre" 
 },
-    { id: 2, type: "Unité", category: "Équipement", title: "2 Bacs de lavage italiens", description: "Bacs de lavage ergonomiques avec douchette. Très peu utilisés, cause déménagement.", location: "Riviera 3, Abidjan", whatsapp: "2250596132058", likes: 42, price: "250.000 FCFA" },
-    { id: 3, type: "Lot", category: "Coiffure", title: "Lot de tondeuses professionnelles", description: "3 tondeuses de marque (Wahl/Andis) + sabots et kits d'entretien. Idéal pour débuter.", location: "Marcory, Abidjan", whatsapp: "2250596132058", likes: 156, price: "85.000 FCFA" },
-    { id: 4, type: "Unité", category: "Esthétique", title: "Table de massage pliable", description: "Table robuste pour esthétique ou massage. Facile à transporter, housse incluse.", location: "Angré, Abidjan", whatsapp: "2250596132058", likes: 34, price: "45.000 FCFA" },
-    { id: 5, type: "Complet", category: "Onglerie", title: "Kit complet Prothésiste Ongulaire", description: "Lampe UV, ponceuse pro, 50 vernis semi-permanents et décorations. Prêt à l'emploi.", location: "Plateau, Abidjan", whatsapp: "2250596132058", likes: 210, price: "120.000 FCFA" },
-    { id: 6, type: "Lot", category: "Mobilier", title: "4 Fauteuils barbier Vintage", description: "Très beaux fauteuils en cuir rouge, hydrauliques. Parfait pour un Barber Shop stylé.", location: "Yamoussoukro", whatsapp: "2250596132058", likes: 77, price: "Sur demande" },
-    { id: 7, type: "Unité", category: "Équipement", title: "Casque séchoir sur pied", description: "Casque professionnel réglable en hauteur, plusieurs vitesses de séchage.", location: "Bouaké", whatsapp: "2250596132058", likes: 19, price: "35.000 FCFA" },
-    { id: 8, type: "Lot", category: "Accessoires", title: "Stock de perruques et mèches", description: "Liquidation d'un stock de mèches humaines et synthétiques suite à fermeture de boutique.", location: "San Pedro", whatsapp: "2250596132058", likes: 124, price: "Prix de gros" },
-    { id: 9, type: "Unité", category: "Esthétique", title: "Appareil Vapozone Pro", description: "Vapozone sur roulettes pour soins du visage en institut. Excellent état de marche.", location: "Korhogo", whatsapp: "2250596132058", likes: 28, price: "55.000 FCFA" },
-    { id: 10, type: "Lot", category: "Mobilier", title: "Étagères d'exposition & Vitrines", description: "3 grandes vitrines en verre avec éclairage LED pour produits de beauté.", location: "Daloa", whatsapp: "2250596132058", likes: 51, price: "90.000 FCFA" }
   ];
 
   return (
