@@ -35,7 +35,7 @@ const HomePage = () => {
             <span className="text-[10px] font-bold uppercase tracking-wider">Plateforme Vérifiée</span>
           </div>
 
-          <p className="text-slate-500 mb-8 font-medium">Trouvez les meilleurs talents ou votre prochain emploi en un clic.</p>
+          <p className="text-slate-500 mb-8 font-medium">Trouvez les meilleurs candiats ici  ou votre prochain emploi en un clic.</p>
 
           {/* SÉLECTEUR DE ZONE */}
           <div className="flex bg-white p-2 rounded-2xl shadow-xl shadow-blue-900/5 max-w-sm mx-auto mb-12 border border-slate-200">
