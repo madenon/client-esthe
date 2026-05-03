@@ -18,8 +18,8 @@ const Blog = () => {
 },
     { 
   id: 1, 
-  type: "Complet", 
-  category: "Salon", 
+  type: "Formation", 
+  category: "Salarié", 
   title: "L'ensemble à brader avec le fauteuil", 
   description: "Bonjour je recherche une coiffeuse et celle qui veulent se faire former dans le domaine de la coiffure nous sommes à bingerville précisément dans la zone de ENP ", 
   location: "Abidjan, Bingerville", 
