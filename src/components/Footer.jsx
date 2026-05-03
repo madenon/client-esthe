@@ -22,17 +22,16 @@ const Footer = () => {
               {/* Texte du Logo avec style typographique */}
               <div className="flex flex-col">
                 <span className="font-black text-2xl tracking-tighter uppercase leading-none">
-                  Mon<span className="text-blue-500">Offre</span>
+                  Goo<span className="text-blue-500">r</span>
                 </span>
                 <span className="text-[10px] text-blue-400 tracking-[0.2em] font-light uppercase">
-                  Business & Opportunités
+                 Coiffure • Esthétique • Opportunité
                 </span>
               </div>
             </div>
 
             <p className="text-slate-400 text-sm max-w-sm leading-relaxed border-l-2 border-blue-500/30 pl-4">
               Votre plateforme de confiance pour les meilleures opportunités. 
-              Présents stratégiquement en Afrique de l'Ouest et au Maghreb.
             </p>
           </div>
 
