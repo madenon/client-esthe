@@ -18,7 +18,6 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-20">
           
-        {/* NOUVEAU LOGO DESIGN : GOOR RECRUTEMENT AVEC PNG */}
 <Link to="/" className="flex items-center gap-4 cursor-pointer group">
   {/* Conteneur de l'icône PNG */}
   <div className="relative flex items-center justify-center w-12 h-12 bg-gradient-to-br rounded-xl shadow-lg shadow-blue-500/20 group-hover:rotate-6 transition-transform duration-300">
@@ -37,7 +36,7 @@ const Navbar = () => {
       <span className="font-black text-2xl tracking-tighter  text-white">
         Goor
       </span>
-      <span className="font-black text-2xl tracking-tighter uppercase text-blue-500">
+      <span className="font-black text-2xl tracking-tighter  text-blue-500">
         Recrutement
       </span>
     </div>

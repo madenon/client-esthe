@@ -37,7 +37,7 @@ const WhatsAppFloat = () => {
       {/* Section Texte */}
       <div className="flex flex-col items-start leading-tight">
         <span className="text-[#0f172a] font-black text-[13px] uppercase tracking-tighter">
-          Besoin de personnel ?
+          Besoin de personnel ou de travail ?
         </span>
         <span className="text-[#25D366] font-black text-[10px] uppercase tracking-widest flex items-center gap-1">
           <span className="w-1.5 h-1.5 bg-[#25D366] rounded-full animate-pulse" />

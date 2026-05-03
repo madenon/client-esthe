@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MapPin, MessageCircle, Heart, Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
+import AdBanner from './AdBanner';
 
 const HomePage = () => {
   // Données mises à jour avec tes mots-clés métiers
@@ -44,6 +45,8 @@ const HomePage = () => {
 
   return (
     <div className="bg-slate-50 min-h-screen font-poppins pb-20">
+      <AdBanner />
+
       
       {/* HERO SECTION */}
       <section className="relative h-[480px] flex items-center justify-center text-center px-6 mb-12 overflow-hidden">
@@ -77,7 +80,6 @@ const HomePage = () => {
           </p>
         </div>
       </section>
-
       {/* FILTRES MÉTIERS */}
       <div className="max-w-7xl mx-auto px-6 mb-12 overflow-x-auto whitespace-nowrap py-4 no-scrollbar">
         <div className="flex gap-4">
@@ -96,6 +98,7 @@ const HomePage = () => {
           ))}
         </div>
       </div>
+
 
       {/* GRILLE DES OFFRES */}
       <motion.div 
