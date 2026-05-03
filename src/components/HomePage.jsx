@@ -1,6 +1,5 @@
-import React from 'react';
 import { MapPin, Banknote, MessageCircle, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion'; // Importation de l'outil d'animation
+import { motion } from 'framer-motion';
 
 const HomePage = () => {
   const jobOffers = [
@@ -9,14 +8,11 @@ const HomePage = () => {
     { id: 3, title: "Gestionnaire de Stock", description: "Optimisation des flux logistiques et suivi rigoureux des inventaires en entrepôt.", price: "250.000 FCFA", location: "Bouaké", whatsapp: "2250596132058" }
   ];
 
-  // Configuration de l'animation pour les cartes (Entrée en cascade)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2 // Délai entre l'apparition de chaque carte
-      }
+      transition: { staggerChildren: 0.2 }
     }
   };
 
@@ -26,35 +22,53 @@ const HomePage = () => {
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen font-poppins pb-20 overflow-x-hidden">
+    <div className="bg-slate-50 min-h-screen font-poppins pb-10 overflow-x-hidden">
       
-      {/* Hero Header avec animation simple */}
-      <section className="bg-[#0f172a] text-white py-20 px-6 text-center mb-12">
-        <motion.h1 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="font-montserrat font-black text-4xl md:text-6xl uppercase tracking-tighter mb-4"
-        >
-          Trouvez votre <span className="text-blue-500">Opportunité</span>
-        </motion.h1>
+      {/* SECTION HERO AVEC IMAGE DE FOND */}
+      <section className="relative h-[500px] flex items-center justify-center text-center px-6 mb-12 overflow-hidden">
         
-        <motion.p 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-slate-400 max-w-2xl mx-auto font-light text-lg"
-        >
-          Explorez les meilleures offres d'emploi et services en Côte d'Ivoire.
-        </motion.p>
+        {/* L'image d'arrière-plan */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: "url('/leading.png')", // Remplace par ton image locale si besoin
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+
+        {/* Overlay sombre pour la lisibilité */}
+        <div className="absolute inset-0 bg-[#0f172a]/75 z-10" />
+
+        {/* Contenu textuel (au-dessus de l'image) */}
+        <div className="relative z-20 max-w-3xl">
+          <motion.h1 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="font-montserrat font-black text-4xl md:text-6xl text-white uppercase tracking-tighter mb-4"
+          >
+            Trouvez votre <span className="text-blue-500">Opportunité</span>
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="text-slate-200 font-light text-lg md:text-xl"
+          >
+            Explorez les meilleures offres d'emploi et services en Côte d'Ivoire.
+          </motion.p>
+        </div>
       </section>
 
       {/* Grille des Offres Animée */}
       <motion.div 
         variants={containerVariants}
         initial="hidden"
-        whileInView="visible" // L'animation se déclenche quand on scroll jusqu'à la grille
-        viewport={{ once: true }} // L'animation ne joue qu'une seule fois
+        whileInView="visible"
+        viewport={{ once: true }}
         className="max-w-7xl mx-auto px-6"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -62,7 +76,7 @@ const HomePage = () => {
             <motion.div 
               key={offer.id} 
               variants={itemVariants}
-              whileHover={{ y: -10 }} // Animation au survol : la carte monte
+              whileHover={{ y: -10 }}
               className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-2xl transition-shadow duration-300 group"
             >
               <div className="p-6">
@@ -73,7 +87,6 @@ const HomePage = () => {
                   {offer.description}
                 </p>
 
-                {/* Badges Info */}
                 <div className="flex flex-wrap gap-3 mb-8">
                   <div className="flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-full text-xs font-bold">
                     <Banknote size={14} />
@@ -85,9 +98,8 @@ const HomePage = () => {
                   </div>
                 </div>
 
-                {/* Bouton WhatsApp Animé */}
                 <motion.a 
-                  whileTap={{ scale: 0.95 }} // Effet de clic
+                  whileTap={{ scale: 0.95 }}
                   href={`https://wa.me/${offer.whatsapp}?text=Bonjour, je souhaite postuler pour l'offre : ${offer.title}`}
                   target="_blank"
                   rel="noopener noreferrer"

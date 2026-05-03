@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { MessageCircle, MapPin, Phone, Mail } from 'lucide-react';
 
 const Contact = () => {
-  // Données des bureaux
   const offices = [
     {
       country: "Côte d'Ivoire",
