@@ -81,9 +81,7 @@ const HomePage = () => {
                         <Volume2 size={14} /> Écouter
                       </button>
                    </div>
-                   <p className="text-slate-500 text-sm leading-relaxed mb-6">
-                    Le nom de domaine <span className="font-bold text-[#1e293b]">Goor</span> est un nom puissant et polyvalent qui évoque un sentiment de force, d'innovation et de vision d'avenir. Avec seulement quatre lettres et une syllabe, il est concis et facile à retenir, ce qui le rend idéal pour connecter les talents du secteur de la beauté et de l'esthétique en Côte d'Ivoire.
-                   </p>
+                  
                    <p className="text-slate-500 text-sm leading-relaxed italic">
                     Goor est une page blanche qui ne demande qu'à être remplie de créativité et d'ingéniosité, offrant des possibilités infinies pour la croissance de votre carrière ou de votre salon.
                    </p>
