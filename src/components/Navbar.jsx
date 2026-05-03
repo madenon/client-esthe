@@ -36,9 +36,7 @@ const Navbar = () => {
       <span className="font-black text-2xl tracking-tighter text-white leading-none">
         Goorco<span className="text-blue-500">.</span>
       </span>
-      <span className="bg-blue-500/10 text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-widest border border-blue-500/20">
-        Cosmétique
-      </span>
+      
     </div>
     
     {/* Slogan en sous-titre pour plus de clarté */}

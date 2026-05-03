@@ -1,12 +1,27 @@
-import { useState } from 'react';
-import { Heart, CheckCircle, Zap, MapPin, MessageCircle, Search, ShieldCheck, RefreshCw, Globe, Volume2, Users, Briefcase } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Heart, CheckCircle, Zap, MapPin, MessageCircle, Search, ShieldCheck, RefreshCw, Globe, Volume2, Users, Briefcase, Cookie, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const [activeZone, setActiveZone] = useState(null); 
   const [activeCat, setActiveCat] = useState('Tous');
-  const [userRole, setUserRole] = useState('Candidat'); // Nouveau : pour diviser Candidat / Employeur
-  const [searchQuery, setSearchQuery] = useState(''); // Nouveau : pour la recherche
+  const [userRole, setUserRole] = useState('Candidat');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showCookies, setShowCookies] = useState(false);
+
+  // Vérifier si l'utilisateur a déjà accepté les cookies
+  useEffect(() => {
+    const consent = localStorage.getItem('goorco-cookies');
+    if (!consent) {
+      setShowCookies(true);
+    }
+  }, []);
+
+  const acceptCookies = () => {
+    localStorage.setItem('goorco-cookies', 'true');
+    setShowCookies(false);
+  };
 
   const jobOffers = [
     { id: 1, zone: "Abidjan", category: "Coiffeur", title: "Emploi Tresseuse Abidjan", description: "Le salon recrute tresseuse experte en pose tissage et tresses africaines. Poste basé à Yopougon.", location: "Abidjan, Yopougon", whatsapp: "2250596132058", likes: 23 },
@@ -19,7 +34,6 @@ const HomePage = () => {
     { id: 8, zone: "Intérieur", category: "Coiffeur", title: "Coiffeuse Dame Polyvalente", description: "Grand salon à Bouaké cherche coiffeuse sachant tout faire (tresses, coupes, soins).", location: "Bouaké", whatsapp: "2250596132058", likes: 28 },
   ];
 
-  // Filtrage combiné : Zone + Catégorie + Recherche
   const filteredOffers = jobOffers.filter(offer => 
     offer.zone === activeZone && 
     (activeCat === 'Tous' || offer.category === activeCat) &&
@@ -27,30 +41,71 @@ const HomePage = () => {
   );
 
   return (
-    <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20 text-[#1e293b]">
+    <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20 text-[#1e293b] relative">
       
       {/* SECTION HERO */}
       <section className="px-6 py-12 text-center">
         <div className="max-w-4xl mx-auto">
           
-          {/* SÉLECTEUR DE RÔLE (Candidat / Employeur) */}
+          {/* SÉLECTEUR DE RÔLE */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <button 
               onClick={() => setUserRole('Candidat')}
               className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Candidat' ? 'bg-blue-600 text-white shadow-blue-200' : 'bg-white text-slate-400 hover:text-blue-600'}`}
             >
-              <Users size={14} /> Espace Candidat
+              <Users size={14} /> <Link to="/espace-candidat">Espace Candidat</Link>
             </button>
             <button 
               onClick={() => setUserRole('Employeur')}
               className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Employeur' ? 'bg-blue-600 text-white shadow-blue-200' : 'bg-white text-slate-400 hover:text-blue-600'}`}
             >
-              <Briefcase size={14} /> Espace  Recruteur 
+              <Briefcase size={14} /> 
+              <Link to="/espace-recruteur">Espace Recruteur</Link>
             </button>
           </div>
 
+          {/* BANDEAU COOKIES - DÉPLACÉ ICI */}
+          <AnimatePresence>
+            {showCookies && (
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                className="mb-10 max-w-2xl mx-auto z-[100]"
+              >
+                <div className="bg-[#1e293b] text-white p-5 rounded-[2rem] shadow-xl border border-slate-700">
+                  <div className="flex flex-col md:flex-row items-center gap-4">
+                    <div className="bg-blue-600 p-2.5 rounded-xl shadow-lg shadow-blue-500/20 shrink-0">
+                      <Cookie size={20} className="text-white" />
+                    </div>
+                    <div className="flex-1 text-center md:text-left">
+                      <h4 className="font-bold text-[11px] uppercase tracking-widest mb-0.5">Cookies & Vie Privée</h4>
+                      <p className="text-slate-400 text-[9px] leading-tight italic">
+                        Nous utilisons des cookies pour améliorer votre expérience sur Goorco CI.
+                      </p>
+                    </div>
+                    <div className="flex gap-2 w-full md:w-auto">
+                      <button 
+                        onClick={acceptCookies}
+                        className="flex-1 md:px-6 bg-white text-[#1e293b] font-black text-[9px] py-2.5 rounded-xl uppercase tracking-tighter hover:bg-blue-500 hover:text-white transition-all"
+                      >
+                        Accepter
+                      </button>
+                      <button 
+                        onClick={() => setShowCookies(false)}
+                        className="px-3 py-2.5 rounded-xl border border-slate-600 text-slate-400 hover:text-white hover:border-white transition-all"
+                      >
+                        <X size={14} />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           <h2 className="text-3xl md:text-5xl font-black mb-4">
-            Goorco<span className="text-blue-600">.com</span> <span className="font-light text-slate-400 italic"> </span>
+            Goorco<span className="text-blue-600">.com</span>
           </h2>
           
           <div className="inline-flex items-center gap-2 bg-[#e8fbf3] text-[#00b67a] px-4 py-1.5 rounded-full border border-[#00b67a]/20 mb-10">
@@ -64,9 +119,7 @@ const HomePage = () => {
               : "Recrutez les meilleurs talents de Côte d'Ivoire en quelques secondes."}
           </p>
 
-          {/* BARRE DE RECHERCHE & SÉLECTEUR DE ZONE */}
           <div className="flex flex-col md:flex-row items-center gap-4 max-w-2xl mx-auto mb-12">
-            {/* Barre de recherche */}
             <div className="relative w-full md:flex-[1.5]">
               <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
               <input 
@@ -78,7 +131,6 @@ const HomePage = () => {
               />
             </div>
 
-            {/* Sélecteur de zone */}
             <div className="flex bg-white p-1.5 rounded-2xl shadow-xl shadow-blue-900/5 w-full md:flex-1 border border-slate-200">
               <button 
                 onClick={() => setActiveZone('Abidjan')}
@@ -106,7 +158,6 @@ const HomePage = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
-              {/* SECTION À PROPOS (Style Image Fournie) */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
                 <div className="lg:col-span-2 bg-white rounded-[2.5rem] p-8 shadow-sm border border-slate-100">
                    <div className="flex items-center justify-between mb-6">
@@ -147,7 +198,6 @@ const HomePage = () => {
                 </div>
               </div>
 
-              {/* GRILLE D'OFFRES AVEC RÉSULTATS DE RECHERCHE */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredOffers.length > 0 ? (
                   filteredOffers.map((offer) => (
@@ -194,7 +244,6 @@ const HomePage = () => {
               </div>
             </motion.div>
           ) : (
-            /* ÉTAT PAR DÉFAUT */
             <motion.div 
               key="empty"
               initial={{ opacity: 0 }}

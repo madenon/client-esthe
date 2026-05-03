@@ -1,232 +1,128 @@
-import  { useState, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { User,  Briefcase, GraduationCap, Send, Camera, FileCheck, CheckCircle2 } from 'lucide-react';
-import html2canvas from 'html2canvas';
-import { jsPDF } from 'jspdf';
+import { UserCheck, ShieldCheck, Star, Briefcase, FileText, Lock, CheckCircle, Bell } from 'lucide-react';
 
 const CvCandidat = () => {
-  const cvRef = useRef(null);
-  const [imagePreview, setImagePreview] = useState(null);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [pdfReady, setPdfReady] = useState(false); // État pour gérer l'affichage du bouton WhatsApp
-  
-  const [formData, setFormData] = useState({
-    nomComplet: '',
-    age: '',
-    email: '',
-    telephone: '',
-    quartier: '',
-    metier: '',
-    experience: '',
-    specialites: '',
-    dernierDiplome: '',
-    disponibilite: 'Immédiate'
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setPdfReady(false); // Réinitialise si l'utilisateur modifie ses infos
-  };
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => setImagePreview(reader.result);
-      reader.readAsDataURL(file);
+  const engagementPoints = [
+    {
+      icon: <UserCheck className="text-blue-500" size={24} />,
+      title: "Profil Certifié",
+      content: "Votre CV est mis en avant auprès des meilleurs salons et instituts de Côte d'Ivoire gérés par des professionnels."
+    },
+    {
+      icon: <Lock className="text-blue-500" size={24} />,
+      title: "Protection des Données",
+      content: "Conformément à la loi n°2013-450, vos informations personnelles sont sécurisées et ne sont partagées qu'avec des recruteurs sérieux."
+    },
+    {
+      icon: <Bell className="text-blue-500" size={24} />,
+      title: "Alertes Directes",
+      content: "Recevez des propositions directement via WhatsApp pour une réactivité maximale avec les gérants."
     }
-  };
-
-  const generatePDF = async () => {
-    if (!formData.nomComplet || !formData.telephone) {
-      alert("Veuillez remplir au moins le nom et le téléphone.");
-      return;
-    }
-
-    setIsGenerating(true);
-    const element = cvRef.current;
-    
-    try {
-      const canvas = await html2canvas(element, {
-        scale: 2,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: "#ffffff"
-      });
-      
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF('p', 'mm', 'a4');
-      const pdfWidth = pdf.internal.pageSize.getWidth();
-      const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
-      
-      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-      
-      const fileName = `CV_${formData.nomComplet.replace(/\s+/g, '_')}.pdf`;
-      pdf.save(fileName);
-      
-      setPdfReady(true); // Active le bouton WhatsApp après succès
-    } catch (error) {
-      console.error("Erreur PDF:", error);
-      alert("Erreur lors de la création du PDF.");
-    } finally {
-      setIsGenerating(false);
-    }
-  };
-
-  const openWhatsApp = () => {
-    const message = `*NOUVEAU CV CANDIDAT - Goorco RECRUTEMENT*
-------------------------------
-👤 *NOM :* ${formData.nomComplet}
-🎂 *ÂGE :* ${formData.age} ans
-💇‍♂️ *MÉTIER :* ${formData.metier}
-📍 *QUARTIER :* ${formData.quartier}
-📧 *EMAIL :* ${formData.email || 'Non précisé'}
-🎓 *NIVEAU :* ${formData.dernierDiplome || 'Non précisé'}
-------------------------------
-_J'ai généré mon CV en PDF, je vous l'envoie ci-joint._`;
-
-    const whatsappUrl = `https://wa.me/212669703561?text=${encodeURIComponent(message)}`;
-    
-    // Sur iPhone, window.open avec _blank est plus fiable qu'une redirection directe
-    window.open(whatsappUrl, '_blank');
-  };
+  ];
 
   return (
-    <div className="bg-slate-100 min-h-screen pb-20 font-sans">
-      <div className="bg-[#0f172a] text-white py-12 px-6 text-center">
-        <h1 className="text-3xl font-black uppercase tracking-tight">
-          Générer mon <span className="text-blue-500">Profil Pro</span>
-        </h1>
-        <p className="text-slate-400 text-sm mt-2">Étape 1 : Créer le PDF | Étape 2 : Envoyer</p>
-      </div>
-
-      <div className="max-w-2xl mx-auto -mt-10 px-4">
-        {/* Zone CV (Capture) */}
-        <div 
-          ref={cvRef} 
-          className="bg-white rounded-3xl shadow-2xl p-8 border border-slate-200"
-          style={{ width: "100%", maxWidth: "600px", margin: "0 auto" }}
+    <div className="bg-[#fcfdfe] min-h-screen font-poppins pb-20">
+      
+      {/* HEADER SECTION */}
+      <section className="bg-gradient-to-b from-[#0f172a] to-[#1e293b] py-20 px-6 text-center text-white">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-3xl mx-auto"
         >
-          <div className="border-b-4 border-blue-600 pb-6 mb-8 flex justify-between items-center">
-            <div>
-              <h2 className="text-2xl font-black text-slate-800 uppercase leading-none">CV Candidat</h2>
-              <p className="text-blue-600 font-bold text-sm">Propulsé par Goorco.ci</p>
-            </div>
-            {imagePreview && (
-              <img src={imagePreview} alt="Profil" className="w-20 h-20 rounded-xl object-cover border-2 border-slate-100" />
-            )}
+          <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full border border-blue-500/30 mb-8">
+            <Star size={16} className="fill-blue-400" />
+            <span className="text-[10px] font-black uppercase tracking-widest">Espace Talents Goorco</span>
           </div>
+          <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-6 leading-tight">
+            Propulsez votre <span className="text-blue-500">Carrière</span>
+          </h1>
+          <p className="text-slate-400 text-sm md:text-base font-light max-w-xl mx-auto leading-relaxed">
+            Rejoignez la communauté des meilleurs coiffeurs, esthéticiennes et barbiers de Côte d'Ivoire.
+          </p>
+        </motion.div>
+      </section>
 
-          <div className="space-y-6">
-            <section>
-              <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-                <User size={14} /> État Civil
-              </h3>
-              <div className="grid grid-cols-1 gap-4">
-                <div className="grid grid-cols-3 gap-4">
-                    <div className="col-span-2 bg-slate-50 p-3 rounded-xl">
-                        <p className="text-[10px] text-slate-500 uppercase font-bold">Nom et Prénoms</p>
-                        <input type="text" name="nomComplet" onChange={handleChange} required placeholder="Ex: Mariam Koné" className="w-full bg-transparent font-bold text-slate-800 outline-none" />
-                    </div>
-                    <div className="bg-slate-50 p-3 rounded-xl">
-                        <p className="text-[10px] text-slate-500 uppercase font-bold">Âge</p>
-                        <input type="number" name="age" onChange={handleChange} required placeholder="25" className="w-full bg-transparent font-bold text-slate-800 outline-none" />
-                    </div>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-slate-50 p-3 rounded-xl">
-                    <p className="text-[10px] text-slate-500 uppercase font-bold">Téléphone</p>
-                    <input type="tel" name="telephone" onChange={handleChange} required placeholder="07..." className="w-full bg-transparent font-bold text-slate-800 outline-none" />
-                  </div>
-                  <div className="bg-slate-50 p-3 rounded-xl">
-                    <p className="text-[10px] text-slate-500 uppercase font-bold">Quartier</p>
-                    <input type="text" name="quartier" onChange={handleChange} required placeholder="Angré" className="w-full bg-transparent font-bold text-slate-800 outline-none" />
-                  </div>
-                </div>
-                <div className="bg-slate-50 p-3 rounded-xl">
-                  <p className="text-[10px] text-slate-500 uppercase font-bold">Email (Facultatif)</p>
-                  <input type="email" name="email" onChange={handleChange} placeholder="exemple@mail.com" className="w-full bg-transparent font-bold text-slate-800 outline-none" />
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-                <GraduationCap size={14} /> Formation
-              </h3>
-              <div className="bg-slate-50 p-3 rounded-xl">
-                  <p className="text-[10px] text-slate-500 uppercase font-bold">Niveau d'étude (Facultatif)</p>
-                  <input type="text" name="dernierDiplome" onChange={handleChange} placeholder="Ex: CAP Coiffure, Terminale..." className="w-full bg-transparent font-bold text-slate-800 outline-none" />
-              </div>
-            </section>
-
-            <section>
-              <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
-                <Briefcase size={14} /> Métier
-              </h3>
-              <div className="space-y-4">
-                <div className="bg-slate-50 p-3 rounded-xl">
-                  <p className="text-[10px] text-slate-500 uppercase font-bold">Métier Principal</p>
-                  <select name="metier" onChange={handleChange} required className="w-full bg-transparent font-bold text-slate-800 outline-none">
-                    <option value="">Sélectionner...</option>
-                    <option value="Coiffeuse Dame">Coiffeuse Dame</option>
-                    <option value="Barber">Barber</option>
-                    <option value="Tresseuse">Tresseuse</option>
-                    <option value="Prothésiste Ongulaire">Prothésiste Ongulaire</option>
-                  </select>
-                </div>
-              </div>
-            </section>
-
-            {!imagePreview && (
-              <div className="border-2 border-dashed border-blue-200 rounded-2xl p-6 text-center">
-                <Camera className="mx-auto text-blue-400 mb-2" />
-                <p className="text-xs text-slate-500 font-bold uppercase">Ma Photo</p>
-                <input type="file" accept="image/*" onChange={handleImageChange} className="mt-2 text-[10px]" />
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* BOUTONS D'ACTION */}
-        <div className="mt-8 space-y-4">
-          {!pdfReady ? (
-            <motion.button
-              whileTap={{ scale: 0.95 }}
-              onClick={generatePDF}
-              disabled={isGenerating}
-              className={`w-full ${isGenerating ? 'bg-slate-400' : 'bg-blue-600'} text-white font-black py-5 rounded-2xl shadow-xl flex items-center justify-center gap-3 uppercase tracking-widest transition-all`}
-            >
-              {isGenerating ? "Création du PDF..." : "Étape 1 : Créer mon CV PDF"}
-            </motion.button>
-          ) : (
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={openWhatsApp}
-              className="w-full bg-[#25D366] text-white font-black py-5 rounded-2xl shadow-xl flex items-center justify-center gap-3 uppercase tracking-widest transition-all"
-            >
-              Étape 2 : Envoyer sur WhatsApp
-              <Send size={20} />
-            </motion.button>
-          )}
+      {/* MAIN CONTENT */}
+      <section className="max-w-6xl mx-auto px-6 -mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          {pdfReady && (
-            <div className="flex items-center justify-center gap-2 text-[#25D366] font-bold text-sm">
-              <CheckCircle2 size={18} />
-              PDF prêt dans vos téléchargements
-            </div>
-          )}
+          {/* COLONNE GAUCHE - ENGAGEMENTS */}
+          <div className="lg:col-span-1 space-y-6">
+            {engagementPoints.map((point, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-[2rem] shadow-sm border border-slate-100"
+              >
+                <div className="bg-blue-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-4">
+                  {point.icon}
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2 text-sm uppercase tracking-wide">{point.title}</h3>
+                <p className="text-slate-500 text-xs leading-relaxed italic">{point.content}</p>
+              </motion.div>
+            ))}
+          </div>
 
-          <div className="mt-4 flex items-start gap-3 bg-white/50 p-4 rounded-xl border border-slate-200">
-            <FileCheck className="text-blue-600 shrink-0" size={20} />
-            <p className="text-[11px] text-slate-600 leading-tight">
-              <b>Guide iPhone :</b> Cliquez sur "Étape 1", le PDF s'enregistrera. Cliquez ensuite sur "Étape 2", WhatsApp s'ouvrira dans un nouvel onglet, et vous pourrez choisir votre fichier PDF.
-            </p>
+          {/* COLONNE DROITE - CONDITIONS & INFOS */}
+          <div className="lg:col-span-2 space-y-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm"
+            >
+              <div className="flex items-center gap-4 mb-8">
+                 <FileText className="text-blue-600" />
+                 <h2 className="text-xl font-black uppercase tracking-tight text-slate-900">Charte du Candidat</h2>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors">
+                  <CheckCircle size={20} className="text-green-500 shrink-0" />
+                  <p className="text-slate-600 text-sm">
+                    <strong>Honnêteté :</strong> Je m'engage à fournir des informations réelles sur mes diplômes et mon expérience en salon.
+                  </p>
+                </div>
+
+                <div className="flex gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors">
+                  <Briefcase size={20} className="text-blue-500 shrink-0" />
+                  <p className="text-slate-600 text-sm">
+                    <strong>Sérieux :</strong> Je m'engage à honorer les rendez-vous de test ou d'entretien fixés avec les recruteurs.
+                  </p>
+                </div>
+
+                <div className="flex gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors">
+                  <ShieldCheck size={20} className="text-blue-500 shrink-0" />
+                  <p className="text-slate-600 text-sm">
+                    <strong>Responsabilité :</strong> Je comprends que Goorco est un intermédiaire et que le contrat final dépend de mon accord avec l'employeur.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-10 p-6 bg-blue-50 rounded-2xl border border-blue-100">
+                <h4 className="font-bold text-blue-900 text-xs uppercase mb-2">Note Importante</h4>
+                <p className="text-blue-800 text-[11px] leading-relaxed italic">
+                  Goorco valorise le talent local. En déposant votre CV, vous acceptez d'être contacté par des professionnels vérifiés. Tout abus ou faux profil sera banni pour préserver la qualité de la plateforme.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* ACTION FOOTER */}
+            <div className="text-center bg-[#1e293b] p-10 rounded-[2.5rem] text-white">
+                <h3 className="font-bold text-lg mb-4">Prêt à briller dans les plus grands salons ?</h3>
+                <button className="bg-blue-600 text-white px-12 py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20 active:scale-95 text-xs">
+                    Déposer mon CV / Profil Via WhatsApp
+                </button>
+                <p className="mt-4 text-slate-400 text-[10px] uppercase tracking-widest">Action 100% Gratuite pour les talents</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

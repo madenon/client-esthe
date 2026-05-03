@@ -1,281 +1,123 @@
-import { Briefcase, MapPin, Clock, UserCheck, Banknote, Gift, CheckCircle2 } from 'lucide-react';
-
-const OFFRES_EMPLOI = [
-  // ... vos offres précédentes
-  {
-    id: 19,
-    nomOffre: "Vendeuse Conseil Cosmétique",
-    localisation: "Plateau, Galerie Marchande",
-    ageExige: "20 - 30 ans",
-    experience: "1 an minimum",
-    salaire: "95.000 FCFA",
-    remunerationDetail: "Salaire fixe + commissions sur les ventes",
-    description: "Boutique de luxe recherche une conseillère passionnée par l'univers de la beauté pour orienter une clientèle exigeante.",
-    pointsCles: ["Excellente présentation", "Force de persuasion", "Maîtrise du maquillage"],
-    avantages: [
-      "Cadre de travail luxueux",
-      "Formation aux produits offerte",
-      "Réductions sur la gamme cosmétique",
-      "Tenue de travail fournie"
-    ]
-  },
-  {
-    id: 20,
-    nomOffre: "Cuisinier de Grillades",
-    localisation: "Riviera 2, Espace Gastronomique",
-    ageExige: "25 - 45 ans",
-    experience: "3 ans minimum",
-    salaire: "120.000 FCFA",
-    description: "Expert en braise et assaisonnements locaux pour un restaurant spécialisé dans les poissons et poulets braisés.",
-    pointsCles: ["Rapidité sous pression", "Hygiène irréprochable", "Sens du goût"],
-    avantages: [
-      "Repas de service inclus",
-      "Équipement de cuisine moderne",
-      "Primes de fin d'année",
-      "Cadre dynamique"
-    ]
-  },
-  {
-    id: 21,
-    nomOffre: "Hôtesse d'Accueil",
-    localisation: "Cocody, Cabinet Médical",
-    ageExige: "21 - 28 ans",
-    experience: "Débutante acceptée",
-    salaire: "85.000 FCFA",
-    remunerationDetail: "Salaire fixe + assurance santé",
-    description: "Accueil des patients, gestion des appels et prise de rendez-vous pour un cabinet dentaire privé.",
-    pointsCles: ["Sourire permanent", "Bonne élocution", "Maîtrise de l'outil informatique"],
-    avantages: [
-      "Horaires stables (8h-17h)",
-      "Environnement calme et professionnel",
-      "Assurance maladie prise en charge",
-      "Transport remboursé à 50%"
-    ]
-  },
-  {
-    id: 22,
-    nomOffre: "Livreur à Moto Professionnel",
-    localisation: "Marcory Zone 4",
-    ageExige: "22 - 35 ans",
-    experience: "2 ans minimum",
-    salaire: "75.000 FCFA",
-    remunerationDetail: "Salaire fixe + bonus par livraison réussie",
-    description: "Livraison de colis fragiles et documents confidentiels pour une agence de logistique urbaine.",
-    pointsCles: ["Permis de conduire valide", "Connaissance parfaite de la ville", "Ponctualité"],
-    avantages: [
-      "Moto de service fournie",
-      "Dotation carburant hebdomadaire",
-      "Crédit de communication offert",
-      "Équipement de sécurité complet"
-    ]
-  },
-  {
-    id: 23,
-    nomOffre: "Agent de Sécurité",
-    localisation: "Yopougon, Zone Industrielle",
-    ageExige: "25 - 45 ans",
-    experience: "1 an minimum",
-    salaire: "90.000 FCFA",
-    remunerationDetail: "Salaire fixe + primes de nuit",
-    description: "Surveillance d'un entrepôt de stockage. Contrôle des accès et rondes régulières.",
-    pointsCles: ["Bonne condition physique", "Intégrité absolue", "Vigilance"],
-    avantages: [
-      "Uniforme et matériel fournis",
-      "Formation aux premiers secours",
-      "Prime de panier pour la nuit",
-      "Stabilité d'emploi"
-    ]
-  },
-  {
-    id: 24,
-    nomOffre: "Prothésiste Ongulaire",
-    localisation: "Riviera Palmeraie",
-    ageExige: "18 - 35 ans",
-    experience: "1 an minimum",
-    salaire: "70.000 FCFA",
-    remunerationDetail: "Salaire de base + 20% de commission sur chaque cliente",
-    description: "Pose de vernis permanent, gel, résine et nail art pour un salon de beauté spécialisé.",
-    pointsCles: ["Créativité et minutie", "Sens de l'esthétique", "Rapidité"],
-    avantages: [
-      "Matériel de pose haut de gamme",
-      "Ambiance conviviale",
-      "Clientèle déjà établie",
-      "Formation aux nouvelles techniques"
-    ]
-  },
-  {
-    id: 25,
-    nomOffre: "Chauffeur de Taxi (Compteur)",
-    localisation: "Abidjan (Toute zone)",
-    ageExige: "30 - 50 ans",
-    experience: "5 ans minimum",
-    salaire: "Recette Journalière",
-    remunerationDetail: "Rémunération basée sur le surplus de la recette fixée",
-    description: "Recherche chauffeur sérieux pour l'exploitation d'un véhicule Toyota en parfait état.",
-    pointsCles: ["Permis de conduire BCDE", "Grande discrétion", "Entretien du véhicule"],
-    avantages: [
-      "Véhicule climatisé et bien entretenu",
-      "Prise en charge des réparations majeures",
-      "Assurance à jour",
-      "Liberté d'organisation"
-    ]
-  },
-  {
-    id: 26,
-    nomOffre: "Vendeur Rayon Électroménager",
-    localisation: "Koumassi, Grand Magasin",
-    ageExige: "22 - 35 ans",
-    experience: "1 an minimum",
-    salaire: "110.000 FCFA",
-    remunerationDetail: "Fixe + challenges mensuels sur les ventes",
-    description: "Vente et démonstration d'appareils électroménagers (TV, Frigo, Split) pour une grande enseigne.",
-    pointsCles: ["Connaissances techniques", "Aisance orale", "Esprit d'équipe"],
-    avantages: [
-      "Primes sur objectifs atteints",
-      "Sécurité sociale (CNPS)",
-      "Possibilité de promotion interne",
-      "Cadre climatisé"
-    ]
-  },
-  {
-    id: 27,
-    nomOffre: "Agent d'Entretien (H/F)",
-    localisation: "Cocody Ambassades",
-    ageExige: "25 - 45 ans",
-    experience: "Débutant accepté",
-    salaire: "60.000 FCFA",
-    remunerationDetail: "Salaire fixe net",
-    description: "Nettoyage et entretien quotidien des bureaux et espaces communs d'une institution.",
-    pointsCles: ["Discrétion totale", "Efficacité", "Sérieux"],
-    avantages: [
-      "Produits d'entretien fournis",
-      "Horaires flexibles",
-      "Contrat stable",
-      "Environnement de travail sécurisé"
-    ]
-  },
-  {
-    id: 28,
-    nomOffre: "Barmaid / Serveuse",
-    localisation: "Marcory Zone 4, Lounge Bar",
-    ageExige: "20 - 30 ans",
-    experience: "1 an minimum",
-    salaire: "80.000 FCFA",
-    remunerationDetail: "Fixe + pourboires conservés à 100%",
-    description: "Service en salle et préparation de cocktails simples dans un cadre chic et branché.",
-    pointsCles: ["Dynamisme", "Excellente présentation", "Politesse"],
-    avantages: [
-      "Service de transport raccompagnement la nuit",
-      "Tenue chic fournie",
-      "Repas du soir offert",
-      "Cadre de travail VIP"
-    ]
-  }
-];
+import { motion } from 'framer-motion';
+import { ShieldCheck, FileText, CreditCard, UserCheck, AlertTriangle, Scale, Clock, CheckCircle } from 'lucide-react';
 
 const Recrutement = () => {
+  const sections = [
+    {
+      icon: <UserCheck className="text-blue-500" size={24} />,
+      title: "1. Éligibilité des Recruteurs",
+      content: "L'accès à l'Espace Recruteur est réservé aux gérants de salons, propriétaires d'instituts de beauté, spas ou toute personne physique/morale ayant un besoin réel en personnel de coiffure et d'esthétique en Côte d'Ivoire."
+    },
+    {
+      icon: <FileText className="text-blue-500" size={24} />,
+      title: "2. Exactitude des Offres",
+      content: "Chaque annonce doit correspondre à un poste réel et disponible. Le recruteur s'engage à fournir des informations honnêtes concernant le lieu de travail, les compétences requises et les conditions de rémunération."
+    },
+    {
+      icon: <CreditCard className="text-blue-500" size={24} />,
+      title: "3. Politique de Paiement",
+      content: "Goorco CI fonctionne sur un modèle payant pour garantir la qualité du service. Les frais d'accès aux profils ou de publication d'offres sont non remboursables et servent à maintenir la vérification des talents sur la plateforme."
+    },
+    {
+      icon: <AlertTriangle className="text-blue-500" size={24} />,
+      title: "4. Éthique et Respect",
+      content: "Le recruteur s'engage à traiter les candidats avec respect. Tout comportement discriminatoire, harcèlement ou offre trompeuse entraînera une suspension immédiate et définitive du compte sans préavis."
+    }
+  ];
+
   return (
-    <div className="bg-slate-50 min-h-screen pb-20 font-sans">
-      <div className="bg-[#0f172a] text-white py-12 px-6 text-center">
-        <h2 className="text-blue-500 font-bold text-xs uppercase tracking-[0.2em] mb-2">Espace Recrutement</h2>
-        <h1 className="text-3xl font-black uppercase italic">
-          Gestion des <span className="text-blue-500">Offres</span>
-        </h1>
-      </div>
+    <div className="bg-[#f8fafc] min-h-screen font-poppins pb-20">
+      
+      {/* Header Section */}
+      <section className="bg-[#1e293b] py-16 px-6 text-center text-white">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-3xl mx-auto"
+        >
+          <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full border border-blue-500/20 mb-6">
+            <ShieldCheck size={16} />
+            <span className="text-[10px] font-black uppercase tracking-widest">Espace Sécurisé</span>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-black uppercase tracking-tighter mb-4">
+            Conditions <span className="text-blue-500">Recruteur</span>
+          </h1>
+          <p className="text-slate-400 text-sm font-light max-w-xl mx-auto">
+            Règles et engagements pour garantir un recrutement de qualité sur Goorco CI.
+          </p>
+        </motion.div>
+      </section>
 
-      <div className="max-w-6xl mx-auto -mt-10 px-4">
+      {/* Main Content */}
+      <section className="max-w-5xl mx-auto px-6 -mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {OFFRES_EMPLOI.map((offre) => (
-            <div key={offre.id} className="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 flex flex-col overflow-hidden">
-              
-              {/* Header de l'offre */}
-              <div className="p-8 pb-4">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="bg-blue-50 text-blue-600 p-3 rounded-2xl">
-                    <Briefcase size={24} />
-                  </div>
-                  <span className="bg-green-100 text-green-700 text-[10px] font-black px-3 py-1 rounded-full uppercase">
-                    Ouvert
-                  </span>
-                </div>
-                <h3 className="text-2xl font-black text-slate-800 uppercase leading-tight mb-2">
-                  {offre.nomOffre}
-                </h3>
-                <div className="flex items-center gap-2 text-slate-500 text-sm italic font-medium">
-                  <MapPin size={16} className="text-blue-500" />
-                  {offre.localisation}
-                </div>
+          {sections.map((section, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white p-8 rounded-[2rem] shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+            >
+              <div className="bg-slate-50 w-12 h-12 rounded-2xl flex items-center justify-center mb-6">
+                {section.icon}
               </div>
-
-              {/* Badges Techniques */}
-              <div className="grid grid-cols-2 border-y border-slate-50 bg-slate-50/30">
-                <div className="p-4 border-r border-slate-100 text-center">
-                  <p className="text-[10px] text-slate-400 uppercase font-black mb-1">Âge requis</p>
-                  <div className="flex items-center justify-center gap-2 text-slate-700 font-bold">
-                    <UserCheck size={16} className="text-blue-400" />
-                    {offre.ageExige}
-                  </div>
-                </div>
-                <div className="p-4 text-center">
-                  <p className="text-[10px] text-slate-400 uppercase font-black mb-1">Expérience</p>
-                  <div className="flex items-center justify-center gap-2 text-slate-700 font-bold">
-                    <Clock size={16} className="text-blue-400" />
-                    {offre.experience}
-                  </div>
-                </div>
-              </div>
-
-              <div className="p-8 space-y-6 flex-grow">
-                {/* Description */}
-                <div>
-                  <h4 className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-2">Description</h4>
-                  <p className="text-sm text-slate-600 leading-relaxed font-medium">
-                    {offre.description}
-                  </p>
-                </div>
-
-                {/* Section Avantages 🎁 */}
-                {offre.avantages && (
-                  <div className="bg-blue-50/50 rounded-3xl p-5">
-                    <h4 className="text-[10px] font-black text-blue-700 uppercase tracking-widest mb-3 flex items-center gap-2">
-                      <Gift size={14} /> Ce que nous offrons
-                    </h4>
-                    <ul className="grid grid-cols-1 gap-2">
-                      {offre.avantages.map((adv, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-[11px] text-slate-700 font-bold">
-                          <CheckCircle2 size={14} className="text-green-500 shrink-0" />
-                          {adv}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {/* Section Salaire 💰 */}
-                <div className="bg-[#0f172a] rounded-2xl p-5 text-white">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Banknote size={18} className="text-blue-400" />
-                    <span className="text-[10px] uppercase font-black tracking-wider text-slate-400">Rémunération Attractive</span>
-                  </div>
-                  <p className="text-lg font-black text-blue-400">{offre.salaire}</p>
-                  <p className="text-[10px] text-slate-400 italic">{offre.remunerationDetail}</p>
-                </div>
-              </div>
-
-           
-
-            </div>
+              <h3 className="font-bold text-slate-900 mb-3">{section.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">
+                {section.content}
+              </p>
+            </motion.div>
           ))}
         </div>
 
-        <div className="mt-12 p-6 bg-white/50 rounded-3xl border border-dashed border-slate-300 text-center">
-          <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">
-            {OFFRES_EMPLOI.length} Postes disponibles • Goorco Recrutement
-          </p>
+        {/* Détails supplémentaires */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 bg-white rounded-[2.5rem] p-8 md:p-12 border border-slate-100 shadow-sm"
+        >
+          <div className="flex items-center gap-4 mb-8">
+             <Scale className="text-blue-600" />
+             <h2 className="text-xl font-black uppercase tracking-tight text-slate-900">Engagements de Goorco CI</h2>
+          </div>
+
+          <div className="space-y-6">
+            <div className="flex gap-4">
+              <div className="mt-1"><CheckCircle size={18} className="text-green-500" /></div>
+              <div>
+                <h4 className="font-bold text-sm text-slate-900 mb-1">Vérification des profils</h4>
+                <p className="text-slate-500 text-sm">Nous faisons de notre mieux pour filtrer les candidats, mais le choix final et la vérification des compétences techniques lors du test en salon incombent au recruteur.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="mt-1"><Clock size={18} className="text-blue-500" /></div>
+              <div>
+                <h4 className="font-bold text-sm text-slate-900 mb-1">Disponibilité du service</h4>
+                <p className="text-slate-500 text-sm">Goorco s'engage à maintenir la visibilité de vos offres 24h/24, sauf en cas de maintenance technique nécessaire à l'amélioration de la plateforme.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 p-6 bg-amber-50 rounded-2xl border border-amber-100">
+            <p className="text-amber-800 text-xs leading-relaxed italic">
+              * En utilisant l'Espace Recruteur, vous acceptez que Goorco CI serve uniquement d'intermédiaire technique. Le contrat de travail final est établi directement entre vous et le candidat.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Footer Action */}
+        <div className="mt-12 text-center">
+          <p className="text-slate-400 text-xs mb-6 font-medium uppercase tracking-widest">Besoin d'aide pour recruter ?</p>
+          <button className="bg-blue-600 text-white px-10 py-4 rounded-2xl font-black uppercase tracking-widest hover:bg-[#1e293b] transition-all shadow-lg shadow-blue-500/20 active:scale-95 text-[11px]">
+            Contacter le support Kalala
+          </button>
         </div>
-      </div>
+      </section>
     </div>
   );
-};
+}
 
 export default Recrutement;
