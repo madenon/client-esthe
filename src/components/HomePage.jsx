@@ -1,36 +1,40 @@
-import { MapPin, Banknote, MessageCircle, ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { MapPin, MessageCircle, Heart, Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const HomePage = () => {
-const jobOffers = [
-  // --- SECTEUR TECH & BUREAU ---
-  { id: 1, title: "Développeur React Junior", description: "Développement d'interfaces modernes et intégration d'API pour une startup tech.", price: "150.000 FCFA", location: "Abidjan, Cocody", whatsapp: "2250596132058" },
-  { id: 2, title: "Commercial Terrain", description: "Prospection et vente de solutions immobilières auprès d'une clientèle haut de gamme.", price: "100.000 FCFA + Com", location: "San-Pédro", whatsapp: "2250596132058" },
-  { id: 3, title: "Gestionnaire de Stock", description: "Suivi des inventaires et gestion logistique pour une chaîne de distribution.", price: "85.000 FCFA", location: "Bouaké", whatsapp: "2250596132058" },
-  { id: 4, title: "Assistant Administratif", description: "Gestion du courrier, accueil téléphonique et organisation d'agendas professionnels.", price: "120.000 FCFA", location: "Abidjan, Plateau", whatsapp: "2250596132058" },
+  // Données mises à jour avec tes mots-clés métiers
+  const jobOffers = [
+    { id: 1, category: "Tresse", title: "Emploi Tresseuse Abidjan", description: "Le salon recrute tresseuse experte en pose tissage et tresses africaines. Poste basé à Yopougon.", location: "Abidjan, Yopougon", whatsapp: "2250596132058" },
+    { id: 2, category: "Onglerie", title: "Emploi Prothésiste Ongulaire Gel", description: "Recrutement prothésiste ongulaire gel et résine pour un institut de beauté haut de gamme.", location: "Abidjan, Cocody", whatsapp: "2250596132058" },
+    { id: 3, category: "Perruque", title: "Job Pose Perruque Abidjan", description: "Spécialiste wig styling recherchée pour pose perruque sans diplôme exigé. Travail soigné demandé.", location: "Abidjan, Marcory", whatsapp: "2250596132058" },
+    { id: 4, category: "Barber", title: "Emploi Barber Abidjan", description: "Barber cherche salon à Cocody ? Nous recrutons pour coupe homme et design barbe moderne.", location: "Abidjan, Cocody", whatsapp: "2250596132058" },
+    { id: 5, category: "Massage", title: "Emploi Masseuse Abidjan", description: "Recherche masseuse pour massage bien-être et soins esthétiques en institut de luxe.", location: "Abidjan, Zone 4", whatsapp: "2250596132058" },
+    { id: 6, category: "Makeup", title: "Job Makeup Artist Abidjan", description: "Coiffeuse mariage et maquilleuse disponible pour prestations VIP et cérémonies.", location: "Abidjan, Plateau", whatsapp: "2250596132058" },
+    { id: 7, category: "Dreadlocks", title: "Emploi Coiffeuse Dame Dreadlocks", description: "Salon recrute coiffeuse spécialisée en dreadlocks et soins naturels en Côte d'Ivoire.", location: "Abidjan, Riviera 2", whatsapp: "2250596132058" },
+    { id: 8, category: "Tresse", title: "Job Pose Tissage CI", description: "Salon de coiffure recrute tresseuse polyvalente pour tresses et poses de mèches.", location: "Abidjan, Angré", whatsapp: "2250596132058" },
+  ];
 
-  // --- SERVICES À LA PERSONNE (Ménage & Nounou) ---
-  { id: 5, title: "Nounou à domicile", description: "Garde de deux enfants en bas âge, aide aux devoirs et préparation des repas légers.", price: "60.000 FCFA", location: "Abidjan, Riviera 3", whatsapp: "2250596132058" },
-  { id: 6, title: "Agent de Ménage", description: "Entretien régulier d'appartements : nettoyage, repassage et rangement.", price: "45.000 FCFA", location: "Abidjan, Marcory", whatsapp: "2250596132058" },
-  { id: 7, title: "Gouvernante de Maison", description: "Gestion complète du foyer, cuisine et supervision du personnel de maison.", price: "90.000 FCFA", location: "Assinie", whatsapp: "2250596132058" },
-  { id: 8, title: "Nounou de Nuit", description: "Surveillance et soins pour nouveau-né durant la nuit (20h - 06h).", price: "75.000 FCFA", location: "Abidjan, Angré", whatsapp: "2250596132058" },
-  { id: 9, title: "Nettoyage de Bureaux", description: "Entretien quotidien des espaces de travail après les heures de bureau.", price: "50.000 FCFA", location: "Abidjan, Zone 4", whatsapp: "2250596132058" },
+  const [filter, setFilter] = useState('Tous');
+  const categories = ['Tous', 'Tresse', 'Onglerie', 'Perruque', 'Barber', 'Massage', 'Makeup', 'Dreadlocks'];
 
-  // --- ESTHÉTIQUE & BIEN-ÊTRE ---
-  { id: 10, title: "Esthéticienne Pro", description: "Soins du visage, épilation et conseils personnalisés en cosmétique.", price: "80.000 FCFA", location: "Abidjan, Deux-Plateaux", whatsapp: "2250596132058" },
-  { id: 11, title: "Prothésiste Ongulaire", description: "Pose de gel, résine et nail art tendance pour une clientèle exigeante.", price: "70.000 FCFA", location: "Abidjan, Biétry", whatsapp: "2250596132058" },
-  { id: 12, title: "Coiffeuse Tresses", description: "Spécialiste des tresses africaines, perruques et soins capillaires.", price: "55.000 FCFA", location: "Abidjan, Yopougon", whatsapp: "2250596132058" },
-  { id: 13, title: "Masseur Bien-être", description: "Pratique de massages relaxants et sportifs à domicile ou en institut.", price: "95.000 FCFA", location: "Abidjan, Bassam", whatsapp: "2250596132058" },
-  { id: 14, title: "Maquilleuse (Make-up Artist)", description: "Maquillage professionnel pour mariages, cérémonies et séances photos.", price: "15.000 FCFA / Presta", location: "Abidjan, Koumassi", whatsapp: "2250596132058" },
-  { id: 15, title: "Technicien en Cils", description: "Pose d'extensions de cils (volume russe, cil à cil) et rehaussement.", price: "65.000 FCFA", location: "Abidjan, Cocody", whatsapp: "2250596132058" }
-];
+  // Fonction spécifique pour iPhone / iOS
+  const getWhatsAppLink = (phone, title) => {
+    const text = encodeURIComponent(`Bonjour Goor Recrutement, je suis intéressé par l'offre : ${title}`);
+    // Détection iOS
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    return isIOS 
+      ? `whatsapp://send?phone=${phone}&text=${text}`
+      : `https://wa.me/${phone}?text=${text}`;
+  };
+
+  const filteredOffers = filter === 'Tous' 
+    ? jobOffers 
+    : jobOffers.filter(offer => offer.category === filter);
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
+    visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
   };
 
   const itemVariants = {
@@ -39,102 +43,111 @@ const jobOffers = [
   };
 
   return (
-    <div className="bg-slate-50 min-h-screen font-poppins pb-10 overflow-x-hidden">
+    <div className="bg-slate-50 min-h-screen font-poppins pb-20">
       
-      {/* SECTION HERO AVEC IMAGE DE FOND */}
-      <section className="relative h-[500px] flex items-center justify-center text-center px-6 mb-12 overflow-hidden">
-        
-        {/* L'image d'arrière-plan */}
+      {/* HERO SECTION */}
+      <section className="relative h-[480px] flex items-center justify-center text-center px-6 mb-12 overflow-hidden">
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('/leading.png')", // Remplace par ton image locale si besoin
+            backgroundImage: "url('/leading.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
           }}
         />
+        <div className="absolute inset-0 bg-[#0f172a]/85 z-10" />
 
-        {/* Overlay sombre pour la lisibilité */}
-        <div className="absolute inset-0 bg-[#0f172a]/75 z-10" />
-
-        {/* Contenu textuel (au-dessus de l'image) */}
-        <div className="relative z-20 max-w-3xl">
-          <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
+        <div className="relative z-20 max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="font-montserrat font-black text-4xl md:text-6xl text-white uppercase tracking-tighter mb-4"
+            className="inline-block px-4 py-1.5 bg-blue-500/20 border border-blue-500/30 rounded-full mb-6"
           >
-            Trouvez votre <span className="text-blue-500">Opportunité</span>
+            <span className="text-blue-400 text-xs font-bold tracking-widest uppercase italic">N°1 Emploi Beauté CI</span>
+          </motion.div>
+          <motion.h1 
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="font-montserrat font-black text-4xl md:text-7xl text-white uppercase tracking-tighter mb-6 leading-none"
+          >
+            Goor <span className="text-blue-500">Recrutement</span>
           </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-slate-200 font-light text-lg md:text-xl"
-          >
-            Explorez les meilleures offres d'emploi et services en Côte d'Ivoire.
-          </motion.p>
+          <p className="text-slate-300 text-lg md:text-xl font-light max-w-2xl mx-auto">
+            La première plateforme d'<strong>emploi coiffure et onglerie</strong> à Abidjan.
+          </p>
         </div>
       </section>
 
-      {/* Grille des Offres Animée */}
-      <motion.div 
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="max-w-7xl mx-auto px-6"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {jobOffers.map((offer) => (
-            <motion.div 
-              key={offer.id} 
-              variants={itemVariants}
-              whileHover={{ y: -10 }}
-              className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-2xl transition-shadow duration-300 group"
+      {/* FILTRES MÉTIERS */}
+      <div className="max-w-7xl mx-auto px-6 mb-12 overflow-x-auto whitespace-nowrap py-4 no-scrollbar">
+        <div className="flex gap-4">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setFilter(cat)}
+              className={`px-7 py-3 rounded-xl font-bold text-sm transition-all duration-300 shadow-sm border ${
+                filter === cat 
+                ? 'bg-blue-600 border-blue-600 text-white scale-105 shadow-blue-500/30' 
+                : 'bg-white border-slate-200 text-slate-600 hover:border-blue-300 hover:text-blue-600'
+              }`}
             >
-              <div className="p-6">
-                <h3 className="font-montserrat font-bold text-xl text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {offer.title}
-                </h3>
-                <p className="text-slate-500 text-sm mb-6 leading-relaxed">
-                  {offer.description}
-                </p>
-
-                <div className="flex flex-wrap gap-3 mb-8">
-                  <div className="flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-full text-xs font-bold">
-                    <Banknote size={14} />
-                    {offer.price}
-                  </div>
-                  <div className="flex items-center gap-2 bg-slate-100 text-slate-600 px-3 py-1.5 rounded-full text-xs font-medium">
-                    <MapPin size={14} />
-                    {offer.location}
-                  </div>
-                </div>
-
-                <motion.a 
-                  whileTap={{ scale: 0.95 }}
-                  href={`https://wa.me/${offer.whatsapp}?text=Bonjour, je souhaite postuler pour l'offre : ${offer.title}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-green-500/20"
-                >
-                  <MessageCircle size={20} />
-                  POSTULER VIA WHATSAPP
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ repeat: Infinity, duration: 1.5 }}
-                  >
-                    <ArrowRight size={18} />
-                  </motion.div>
-                </motion.a>
-              </div>
-            </motion.div>
+              {cat}
+            </button>
           ))}
         </div>
+      </div>
+
+      {/* GRILLE DES OFFRES */}
+      <motion.div 
+        key={filter}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        {filteredOffers.map((offer) => (
+          <motion.div 
+            key={offer.id} 
+            variants={itemVariants}
+            whileHover={{ y: -10 }}
+            className="bg-white rounded-3xl shadow-sm border border-slate-200 p-7 hover:shadow-2xl transition-all group relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
+              <Briefcase size={120} />
+            </div>
+
+            <div className="flex justify-between items-center mb-6">
+               <span className="bg-slate-100 text-slate-600 text-[10px] font-black uppercase px-4 py-1.5 rounded-full border border-slate-200">
+                 {offer.category}
+               </span>
+               <Heart size={20} className="text-slate-300 hover:text-red-500 cursor-pointer transition-colors" />
+            </div>
+
+            <h3 className="font-montserrat font-bold text-xl text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+              {offer.title}
+            </h3>
+            
+            <p className="text-slate-500 text-sm mb-8 leading-relaxed line-clamp-3">
+              {offer.description}
+            </p>
+
+            <div className="flex items-center gap-2 text-slate-900 text-xs font-black bg-blue-50/50 w-fit px-4 py-2 rounded-xl mb-8">
+              <MapPin size={16} className="text-blue-500" />
+              {offer.location}
+            </div>
+
+            <motion.a 
+              whileTap={{ scale: 0.96 }}
+              href={getWhatsAppLink(offer.whatsapp, offer.title)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 w-full bg-[#0f172a] hover:bg-blue-600 text-white font-bold py-4 rounded-2xl transition-all shadow-lg"
+            >
+              <MessageCircle size={20} />
+              DISCUTER SUR WHATSAPP
+            </motion.a>
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );

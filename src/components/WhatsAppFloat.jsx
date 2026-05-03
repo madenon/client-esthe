@@ -13,34 +13,45 @@ const WhatsAppFloat = () => {
       target="_blank"
       rel="noopener noreferrer"
       // Animation d'apparition et mouvement de flottement
-      initial={{ opacity: 0, x: 50 }}
+      initial={{ opacity: 0, x: 20 }}
       animate={{ 
         opacity: 1, 
         x: 0,
-        y: [0, -8, 0] 
+        y: [0, -10, 0] 
       }}
       transition={{ 
         duration: 0.8,
-        y: { repeat: Infinity, duration: 3, ease: "easeInOut" } 
+        y: { 
+          repeat: Infinity, 
+          duration: 3, 
+          ease: "easeInOut" 
+        } 
       }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      // Style du conteneur principal (forme pilule)
-      className="fixed bottom-8 right-8 z-[9999] bg-white border border-green-100 flex items-center gap-4 pl-6 pr-2 py-2 rounded-full shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] group cursor-pointer"
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.92 }}
+      // Style optimisé pour iPhone (iOS)
+      className="fixed bottom-6 right-6 z-[9999] bg-white border border-slate-100 flex items-center gap-4 pl-6 pr-2 py-2 rounded-full shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] group cursor-pointer touch-none"
+      style={{ 
+        WebkitTapHighlightColor: 'transparent', // Supprime le carré gris au clic sur iPhone
+      }}
     >
       {/* Section Texte */}
       <div className="flex flex-col items-start leading-tight">
-        <span className="text-[#0f172a] font-black text-sm font-montserrat tracking-tight">
+        <span className="text-[#0f172a] font-black text-[13px] uppercase tracking-tighter">
           Besoin de personnel ?
         </span>
-        <span className="text-[#25D366] font-extrabold text-[11px] font-poppins uppercase tracking-wider">
-          Whatsapp Direct
+        <span className="text-[#25D366] font-black text-[10px] uppercase tracking-widest flex items-center gap-1">
+          <span className="w-1.5 h-1.5 bg-[#25D366] rounded-full animate-pulse" />
+          En ligne
         </span>
       </div>
 
-      {/* Icône dans son cercle vert */}
-      <div className="bg-[#25D366] text-white p-3 rounded-full shadow-lg group-hover:rotate-12 transition-transform">
-        <MessageCircle size={24} fill="currentColor" />
+      {/* Icône avec effet de pulsation */}
+      <div className="relative">
+        <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-20" />
+        <div className="relative bg-[#25D366] text-white p-3.5 rounded-full shadow-md group-hover:scale-110 transition-transform">
+          <MessageCircle size={22} fill="currentColor" />
+        </div>
       </div>
     </motion.a>
   );

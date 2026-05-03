@@ -1,55 +1,68 @@
-import  { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react'; // Ajout de l'icône Briefcase
 import { Link } from 'react-router-dom'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Chemins correspondants à tes routes dans App.js
   const navLinks = [
     { name: 'Accueil', href: '/' },
+    { name: 'RECRUTEMENT', href: '/recruteur' },
+    { name: 'Créateur de CV gratuit', href: '/cv-candidat' },
     { name: 'À propos', href: '/a-propos' },
     { name: 'Contact', href: '/contact' },
   ];
 
   return (
-    <nav className="bg-[#0f172a] font-montserrat text-white shadow-lg sticky top-0 z-50 border-b border-slate-800">
+    <nav className="bg-[#0f172a] font-montserrat text-white shadow-xl sticky top-0 z-50 border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-20">
           
-          {/* LOGO (Utilisation de Link pour un retour accueil fluide) */}
-          <Link to="/" className="flex items-center gap-3 cursor-pointer group">
-            <div className="relative p-1 bg-gradient-to-tr from-blue-600 to-blue-400 rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300">
-              <img 
-                className="w-9 h-9 object-contain bg-[#0f172a] rounded-md p-1" 
-                src="/hero.png" 
-                alt="Logo MonOffre" 
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-black text-2xl tracking-tighter uppercase leading-none">
-                Mon<span className="text-blue-500">Offre</span>
-              </span>
-            </div>
-          </Link>
+        {/* NOUVEAU LOGO DESIGN : GOOR RECRUTEMENT AVEC PNG */}
+<Link to="/" className="flex items-center gap-4 cursor-pointer group">
+  {/* Conteneur de l'icône PNG */}
+  <div className="relative flex items-center justify-center w-12 h-12 bg-gradient-to-br rounded-xl shadow-lg shadow-blue-500/20 group-hover:rotate-6 transition-transform duration-300">
+    <img 
+      src="/hero.png" 
+      alt="Logo Goor Recrutement" 
+      className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-110" 
+    />
+    
+    {/* Petit point lumineux (Status indicator) */}
+  </div>
+
+  {/* Texte du Logo */}
+  <div className="flex flex-col">
+    <div className="flex items-baseline gap-1">
+      <span className="font-black text-2xl tracking-tighter uppercase text-white">
+        Goor
+      </span>
+      <span className="font-black text-2xl tracking-tighter uppercase text-blue-500">
+        Recrutement
+      </span>
+    </div>
+    
+  </div>
+</Link>
 
           {/* MENU DESKTOP */}
           <div className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                to={link.href} // Changé de 'href' à 'to'
-                className="text-sm font-semibold hover:text-blue-400 transition-colors duration-200 relative group"
+                to={link.href}
+                className="text-sm uppercase font-semibold hover:text-blue-400 transition-colors duration-200 relative group py-2"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
+           
           </div>
 
           {/* BOUTON MOBILE */}
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="p-2 hover:bg-slate-800 rounded-full transition-colors">
+            <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-slate-400 hover:text-white transition-colors">
               {isOpen ? <X size={32} /> : <Menu size={32} />}
             </button>
           </div>
@@ -57,10 +70,10 @@ const Navbar = () => {
       </div>
 
       {/* SIDEBAR MOBILE */}
-      <div className={`fixed top-0 left-0 h-full w-72 bg-[#0f172a] transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-500 ease-in-out z-50 shadow-2xl md:hidden border-r border-slate-800`}>
+      <div className={`fixed top-0 left-0 h-full w-72 bg-[#111a2e] transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-500 ease-in-out z-[60] shadow-2xl md:hidden border-r border-slate-800`}>
         <div className="p-8">
           <div className="flex justify-between items-center mb-12">
-            <span className="font-bold text-xl text-blue-500 uppercase tracking-widest">Menu</span>
+            <span className="font-bold text-xl text-blue-500 uppercase tracking-widest italic">Menu</span>
             <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-white transition-colors">
               <X size={28} />
             </button>
@@ -70,19 +83,25 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                to={link.href} // Redirection mobile fluide
-                onClick={() => setIsOpen(false)} // Ferme le menu après clic
-                className="text-lg font-medium text-slate-300 hover:text-blue-400 border-b border-slate-800/50 pb-2 transition-all active:pl-2"
+                to={link.href}
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-medium text-slate-300 hover:text-blue-400 border-b border-slate-800/50 pb-2 transition-all"
               >
                 {link.name}
               </Link>
             ))}
-            <button className="bg-blue-500 text-white w-full py-4 rounded-xl font-bold mt-4 shadow-lg hover:bg-blue-600 transition-colors">
-              Publier une offre
-            </button>
+           
           </div>
         </div>
       </div>
+      
+      {/* Overlay pour le menu mobile */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/60 z-[55] md:hidden backdrop-blur-sm"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
     </nav>
   );
 };
