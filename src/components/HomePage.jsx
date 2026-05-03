@@ -7,11 +7,11 @@ const HomePage = () => {
   const [activeCat, setActiveCat] = useState('Tous');
 
   const jobOffers = [
-    { id: 1, zone: "Abidjan", category: "Coiffeur", title: "Emploi Tresseuse Abidjan", description: "Le salon recrute tresseuse experte en pose tissage et tresses africaines. Poste basé à Yopougon.", location: "Abidjan, Yopougon", whatsapp: "2250596132058", likes: 63 },
+    { id: 1, zone: "Abidjan", category: "Coiffeur", title: "Emploi Tresseuse Abidjan", description: "Le salon recrute tresseuse experte en pose tissage et tresses africaines. Poste basé à Yopougon.", location: "Abidjan, Yopougon", whatsapp: "2250596132058", likes: 23 },
     { id: 2, zone: "Abidjan", category: "Esthétique", title: "Prothésiste Ongulaire Gel", description: "Recrutement prothésiste ongulaire gel et résine pour un institut de luxe à Cocody.", location: "Abidjan, Cocody", whatsapp: "2250596132058", likes: 12 },
-    { id: 3, zone: "Intérieur", category: "Coiffeur", title: "Barber expérimenté - San Pedro", description: "Hôtel cherche barber pour sa clientèle VIP. Logement possible en bord de mer.", location: "San Pedro", whatsapp: "2250596132058", likes: 45 },
+    { id: 3, zone: "Intérieur", category: "Coiffeur", title: "Barber expérimenté - San Pedro", description: "Hôtel cherche barber pour sa clientèle VIP. Logement possible en bord de mer.", location: "San Pedro", whatsapp: "2250596132058", likes: 15 },
     { id: 4, zone: "Abidjan", category: "Coiffeur", title: "Spécialiste Pose Perruque", description: "Recherche experte en wig styling et pose de perruques sans colle à Marcory.", location: "Abidjan, Marcory", whatsapp: "2250596132058", likes: 89 },
-    { id: 5, zone: "Intérieur", category: "Esthétique", title: "Masseuse Bien-être - Yamoussoukro", description: "Institut recherche masseuse qualifiée pour soins corporels et massage relaxant.", location: "Yamoussoukro", whatsapp: "2250596132058", likes: 21 },
+    { id: 5, zone: "Intérieur", category: "Esthétique", title: "Masseuse Bien-être - Yamoussoukro", description: "Institut recherche masseuse qualifiée pour soins corporels et massage relaxant.", location: "Yamoussoukro", whatsapp: "2250596132058", likes: 20 },
     { id: 6, zone: "Abidjan", category: "Coiffeur", title: "Expert Dreadlocks & Soins", description: "Salon spécialisé cherche coiffeur/se expert en locks et soins naturels.", location: "Abidjan, Riviera 2", whatsapp: "2250596132058", likes: 34 },
     { id: 7, zone: "Abidjan", category: "Esthétique", title: "Makeup Artist / Maquilleuse", description: "Besoin d'une maquilleuse disponible pour mariages et événements VIP au Plateau.", location: "Abidjan, Plateau", whatsapp: "2250596132058", likes: 56 },
     { id: 8, zone: "Intérieur", category: "Coiffeur", title: "Coiffeuse Dame Polyvalente", description: "Grand salon à Bouaké cherche coiffeuse sachant tout faire (tresses, coupes, soins).", location: "Bouaké", whatsapp: "2250596132058", likes: 28 },
