@@ -24,35 +24,78 @@ const HomePage = () => {
     setShowCookies(false);
   };
 
-  const jobOffers = [
-{ 
-  id: 6, 
-  zone: "Abidjan", 
-  category: "Coiffeur", 
-  title: "Besoin coiffeuse et prothésiste", 
-  description: "J’ai besoin d’une coiffeuse qui maitrise bien les poses et une prothésiste ongulaire qui maîtrise toutes les techniques, 90mil", 
-  location: "Abidjan, Yopougon", 
-  likes: 34 
-},{ 
-  id: 7, 
-  zone: "Abidjan", 
-  category: "Esthétique", 
-  title: "Makeup Artist / Maquilleuse", 
-  description: "Besoin d'un coiffeur pour la journée de demain on gère par pourcentage la coummune Youpougon", 
-  location: "Abidjan, Yopougon", 
-  whatsapp: "2250596132058", 
-  likes: 56 
-},
-{ 
-  id: 8, 
-  zone: "Intérieur", 
-  category: "Coiffeur", 
-  title: "Coiffeuse Dame Polyvalente", 
-  description: "Besoin d’une bonne prothésiste ongulaire à l’intérieur", 
-  location: "Bouaké", 
-  whatsapp: "2250596132058", 
-  likes: 28 
-},  ];
+const jobOffers = [
+  { 
+    id: 1, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Urgent : Coiffeur assidu", 
+    description: "Besoin urgent de coiffeur assidu et patient qui habite a Yopougon Maroc ou aux alentours.", 
+    location: "Abidjan, Yopougon Maroc", 
+    whatsapp: "2250596659858", 
+    likes: 0 
+  },
+  { 
+    id: 6, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Besoin coiffeuse et prothésiste", 
+    description: "J’ai besoin d’une coiffeuse qui maitrise bien les poses et une prothésiste ongulaire qui maîtrise toutes les techniques, 90mil", 
+    location: "Abidjan, Yopougon", 
+    whatsapp: "2250544639154",
+    likes: 34 
+  },
+  { 
+    id: 7, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Besoin de 2 filles (Pédicure/Soins)", 
+    description: "Besoin de 2 filles pour faire pédicure manucure et soins de visage à Yop maroc et Treichville. De 8h à 20h. Salaire : 80.000f", 
+    location: "Yopougon Maroc / Treichville", 
+    whatsapp: "2250544639154", 
+    likes: 56 
+  },
+  { 
+    id: 8, 
+    zone: "Intérieur", 
+    category: "Coiffeur", 
+    title: "Coiffeuse à Bassam", 
+    description: "Besoin d'une coiffeuse à bassam avec dortoir. Salaire 50.000f", 
+    location: "Grand-Bassam", 
+    whatsapp: "2250544639154", 
+    likes: 28 
+  },
+  { 
+    id: 9, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Coiffeuse experte en poses", 
+    description: "Besoin d'une coiffeuse à abatta qui maîtrise surtout les pose perruque. Salaire : 70.000f négociable. Heure : 9h a 20h 30", 
+    location: "Abidjan, Abatta", 
+    whatsapp: "2250544639154", 
+    likes: 12 
+  },
+  { 
+    id: 10, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Coiffeur professionnel", 
+    description: "Besoin d'un coiffeur professionnel à abatta. Salaire : 60.000f. Heure : 9h a 20h 30", 
+    location: "Abidjan, Abatta", 
+    whatsapp: "2250544639154", 
+    likes: 15 
+  },
+  { 
+    id: 11, 
+    zone: "Intérieur", 
+    category: "Coiffeur", 
+    title: "Urgent : Coiffeur avec dortoir", 
+    description: "Besoin urgement d'un coiffeur à sikasso département de grand lahou avec dortoir", 
+    location: "Grand-Lahou, Sikasso", 
+    whatsapp: "2250700732532", 
+    likes: 8 
+  }
+];
 
   const filteredOffers = jobOffers.filter(offer => 
     offer.zone === activeZone && 
