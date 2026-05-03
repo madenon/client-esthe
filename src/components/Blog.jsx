@@ -16,6 +16,17 @@ const Blog = () => {
   likes: 89, 
   price: "Prix à débattre" 
 },
+    { 
+  id: 1, 
+  type: "Complet", 
+  category: "Salon", 
+  title: "L'ensemble à brader avec le fauteuil", 
+  description: "Bonjour je recherche une coiffeuse et celle qui veulent se faire former dans le domaine de la coiffure nous sommes à bingerville précisément dans la zone de ENP ", 
+  location: "Abidjan, Bingerville", 
+  whatsapp: "0594478116", 
+  likes: 89, 
+  price: "Prix à débattre" 
+},
   ];
 
   return (
