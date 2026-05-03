@@ -2,11 +2,28 @@ import { MapPin, Banknote, MessageCircle, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const HomePage = () => {
-  const jobOffers = [
-    { id: 1, title: "Développeur React Junior", description: "Nous recherchons un talent passionné par le web pour intégrer une équipe dynamique à Abidjan.", price: "450.000 FCFA", location: "Abidjan, Cocody", whatsapp: "2250596132058" },
-    { id: 2, title: "Commercial Terrain", description: "Développez notre portefeuille client dans le secteur de l'immobilier de luxe.", price: "300.000 FCFA + Com", location: "San-Pédro", whatsapp: "2250596132058" },
-    { id: 3, title: "Gestionnaire de Stock", description: "Optimisation des flux logistiques et suivi rigoureux des inventaires en entrepôt.", price: "250.000 FCFA", location: "Bouaké", whatsapp: "2250596132058" }
-  ];
+const jobOffers = [
+  // --- SECTEUR TECH & BUREAU ---
+  { id: 1, title: "Développeur React Junior", description: "Développement d'interfaces modernes et intégration d'API pour une startup tech.", price: "150.000 FCFA", location: "Abidjan, Cocody", whatsapp: "2250596132058" },
+  { id: 2, title: "Commercial Terrain", description: "Prospection et vente de solutions immobilières auprès d'une clientèle haut de gamme.", price: "100.000 FCFA + Com", location: "San-Pédro", whatsapp: "2250596132058" },
+  { id: 3, title: "Gestionnaire de Stock", description: "Suivi des inventaires et gestion logistique pour une chaîne de distribution.", price: "85.000 FCFA", location: "Bouaké", whatsapp: "2250596132058" },
+  { id: 4, title: "Assistant Administratif", description: "Gestion du courrier, accueil téléphonique et organisation d'agendas professionnels.", price: "120.000 FCFA", location: "Abidjan, Plateau", whatsapp: "2250596132058" },
+
+  // --- SERVICES À LA PERSONNE (Ménage & Nounou) ---
+  { id: 5, title: "Nounou à domicile", description: "Garde de deux enfants en bas âge, aide aux devoirs et préparation des repas légers.", price: "60.000 FCFA", location: "Abidjan, Riviera 3", whatsapp: "2250596132058" },
+  { id: 6, title: "Agent de Ménage", description: "Entretien régulier d'appartements : nettoyage, repassage et rangement.", price: "45.000 FCFA", location: "Abidjan, Marcory", whatsapp: "2250596132058" },
+  { id: 7, title: "Gouvernante de Maison", description: "Gestion complète du foyer, cuisine et supervision du personnel de maison.", price: "90.000 FCFA", location: "Assinie", whatsapp: "2250596132058" },
+  { id: 8, title: "Nounou de Nuit", description: "Surveillance et soins pour nouveau-né durant la nuit (20h - 06h).", price: "75.000 FCFA", location: "Abidjan, Angré", whatsapp: "2250596132058" },
+  { id: 9, title: "Nettoyage de Bureaux", description: "Entretien quotidien des espaces de travail après les heures de bureau.", price: "50.000 FCFA", location: "Abidjan, Zone 4", whatsapp: "2250596132058" },
+
+  // --- ESTHÉTIQUE & BIEN-ÊTRE ---
+  { id: 10, title: "Esthéticienne Pro", description: "Soins du visage, épilation et conseils personnalisés en cosmétique.", price: "80.000 FCFA", location: "Abidjan, Deux-Plateaux", whatsapp: "2250596132058" },
+  { id: 11, title: "Prothésiste Ongulaire", description: "Pose de gel, résine et nail art tendance pour une clientèle exigeante.", price: "70.000 FCFA", location: "Abidjan, Biétry", whatsapp: "2250596132058" },
+  { id: 12, title: "Coiffeuse Tresses", description: "Spécialiste des tresses africaines, perruques et soins capillaires.", price: "55.000 FCFA", location: "Abidjan, Yopougon", whatsapp: "2250596132058" },
+  { id: 13, title: "Masseur Bien-être", description: "Pratique de massages relaxants et sportifs à domicile ou en institut.", price: "95.000 FCFA", location: "Abidjan, Bassam", whatsapp: "2250596132058" },
+  { id: 14, title: "Maquilleuse (Make-up Artist)", description: "Maquillage professionnel pour mariages, cérémonies et séances photos.", price: "15.000 FCFA / Presta", location: "Abidjan, Koumassi", whatsapp: "2250596132058" },
+  { id: 15, title: "Technicien en Cils", description: "Pose d'extensions de cils (volume russe, cil à cil) et rehaussement.", price: "65.000 FCFA", location: "Abidjan, Cocody", whatsapp: "2250596132058" }
+];
 
   const containerVariants = {
     hidden: { opacity: 0 },

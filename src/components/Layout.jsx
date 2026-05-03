@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         On ajoute un padding-top équivalent à la hauteur de la Navbar
         pour éviter que le contenu passe dessous (surtout en mobile)
       */}
-      <main className="w-full flex-1 relative z-0 pt-[90px] md:pt-[100px]">
+      <main className="w-full flex-1 relative z-0 pt-[40px] md:pt-[30px]">
         {children}
       </main>
 
