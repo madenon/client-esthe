@@ -1,156 +1,146 @@
 import { useState } from 'react';
-import { MapPin, MessageCircle, Heart, Briefcase, Search, Globe } from 'lucide-react';
+import { Heart, CheckCircle, Zap, MapPin, MessageCircle, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import AdBanner from './AdBanner';
 
 const HomePage = () => {
-  // 1. Données avec distinction Zone (Abidjan / Intérieur)
-  const jobOffers = [
-    { id: 1, zone: "Abidjan", category: "Coiffeur", title: "Emploi Tresseuse Abidjan", description: "Le salon recrute tresseuse experte en pose tissage. Poste basé à Yopougon.", location: "Abidjan, Yopougon", whatsapp: "2250596132058" },
-    { id: 2, zone: "Abidjan", category: "Esthétique", title: "Prothésiste Ongulaire Gel", description: "Recrutement prothésiste ongulaire gel et résine pour un institut de luxe.", location: "Abidjan, Cocody", whatsapp: "2250596132058" },
-    { id: 3, zone: "Intérieur", category: "Coiffeur", title: "Barber expérimenté - San Pedro", description: "Hôtel cherche barber pour sa clientèle VIP. Logement possible.", location: "San Pedro, Centre", whatsapp: "2250596132058" },
-    { id: 4, zone: "Intérieur", category: "Esthétique", title: "Masseuse Bien-être - Yamoussoukro", description: "Institut recherche masseuse qualifiée pour soins corporels.", location: "Yamoussoukro", whatsapp: "2250596132058" },
-    { id: 5, zone: "Abidjan", category: "Coiffeur", title: "Spécialiste Dreadlocks", description: "Salon Riviera 2 cherche expert en locks et soins naturels.", location: "Abidjan, Riviera", whatsapp: "2250596132058" },
-  ];
-
-  const [activeZone, setActiveZone] = useState('Abidjan'); // 'Abidjan' ou 'Intérieur'
+  // 1. État initial à null pour ne rien afficher par défaut
+  const [activeZone, setActiveZone] = useState(null); 
   const [activeCat, setActiveCat] = useState('Tous');
 
-  const categories = ['Tous', 'Coiffeur', 'Esthétique'];
+  const jobOffers = [
+    { id: 1, zone: "Abidjan", category: "Coiffeur", title: "Emploi Tresseuse Abidjan", description: "Le salon recrute tresseuse experte en pose tissage et tresses africaines. Poste basé à Yopougon.", location: "Abidjan, Yopougon", whatsapp: "2250596132058", likes: 63 },
+    { id: 2, zone: "Abidjan", category: "Esthétique", title: "Prothésiste Ongulaire Gel", description: "Recrutement prothésiste ongulaire gel et résine pour un institut de luxe à Cocody.", location: "Abidjan, Cocody", whatsapp: "2250596132058", likes: 12 },
+    { id: 3, zone: "Intérieur", category: "Coiffeur", title: "Barber expérimenté - San Pedro", description: "Hôtel cherche barber pour sa clientèle VIP. Logement possible en bord de mer.", location: "San Pedro", whatsapp: "2250596132058", likes: 45 },
+    { id: 4, zone: "Abidjan", category: "Coiffeur", title: "Spécialiste Pose Perruque", description: "Recherche experte en wig styling et pose de perruques sans colle à Marcory.", location: "Abidjan, Marcory", whatsapp: "2250596132058", likes: 89 },
+    { id: 5, zone: "Intérieur", category: "Esthétique", title: "Masseuse Bien-être - Yamoussoukro", description: "Institut recherche masseuse qualifiée pour soins corporels et massage relaxant.", location: "Yamoussoukro", whatsapp: "2250596132058", likes: 21 },
+    { id: 6, zone: "Abidjan", category: "Coiffeur", title: "Expert Dreadlocks & Soins", description: "Salon spécialisé cherche coiffeur/se expert en locks et soins naturels.", location: "Abidjan, Riviera 2", whatsapp: "2250596132058", likes: 34 },
+    { id: 7, zone: "Abidjan", category: "Esthétique", title: "Makeup Artist / Maquilleuse", description: "Besoin d'une maquilleuse disponible pour mariages et événements VIP au Plateau.", location: "Abidjan, Plateau", whatsapp: "2250596132058", likes: 56 },
+    { id: 8, zone: "Intérieur", category: "Coiffeur", title: "Coiffeuse Dame Polyvalente", description: "Grand salon à Bouaké cherche coiffeuse sachant tout faire (tresses, coupes, soins).", location: "Bouaké", whatsapp: "2250596132058", likes: 28 },
+  ];
 
-  // Filtrage combiné (Zone + Catégorie)
-  const filteredOffers = jobOffers.filter(offer => {
-    const matchZone = offer.zone === activeZone;
-    const matchCat = activeCat === 'Tous' || offer.category === activeCat;
-    return matchZone && matchCat;
-  });
-
-  const getWhatsAppLink = (phone, title) => {
-    const text = encodeURIComponent(`Bonjour Goor Recrutement, je suis intéressé par l'offre : ${title}`);
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    return isIOS ? `whatsapp://send?phone=${phone}&text=${text}` : `https://wa.me/${phone}?text=${text}`;
-  };
+  const filteredOffers = jobOffers.filter(offer => 
+    offer.zone === activeZone && (activeCat === 'Tous' || offer.category === activeCat)
+  );
 
   return (
-    <div className="bg-[#f8fafc] min-h-screen font-poppins pb-20">
-      <AdBanner />
+    <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20">
+      
+      {/* SECTION HERO */}
+      <section className="px-6 py-12 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-black text-[#1e293b] mb-4">
+            Goor<span className="text-blue-600">.com</span> <span className="font-light">est là pour vous !</span>
+          </h2>
+          <div className="inline-flex items-center gap-2 bg-[#e8fbf3] text-[#00b67a] px-4 py-1.5 rounded-full border border-[#00b67a]/20 mb-10">
+            <CheckCircle size={14} />
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#00b67a]">Plateforme Vérifiée</span>
+          </div>
 
-      {/* HERO SECTION PROFESSIONNELLE */}
-      <section className="relative h-[400px] flex items-center justify-center text-center px-6 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[#0f172a]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-600/20 to-transparent z-10" />
-        
-        <div className="relative z-20 max-w-4xl">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="font-montserrat font-black text-2xl md:text-4xl text-white uppercase mb-4"
-          >
-            Trouvez votre <span className="text-blue-500">Futur Job</span>
-          </motion.h1>
-          <p className="text-slate-300 text-lg font-light italic">La référence du recrutement beauté en Côte d'Ivoire</p>
+          <p className="text-slate-500 mb-8 font-medium">Choisissez votre zone pour voir les offres disponibles</p>
+
+          {/* SÉLECTEUR DE ZONE */}
+          <div className="flex bg-white p-2 rounded-2xl shadow-xl shadow-blue-900/5 max-w-sm mx-auto mb-12 border border-slate-200">
+            <button 
+              onClick={() => setActiveZone('Abidjan')}
+              className={`flex-1 py-3 rounded-xl font-bold text-xs uppercase tracking-widest transition-all ${activeZone === 'Abidjan' ? 'bg-[#1e293b] text-white' : 'text-slate-400 hover:text-[#1e293b]'}`}
+            >
+              Abidjan
+            </button>
+            <button 
+              onClick={() => setActiveZone('Intérieur')}
+              className={`flex-1 py-3 rounded-xl font-bold text-xs uppercase tracking-widest transition-all ${activeZone === 'Intérieur' ? 'bg-[#1e293b] text-white' : 'text-slate-400 hover:text-[#1e293b]'}`}
+            >
+              Intérieur
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* BARRE DE RECHERCHE & FILTRES (L'INTERFACE "PRO") */}
-      <div className="max-w-5xl mx-auto px-6 -mt-16 relative z-30">
-        <div className="bg-white rounded-[2.5rem] shadow-2xl shadow-blue-900/10 p-4 md:p-8 border border-slate-100">
-          
-          {/* Sélecteur de Zone (Abidjan vs Intérieur) */}
-          <div className="flex bg-slate-100 p-1.5 rounded-2xl mb-8 w-full max-w-md mx-auto">
-            <button 
-              onClick={() => { setActiveZone('Abidjan'); setActiveCat('Tous'); }}
-              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all ${activeZone === 'Abidjan' ? 'bg-white text-blue-600 shadow-md' : 'text-slate-500'}`}
+      <div className="max-w-6xl mx-auto px-6">
+        
+        <AnimatePresence mode="wait">
+          {activeZone ? (
+            <motion.div
+              key="results"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
             >
-              <MapPin size={18} /> Abidjan
-            </button>
-            <button 
-              onClick={() => { setActiveZone('Intérieur'); setActiveCat('Tous'); }}
-              className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-bold text-sm transition-all ${activeZone === 'Intérieur' ? 'bg-white text-blue-600 shadow-md' : 'text-slate-500'}`}
-            >
-              <Globe size={18} /> Intérieur du pays
-            </button>
-          </div>
-
-          {/* Filtre Métiers */}
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCat(cat)}
-                className={`px-8 py-3 rounded-full font-bold text-xs uppercase tracking-widest transition-all border ${
-                  activeCat === cat 
-                  ? 'bg-[#0f172a] border-[#0f172a] text-white shadow-lg' 
-                  : 'bg-white border-slate-200 text-slate-500 hover:border-blue-400'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* RÉSULTATS */}
-      <div className="max-w-7xl mx-auto px-6 mt-16">
-        <div className="flex items-center justify-between mb-8 border-b border-slate-200 pb-4">
-          <h2 className="text-slate-900 font-black text-xl uppercase tracking-tight">
-             Offres disponibles : <span className="text-blue-600">{activeZone}</span>
-          </h2>
-          <span className="text-slate-400 text-sm font-bold">{filteredOffers.length} Postes ouverts</span>
-        </div>
-
-        <motion.div 
-          layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <AnimatePresence mode='popLayout'>
-            {filteredOffers.length > 0 ? (
-              filteredOffers.map((offer) => (
-                <motion.div 
-                  key={offer.id}
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  whileHover={{ y: -8 }}
-                  className="bg-white rounded-[2rem] border border-slate-100 shadow-sm p-7 hover:shadow-xl transition-all group"
-                >
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="p-3 bg-blue-50 rounded-2xl text-blue-600">
-                      <Briefcase size={24} />
-                    </div>
-                    <span className={`text-[10px] font-black px-3 py-1 rounded-lg ${offer.category === 'Coiffeur' ? 'bg-orange-100 text-orange-600' : 'bg-purple-100 text-purple-600'}`}>
-                      {offer.category.toUpperCase()}
-                    </span>
-                  </div>
-
-                  <h3 className="font-montserrat font-bold text-lg text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    {offer.title}
-                  </h3>
-                  <p className="text-slate-500 text-sm mb-6 line-clamp-2 italic">"{offer.description}"</p>
-
-                  <div className="flex items-center gap-2 text-[#0f172a] text-[11px] font-bold mb-6 bg-slate-50 w-fit px-3 py-1.5 rounded-lg">
-                    <MapPin size={14} className="text-blue-500" />
-                    {offer.location}
-                  </div>
-
-                  <motion.a 
-                    whileTap={{ scale: 0.95 }}
-                    href={getWhatsAppLink(offer.whatsapp, offer.title)}
-                    className="flex items-center justify-center gap-3 w-full bg-[#0f172a] hover:bg-blue-600 text-white font-bold py-4 rounded-xl transition-all shadow-lg text-xs tracking-widest"
-                  >
-                    <MessageCircle size={18} /> POSTULER VIA WHATSAPP
-                  </motion.a>
-                </motion.div>
-              ))
-            ) : (
-              <div className="col-span-full py-20 text-center">
-                <p className="text-slate-400 font-medium text-lg">Aucune offre disponible pour cette sélection pour le moment.</p>
+              {/* BANDEAU "FORT INTÉRÊT" */}
+              <div className="bg-white rounded-3xl p-6 border-l-[6px] border-blue-500 shadow-sm flex items-center gap-6 mb-12">
+                <div className="bg-blue-500 p-3 rounded-2xl text-white">
+                  <Zap size={24} fill="currentColor" />
+                </div>
+                <div>
+                  <h4 className="font-black text-[#1e293b] text-sm uppercase tracking-tight">Fort intérêt à {activeZone}</h4>
+                  <p className="text-slate-500 text-xs mt-1">
+                    {filteredOffers.length > 0 
+                      ? `${filteredOffers.length * 4} salons consultent actuellement ces profils.`
+                      : "De nouvelles offres arrivent très bientôt dans cette zone."}
+                  </p>
+                </div>
               </div>
-            )}
-          </AnimatePresence>
-        </motion.div>
+
+              {/* GRILLE D'OFFRES */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredOffers.map((offer) => (
+                  <motion.div 
+                    layout
+                    key={offer.id}
+                    className="bg-white rounded-[2rem] border border-slate-100 shadow-sm overflow-hidden group hover:shadow-2xl transition-all duration-500"
+                  >
+                    <div className="h-44 bg-slate-50 relative flex items-center justify-center">
+                      <div className="absolute top-4 right-4 bg-white/90 px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-2 text-slate-500">
+                        <Heart size={14} className="group-hover:text-red-500 transition-colors" />
+                        <span className="text-xs font-bold">{offer.likes}</span>
+                      </div>
+                      <div className="text-5xl font-black text-slate-200 group-hover:text-blue-500/10">GOOR</div>
+                    </div>
+
+                    <div className="p-7">
+                      <div className="flex gap-2 mb-4">
+                        <span className={`text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-lg ${offer.category === 'Coiffeur' ? 'bg-orange-50 text-orange-600' : 'bg-purple-50 text-purple-600'}`}>
+                          {offer.category}
+                        </span>
+                        <span className="flex items-center gap-1 text-[9px] font-black uppercase tracking-widest px-3 py-1 bg-slate-100 text-slate-500 rounded-lg">
+                          <MapPin size={10} /> {offer.location}
+                        </span>
+                      </div>
+                      <h3 className="font-bold text-lg text-[#1e293b] mb-2 leading-tight">{offer.title}</h3>
+                      <p className="text-slate-400 text-xs leading-relaxed mb-8 line-clamp-2 italic">"{offer.description}"</p>
+                      <a 
+                        href={`https://wa.me/${offer.whatsapp}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-3 w-full bg-[#1e293b] hover:bg-blue-600 text-white font-bold py-4 rounded-2xl transition-all text-[11px] uppercase tracking-widest shadow-lg"
+                      >
+                        <MessageCircle size={16} /> Postuler maintenant
+                      </a>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          ) : (
+            /* ÉTAT PAR DÉFAUT (VIDE) */
+            <motion.div 
+              key="empty"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex flex-col items-center justify-center py-20 text-center"
+            >
+              <div className="bg-white p-10 rounded-[3rem] shadow-xl shadow-blue-900/5 border border-slate-100">
+                <div className="bg-slate-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Search size={32} className="text-slate-300" />
+                </div>
+                <h3 className="text-[#1e293b] font-bold text-xl mb-2">Prêt à trouver un job ?</h3>
+                <p className="text-slate-400 text-sm max-w-xs mx-auto">
+                  Cliquez sur <span className="font-bold text-[#1e293b]">Abidjan</span> ou <span className="font-bold text-[#1e293b]">Intérieur</span> ci-dessus pour lancer la recherche.
+                </p>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
