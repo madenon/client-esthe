@@ -13,11 +13,11 @@ const Blog = () => {
   description: "Tête de perruque neuve 25mil, Lit pliable neuf avec son sac 115mil, Appareil hydrafacial 85mil", 
   location: "Abidjan, Riviera", 
   whatsapp: "2250596132058", 
-  likes: 89, 
+  likes: 109, 
   price: "Prix à débattre" 
 },
     { 
-  id: 1, 
+  id: 2, 
   type: "Formation", 
   category: "Salarié", 
   title: "L'ensemble à brader avec le fauteuil", 

@@ -36,7 +36,7 @@ const jobOffers = [
     likes: 0 
   },
   { 
-    id: 6, 
+    id: 2, 
     zone: "Abidjan", 
     category: "Coiffeur", 
     title: "Besoin coiffeuse et prothésiste", 
@@ -46,7 +46,7 @@ const jobOffers = [
     likes: 34 
   },
   { 
-    id: 7, 
+    id: 3, 
     zone: "Abidjan", 
     category: "Esthétique", 
     title: "Besoin de 2 filles (Pédicure/Soins)", 
@@ -56,7 +56,7 @@ const jobOffers = [
     likes: 56 
   },
   { 
-    id: 8, 
+    id: 4, 
     zone: "Intérieur", 
     category: "Coiffeur", 
     title: "Coiffeuse à Bassam", 
@@ -66,7 +66,7 @@ const jobOffers = [
     likes: 28 
   },
   { 
-    id: 9, 
+    id: 5, 
     zone: "Abidjan", 
     category: "Coiffeur", 
     title: "Coiffeuse experte en poses", 
@@ -76,7 +76,7 @@ const jobOffers = [
     likes: 12 
   },
   { 
-    id: 10, 
+    id: 6, 
     zone: "Abidjan", 
     category: "Coiffeur", 
     title: "Coiffeur professionnel", 
@@ -86,7 +86,7 @@ const jobOffers = [
     likes: 15 
   },
   { 
-    id: 11, 
+    id: 7, 
     zone: "Intérieur", 
     category: "Coiffeur", 
     title: "Urgent : Coiffeur avec dortoir", 
