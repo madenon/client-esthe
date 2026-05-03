@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { UserCheck, ShieldCheck, Star, Briefcase, FileText, Lock, CheckCircle, Bell } from 'lucide-react';
 

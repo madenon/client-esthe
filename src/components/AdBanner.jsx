@@ -1,105 +1,111 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {  Sparkles, UserPlus } from 'lucide-react';
+import { Sparkles, ShoppingBag, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const AdBanner = () => {
   const [index, setIndex] = useState(0);
 
-  // 1. Définition des textes qui défilent
-  const slides = [
+  // Utilisation de useMemo pour éviter de redéfinir les slides inutilement
+  const slides = useMemo(() => [
     {
-      icon: <Sparkles className="text-blue-400" />,
-      title: <>À la recherche <span className="text-blue-500">de travail ?</span></>,
-      description: "Contactez-nous dès maintenant pour intégrer les meilleurs salons de coiffure et instituts de beauté d'Abidjan."
+      icon: <ShoppingBag className="text-orange-400" />,
+      title: <>Besoin de <span className="text-orange-500">matériel pro ?</span></>,
+      description: "Liquidation d'un stock de mèches humaines et synthétiques suite à fermeture de boutique",
+      buttonText: "Voir les annonces",
+      link: "/blog"
     },
     {
-      icon: <UserPlus className="text-blue-400" />,
-      title: <>Besoin de <span className="text-blue-500">personnel ?</span></>,
-      description: "Vous êtes un professionnel ? Trouvez rapidement du personnel qualifié et sérieux pour booster votre activité."
+      icon: <Sparkles className="text-pink-400" />,
+      title: <>Liquidez votre <span className="text-pink-500">matériel !</span></>,
+      description: "Je mets en vente tout le matériel : 3 fauteuils, 2 bacs de lavage, miroirs et comptoir. État quasi neuf.",
+      buttonText: "Vendre maintenant",
+      link: "/contact" // Ou le lien vers le formulaire de dépôt
     }
-  ];
+  ], []);
 
-  // 2. Logique de défilement automatique (toutes les 5 secondes)
+  // Défilement automatique
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
-
-  const getAdWhatsAppLink = () => {
-    const phone = "2250596132058";
-    const message = encodeURIComponent("Bonjour Goorco Recrutement, je souhaite en savoir plus sur vos services.");
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    return isIOS 
-      ? `whatsapp://send?phone=${phone}&text=${message}`
-      : `https://wa.me/${phone}?text=${message}`;
-  };
+  }, [slides.length]);
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+    <motion.section 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="max-w-7xl mx-auto px-6 mb-12"
+      className="max-w-7xl mx-auto px-4 md:px-6 mb-12"
     >
-      <div className="relative overflow-hidden rounded-[2.5rem] bg-[#0f172a] p-8 md:p-12 shadow-xl border border-slate-800 min-h-[320px] md:min-h-[280px] flex items-center">
+      <div className="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-[#0f172a] p-8 md:p-12 shadow-2xl border border-slate-800 min-h-[350px] md:min-h-[280px] flex items-center">
         
-        {/* Background Animé */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -mr-20 -mt-20" />
+        {/* Effet de fond lumineux dynamique */}
+        <div 
+          className={`absolute top-0 right-0 w-64 h-64 rounded-full blur-[80px] -mr-20 -mt-20 transition-colors duration-1000 ${
+            index === 0 ? 'bg-orange-600/20' : 'bg-pink-600/20'
+          }`} 
+        />
         
         <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-between gap-8">
           
-          {/* Zone de texte avec Animation de défilement */}
-          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left h-full">
+          {/* Zone de texte animée */}
+          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -20, opacity: 0 }}
+                initial={{ x: 20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -20, opacity: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="flex flex-col items-center md:items-start"
               >
-                <div className="bg-blue-500/20 p-3 rounded-2xl w-fit mb-4">
+                <div className="bg-white/5 backdrop-blur-sm p-4 rounded-2xl w-fit mb-6 border border-white/10 shadow-inner">
                   {slides[index].icon}
                 </div>
-                <h2 className="text-white font-montserrat font-black text-2xl md:text-4xl uppercase tracking-tighter mb-3 leading-tight">
+                <h2 className="text-white font-black text-2xl md:text-4xl uppercase tracking-tighter mb-4 leading-tight">
                   {slides[index].title}
                 </h2>
-                <p className="text-slate-400 text-sm md:text-base max-w-md font-medium">
+                <p className="text-slate-400 text-sm md:text-base max-w-md font-medium leading-relaxed">
                   {slides[index].description}
                 </p>
               </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* Bouton CTA */}
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            href={getAdWhatsAppLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-black px-10 py-5 rounded-2xl shadow-lg shadow-blue-900/20 transition-all flex items-center gap-3 whitespace-nowrap text-xs uppercase tracking-widest"
-            style={{ WebkitTapHighlightColor: 'transparent' }}
+          {/* Bouton d'action dynamique */}
+          <motion.div
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="w-full md:w-auto"
           >
-            Contactez-nous
-          </motion.a>
+            <Link
+              to={slides[index].link}
+              className="bg-white text-[#0f172a] font-black px-10 py-5 rounded-2xl shadow-xl transition-all flex items-center justify-center gap-3 whitespace-nowrap text-xs uppercase tracking-widest group w-full"
+            >
+              {slides[index].buttonText}
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
         </div>
 
-        {/* Indicateurs de défilement (Petits points en bas) */}
+        {/* Indicateurs (Points) */}
         <div className="absolute bottom-6 left-1/2 md:left-12 transform -translate-x-1/2 md:translate-x-0 flex gap-2">
           {slides.map((_, i) => (
-            <div 
+            <button
               key={i}
-              className={`h-1.5 rounded-full transition-all duration-500 ${i === index ? 'w-8 bg-blue-500' : 'w-2 bg-slate-700'}`}
+              onClick={() => setIndex(i)}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                i === index ? 'w-8 bg-orange-500' : 'w-2 bg-slate-700'
+              }`}
+              aria-label={`Aller au slide ${i + 1}`}
             />
           ))}
         </div>
 
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 

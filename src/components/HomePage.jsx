@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Heart, CheckCircle, Zap, MapPin, MessageCircle, Search, ShieldCheck, RefreshCw, Globe, Volume2, Users, Briefcase, Cookie, X } from 'lucide-react';
+import { Heart, CheckCircle, Zap, MapPin, MessageCircle, Search, ShieldCheck, Globe, Volume2, Users, Briefcase, Cookie, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import AdBanner from './AdBanner';
 
 const HomePage = () => {
   const [activeZone, setActiveZone] = useState(null); 
@@ -42,6 +43,7 @@ const HomePage = () => {
 
   return (
     <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20 text-[#1e293b] relative">
+      <AdBanner />
       
       {/* SECTION HERO */}
       <section className="px-6 py-12 text-center">
