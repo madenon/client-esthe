@@ -22,7 +22,7 @@ const Footer = () => {
               {/* Texte du Logo avec style typographique */}
               <div className="flex flex-col">
                 <span className="font-black text-2xl tracking-tighter uppercase leading-none">
-                  Goo<span className="text-blue-500">r</span>
+                  Goo<span className="text-blue-500">rco</span>
                 </span>
                 <span className="text-[10px] text-blue-400 tracking-[0.2em] font-light uppercase">
                  Coiffure • Esthétique • Opportunité

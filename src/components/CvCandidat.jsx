@@ -74,7 +74,7 @@ const CvCandidat = () => {
   };
 
   const openWhatsApp = () => {
-    const message = `*NOUVEAU CV CANDIDAT - GOOR RECRUTEMENT*
+    const message = `*NOUVEAU CV CANDIDAT - Goorco RECRUTEMENT*
 ------------------------------
 👤 *NOM :* ${formData.nomComplet}
 🎂 *ÂGE :* ${formData.age} ans
@@ -110,7 +110,7 @@ _J'ai généré mon CV en PDF, je vous l'envoie ci-joint._`;
           <div className="border-b-4 border-blue-600 pb-6 mb-8 flex justify-between items-center">
             <div>
               <h2 className="text-2xl font-black text-slate-800 uppercase leading-none">CV Candidat</h2>
-              <p className="text-blue-600 font-bold text-sm">Propulsé par Goor.ci</p>
+              <p className="text-blue-600 font-bold text-sm">Propulsé par Goorco.ci</p>
             </div>
             {imagePreview && (
               <img src={imagePreview} alt="Profil" className="w-20 h-20 rounded-xl object-cover border-2 border-slate-100" />

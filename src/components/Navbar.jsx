@@ -23,8 +23,8 @@ const Navbar = () => {
   <div className="relative flex items-center justify-center w-12 h-12 bg-gradient-to-br from-slate-800 to-[#1e293b] rounded-xl shadow-lg shadow-blue-500/10 group-hover:rotate-6 transition-transform duration-300 border border-white/5">
     <img 
       src="/hero.png" 
-      alt="Logo Goor Cosmétique" 
-      className="w-7 h-7 object-contain transition-transform duration-300 group-hover:scale-110" 
+      alt="Logo Goorcoco Cosmétique" 
+      className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110" 
     />
     {/* Point lumineux décoratif */}
     <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-[#1e293b] shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
@@ -34,7 +34,7 @@ const Navbar = () => {
   <div className="flex flex-col justify-center">
     <div className="flex items-center gap-1.5">
       <span className="font-black text-2xl tracking-tighter text-white leading-none">
-        Goor<span className="text-blue-500">.</span>
+        Goorco<span className="text-blue-500">.</span>
       </span>
       <span className="bg-blue-500/10 text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-widest border border-blue-500/20">
         Cosmétique

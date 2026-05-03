@@ -50,7 +50,7 @@ const HomePage = () => {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-black mb-4">
-            Goor<span className="text-blue-600">.com</span> <span className="font-light text-slate-400 italic"> </span>
+            Goorco<span className="text-blue-600">.com</span> <span className="font-light text-slate-400 italic"> </span>
           </h2>
           
           <div className="inline-flex items-center gap-2 bg-[#e8fbf3] text-[#00b67a] px-4 py-1.5 rounded-full border border-[#00b67a]/20 mb-10">
@@ -114,14 +114,14 @@ const HomePage = () => {
                         <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
                             <Globe size={18} />
                         </div>
-                        <h4 className="font-black text-xs uppercase tracking-widest">À propos de Goor</h4>
+                        <h4 className="font-black text-xs uppercase tracking-widest">À propos de Goorco</h4>
                       </div>
                       <button className="flex items-center gap-2 text-[10px] font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full hover:bg-blue-100 transition-colors">
                         <Volume2 size={14} /> Écouter
                       </button>
                    </div>
                    <p className="text-slate-500 text-sm leading-relaxed italic">
-                    Goor est une plateforme conçue pour connecter l'excellence. Que vous soyez un talent cherchant à s'épanouir ou un établissement en quête de perfection, nous offrons les outils pour faire grandir votre vision.
+                    Goorco est une plateforme conçue pour connecter l'excellence. Que vous soyez un talent cherchant à s'épanouir ou un établissement en quête de perfection, nous offrons les outils pour faire grandir votre vision.
                    </p>
                 </div>
 
@@ -161,7 +161,7 @@ const HomePage = () => {
                           <Heart size={14} className="group-hover:text-red-500 transition-colors" />
                           <span className="text-xs font-bold">{offer.likes}</span>
                         </div>
-                        <div className="text-5xl font-black text-slate-200 group-hover:text-blue-500/10 transition-all">GOOR</div>
+                        <div className="text-5xl font-black text-slate-200 group-hover:text-blue-500/10 transition-all">Goorco</div>
                       </div>
 
                       <div className="p-7">

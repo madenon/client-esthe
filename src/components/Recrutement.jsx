@@ -270,7 +270,7 @@ const Recrutement = () => {
 
         <div className="mt-12 p-6 bg-white/50 rounded-3xl border border-dashed border-slate-300 text-center">
           <p className="text-slate-500 text-xs font-bold uppercase tracking-widest">
-            {OFFRES_EMPLOI.length} Postes disponibles • Goor Recrutement
+            {OFFRES_EMPLOI.length} Postes disponibles • Goorco Recrutement
           </p>
         </div>
       </div>

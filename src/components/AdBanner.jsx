@@ -29,7 +29,7 @@ const AdBanner = () => {
 
   const getAdWhatsAppLink = () => {
     const phone = "2250596132058";
-    const message = encodeURIComponent("Bonjour Goor Recrutement, je souhaite en savoir plus sur vos services.");
+    const message = encodeURIComponent("Bonjour Goorco Recrutement, je souhaite en savoir plus sur vos services.");
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     return isIOS 
       ? `whatsapp://send?phone=${phone}&text=${message}`
