@@ -3,8 +3,19 @@ import { ArrowRight, MapPin, MessageCircle, Heart, ShoppingBag } from 'lucide-re
 import { motion } from 'framer-motion';
 
 const Blog = () => {
+
   const salesOffers = [
-    { id: 1, type: "Complet", category: "Salon", title: "Liquidation totale Salon Cocody", description: "Je mets en vente tout le matériel : 3 fauteuils, 2 bacs de lavage, miroirs et comptoir. État quasi neuf.", location: "Cocody, Abidjan", whatsapp: "2250596132058", likes: 89, price: "Prix à débattre" },
+    { 
+  id: 1, 
+  type: "Complet", 
+  category: "Salon", 
+  title: "L'ensemble à brader avec le fauteuil", 
+  description: "Tête de perruque neuve 25mil, Lit pliable neuf avec son sac 115mil, Appareil hydrafacial 85mil", 
+  location: "Abidjan, Riviera", 
+  whatsapp: "2250596132058", 
+  likes: 89, 
+  price: "Prix à débattre" 
+},
     { id: 2, type: "Unité", category: "Équipement", title: "2 Bacs de lavage italiens", description: "Bacs de lavage ergonomiques avec douchette. Très peu utilisés, cause déménagement.", location: "Riviera 3, Abidjan", whatsapp: "2250596132058", likes: 42, price: "250.000 FCFA" },
     { id: 3, type: "Lot", category: "Coiffure", title: "Lot de tondeuses professionnelles", description: "3 tondeuses de marque (Wahl/Andis) + sabots et kits d'entretien. Idéal pour débuter.", location: "Marcory, Abidjan", whatsapp: "2250596132058", likes: 156, price: "85.000 FCFA" },
     { id: 4, type: "Unité", category: "Esthétique", title: "Table de massage pliable", description: "Table robuste pour esthétique ou massage. Facile à transporter, housse incluse.", location: "Angré, Abidjan", whatsapp: "2250596132058", likes: 34, price: "45.000 FCFA" },
