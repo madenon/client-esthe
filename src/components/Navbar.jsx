@@ -30,18 +30,19 @@ const Navbar = () => {
     <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-[#1e293b] shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
   </div>
 
-  {/* Texte du Logo */}
+  {/* Texte du Logo mis à jour */}
   <div className="flex flex-col justify-center">
     <div className="flex items-center gap-1.5">
-      <span className="font-black text-2xl tracking-tighter text-white leading-none">
-        Goorco<span className="text-blue-500">.</span>
+      <span className="font-black text-2xl tracking-tighter leading-none">
+        <span className="text-white">Goor</span>
+        <span className="text-[#ff4da6]">co</span>
+        <span className="text-blue-500">.</span>
       </span>
-      
     </div>
     
-    {/* Slogan en sous-titre pour plus de clarté */}
+    {/* Slogan en sous-titre */}
     <div className="flex items-center gap-1 mt-1">
-      <span className="text-[9px] font-medium text-slate-400 uppercase tracking-[0.2em] leading-none">
+      <span className="text-[9px] font-medium text-[#ff4da6] uppercase tracking-[0.2em] leading-none">
         Coiffure <span className="text-blue-500/50">•</span> Esthétique <span className="text-blue-500/50">•</span> Opportunité
       </span>
     </div>

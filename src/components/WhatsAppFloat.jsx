@@ -1,8 +1,7 @@
-import { MessageCircle } from 'lucide-react';
+import { MessageCircleMore } from 'lucide-react'; // L'icône exacte de votre image
 import { motion } from 'framer-motion';
 
 const WhatsAppFloat = () => {
-  // Configuration du contact
   const phoneNumber = "2250596132058"; 
   const message = "Bonjour ! J'ai besoin de personnel et je souhaite avoir des informations.";
 
@@ -11,7 +10,6 @@ const WhatsAppFloat = () => {
       href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
       target="_blank"
       rel="noopener noreferrer"
-      // Animation d'apparition et mouvement de flottement
       initial={{ opacity: 0, x: 20 }}
       animate={{ 
         opacity: 1, 
@@ -28,10 +26,9 @@ const WhatsAppFloat = () => {
       }}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.92 }}
-      // Style optimisé pour iPhone (iOS)
       className="fixed bottom-6 right-6 z-[9999] bg-white border border-slate-100 flex items-center gap-4 pl-6 pr-2 py-2 rounded-full shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] group cursor-pointer touch-none"
       style={{ 
-        WebkitTapHighlightColor: 'transparent', // Supprime le carré gris au clic sur iPhone
+        WebkitTapHighlightColor: 'transparent',
       }}
     >
       {/* Section Texte */}
@@ -45,11 +42,11 @@ const WhatsAppFloat = () => {
         </span>
       </div>
 
-      {/* Icône avec effet de pulsation */}
+      {/* Icône WhatsApp (Style identique à l'image) */}
       <div className="relative">
         <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-20" />
-        <div className="relative bg-[#25D366] text-white p-3.5 rounded-full shadow-md group-hover:scale-110 transition-transform">
-          <MessageCircle size={22} fill="currentColor" />
+        <div className="relative bg-[#25D366] text-white p-3.5 rounded-full shadow-md group-hover:scale-110 transition-transform flex items-center justify-center">
+          <MessageCircleMore size={24} strokeWidth={2.5} />
         </div>
       </div>
     </motion.a>

@@ -14,6 +14,7 @@ export default {
         lato: ["Lato", "sans-serif"],
         merriweather: ["Merriweather", "serif"],
         playfair: ["Playfair Display", "serif"],
+        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
     },
   },

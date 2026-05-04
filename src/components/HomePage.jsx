@@ -24,84 +24,90 @@ const HomePage = () => {
     setShowCookies(false);
   };
 
-const jobOffers = [
-  { 
-    id: 1, 
-    zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Urgent : Coiffeur assidu", 
-    description: "Besoin urgent de coiffeur assidu et patient qui habite a Yopougon Maroc ou aux alentours.", 
-    location: "Abidjan, Yopougon Maroc", 
-    whatsapp: "2250596659858", 
-    likes: 0 
-  },
-  { 
-    id: 2, 
-    zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Besoin coiffeuse et prothésiste", 
-    description: "J’ai besoin d’une coiffeuse qui maitrise bien les poses et une prothésiste ongulaire qui maîtrise toutes les techniques, 90mil", 
-    location: "Abidjan, Yopougon", 
-    whatsapp: "2250544639154",
-    likes: 34 
-  },
-  { 
-    id: 3, 
-    zone: "Abidjan", 
-    category: "Esthétique", 
-    title: "Besoin de 2 filles (Pédicure/Soins)", 
-    description: "Besoin de 2 filles pour faire pédicure manucure et soins de visage à Yop maroc et Treichville. De 8h à 20h. Salaire : 80.000f", 
-    location: "Yopougon Maroc / Treichville", 
-    whatsapp: "2250544639154", 
-    likes: 56 
-  },
-  { 
-    id: 4, 
-    zone: "Intérieur", 
-    category: "Coiffeur", 
-    title: "Coiffeuse à Bassam", 
-    description: "Besoin d'une coiffeuse à bassam avec dortoir. Salaire 50.000f", 
-    location: "Grand-Bassam", 
-    whatsapp: "2250544639154", 
-    likes: 28 
-  },
-  { 
-    id: 5, 
-    zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Coiffeuse experte en poses", 
-    description: "Besoin d'une coiffeuse à abatta qui maîtrise surtout les pose perruque. Salaire : 70.000f négociable. Heure : 9h a 20h 30", 
-    location: "Abidjan, Abatta", 
-    whatsapp: "2250544639154", 
-    likes: 12 
-  },
-  { 
-    id: 6, 
-    zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Coiffeur professionnel", 
-    description: "Besoin d'un coiffeur professionnel à abatta. Salaire : 60.000f. Heure : 9h a 20h 30", 
-    location: "Abidjan, Abatta", 
-    whatsapp: "2250544639154", 
-    likes: 15 
-  },
-  { 
-    id: 7, 
-    zone: "Intérieur", 
-    category: "Coiffeur", 
-    title: "Urgent : Coiffeur avec dortoir", 
-    description: "Besoin urgement d'un coiffeur à sikasso département de grand lahou avec dortoir", 
-    location: "Grand-Lahou, Sikasso", 
-    whatsapp: "2250700732532", 
-    likes: 8 
-  }
-];
+  const jobOffers = [
+    { 
+      id: 1, 
+      zone: "Abidjan", 
+      category: "Coiffeur", 
+      title: "Urgent : Coiffeur assidu", 
+      description: "Besoin urgent de coiffeur assidu et patient qui habite a Yopougon Maroc ou aux alentours.", 
+      location: "Abidjan, Yopougon Maroc", 
+      whatsapp: "2250596659858", 
+      likes: 0 
+    },
+    { 
+      id: 2, 
+      zone: "Abidjan", 
+      category: "Coiffeur", 
+      title: "Besoin coiffeuse et prothésiste", 
+      description: "J’ai besoin d’une coiffeuse qui maitrise bien les poses et une prothésiste ongulaire qui maîtrise toutes les techniques, 90mil", 
+      location: "Abidjan, Yopougon", 
+      whatsapp: "2250544639154",
+      likes: 34 
+    },
+    { 
+      id: 3, 
+      zone: "Abidjan", 
+      category: "Esthétique", 
+      title: "Besoin de 2 filles (Pédicure/Soins)", 
+      description: "Besoin de 2 filles pour faire pédicure manucure et soins de visage à Yop maroc et Treichville. De 8h à 20h. Salaire : 80.000f", 
+      location: "Yopougon Maroc / Treichville", 
+      whatsapp: "2250544639154", 
+      likes: 56 
+    },
+    { 
+      id: 4, 
+      zone: "Intérieur", 
+      category: "Coiffeur", 
+      title: "Coiffeuse à Bassam", 
+      description: "Besoin d'une coiffeuse à bassam avec dortoir. Salaire 50.000f", 
+      location: "Grand-Bassam", 
+      whatsapp: "2250544639154", 
+      likes: 28 
+    },
+    { 
+      id: 5, 
+      zone: "Abidjan", 
+      category: "Coiffeur", 
+      title: "Coiffeuse experte en poses", 
+      description: "Besoin d'une coiffeuse à abatta qui maîtrise surtout les pose perruque. Salaire : 70.000f négociable. Heure : 9h a 20h 30", 
+      location: "Abidjan, Abatta", 
+      whatsapp: "2250544639154", 
+      likes: 12 
+    },
+    { 
+      id: 6, 
+      zone: "Abidjan", 
+      category: "Coiffeur", 
+      title: "Coiffeur professionnel", 
+      description: "Besoin d'un coiffeur professionnel à abatta. Salaire : 60.000f. Heure : 9h a 20h 30", 
+      location: "Abidjan, Abatta", 
+      whatsapp: "2250544639154", 
+      likes: 15 
+    },
+    { 
+      id: 7, 
+      zone: "Intérieur", 
+      category: "Coiffeur", 
+      title: "Urgent : Coiffeur avec dortoir", 
+      description: "Besoin urgement d'un coiffeur à sikasso département de grand lahou avec dortoir", 
+      location: "Grand-Lahou, Sikasso", 
+      whatsapp: "2250700732532", 
+      likes: 8 
+    }
+  ];
 
-  const filteredOffers = jobOffers.filter(offer => 
-    offer.zone === activeZone && 
-    (activeCat === 'Tous' || offer.category === activeCat) &&
-    (offer.title.toLowerCase().includes(searchQuery.toLowerCase()) || offer.description.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
+  // LOGIQUE DE FILTRAGE MISE À JOUR :
+  // Si activeZone est null, on affiche tout. Si une zone est cliquée, on filtre.
+  const filteredOffers = jobOffers.filter(offer => {
+    const matchZone = activeZone ? offer.zone === activeZone : true;
+    const matchCat = activeCat === 'Tous' || offer.category === activeCat;
+    const matchSearch = 
+      offer.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      offer.description.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    return matchZone && matchCat && matchSearch;
+  });
 
   return (
     <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20 text-[#1e293b] relative">
@@ -121,14 +127,14 @@ const jobOffers = [
             </button>
             <button 
               onClick={() => setUserRole('Employeur')}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Employeur' ? 'bg-blue-600 text-white shadow-blue-200' : 'bg-white text-slate-400 hover:text-blue-600'}`}
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Employeur' ? 'bg-blue-600 text-white shadow-blue-200' : 'bg-[#ff4da6] text-white hover:text-blue-600'}`}
             >
               <Briefcase size={14} /> 
               <Link to="/espace-recruteur">Espace Recruteur</Link>
             </button>
           </div>
 
-          {/* BANDEAU COOKIES - DÉPLACÉ ICI */}
+          {/* BANDEAU COOKIES */}
           <AnimatePresence>
             {showCookies && (
               <motion.div 
@@ -169,7 +175,7 @@ const jobOffers = [
           </AnimatePresence>
 
           <h2 className="text-3xl md:text-5xl font-black mb-4">
-            Goorco<span className="text-blue-600">.com</span>
+            Goo<span className="text-[#ff4da6]">co</span><span className="text-blue-600">.com</span>
           </h2>
           
           <div className="inline-flex items-center gap-2 bg-[#e8fbf3] text-[#00b67a] px-4 py-1.5 rounded-full border border-[#00b67a]/20 mb-10">
@@ -197,13 +203,13 @@ const jobOffers = [
 
             <div className="flex bg-white p-1.5 rounded-2xl shadow-xl shadow-blue-900/5 w-full md:flex-1 border border-slate-200">
               <button 
-                onClick={() => setActiveZone('Abidjan')}
+                onClick={() => setActiveZone(activeZone === 'Abidjan' ? null : 'Abidjan')}
                 className={`flex-1 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all ${activeZone === 'Abidjan' ? 'bg-[#1e293b] text-white' : 'text-slate-400 hover:text-[#1e293b]'}`}
               >
                 Abidjan
               </button>
               <button 
-                onClick={() => setActiveZone('Intérieur')}
+                onClick={() => setActiveZone(activeZone === 'Intérieur' ? null : 'Intérieur')}
                 className={`flex-1 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all ${activeZone === 'Intérieur' ? 'bg-[#1e293b] text-white' : 'text-slate-400 hover:text-[#1e293b]'}`}
               >
                 Intérieur
@@ -215,7 +221,8 @@ const jobOffers = [
 
       <div className="max-w-6xl mx-auto px-6">
         <AnimatePresence mode="wait">
-          {activeZone ? (
+          {/* L'affichage se déclenche s'il y a des offres filtrées */}
+          {filteredOffers.length > 0 ? (
             <motion.div
               key="results"
               initial={{ opacity: 0, y: 20 }}
@@ -263,14 +270,13 @@ const jobOffers = [
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredOffers.length > 0 ? (
-                  filteredOffers.map((offer) => (
+                  {filteredOffers.map((offer) => (
                     <motion.div 
                       layout
                       key={offer.id}
                       className="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden group hover:shadow-2xl transition-all duration-500"
                     >
-                      <div className="h-40 bg-slate-50 relative flex items-center justify-center">
+                      <div className="h-40 bg-[#ff4da6]  relative flex items-center justify-center">
                         <div className="absolute top-4 right-4 bg-white/90 px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-2 text-slate-500">
                           <Heart size={14} className="group-hover:text-red-500 transition-colors" />
                           <span className="text-xs font-bold">{offer.likes}</span>
@@ -278,36 +284,57 @@ const jobOffers = [
                         <div className="text-5xl font-black text-slate-200 group-hover:text-blue-500/10 transition-all">Goorco</div>
                       </div>
 
-                      <div className="p-7">
-                        <div className="flex gap-2 mb-4">
-                          <span className={`text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-lg ${offer.category === 'Coiffeur' ? 'bg-orange-50 text-orange-600' : 'bg-purple-50 text-purple-600'}`}>
-                            {offer.category}
-                          </span>
-                          <span className="flex items-center gap-1 text-[9px] font-black uppercase tracking-widest px-3 py-1 bg-slate-100 text-slate-500 rounded-lg">
-                            <MapPin size={10} /> {offer.location}
-                          </span>
-                        </div>
-                        <h3 className="font-bold text-lg mb-2 leading-tight">{offer.title}</h3>
-                       
-                       <p className="text-slate-400 text-xs leading-relaxed mb-8 italic">
-  "{offer.description}"
-</p>
-                        <a 
-                          href={`https://wa.me/${offer.whatsapp}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-3 w-full bg-[#1e293b] hover:bg-blue-600 text-white font-bold py-4 rounded-2xl transition-all text-[11px] uppercase tracking-widest shadow-lg"
-                        >
-                          <MessageCircle size={16} /> Postuler maintenant
-                        </a>
-                      </div>
+                     {/* Remplacez tout le contenu de la div p-7 par ceci */}
+<div className="p-7">
+  {/* En-tête de l'offre : Catégorie et Localisation */}
+  <div className="flex flex-col gap-1 mb-4">
+    <div className="flex items-center gap-2 text-[13px] text-slate-500 font-medium">
+      <span>{offer.category}</span>
+      <span className="text-slate-300">•</span>
+      <span>{offer.location}</span>
+      <span className="text-slate-300">•</span>
+      <span className="text-blue-600">via Goorco</span>
+    </div>
+    <div className="flex items-center gap-2 mt-1">
+      <Briefcase size={14} className="text-slate-700" />
+      <span className="text-[13px] text-slate-700 font-medium">À plein temps</span>
+    </div>
+  </div>
+
+  {/* Titre style "Google Search" */}
+  <h3 className="font-semibold text-[20px] text-[#1a0dab] group-hover:underline mb-6 leading-snug">
+    {offer.title}
+  </h3>
+
+  {/* Section Description style image_b56723.jpg */}
+  <div className="space-y-4 mb-8">
+    <h4 className="text-[#202124] font-bold text-[18px]">Description du poste</h4>
+    <p className="text-[#3c4043] text-[14px] leading-relaxed font-normal">
+      {offer.description}
+    </p>
+    
+    {/* Optionnel : Ajout d'un simulateur de missions comme sur l'image */}
+    <div className="pt-2">
+      <p className="text-[#3c4043] text-[14px] font-medium mb-2">Missions principales :</p>
+      <ul className="text-[#3c4043] text-[14px] list-disc pl-5 space-y-1 opacity-80">
+        <li>Assurer le service client</li>
+        <li>Suivre les standards Goorco...</li>
+      </ul>
+    </div>
+  </div>
+
+  {/* Bouton d'action */}
+  <a 
+    href={`https://wa.me/${offer.whatsapp}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-3 w-full bg-[#1a73e8] hover:bg-[#1765cc] text-white font-bold py-3.5 rounded-full transition-all text-[14px] shadow-md"
+  >
+    Postuler sur WhatsApp
+  </a>
+</div>
                     </motion.div>
-                  ))
-                ) : (
-                  <div className="col-span-full py-10 text-center text-slate-400 text-sm font-medium">
-                    Aucun résultat trouvé pour votre recherche dans cette zone.
-                  </div>
-                )}
+                  ))}
               </div>
             </motion.div>
           ) : (
@@ -321,9 +348,9 @@ const jobOffers = [
                 <div className="bg-slate-50 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8">
                   <Search size={36} className="text-slate-300" />
                 </div>
-                <h3 className="font-bold text-2xl mb-3">Recherchez maintenant</h3>
+                <h3 className="font-bold text-2xl mb-3">Aucun résultat</h3>
                 <p className="text-slate-400 text-sm">
-                  Utilisez la barre de recherche ou choisissez votre zone ci-dessus.
+                  Nous n'avons trouvé aucune offre correspondant à vos critères actuels.
                 </p>
               </div>
             </motion.div>
