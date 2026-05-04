@@ -26,6 +26,28 @@ const HomePage = () => {
 
 const jobOffers = [
   { 
+    id: 9, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Stage en Esthétique (2 postes)", 
+    description: "Recherche de stagiaires en esthétique passionnées pour intégrer notre équipe à Angré. Prime de transport incluse.", 
+    location: "Angré", 
+    salary: "Prime de transport",
+    whatsapp: "2250596132058", 
+    likes: 10 
+  },
+  { 
+    id: 10, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Stage en Esthétique (2 postes)", 
+    description: "Recherche de stagiaires en esthétique pour notre salon à Yopougon. Prime de transport prévue.", 
+    location: "Yopougon", 
+    salary: "Prime de transport",
+    whatsapp: "2250596132058", 
+    likes: 7 
+  },
+  { 
     id: 1, 
     zone: "Abidjan", 
     category: "Coiffeur", 
@@ -33,7 +55,7 @@ const jobOffers = [
     description: "Besoin urgent de coiffeur assidu et patient qui habite a Yopougon Maroc ou aux alentours.", 
     location: " Yopougon Maroc", 
     salary: "À débattre",
-    whatsapp: "2250596659858", 
+    whatsapp: "2250596132058", 
     likes: 12 
   },
   { 
@@ -44,7 +66,7 @@ const jobOffers = [
     description: "Recherche d'un(e) coiffeur(se) spécialisé(e) dans la customisation et la pose de perruques. Disponibilité immédiate.", 
     location: " Bingerville", 
     salary: "100.000 FCFA",
-    whatsapp: "2250101747343", 
+    whatsapp: "2250596132058", 
     likes: 45 
   },
   { 
@@ -55,7 +77,7 @@ const jobOffers = [
     description: "J’ai besoin d’une coiffeuse qui maitrise bien les poses et une prothésiste ongulaire qui maîtrise toutes les techniques.", 
     location: " Yopougon", 
     salary: "90.000 FCFA",
-    whatsapp: "2250544639154",
+    whatsapp: "2250596132058",
     likes: 34 
   },
   { 
@@ -66,7 +88,7 @@ const jobOffers = [
     description: "Besoin de 2 filles pour faire pédicure manucure et soins de visage à Yop maroc et Treichville. De 8h à 20h.", 
     location: "Yopougon / Treichville", 
     salary: "80.000 FCFA",
-    whatsapp: "2250544639154", 
+    whatsapp: "2250596132058", 
     likes: 56 
   },
   { 
@@ -77,7 +99,7 @@ const jobOffers = [
     description: "Besoin d'une coiffeuse à Bassam avec dortoir disponible immédiatement.", 
     location: "Grand-Bassam", 
     salary: "50.000 FCFA",
-    whatsapp: "2250544639154", 
+    whatsapp: "2250596132058", 
     likes: 28 
   },
   { 
@@ -88,7 +110,7 @@ const jobOffers = [
     description: "Besoin d'une coiffeuse à abatta qui maîtrise surtout les pose perruque. Heure : 9h a 20h 30.", 
     location: " Abatta", 
     salary: "70.000 FCFA",
-    whatsapp: "2250544639154", 
+    whatsapp: "2250596132058", 
     likes: 12 
   },
   { 
@@ -99,7 +121,7 @@ const jobOffers = [
     description: "Besoin d'un coiffeur professionnel à abatta. Heure : 9h a 20h 30.", 
     location: " Abatta", 
     salary: "60.000 FCFA",
-    whatsapp: "2250544639154", 
+    whatsapp: "2250596132058", 
     likes: 15 
   },
   { 
