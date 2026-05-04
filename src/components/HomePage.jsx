@@ -292,8 +292,6 @@ const HomePage = () => {
       <span>{offer.category}</span>
       <span className="text-slate-300">•</span>
       <span>{offer.location}</span>
-      <span className="text-slate-300">•</span>
-      <span className="text-blue-600">via Goorco</span>
     </div>
     <div className="flex items-center gap-2 mt-1">
       <Briefcase size={14} className="text-slate-700" />
