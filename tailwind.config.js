@@ -16,6 +16,9 @@ export default {
         playfair: ["Playfair Display", "serif"],
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
+      animation: {
+        'pulse-soft': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      }
     },
   },
   plugins: [],
