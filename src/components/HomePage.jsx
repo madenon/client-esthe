@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Heart, CheckCircle, Zap, Search, ShieldCheck, Globe, Volume2, Users, Briefcase, Cookie, X, MessageCircle } from 'lucide-react';
+import { Heart, CheckCircle, Zap, Search, ShieldCheck, Globe, Volume2, Users, Briefcase, Cookie, X, MessageCircle, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import AdBanner from './AdBanner';
@@ -31,7 +31,7 @@ const jobOffers = [
     category: "Coiffeur", 
     title: "Urgent : Coiffeur assidu", 
     description: "Besoin urgent de coiffeur assidu et patient qui habite a Yopougon Maroc ou aux alentours.", 
-    location: "Abidjan, Yopougon Maroc", 
+    location: " Yopougon Maroc", 
     salary: "À débattre",
     whatsapp: "2250596659858", 
     likes: 12 
@@ -42,7 +42,7 @@ const jobOffers = [
     category: "Coiffeur", 
     title: "Expert(e) en Perruques & Customisation", 
     description: "Recherche d'un(e) coiffeur(se) spécialisé(e) dans la customisation et la pose de perruques. Disponibilité immédiate.", 
-    location: "Abidjan, Bingerville", 
+    location: " Bingerville", 
     salary: "100.000 FCFA",
     whatsapp: "2250101747343", 
     likes: 45 
@@ -53,7 +53,7 @@ const jobOffers = [
     category: "Coiffeur", 
     title: "Besoin coiffeuse et prothésiste", 
     description: "J’ai besoin d’une coiffeuse qui maitrise bien les poses et une prothésiste ongulaire qui maîtrise toutes les techniques.", 
-    location: "Abidjan, Yopougon", 
+    location: " Yopougon", 
     salary: "90.000 FCFA",
     whatsapp: "2250544639154",
     likes: 34 
@@ -86,7 +86,7 @@ const jobOffers = [
     category: "Coiffeur", 
     title: "Coiffeuse experte en poses", 
     description: "Besoin d'une coiffeuse à abatta qui maîtrise surtout les pose perruque. Heure : 9h a 20h 30.", 
-    location: "Abidjan, Abatta", 
+    location: " Abatta", 
     salary: "70.000 FCFA",
     whatsapp: "2250544639154", 
     likes: 12 
@@ -97,7 +97,7 @@ const jobOffers = [
     category: "Coiffeur", 
     title: "Coiffeur professionnel", 
     description: "Besoin d'un coiffeur professionnel à abatta. Heure : 9h a 20h 30.", 
-    location: "Abidjan, Abatta", 
+    location: " Abatta", 
     salary: "60.000 FCFA",
     whatsapp: "2250544639154", 
     likes: 15 
@@ -110,7 +110,7 @@ const jobOffers = [
     description: "Besoin urgement d'un coiffeur à sikasso département de grand lahou avec dortoir.", 
     location: "Grand-Lahou, Sikasso", 
     salary: "À débattre",
-    whatsapp: "2250700732532", 
+    whatsapp: "2250596132058", 
     likes: 8 
   }
 ];
@@ -254,7 +254,7 @@ const jobOffers = [
                     className="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden group hover:shadow-2xl transition-all duration-500"
                   >
                     {/* Header Image */}
-                    <div className="h-40 bg-[#ff4da6] relative flex items-center justify-center">
+                    <div className="h-40 bg-[#ff4da6]/40 relative flex items-center justify-center">
                       <div className="absolute top-4 right-4 bg-white/90 px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-2 text-slate-500">
                         <Heart size={14} className="group-hover:text-red-500 transition-colors" />
                         <span className="text-xs font-bold">{offer.likes}</span>
@@ -262,45 +262,62 @@ const jobOffers = [
                       <div className="text-5xl font-black text-white/20 uppercase tracking-tighter">Goorco</div>
                     </div>
 
-                    <div className="p-7">
-                      <div className="flex flex-col gap-1 mb-4">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2 text-[12px] text-slate-500 font-medium">
-                            <span className="bg-slate-100 px-2 py-0.5 rounded text-slate-600 uppercase text-[10px] font-bold tracking-wider">{offer.category}</span>
-                            <span className="text-slate-300">•</span>
-                            <span>{offer.location}</span>
-                          </div>
-                          {/* Badge Salaire */}
-                          <span className="bg-emerald-50 text-emerald-600 px-2 py-1 rounded-lg text-[10px] font-black border border-emerald-100">
-                            {offer.salary}
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-2 mt-2">
-                          <Briefcase size={14} className="text-slate-700" />
-                          <span className="text-[13px] text-slate-700 font-medium">Temps plein</span>
-                        </div>
-                      </div>
+                   <div className="p-7">
+  <div className="flex flex-col gap-1 mb-4">
+    <div className="flex items-center justify-between">
+      <div className="flex items-center gap-2">
+        {/* Badge Catégorie - Discret */}
+        <span className="bg-slate-100 px-2 py-0.5 rounded text-slate-500 uppercase text-[9px] font-bold tracking-wider">
+          {offer.category}
+        </span>
+        
+        {/* Localisation - L'ACCENT EST ICI */}
+        <div className="flex items-center gap-1.5 bg-[#D25A08] text-white px-3 py-1 rounded-xl shadow-md shadow-blue-200">
+          <MapPin size={14} className="shrink-0" />
+          <span className="text-[13px] font-black uppercase tracking-tight">
+            {offer.location}
+          </span>
+        </div>
+      </div>
 
-                      <h3 className="font-semibold text-[20px] text-[#1a0dab] group-hover:underline mb-4 leading-snug min-h-[56px]">
-                        {offer.title}
-                      </h3>
+      {/* Badge Salaire */}
+      <span className="bg-emerald-50 text-emerald-600 px-2 py-1 rounded-lg text-[10px] font-black border border-emerald-100">
+        {offer.salary}
+      </span>
+    </div>
 
-                      <div className="space-y-3 mb-8">
-                        <h4 className="text-[#202124] font-bold text-[16px]">Description</h4>
-                        <p className="text-[#3c4043] text-[13px] leading-relaxed line-clamp-3">
-                          {offer.description}
-                        </p>
-                      </div>
+    <div className="flex items-center gap-2 mt-2">
+      <Briefcase size={14} className="text-slate-700" />
+      <span className="text-[13px] text-slate-700 font-medium">Temps plein</span>
+    </div>
+  </div>
 
-                      <a 
-                        href={`https://wa.me/${offer.whatsapp}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-3 w-full bg-[#1a73e8] hover:bg-[#1765cc] text-white font-bold py-3.5 rounded-2xl transition-all text-[14px] shadow-lg shadow-blue-200"
-                      >
-                        <MessageCircle size={18} /> Postuler sur WhatsApp
-                      </a>
-                    </div>
+  <h3 className="font-semibold text-[20px] text-[#1a0dab] group-hover:underline mb-4 leading-snug min-h-[56px]">
+    {offer.title}
+  </h3>
+
+  <div className="space-y-3 mb-8">
+    <h4 className="text-[#202124] font-bold text-[16px]">Description</h4>
+    <p className="text-[#3c4043] text-[13px] leading-relaxed line-clamp-3">
+      {offer.description}
+    </p>
+  </div>
+
+  <a 
+    href={`https://api.whatsapp.com/send?phone=${offer.whatsapp}&text=${encodeURIComponent(
+      `Bonjour, je suis intéressé(e) par votre offre sur Goorco.com :\n\n` +
+      `*Poste :* ${offer.title}\n` +
+      `*Lieu :* ${offer.location}\n` +
+      `*Salaire :* ${offer.salary}\n\n` +
+      `Est-elle toujours disponible ?`
+    )}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-3 w-full bg-[#1a73e8] hover:bg-[#1765cc] text-white font-bold py-3.5 rounded-2xl transition-all text-[14px] shadow-lg shadow-blue-200"
+  >
+    <MessageCircle size={18} /> Postuler sur WhatsApp
+  </a>
+</div>
                   </motion.div>
                 ))}
               </div>
