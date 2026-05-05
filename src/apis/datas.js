@@ -1,0 +1,205 @@
+
+
+ 
+
+  export const jobOffers = [
+  { 
+    id: 9, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Stage en Esthétique (2 postes)", 
+    description: "Recherche de stagiaires en esthétique passionnées pour intégrer notre équipe à Angré. Prime de transport incluse.", 
+    location: "Angré", 
+    salary: "Prime de transport",
+    whatsapp: "2250596132058", 
+    likes: 10 
+  },
+  { 
+    id: 10, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Stage en Esthétique (2 postes)", 
+    description: "Recherche de stagiaires en esthétique pour notre salon à Yopougon. Prime de transport prévue.", 
+    location: "Yopougon", 
+    salary: "Prime de transport",
+    whatsapp: "2250596132058", 
+    likes: 7 
+  },
+  { 
+    id: 1, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Urgent : Coiffeur assidu", 
+    description: "Besoin urgent de coiffeur assidu et patient qui habite a Yopougon Maroc ou aux alentours.", 
+    location: " Yopougon Maroc", 
+    salary: "À débattre",
+    whatsapp: "2250596132058", 
+    likes: 12 
+  },
+  { 
+    id: 8, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Expert(e) en Perruques & Customisation", 
+    description: "Recherche d'un(e) coiffeur(se) spécialisé(e) dans la customisation et la pose de perruques. Disponibilité immédiate.", 
+    location: " Bingerville", 
+    salary: "100.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 45 
+  },
+  { 
+    id: 2, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Besoin coiffeuse et prothésiste", 
+    description: "J’ai besoin d’une coiffeuse qui maitrise bien les poses et une prothésiste ongulaire qui maîtrise toutes les techniques.", 
+    location: " Yopougon", 
+    salary: "90.000 FCFA",
+    whatsapp: "2250596132058",
+    likes: 34 
+  },
+  { 
+    id: 3, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Besoin de 2 filles (Pédicure/Soins)", 
+    description: "Besoin de 2 filles pour faire pédicure manucure et soins de visage à Yop maroc et Treichville. De 8h à 20h.", 
+    location: "Yopougon / Treichville", 
+    salary: "80.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 56 
+  },
+  { 
+    id: 4, 
+    zone: "Intérieur", 
+    category: "Coiffeur", 
+    title: "Coiffeuse à Bassam", 
+    description: "Besoin d'une coiffeuse à Bassam avec dortoir disponible immédiatement.", 
+    location: "Grand-Bassam", 
+    salary: "50.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 28 
+  },
+  { 
+    id: 5, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Coiffeuse experte en poses", 
+    description: "Besoin d'une coiffeuse à abatta qui maîtrise surtout les pose perruque. Heure : 9h a 20h 30.", 
+    location: " Abatta", 
+    salary: "70.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 12 
+  },
+  { 
+    id: 6, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Coiffeur professionnel", 
+    description: "Besoin d'un coiffeur professionnel à abatta. Heure : 9h a 20h 30.", 
+    location: " Abatta", 
+    salary: "60.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 15 
+  },
+  { 
+    id: 7, 
+    zone: "Intérieur", 
+    category: "Coiffeur", 
+    title: "Urgent : Coiffeur avec dortoir", 
+    description: "Besoin urgement d'un coiffeur à sikasso département de grand lahou avec dortoir.", 
+    location: "Grand-Lahou, Sikasso", 
+    salary: "À débattre",
+    whatsapp: "2250596132058", 
+    likes: 8 
+  },
+   { 
+    id: 11, 
+    zone: "Abidjan", 
+    category: "Mixte", 
+    title: "Recrutement Zenade Beauty", 
+    description: "Coiffeuse pro maîtrisant tresses, perruques, soins visage et teinture.", 
+    location: "Angré 8ème tranche", 
+    salary: "À discuter",
+    whatsapp: "2250596132058", 
+    likes: 0 
+  },
+  { 
+    id: 12, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Coiffeur - Treichville", 
+    description: "Recherche coiffeur pour salon. Libre gérance possible.", 
+    location: "Treichville / Marcory", 
+    salary: "70.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 0 
+  },
+  { 
+    id: 13, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Recrutement Multiple CHU", 
+    description: "Recherche prothésiste, coiffeuse et technicienne de cils.", 
+    location: "Angré CHU", 
+    salary: "À débattre",
+    whatsapp: "2250596132058", 
+    likes: 0 
+  },
+  { 
+    id: 14, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Expert Spa & Extensions", 
+    description: "Soins corps/visage et extensions de cils (Russe/Hybride).", 
+    location: "Riviera Mbadon", 
+    salary: "200.000 - 250.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 0 
+  },
+  { 
+    id: 15, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Prothésiste Ongulaire Pro", 
+    description: "Besoin urgent de deux prothésistes qualifiées.", 
+    location: "Abobo Baoulé", 
+    salary: "70.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 0 
+  },
+  { 
+    id: 16, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Coiffeuse Perruques & Tresses", 
+    description: "Maîtrise parfaite des poses et tresses pour salon.", 
+    location: "Yopougon", 
+    salary: "90.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 0 
+  },
+  { 
+    id: 17, 
+    zone: "Abidjan", 
+    category: "Mixte", 
+    title: "Multi-postes Faya Cité SIR", 
+    description: "Recherche apprenti (50k), prothésiste (70k) et coiffeur (80k).", 
+    location: "Faya Cité SIR", 
+    salary: "50.000 - 80.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 0 
+  },
+  { 
+    id: 18, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Pédicuriste & Capsules", 
+    description: "Spécialiste pose capsules et vernis permanent sur pieds.", 
+    location: "Angré 8ème tranche", 
+    salary: "90.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 0 
+  }
+
+];

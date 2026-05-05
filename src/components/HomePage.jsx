@@ -4,6 +4,7 @@ import { Heart, CheckCircle, Zap, Search, ShieldCheck, Globe, Volume2, Users, Br
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import AdBanner from './AdBanner';
+import { jobOffers } from '../apis/datas';
 
 const HomePage = () => {
   const [activeZone, setActiveZone] = useState(null); 
@@ -24,118 +25,7 @@ const HomePage = () => {
     setShowCookies(false);
   };
 
-const jobOffers = [
-  { 
-    id: 9, 
-    zone: "Abidjan", 
-    category: "Esthétique", 
-    title: "Stage en Esthétique (2 postes)", 
-    description: "Recherche de stagiaires en esthétique passionnées pour intégrer notre équipe à Angré. Prime de transport incluse.", 
-    location: "Angré", 
-    salary: "Prime de transport",
-    whatsapp: "2250596132058", 
-    likes: 10 
-  },
-  { 
-    id: 10, 
-    zone: "Abidjan", 
-    category: "Esthétique", 
-    title: "Stage en Esthétique (2 postes)", 
-    description: "Recherche de stagiaires en esthétique pour notre salon à Yopougon. Prime de transport prévue.", 
-    location: "Yopougon", 
-    salary: "Prime de transport",
-    whatsapp: "2250596132058", 
-    likes: 7 
-  },
-  { 
-    id: 1, 
-    zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Urgent : Coiffeur assidu", 
-    description: "Besoin urgent de coiffeur assidu et patient qui habite a Yopougon Maroc ou aux alentours.", 
-    location: " Yopougon Maroc", 
-    salary: "À débattre",
-    whatsapp: "2250596132058", 
-    likes: 12 
-  },
-  { 
-    id: 8, 
-    zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Expert(e) en Perruques & Customisation", 
-    description: "Recherche d'un(e) coiffeur(se) spécialisé(e) dans la customisation et la pose de perruques. Disponibilité immédiate.", 
-    location: " Bingerville", 
-    salary: "100.000 FCFA",
-    whatsapp: "2250596132058", 
-    likes: 45 
-  },
-  { 
-    id: 2, 
-    zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Besoin coiffeuse et prothésiste", 
-    description: "J’ai besoin d’une coiffeuse qui maitrise bien les poses et une prothésiste ongulaire qui maîtrise toutes les techniques.", 
-    location: " Yopougon", 
-    salary: "90.000 FCFA",
-    whatsapp: "2250596132058",
-    likes: 34 
-  },
-  { 
-    id: 3, 
-    zone: "Abidjan", 
-    category: "Esthétique", 
-    title: "Besoin de 2 filles (Pédicure/Soins)", 
-    description: "Besoin de 2 filles pour faire pédicure manucure et soins de visage à Yop maroc et Treichville. De 8h à 20h.", 
-    location: "Yopougon / Treichville", 
-    salary: "80.000 FCFA",
-    whatsapp: "2250596132058", 
-    likes: 56 
-  },
-  { 
-    id: 4, 
-    zone: "Intérieur", 
-    category: "Coiffeur", 
-    title: "Coiffeuse à Bassam", 
-    description: "Besoin d'une coiffeuse à Bassam avec dortoir disponible immédiatement.", 
-    location: "Grand-Bassam", 
-    salary: "50.000 FCFA",
-    whatsapp: "2250596132058", 
-    likes: 28 
-  },
-  { 
-    id: 5, 
-    zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Coiffeuse experte en poses", 
-    description: "Besoin d'une coiffeuse à abatta qui maîtrise surtout les pose perruque. Heure : 9h a 20h 30.", 
-    location: " Abatta", 
-    salary: "70.000 FCFA",
-    whatsapp: "2250596132058", 
-    likes: 12 
-  },
-  { 
-    id: 6, 
-    zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Coiffeur professionnel", 
-    description: "Besoin d'un coiffeur professionnel à abatta. Heure : 9h a 20h 30.", 
-    location: " Abatta", 
-    salary: "60.000 FCFA",
-    whatsapp: "2250596132058", 
-    likes: 15 
-  },
-  { 
-    id: 7, 
-    zone: "Intérieur", 
-    category: "Coiffeur", 
-    title: "Urgent : Coiffeur avec dortoir", 
-    description: "Besoin urgement d'un coiffeur à sikasso département de grand lahou avec dortoir.", 
-    location: "Grand-Lahou, Sikasso", 
-    salary: "À débattre",
-    whatsapp: "2250596132058", 
-    likes: 8 
-  }
-];
+
   // Logique de filtrage
   const filteredOffers = jobOffers.filter(offer => {
     const matchZone = activeZone ? offer.zone === activeZone : true;
@@ -166,7 +56,7 @@ const jobOffers = [
             </Link>
             <Link 
               to="/espace-recruteur"
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Employeur' ? 'bg-[#ff4da6] text-white' : 'bg-white text-slate-400 hover:text-[#ff4da6]'}`}
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Employeur' ? 'bg-[#ff4da6] text-white' : 'bg-[#ff4da6] text-white  hover:text-[#ff4da6]'}`}
               onClick={() => setUserRole('Employeur')}
             >
               <Briefcase size={14} /> Espace Recruteur

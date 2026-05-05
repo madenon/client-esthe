@@ -14,13 +14,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#0f172a] font-montserrat text-white shadow-xl sticky top-0 z-50 border-b border-slate-800">
+    <nav className="bg-[#0f172a]/10 font-montserrat text-white shadow-xl sticky top-0 z-50 border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-20">
           
 <Link to="/" className="flex items-center gap-4 cursor-pointer group">
   {/* Conteneur de l'icône PNG */}
-  <div className="relative flex items-center justify-center w-12 h-12 bg-gradient-to-br from-slate-800 to-[#1e293b] rounded-xl shadow-lg shadow-blue-500/10 group-hover:rotate-6 transition-transform duration-300 border border-white/5">
+  <div className="relative flex items-center justify-center w-12 h-12  rounded-xl shadow-lg  border-white/5">
     <img 
       src="/hero.png" 
       alt="Logo Goorcoco Cosmétique" 
@@ -34,7 +34,7 @@ const Navbar = () => {
   <div className="flex flex-col justify-center">
     <div className="flex items-center gap-1.5">
       <span className="font-black text-2xl tracking-tighter leading-none">
-        <span className="text-white">Goor</span>
+        <span className="text-blue-700">Goor</span>
         <span className="text-[#ff4da6]">co</span>
         <span className="text-blue-500">.</span>
       </span>
@@ -50,7 +50,7 @@ const Navbar = () => {
 </Link>
 
           {/* MENU DESKTOP */}
-          <div className="hidden md:flex items-center space-x-10">
+          <div className="hidden md:flex items-center space-x-10 text-black">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
