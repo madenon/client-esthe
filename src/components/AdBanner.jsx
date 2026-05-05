@@ -8,8 +8,8 @@ const AdBanner = () => {
 
   const slides = useMemo(() => [
     {
-      icon: <ShoppingBag className="text-orange-400" />,
-      title: <>Besoin de <span className="text-orange-500">matériel pro ?</span></>,
+      icon: <ShoppingBag className="text-blue-400" />,
+      title: <>Besoin de <span className="text-blue-500">matériel pro ?</span></>,
       description: "Liquidation d'un stock de mèches humaines et synthétiques suite à fermeture de boutique",
       buttonText: "Voir les annonces",
       link: "/blog",
@@ -43,7 +43,7 @@ const AdBanner = () => {
       viewport={{ once: true }}
       className="max-w-7xl mx-auto px-4 md:px-6 mb-12"
     >
-      <div className="relative overflow-hidden rounded-[2.5rem] bg-white p-8 md:p-12 shadow-2xl border border-slate-800 min-h-[400px] md:min-h-[320px] flex items-center">
+      <div className="relative overflow-hidden rounded-[2.5rem] bg-blue-700 p-8 md:p-12 shadow-2xl border border-slate-800 min-h-[400px] md:min-h-[320px] flex items-center">
         
         {/* Effet de fond lumineux dynamique */}
         <div className={`absolute top-0 right-0 w-96 h-96 rounded-full blur-[100px] -mr-32 -mt-32 transition-colors duration-1000 ${slides[index].accentColor}`} />
