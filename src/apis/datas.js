@@ -28,7 +28,7 @@ export const jobOffers = [
     salary: "100.000 FCFA",
     whatsapp: "2250596132058", 
     likes: 45,
-    isUrgent: false,
+    isUrgent: true,
     hasDortoir: false,
     isPremium: true, // Exemple d'annonce partenaire (Bloc 5)
     date: "2024-05-17"
@@ -43,7 +43,7 @@ export const jobOffers = [
     salary: "90.000 FCFA",
     whatsapp: "2250596132058",
     likes: 34,
-    isUrgent: false,
+    isUrgent: true,
     hasDortoir: false,
     isPremium: false,
     date: "2024-05-16"
