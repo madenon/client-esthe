@@ -1,13 +1,13 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // Ajout de l'icône Briefcase
+import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Définition des liens de navigation
   const navLinks = [
     { name: 'Accueil', href: '/' },
-    // { name: 'RECRUTEMENT', href: '/recruteur' },
     { name: 'Blog', href: '/blog' },
     { name: 'À propos', href: '/a-propos' },
     { name: 'Contact', href: '/contact' },
@@ -18,37 +18,33 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-20">
           
-<Link to="/" className="flex items-center gap-4 cursor-pointer group">
-  {/* Conteneur de l'icône PNG */}
-  <div className="relative flex items-center justify-center w-12 h-12  rounded-xl shadow-lg  border-white/5">
-    <img 
-      src="/hero.png" 
-      alt="Logo Goorcoco Cosmétique" 
-      className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110" 
-    />
-    {/* Point lumineux décoratif */}
-    <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-[#1e293b] shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
-  </div>
+          {/* LOGO AVEC REDIRECTION */}
+          <Link to="/" className="flex items-center gap-4 cursor-pointer group">
+            <div className="relative flex items-center justify-center w-12 h-12 rounded-xl shadow-lg border-white/5">
+              <img 
+                src="/hero.png" 
+                alt="Logo Goorcoco Cosmétique" 
+                className="w-10 h-10 object-contain transition-transform duration-300 group-hover:scale-110" 
+              />
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-[#1e293b] shadow-[0_0_8px_rgba(59,130,246,0.5)]" />
+            </div>
 
-  {/* Texte du Logo mis à jour */}
-  <div className="flex flex-col justify-center">
-    <div className="flex items-center gap-1.5">
-      <span className="font-black text-2xl tracking-tighter leading-none">
-        <span className="text-blue-700">Goor</span>
-        <span className="text-[#ff4da6]">co</span>
-      </span>
-    </div>
-    
-    {/* Slogan en sous-titre */}
-    <div className="flex items-center gap-1 mt-1">
-      <span className="text-[9px] font-medium text-[#ff4da6] uppercase tracking-[0.2em] leading-none">
-        Coiffure <span className="text-blue-500/50">•</span> Esthétique <span className="text-blue-500/50">•</span> Opportunité
-      </span>
-    </div>
-  </div>
-</Link>
+            <div className="flex flex-col justify-center">
+              <div className="flex items-center gap-1.5">
+                <span className="font-black text-2xl tracking-tighter leading-none">
+                  <span className="text-blue-700">Goor</span>
+                  <span className="text-[#ff4da6]">co</span>
+                </span>
+              </div>
+              <div className="flex items-center gap-1 mt-1">
+                <span className="text-[9px] font-medium text-[#ff4da6] uppercase tracking-[0.2em] leading-none">
+                  Coiffure <span className="text-blue-500/50">•</span> Esthétique <span className="text-blue-500/50">•</span> Opportunité
+                </span>
+              </div>
+            </div>
+          </Link>
 
-          {/* MENU DESKTOP */}
+          {/* MENU DESKTOP - Utilisation de 'to' au lieu de 'href' */}
           <div className="hidden md:flex items-center space-x-10 text-black">
             {navLinks.map((link) => (
               <Link
@@ -60,7 +56,6 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-           
           </div>
 
           {/* BOUTON MOBILE */}
@@ -87,18 +82,17 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                onClick={() => setIsOpen(false)}
+                onClick={() => setIsOpen(false)} // IMPORTANT : Ferme le menu après le clic
                 className="text-lg font-medium text-slate-300 hover:text-blue-400 border-b border-slate-800/50 pb-2 transition-all"
               >
                 {link.name}
               </Link>
             ))}
-           
           </div>
         </div>
       </div>
       
-      {/* Overlay pour le menu mobile */}
+      {/* Overlay pour fermer le menu en cliquant à côté */}
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/60 z-[55] md:hidden backdrop-blur-sm"
