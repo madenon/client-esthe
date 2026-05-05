@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#0f172a]/10 font-montserrat text-white shadow-xl sticky top-0 z-50 border-b border-slate-800">
+    <nav className="bg-[#0f172a]/10 font-montserrat text-white shadow-xl sticky top-0 z-50 ">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-20">
           
@@ -36,7 +36,6 @@ const Navbar = () => {
       <span className="font-black text-2xl tracking-tighter leading-none">
         <span className="text-blue-700">Goor</span>
         <span className="text-[#ff4da6]">co</span>
-        <span className="text-blue-500">.</span>
       </span>
     </div>
     
