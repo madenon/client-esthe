@@ -147,7 +147,7 @@ const HomePage = () => {
       className="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden group hover:shadow-2xl transition-all duration-500 text-slate-800 flex flex-col"
     >
       {/* HEADER DE LA CARTE */}
-      <div className="h-32 bg-slate-50 relative flex items-center justify-center overflow-hidden">
+      <div className="h-32 bg-[#ff4da6]/90 relative flex items-center justify-center overflow-hidden">
         {/* Badge Urgent - S'affiche si offer.isUrgent est vrai */}
         {offer.isUrgent && (
           <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 animate-pulse z-10">
