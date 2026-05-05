@@ -8,7 +8,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Accueil', href: '/' },
     // { name: 'RECRUTEMENT', href: '/recruteur' },
-    { name: 'Blog de ventes', href: '/blog' },
+    { name: 'Blog', href: '/blog' },
     { name: 'À propos', href: '/a-propos' },
     { name: 'Contact', href: '/contact' },
   ];
