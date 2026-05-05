@@ -38,7 +38,7 @@ const HomePage = () => {
               <Users size={14} /> Espace Candidat
             </button>
             <button 
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Employeur' ? 'bg-[#ff4da6] text-white' : 'bg-white text-slate-400'}`}
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Employeur' ? 'bg-white text-[#ff4da6]' : 'bg-[#ff4da6] text-white'}`}
               onClick={() => setUserRole('Employeur')}
             >
               <Briefcase size={14} /> Espace Recruteur
@@ -62,12 +62,12 @@ const HomePage = () => {
               />
             </div>
 
-            <div className="flex bg-white p-1.5 rounded-2xl shadow-xl shadow-blue-900/5 w-full md:flex-1 border border-slate-200">
+            <div className="flex bg-blue-600 p-1.5 rounded-2xl shadow-xl shadow-blue-900/5 w-full md:flex-1 border border-slate-200">
               {['Abidjan', 'Intérieur'].map((zone) => (
                 <button 
                   key={zone}
                   onClick={() => setActiveZone(activeZone === zone ? null : zone)}
-                  className={`flex-1 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all ${activeZone === zone ? 'bg-[#1e293b] text-white' : 'text-slate-400 hover:text-[#1e293b]'}`}
+                  className={`flex-1 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all ${activeZone === zone ? 'bg-[#1e293b] text-white' : 'text-white hover:text-[#1e293b]'}`}
                 >
                   {zone}
                 </button>
