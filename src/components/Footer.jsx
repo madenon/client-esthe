@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="flex items-center gap-3 group">
-                <div className="relative p-1 bg-gradient-to-tr from-blue-600 to-blue-400 rounded-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="relative p-1 0 rounded-lg shadow-lg ">
                   <img 
                     className="w-10 h-10 object-contain bg-[#0f172a] rounded-md p-1" 
                     src="/hero.png" 
@@ -22,7 +22,7 @@ const Footer = () => {
                   <span className="font-black text-2xl tracking-tighter uppercase leading-none">
                     Goor<span className="text-[#ff4da6]">co</span>
                   </span>
-                  <span className="text-[10px] text-blue-400 tracking-[0.2em] font-light uppercase">
+                  <span className="text-[10px] text-[#ff4da6]tracking-[0.2em] font-light uppercase">
                    Coiffure • Esthétique • Opportunité
                   </span>
                 </div>
