@@ -26,50 +26,36 @@ const HomePage = () => {
     <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20 text-[#1e293b] relative">
       <AdBanner />
       
-      {/* SECTION HERO */}
-      <section className="px-6 py-12 text-center">
+       <section className="px-6 py-12 text-center">
         <div className="max-w-4xl mx-auto">
           
-          {/* SÉLECTEUR DE RÔLE */}
+          {/* SÉLECTEUR DE RÔLE (Inchangé) */}
           <div className="flex items-center justify-center gap-4 mb-8">
-            <Link 
-              to="/espace-candidat"
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Candidat' ? 'bg-blue-600 text-white shadow-blue-200' : 'bg-white text-slate-400 hover:text-blue-600'}`}
+            <button 
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Candidat' ? 'bg-blue-600 text-white' : 'bg-white text-slate-400'}`}
               onClick={() => setUserRole('Candidat')}
             >
               <Users size={14} /> Espace Candidat
-            </Link>
-            <Link 
-              to="/espace-recruteur"
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Employeur' ? 'bg-[#ff4da6] text-white' : 'bg-[#ff4da6] text-white hover:text-[#ff4da6]'}`}
+            </button>
+            <button 
+              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Employeur' ? 'bg-[#ff4da6] text-white' : 'bg-white text-slate-400'}`}
               onClick={() => setUserRole('Employeur')}
             >
               <Briefcase size={14} /> Espace Recruteur
-            </Link>
+            </button>
           </div>
 
           <h2 className="text-3xl md:text-5xl font-black mb-4 text-slate-900">
             Goo<span className="text-[#ff4da6]">co</span><span className="text-blue-600">.com</span>
           </h2>
-          
-          <div className="inline-flex items-center gap-2 bg-[#e8fbf3] text-[#00b67a] px-4 py-1.5 rounded-full border border-[#00b67a]/20 mb-10">
-            <CheckCircle size={14} />
-            <span className="text-[10px] font-bold uppercase tracking-wider">Plateforme Vérifiée</span>
-          </div>
-
-          <p className="text-slate-500 mb-8 font-medium">
-            {userRole === 'Candidat' 
-              ? "Trouvez votre prochain emploi en un clic parmi les meilleurs salons." 
-              : "Recrutez les meilleurs talents de Côte d'Ivoire en quelques secondes."}
-          </p>
 
           {/* BARRE DE RECHERCHE & FILTRE ZONE */}
-          <div className="flex flex-col md:flex-row items-center gap-4 max-w-2xl mx-auto mb-12">
+          <div className="flex flex-col md:flex-row items-center gap-4 max-w-2xl mx-auto mb-10">
             <div className="relative w-full md:flex-[1.5]">
               <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
               <input 
                 type="text"
-                placeholder="Rechercher un poste, un salon..."
+                placeholder="Rechercher (ex: Yopougon, Coiffeuse...)"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-white pl-14 pr-6 py-4 rounded-2xl shadow-xl shadow-blue-900/5 border border-slate-200 focus:outline-none focus:border-blue-400 text-sm"
@@ -77,19 +63,29 @@ const HomePage = () => {
             </div>
 
             <div className="flex bg-white p-1.5 rounded-2xl shadow-xl shadow-blue-900/5 w-full md:flex-1 border border-slate-200">
-              <button 
-                onClick={() => setActiveZone(activeZone === 'Abidjan' ? null : 'Abidjan')}
-                className={`flex-1 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all ${activeZone === 'Abidjan' ? 'bg-[#1e293b] text-white' : 'text-slate-400 hover:text-[#1e293b]'}`}
-              >
-                Abidjan
-              </button>
-              <button 
-                onClick={() => setActiveZone(activeZone === 'Intérieur' ? null : 'Intérieur')}
-                className={`flex-1 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all ${activeZone === 'Intérieur' ? 'bg-[#1e293b] text-white' : 'text-slate-400 hover:text-[#1e293b]'}`}
-              >
-                Intérieur
-              </button>
+              {['Abidjan', 'Intérieur'].map((zone) => (
+                <button 
+                  key={zone}
+                  onClick={() => setActiveZone(activeZone === zone ? null : zone)}
+                  className={`flex-1 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all ${activeZone === zone ? 'bg-[#1e293b] text-white' : 'text-slate-400 hover:text-[#1e293b]'}`}
+                >
+                  {zone}
+                </button>
+              ))}
             </div>
+          </div>
+
+          {/* NOUVEAU : FILTRE PAR CATÉGORIE (TRÈS IMPORTANT) */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {['Tous', 'Coiffeur', 'Esthétique', 'Mixte'].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCat(cat)}
+                className={`px-5 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all border ${activeCat === cat ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-500 hover:border-blue-200'}`}
+              >
+                {cat}
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -142,75 +138,67 @@ const HomePage = () => {
                 </div>
               </div>
 
-              {/* GRILLE DES OFFRES */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredOffers.map((offer) => (
-                  <motion.div 
-                    layout
-                    key={offer.id}
-                    className="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden group hover:shadow-2xl transition-all duration-500 text-slate-800"
-                  >
-                    <div className="h-40 bg-[#ff4da6]/40 relative flex items-center justify-center">
-                      <div className="absolute top-4 right-4 bg-white/90 px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-2 text-slate-500">
-                        <Heart size={14} className="group-hover:text-red-500 transition-colors" />
-                        <span className="text-xs font-bold">{offer.likes}</span>
-                      </div>
-                      <div className="text-5xl font-black text-white/20 uppercase tracking-tighter">Goorco</div>
-                    </div>
+             {/* GRILLE DES OFFRES AMÉLIORÉE */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {filteredOffers.map((offer) => (
+    <motion.div 
+      layout
+      key={offer.id}
+      className="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden group hover:shadow-2xl transition-all duration-500 text-slate-800 flex flex-col"
+    >
+      {/* HEADER DE LA CARTE */}
+      <div className="h-32 bg-slate-50 relative flex items-center justify-center overflow-hidden">
+        {/* Badge Urgent - S'affiche si offer.isUrgent est vrai */}
+        {offer.isUrgent && (
+          <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 animate-pulse z-10">
+            <Zap size={12} fill="currentColor" /> Urgent
+          </div>
+        )}
+        
+        <div className="absolute top-4 right-4 bg-white/90 px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-2 text-slate-500">
+          <Heart size={14} className="group-hover:text-red-500 transition-colors cursor-pointer" />
+          <span className="text-xs font-bold">{offer.likes}</span>
+        </div>
+        <div className="text-4xl font-black text-slate-200 uppercase tracking-tighter">Goorco</div>
+      </div>
 
-                    <div className="p-7">
-                      <div className="flex flex-col gap-1 mb-4">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <span className="bg-slate-100 px-2 py-0.5 rounded text-slate-500 uppercase text-[9px] font-bold tracking-wider">
-                              {offer.category}
-                            </span>
-                            <div className="flex items-center gap-1.5 bg-[#D25A08] text-white px-3 py-1 rounded-xl shadow-md">
-                              <MapPin size={14} className="shrink-0" />
-                              <span className="text-[13px] font-black uppercase tracking-tight">
-                                {offer.location}
-                              </span>
-                            </div>
-                          </div>
-                          <span className="bg-emerald-50 text-emerald-600 px-2 py-1 rounded-lg text-[10px] font-black border border-emerald-100">
-                            {offer.salary}
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-2 mt-2 text-slate-700">
-                          <Briefcase size={14} />
-                          <span className="text-[13px] font-medium">Temps plein</span>
-                        </div>
-                      </div>
+      {/* CONTENU DE LA CARTE */}
+      <div className="p-7 flex flex-col flex-grow">
+        <div className="flex items-center justify-between mb-3">
+          <span className="bg-blue-50 text-blue-600 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider">
+            {offer.category}
+          </span>
+          <span className="text-[#10b981] font-black text-sm">
+            {offer.salary}
+          </span>
+        </div>
 
-                      <h3 className="font-semibold text-[20px] text-[#1a0dab] group-hover:underline mb-4 leading-snug min-h-[56px]">
-                        {offer.title}
-                      </h3>
+        <h3 className="font-bold text-[18px] text-slate-900 mb-3 leading-snug">
+          {offer.title}
+        </h3>
 
-                      <div className="space-y-3 mb-8">
-                        <h4 className="text-slate-900 font-bold text-[16px]">Description</h4>
-                        <p className="text-slate-600 text-[13px] leading-relaxed line-clamp-3">
-                          {offer.description}
-                        </p>
-                      </div>
+        <div className="flex items-center gap-1.5 text-slate-500 mb-4">
+          <MapPin size={14} className="text-blue-500" />
+          <span className="text-[12px] font-medium uppercase">{offer.location}</span>
+        </div>
 
-                      <a 
-                        href={`https://api.whatsapp.com/send?phone=${offer.whatsapp}&text=${encodeURIComponent(
-                          `Bonjour, je suis intéressé(e) par votre offre sur Goorco.com :\n\n` +
-                          `*Poste :* ${offer.title}\n` +
-                          `*Lieu :* ${offer.location}\n` +
-                          `*Salaire :* ${offer.salary}\n\n` +
-                          `Est-elle toujours disponible ?`
-                        )}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-3 w-full bg-[#1a73e8] hover:bg-[#1765cc] text-white font-bold py-3.5 rounded-2xl transition-all text-[14px] shadow-lg shadow-blue-200"
-                      >
-                        <MessageCircle size={18} /> Postuler sur WhatsApp
-                      </a>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+        <p className="text-slate-500 text-[13px] leading-relaxed line-clamp-2 mb-6">
+          {offer.description}
+        </p>
+
+        {/* BOUTON VOIR DÉTAILS - Remplace le bouton WhatsApp */}
+        <div className="mt-auto">
+          <Link 
+            to={`/offre/${offer.id}`}
+            className="flex items-center justify-center gap-2 w-full bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-black py-3.5 rounded-2xl transition-all text-[12px] uppercase tracking-widest"
+          >
+            Voir détails offre
+          </Link>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
             </motion.div>
           ) : (
             <motion.div 
@@ -233,3 +221,7 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+
+
+

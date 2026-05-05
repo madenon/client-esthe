@@ -1,40 +1,22 @@
-
-
+export const jobOffers = [
+  
  
-
-  export const jobOffers = [
-  { 
-    id: 9, 
-    zone: "Abidjan", 
-    category: "Esthétique", 
-    title: "Stage en Esthétique (2 postes)", 
-    description: "Recherche de stagiaires en esthétique passionnées pour intégrer notre équipe à Angré. Prime de transport incluse.", 
-    location: "Angré", 
-    salary: "Prime de transport",
-    whatsapp: "2250596132058", 
-    likes: 10 
-  },
-  { 
-    id: 10, 
-    zone: "Abidjan", 
-    category: "Esthétique", 
-    title: "Stage en Esthétique (2 postes)", 
-    description: "Recherche de stagiaires en esthétique pour notre salon à Yopougon. Prime de transport prévue.", 
-    location: "Yopougon", 
-    salary: "Prime de transport",
-    whatsapp: "2250596132058", 
-    likes: 7 
-  },
+ 
+  
   { 
     id: 1, 
     zone: "Abidjan", 
     category: "Coiffeur", 
     title: "Urgent : Coiffeur assidu", 
     description: "Besoin urgent de coiffeur assidu et patient qui habite a Yopougon Maroc ou aux alentours.", 
-    location: " Yopougon Maroc", 
+    location: "Yopougon Maroc", 
     salary: "À débattre",
     whatsapp: "2250596132058", 
-    likes: 12 
+    likes: 12,
+    isUrgent: true,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-18"
   },
   { 
     id: 8, 
@@ -42,10 +24,14 @@
     category: "Coiffeur", 
     title: "Expert(e) en Perruques & Customisation", 
     description: "Recherche d'un(e) coiffeur(se) spécialisé(e) dans la customisation et la pose de perruques. Disponibilité immédiate.", 
-    location: " Bingerville", 
+    location: "Bingerville", 
     salary: "100.000 FCFA",
     whatsapp: "2250596132058", 
-    likes: 45 
+    likes: 45,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true, // Exemple d'annonce partenaire (Bloc 5)
+    date: "2024-05-17"
   },
   { 
     id: 2, 
@@ -53,10 +39,14 @@
     category: "Coiffeur", 
     title: "Besoin coiffeuse et prothésiste", 
     description: "J’ai besoin d’une coiffeuse qui maitrise bien les poses et une prothésiste ongulaire qui maîtrise toutes les techniques.", 
-    location: " Yopougon", 
+    location: "Yopougon", 
     salary: "90.000 FCFA",
     whatsapp: "2250596132058",
-    likes: 34 
+    likes: 34,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-16"
   },
   { 
     id: 3, 
@@ -67,7 +57,11 @@
     location: "Yopougon / Treichville", 
     salary: "80.000 FCFA",
     whatsapp: "2250596132058", 
-    likes: 56 
+    likes: 56,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-15"
   },
   { 
     id: 4, 
@@ -78,7 +72,11 @@
     location: "Grand-Bassam", 
     salary: "50.000 FCFA",
     whatsapp: "2250596132058", 
-    likes: 28 
+    likes: 28,
+    isUrgent: false,
+    hasDortoir: true,
+    isPremium: false,
+    date: "2024-05-14"
   },
   { 
     id: 5, 
@@ -86,10 +84,14 @@
     category: "Coiffeur", 
     title: "Coiffeuse experte en poses", 
     description: "Besoin d'une coiffeuse à abatta qui maîtrise surtout les pose perruque. Heure : 9h a 20h 30.", 
-    location: " Abatta", 
+    location: "Abatta", 
     salary: "70.000 FCFA",
     whatsapp: "2250596132058", 
-    likes: 12 
+    likes: 12,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-13"
   },
   { 
     id: 6, 
@@ -97,10 +99,14 @@
     category: "Coiffeur", 
     title: "Coiffeur professionnel", 
     description: "Besoin d'un coiffeur professionnel à abatta. Heure : 9h a 20h 30.", 
-    location: " Abatta", 
+    location: "Abatta", 
     salary: "60.000 FCFA",
     whatsapp: "2250596132058", 
-    likes: 15 
+    likes: 15,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-12"
   },
   { 
     id: 7, 
@@ -111,9 +117,13 @@
     location: "Grand-Lahou, Sikasso", 
     salary: "À débattre",
     whatsapp: "2250596132058", 
-    likes: 8 
+    likes: 8,
+    isUrgent: true,
+    hasDortoir: true,
+    isPremium: false,
+    date: "2024-05-11"
   },
-   { 
+  { 
     id: 11, 
     zone: "Abidjan", 
     category: "Mixte", 
@@ -122,7 +132,11 @@
     location: "Angré 8ème tranche", 
     salary: "À discuter",
     whatsapp: "2250596132058", 
-    likes: 0 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-10"
   },
   { 
     id: 12, 
@@ -133,7 +147,11 @@
     location: "Treichville / Marcory", 
     salary: "70.000 FCFA",
     whatsapp: "2250596132058", 
-    likes: 0 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-09"
   },
   { 
     id: 13, 
@@ -144,7 +162,11 @@
     location: "Angré CHU", 
     salary: "À débattre",
     whatsapp: "2250596132058", 
-    likes: 0 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-08"
   },
   { 
     id: 14, 
@@ -155,7 +177,11 @@
     location: "Riviera Mbadon", 
     salary: "200.000 - 250.000 FCFA",
     whatsapp: "2250596132058", 
-    likes: 0 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "2024-05-07"
   },
   { 
     id: 15, 
@@ -166,7 +192,11 @@
     location: "Abobo Baoulé", 
     salary: "70.000 FCFA",
     whatsapp: "2250596132058", 
-    likes: 0 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-06"
   },
   { 
     id: 16, 
@@ -177,7 +207,11 @@
     location: "Yopougon", 
     salary: "90.000 FCFA",
     whatsapp: "2250596132058", 
-    likes: 0 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-05"
   },
   { 
     id: 17, 
@@ -188,7 +222,11 @@
     location: "Faya Cité SIR", 
     salary: "50.000 - 80.000 FCFA",
     whatsapp: "2250596132058", 
-    likes: 0 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-04"
   },
   { 
     id: 18, 
@@ -199,7 +237,10 @@
     location: "Angré 8ème tranche", 
     salary: "90.000 FCFA",
     whatsapp: "2250596132058", 
-    likes: 0 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-03"
   }
-
 ];

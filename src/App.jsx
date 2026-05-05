@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Recrutement from './components/Recrutement';
 import CvCandidat from './components/CvCandidat';
 import Blog from './components/Blog';
+import DetailPage from './components/DetailPage';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <WhatsAppFloat />
       <Routes>
   <Route path='/' element={<HomePage />} />
+  <Route path="/offre/:id" element={<DetailPage />} />
   <Route path='/a-propos' element={<About />} />
   <Route path='/espace-candidat' element={<CvCandidat />} />
   <Route path='/espace-recruteur' element={<Recrutement />} />
