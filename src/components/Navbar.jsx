@@ -38,7 +38,7 @@ const Navbar = () => {
               </div>
               <div className="flex items-center gap-1 mt-1">
                 <span className="text-[9px] font-medium text-[#ff4da6] uppercase tracking-[0.2em] leading-none">
-                  Coiffure <span className="text-blue-500/50">•</span> Esthétique <span className="text-blue-500/50">•</span> Opportunité
+                  Coiffure <span className="text-blue-500/50"></span> Esthétique <span className="text-blue-500/50"></span> Opportunité
                 </span>
               </div>
             </div>
