@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#0f172a]/10 font-montserrat text-white shadow-xl sticky top-0 z-50 ">
+    <nav className="bg-black/90 font-montserrat text-white shadow-xl sticky top-0 z-50 ">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-20">
           
@@ -45,7 +45,7 @@ const Navbar = () => {
           </Link>
 
           {/* MENU DESKTOP - Utilisation de 'to' au lieu de 'href' */}
-          <div className="hidden md:flex items-center space-x-10 text-black">
+          <div className="hidden md:flex items-center space-x-10 text-white">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
