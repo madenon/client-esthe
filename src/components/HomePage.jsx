@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Heart, CheckCircle, Zap, Search, ShieldCheck, Globe, Volume2, Users, Briefcase, MessageCircle, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import AdBanner from './AdBanner';
 import { jobOffers } from '../apis/datas';
+import Temoignage from './Temoignage';
 
 const HomePage = () => {
   const [activeZone, setActiveZone] = useState(null); 
@@ -24,7 +24,7 @@ const HomePage = () => {
 
   return (
     <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20 text-[#1e293b] relative">
-      <AdBanner />
+      
       
        <section className="px-6 py-12 text-center">
         <div className="max-w-4xl mx-auto">
@@ -35,13 +35,13 @@ const HomePage = () => {
               className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Candidat' ? 'bg-blue-600 text-white' : 'bg-white text-slate-400'}`}
               onClick={() => setUserRole('Candidat')}
             >
-              <Users size={14} /> Espace Candidat
+              <Users size={14} /> <Link to="/espace-candidat">Espace Candidat</Link>
             </button>
             <button 
               className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${userRole === 'Employeur' ? 'bg-white text-[#ff4da6]' : 'bg-[#ff4da6] text-white'}`}
               onClick={() => setUserRole('Employeur')}
             >
-              <Briefcase size={14} /> Espace Recruteur
+              <Briefcase size={14} /> <Link to="/espace-recruteur"> Espace Recruteur </Link> 
             </button>
           </div>
 
@@ -216,6 +216,7 @@ const HomePage = () => {
           )}
         </AnimatePresence>
       </div>
+        <Temoignage />
     </div>
   );
 };

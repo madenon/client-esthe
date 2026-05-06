@@ -244,3 +244,129 @@ export const jobOffers = [
     date: "2024-05-03"
   }
 ];
+
+
+
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Awa Koné",
+    role: "Coiffeuse Professionnelle",
+    content: "Grâce à Goorco, j'ai trouvé un salon à Angré en moins de 48h. Le contact via WhatsApp est ultra rapide !",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/150?u=awa"
+  },
+  {
+    id: 2,
+    name: "Marc Koffi",
+    role: "Gérant de Salon",
+    content: "Recruter du personnel qualifié était un calvaire. Avec cette plateforme, j'ai accès aux meilleurs profils de la ville.",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/150?u=marc"
+  },
+  {
+    id: 3,
+    name: "Sery Dorcas",
+    role: "Esthéticienne",
+    content: "La section 'Dortoir disponible' m'a vraiment aidée car je venais de l'intérieur du pays. Je recommande !",
+    rating: 4,
+    avatar: "https://i.pravatar.cc/150?u=dorcas"
+  },
+  {
+    id: 4,
+    name: "Bakayoko Moussa",
+    role: "Coiffeur Homme",
+    content: "L'interface est super simple. J'ai postulé à Yopougon et j'ai commencé le lendemain. Un gain de temps énorme.",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/150?u=moussa"
+  },
+  {
+    id: 5,
+    name: "Marie-Louise Kouamé",
+    role: "Spécialiste Tresses",
+    content: "J'adore le système de badges 'Urgent'. Ça permet de savoir quelles offres nécessitent une réponse immédiate.",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/150?u=marielouise"
+  },
+  {
+    id: 6,
+    name: "Jean-Pierre Yao",
+    role: "Propriétaire Spa",
+    content: "Enfin une plateforme dédiée à nos métiers ! Goorco centralise tout ce dont on a besoin pour gérer nos équipes.",
+    rating: 4,
+    avatar: "https://i.pravatar.cc/150?u=jp"
+  },
+  {
+    id: 7,
+    name: "Tidiane Diabaté",
+    role: "Prothésiste Ongulaire",
+    content: "La visibilité sur les salaires dès l'annonce évite les mauvaises surprises. Très transparent, j'apprécie beaucoup.",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/150?u=tidiane"
+  },
+  {
+    id: 8,
+    name: "Fatou Diop",
+    role: "Maquilleuse Pro",
+    content: "J'ai trouvé une mission premium à Assinie grâce au site. Les offres sont vraiment de qualité.",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/150?u=fatou"
+  },
+  {
+    id: 9,
+    name: "Emmanuel Goli",
+    role: "Apprenti Coiffeur",
+    content: "Même pour un débutant, il y a des opportunités. J'ai trouvé un salon qui accepte de me former à Marcory.",
+    rating: 4,
+    avatar: "https://i.pravatar.cc/150?u=emmanuel"
+  },
+  {
+    id: 10,
+    name: "Christelle N'Guessan",
+    role: "Gérante de Barbier",
+    content: "Goorco est devenu mon outil numéro 1 pour le recrutement. Simple, efficace et très bien ciblé sur la Côte d'Ivoire.",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/150?u=christelle"
+  },
+  {
+    id: 11,
+    name: "Oumar Traoré",
+    role: "Spécialiste Coloration",
+    content: "Le filtre par zone est super pratique. J'habite à Bingerville et j'ai trouvé juste à côté de chez moi.",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/150?u=oumar"
+  },
+  {
+    id: 12,
+    name: "Syntiche Boni",
+    role: "Technicienne de Cils",
+    content: "Super expérience ! Le site est fluide et les recruteurs répondent vraiment vite sur WhatsApp.",
+    rating: 4,
+    avatar: "https://i.pravatar.cc/150?u=syntiche"
+  },
+  {
+    id: 13,
+    name: "Patrick Kouassi",
+    role: "Manager Salon de Luxe",
+    content: "On sent que la plateforme comprend les besoins du secteur. Les profils sont vérifiés et sérieux.",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/150?u=patrick"
+  },
+  {
+    id: 14,
+    name: "Esther Toure",
+    role: "Experte Perruques",
+    content: "Inscrite le matin, contactée l'après-midi. Je n'avais jamais vu un recrutement aussi rapide à Abidjan.",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/150?u=esther"
+  },
+  {
+    id: 15,
+    name: "Abdoulaye Sidibé",
+    role: "Coiffeur Polyvalent",
+    content: "Habitant à Bouaké, j'avais peur de ne rien trouver, mais il y a des offres pour tout le pays !",
+    rating: 5,
+    avatar: "https://i.pravatar.cc/150?u=abdou"
+  }
+];
