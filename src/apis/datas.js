@@ -1,9 +1,7 @@
 export const jobOffers = [
   
  
- 
-  
-  { 
+ { 
     id: 1, 
     zone: "Abidjan", 
     category: "Coiffeur", 
@@ -14,6 +12,7 @@ export const jobOffers = [
     whatsapp: "2250596132058", 
     likes: 12,
     isUrgent: true,
+    isFavorite: false,
     hasDortoir: false,
     isPremium: false,
     date: "2024-05-18"
@@ -28,9 +27,10 @@ export const jobOffers = [
     salary: "100.000 FCFA",
     whatsapp: "2250596132058", 
     likes: 45,
-    isUrgent: true,
+    isUrgent: false,
+    isFavorite: true, // Ajouté
     hasDortoir: false,
-    isPremium: true, // Exemple d'annonce partenaire (Bloc 5)
+    isPremium: true,
     date: "2024-05-17"
   },
   { 
@@ -44,6 +44,7 @@ export const jobOffers = [
     whatsapp: "2250596132058",
     likes: 34,
     isUrgent: true,
+    isFavorite: false, // Ajouté
     hasDortoir: false,
     isPremium: false,
     date: "2024-05-16"
@@ -59,6 +60,7 @@ export const jobOffers = [
     whatsapp: "2250596132058", 
     likes: 56,
     isUrgent: false,
+    isFavorite: true,
     hasDortoir: false,
     isPremium: false,
     date: "2024-05-15"
@@ -74,10 +76,28 @@ export const jobOffers = [
     whatsapp: "2250596132058", 
     likes: 28,
     isUrgent: false,
+    isFavorite: true,
     hasDortoir: true,
     isPremium: false,
     date: "2024-05-14"
   },
+  { 
+    id: 104, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Expert Spa & Extensions", 
+    description: "Soins corps/visage et extensions de cils (Russe/Hybride).", 
+    location: "Riviera Mbadon", 
+    salary: "200.000 - 250.000 FCFA",
+    whatsapp: "2250596132058", 
+    likes: 15, // Mis à jour à au moins 12
+    isUrgent: false,
+    isFavorite: true, // Annonce Premium souvent mise en favori
+    hasDortoir: false,
+    isPremium: true,
+    date: "2024-05-07"
+  },
+ 
   { 
     id: 5, 
     zone: "Abidjan", 
@@ -90,6 +110,8 @@ export const jobOffers = [
     likes: 12,
     isUrgent: false,
     hasDortoir: false,
+        isFavorite: true, 
+
     isPremium: false,
     date: "2024-05-13"
   },
@@ -103,7 +125,7 @@ export const jobOffers = [
     salary: "60.000 FCFA",
     whatsapp: "2250596132058", 
     likes: 15,
-    isUrgent: false,
+    isUrgent: true,
     hasDortoir: false,
     isPremium: false,
     date: "2024-05-12"
@@ -120,6 +142,8 @@ export const jobOffers = [
     likes: 8,
     isUrgent: true,
     hasDortoir: true,
+        isFavorite: false, // Annonce Premium souvent mise en favori
+
     isPremium: false,
     date: "2024-05-11"
   },

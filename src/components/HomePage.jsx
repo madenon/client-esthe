@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Heart, CheckCircle, Zap, Search, ShieldCheck, Globe, Volume2, Users, Briefcase, MessageCircle, MapPin } from 'lucide-react';
+import { Heart, Zap, Search, ShieldCheck, Globe, Volume2, Users, Briefcase, MessageCircle, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { jobOffers } from '../apis/datas';
+import { jobOffers as initialOffers, jobOffers } from '../apis/datas';
 import Temoignage from './Temoignage';
 
 const HomePage = () => {
@@ -10,6 +10,22 @@ const HomePage = () => {
   const [activeCat, setActiveCat] = useState('Tous');
   const [userRole, setUserRole] = useState('Candidat');
   const [searchQuery, setSearchQuery] = useState('');
+  const [offers, setOffers] = useState(initialOffers);
+
+  // 2. Fonction pour basculer le favori
+  const toggleFavorite = (id) => {
+    setOffers(offers.map(offer => {
+      if (offer.id === id) {
+        return {
+          ...offer,
+          isFavorite: !offer.isFavorite,
+          // Optionnel : on ajuste les likes en même temps
+          likes: offer.isFavorite ? offer.likes - 1 : offer.likes + 1
+        };
+      }
+      return offer;
+    }));
+  };
 
   // Logique de filtrage
   const filteredOffers = jobOffers.filter(offer => {
@@ -100,44 +116,7 @@ const HomePage = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
-              {/* CARTES INFOS */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-                <div className="lg:col-span-2 bg-white rounded-[2.5rem] p-8 shadow-sm border border-slate-100 text-slate-800">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
-                        <Globe size={18} />
-                      </div>
-                      <h4 className="font-black text-xs uppercase tracking-widest">À propos de Goorco</h4>
-                    </div>
-                    <button className="flex items-center gap-2 text-[10px] font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full hover:bg-blue-100 transition-colors">
-                      <Volume2 size={14} /> Écouter
-                    </button>
-                  </div>
-                  <p className="text-slate-500 text-sm leading-relaxed italic">
-                    Goorco est la plateforme leader en Côte d'Ivoire pour les métiers de la beauté. Nous connectons les talents passionnés avec les meilleurs établissements du pays.
-                  </p>
-                </div>
-
-                <div className="flex flex-col gap-4">
-                  <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-4 group hover:border-blue-200 transition-colors">
-                    <div className="bg-blue-50 p-3 rounded-xl text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                      <ShieldCheck size={20} />
-                    </div>
-                    <span className="font-bold text-[11px] uppercase tracking-wider text-slate-600">Offres Vérifiées</span>
-                  </div>
-                  <div className="bg-[#1e293b] p-6 rounded-[2rem] text-white shadow-lg relative overflow-hidden group">
-                    <div className="relative z-10">
-                      <h4 className="font-black text-xs uppercase tracking-widest mb-2 flex items-center gap-2">
-                        <Zap size={14} className="text-yellow-400 fill-yellow-400" /> Recrutement Rapide
-                      </h4>
-                      <p className="text-slate-400 text-[10px] leading-tight">Contact direct via WhatsApp pour une réponse en moins de 24h.</p>
-                    </div>
-                    <MessageCircle size={80} className="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform" />
-                  </div>
-                </div>
-              </div>
-
+             
              {/* GRILLE DES OFFRES AMÉLIORÉE */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   {filteredOffers.map((offer) => (
@@ -146,21 +125,43 @@ const HomePage = () => {
       key={offer.id}
       className="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden group hover:shadow-2xl transition-all duration-500 text-slate-800 flex flex-col"
     >
-      {/* HEADER DE LA CARTE */}
-      <div className="h-32 bg-[#ff4da6]/90 relative flex items-center justify-center overflow-hidden">
-        {/* Badge Urgent - S'affiche si offer.isUrgent est vrai */}
-        {offer.isUrgent && (
-          <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 animate-pulse z-10">
-            <Zap size={12} fill="currentColor" /> Urgent
-          </div>
-        )}
-        
-        <div className="absolute top-4 right-4 bg-white/90 px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-2 text-slate-500">
-          <Heart size={14} className="group-hover:text-red-500 transition-colors cursor-pointer" />
-          <span className="text-xs font-bold">{offer.likes}</span>
-        </div>
-        <div className="text-4xl font-black text-slate-200 uppercase tracking-tighter">Goorco</div>
+{/* HEADER DE LA CARTE */}
+<div className="h-32 bg-[#ff4da6]/30 relative flex items-center justify-center overflow-hidden">
+  
+  {/* CONTENEUR DES BADGES (Haut Gauche) */}
+  <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
+    {/* Badge Urgent */}
+    {offer.isUrgent && (
+      <div className="bg-red-500 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 animate-pulse">
+        <Zap size={12} fill="currentColor" /> Urgent
       </div>
+    )}
+
+    {/* NOUVEAU : Badge Favorite en Vert */}
+    {offer.isFavorite && (
+      <div className="bg-emerald-500 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-lg">
+        <Heart size={12} fill="currentColor" /> Favorite
+      </div>
+    )}
+  </div>
+  
+  {/* BLOC LIKES (Haut Droite) */}
+  <div className="absolute top-4 right-4 bg-white/90 px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-2 text-slate-500">
+    <Heart 
+      size={14} 
+      className={`transition-all duration-300 cursor-pointer ${
+        offer.isFavorite 
+          ? "text-red-200 fill-red-200 scale-110" 
+          : "text-slate-500 group-hover:text-red-200"
+      }`} 
+    />
+    <span className={`text-xs font-bold ${offer.isFavorite ? "text-red-400" : "text-slate-500"}`}>
+      {offer.likes}
+    </span>
+  </div>
+  
+  <div className="text-4xl font-black text-slate-200 uppercase tracking-tighter">Goorco</div>
+</div>
 
       {/* CONTENU DE LA CARTE */}
       <div className="p-7 flex flex-col flex-grow">
