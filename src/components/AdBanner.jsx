@@ -41,12 +41,12 @@ const AdBanner = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="max-w-7xl mx-auto px-4 md:px-6 mb-12"
+      className="max-w-5xl mx-auto px-4 md:px-6 mb-12"
     >
       <div className="relative overflow-hidden rounded-[2.5rem] bg-blue-700 p-8 md:p-12 shadow-2xl border border-slate-800 min-h-[400px] md:min-h-[320px] flex items-center">
         
         {/* Effet de fond lumineux dynamique */}
-        <div className={`absolute top-0 right-0 w-96 h-96 rounded-full blur-[100px] -mr-32 -mt-32 transition-colors duration-1000 ${slides[index].accentColor}`} />
+        <div className={`absolute top-0 right-0 w-96 h-80 rounded-full blur-[100px] -mr-32 -mt-32 transition-colors duration-1000 ${slides[index].accentColor}`} />
         
         <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-between gap-12">
           

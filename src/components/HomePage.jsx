@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { jobOffers as initialOffers, jobOffers } from '../apis/datas';
 import Temoignage from './Temoignage';
+import AdBanner from './AdBanner';
 
 const HomePage = () => {
   const [activeZone, setActiveZone] = useState(null); 
@@ -105,6 +106,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      <AdBanner />
 
       {/* SECTION RÉSULTATS */}
       <div className="max-w-6xl mx-auto px-6">
