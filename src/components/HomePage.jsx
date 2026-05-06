@@ -63,7 +63,7 @@ const HomePage = () => {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-black mb-4 text-slate-900">
-            Goo<span className="text-[#ff4da6]">co</span><span className="text-blue-600">.com</span>
+            Goor<span className="text-[#ff4da6]">co</span><span className="text-blue-600">.com</span>
           </h2>
 
           {/* BARRE DE RECHERCHE & FILTRE ZONE */}
