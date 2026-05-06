@@ -127,83 +127,98 @@ const HomePage = () => {
       key={offer.id}
       className="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden group hover:shadow-2xl transition-all duration-500 text-slate-800 flex flex-col"
     >
-{/* HEADER DE LA CARTE */}
-{/* HEADER DE LA CARTE - Fond Rose par défaut */}
-<div className="h-32 bg-rose-100/50 relative flex items-center justify-center overflow-hidden">
+{/* HEADER DE LA CARTE - Fond Rose très léger */}
+<div className="h-32 bg-rose-50 relative flex items-center justify-center overflow-hidden">
   
   {/* CONTENEUR DES BADGES (Haut Gauche) */}
   <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
     
-    {/* Badge Urgent : Rouge */}
+    {/* Badge Urgent : Fond Rouge clair / Texte Rouge vif */}
     {offer.isUrgent && (
-      <div className="bg-white text-red-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-sm animate-pulse">
+      <div className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-sm animate-pulse border border-red-200">
         <Zap size={12} fill="currentColor" /> Urgent
       </div>
     )}
 
-    {/* Badge Favorite : Bleu */}
+    {/* Badge Favorite : Fond Bleu clair / Texte Bleu vif */}
     {offer.isFavorite && (
-      <div className="bg-white text-blue-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-sm">
+      <div className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-sm border border-blue-200">
         <Heart size={12} fill="currentColor" /> Favorite
       </div>
     )}
   </div>
   
   {/* BLOC LIKES (Haut Droite) */}
-  <div className="absolute top-4 right-4 bg-white/90 px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-2 text-slate-500">
+  <div className="absolute top-4 right-4 bg-white/90 px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-2 text-slate-500 border border-slate-100">
     <Heart 
       size={14} 
       className={`transition-all duration-300 cursor-pointer ${
         offer.isFavorite 
-          ? "text-blue-500 fill-blue-500 scale-110" // Le cœur devient bleu s'il est favori
+          ? "text-blue-500 fill-blue-500 scale-110" 
           : "text-slate-400 group-hover:text-red-400"
       }`} 
     />
-    <span className={`text-xs font-bold ${offer.isFavorite ? "text-blue-600" : "text-slate-500"}`}>
+    <span className={`text-xs font-black tracking-tighter ${offer.isFavorite ? "text-blue-600" : "text-slate-500"}`}>
       {offer.likes}
     </span>
   </div>
   
-  {/* Logo en arrière-plan (Rose discret) */}
-  <div className="text-4xl font-black text-rose-200/50 uppercase tracking-tighter select-none">
+  {/* Logo Goorco en arrière-plan */}
+  <div className="text-4xl font-black text-rose-200/40 uppercase tracking-tighter select-none">
     Goorco
   </div>
 </div>
 
-      {/* CONTENU DE LA CARTE */}
-      <div className="p-7 flex flex-col flex-grow">
-        <div className="flex items-center justify-between mb-3">
-          <span className="bg-blue-50 text-blue-600 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider">
-            {offer.category}
-          </span>
-          <span className="text-[#10b981] font-black text-sm">
-            {offer.salary}
-          </span>
-        </div>
+     {/* CONTENU DE LA CARTE MODIFIÉ */}
+<div className="p-7 flex flex-col flex-grow">
+  <div className="flex items-center justify-between mb-3">
+    <span className="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider">
+      {offer.category}
+    </span>
+    <span className="text-[#10b981] font-black text-sm">
+      {offer.salary}
+    </span>
+  </div>
 
-        <h3 className="font-bold text-[18px] text-slate-900 mb-3 leading-snug">
-          {offer.title}
-        </h3>
+  {/* TITRE DYNAMIQUE */}
+  <h3 className={`font-black text-[18px] mb-3 leading-snug transition-colors duration-300 ${
+    offer.isUrgent ? 'text-red-600' : 
+    offer.isFavorite ? 'text-blue-600' : 
+    'text-slate-900'
+  }`}>
+    {offer.title}
+  </h3>
 
-        <div className="flex items-center gap-1.5 text-slate-500 mb-4">
-          <MapPin size={14} className="text-blue-500" />
-          <span className="text-[12px] font-medium uppercase">{offer.location}</span>
-        </div>
+  {/* LOCALISATION DYNAMIQUE */}
+  <div className="flex items-center gap-1.5 mb-4">
+    <MapPin size={14} className={
+      offer.isUrgent ? 'text-red-500' : 
+      offer.isFavorite ? 'text-blue-500' : 
+      'text-slate-400'
+    } />
+    <span className="text-[12px] font-bold uppercase text-slate-500">{offer.location}</span>
+  </div>
 
-        <p className="text-slate-500 text-[13px] leading-relaxed line-clamp-2 mb-6">
-          {offer.description}
-        </p>
+  <p className="text-slate-500 text-[13px] leading-relaxed line-clamp-2 mb-6">
+    {offer.description}
+  </p>
 
-        {/* BOUTON VOIR DÉTAILS - Remplace le bouton WhatsApp */}
-        <div className="mt-auto">
-          <Link 
-            to={`/offre/${offer.id}`}
-            className="flex items-center justify-center gap-2 w-full bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-black py-3.5 rounded-2xl transition-all text-[12px] uppercase tracking-widest"
-          >
-            Voir détails offre
-          </Link>
-        </div>
-      </div>
+  {/* BOUTON DYNAMIQUE */}
+  <div className="mt-auto">
+    <Link 
+      to={`/offre/${offer.id}`}
+      className={`flex items-center justify-center gap-2 w-full bg-white border-2 font-black py-3.5 rounded-2xl transition-all text-[12px] uppercase tracking-widest ${
+        offer.isUrgent 
+          ? 'border-red-600 text-red-600 hover:bg-red-600 hover:text-white' 
+          : offer.isFavorite 
+          ? 'border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white' 
+          : 'border-slate-200 text-slate-600 hover:bg-slate-900 hover:text-white hover:border-slate-900'
+      }`}
+    >
+      Voir détails offre
+    </Link>
+  </div>
+</div>
     </motion.div>
   ))}
 </div>
