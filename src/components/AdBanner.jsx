@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, ShoppingBag, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -8,114 +8,142 @@ const AdBanner = () => {
 
   const slides = useMemo(() => [
     {
+      id: 'slide-1',
       icon: <ShoppingBag className="text-blue-400" />,
       title: <>Besoin de <span className="text-blue-500">matériel pro ?</span></>,
       description: "Liquidation d'un stock de mèches humaines et synthétiques suite à fermeture de boutique",
       buttonText: "Voir les annonces",
       link: "/blog",
-      // Remplace par tes vrais liens d'images PNG
       imgUrl: "/esthe.png", 
-      accentColor: "bg-orange-600/20"
+      accentColor: "from-orange-600/30", // Changé pour un dégradé
+      themeColor: "bg-orange-500"
     },
     {
+      id: 'slide-2',
       icon: <Sparkles className="text-pink-400" />,
       title: <>Liquidez votre <span className="text-pink-500">matériel !</span></>,
       description: "Je mets en vente tout le matériel : 3 fauteuils, 2 bacs de lavage, miroirs et comptoir. État quasi neuf.",
       buttonText: "Vendre maintenant",
       link: "/contact",
-      // Remplace par tes vrais liens d'images PNG
       imgUrl: "/esth.png",
-      accentColor: "bg-pink-600/20"
+      accentColor: "from-pink-600/30",
+      themeColor: "bg-pink-500"
     }
   ], []);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
+  // Fonction pour changer de slide de manière sécurisée
+  const nextSlide = useCallback(() => {
+    setIndex((prev) => (prev + 1) % slides.length);
   }, [slides.length]);
+
+  // Gestion du Timer automatique
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 6000); // 6 secondes pour laisser le temps de lire
+    return () => clearInterval(timer);
+  }, [nextSlide]);
 
   return (
     <motion.section 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="max-w-5xl mx-auto px-4 md:px-6 mb-12"
+      className="max-w-5xl mx-auto px-4 md:px-6 mb-12 select-none"
     >
-      <div className="relative overflow-hidden rounded-[2.5rem] bg-blue-700 p-8 md:p-12 shadow-2xl border border-slate-800 min-h-[400px] md:min-h-[320px] flex items-center">
+     {/* SURTITRE ANIMÉ (EFFET MARQUEE) */}
+<div className="overflow-hidden whitespace-nowrap mb-4 w-full border-y border-rose-100 py-1">
+  <motion.div
+    initial={{ x: "100%" }}
+    animate={{ x: "-100%" }}
+    transition={{
+      repeat: Infinity,
+      duration: 20, // Ajuste la vitesse ici (plus c'est haut, plus c'est lent)
+      ease: "linear",
+    }}
+    className="inline-block"
+  >
+   
+    <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-blue-900 font-black px-4">
+      Équipement & Opportunités ! Vous vendez ou cherchez du matériel pro ? 
+      Découvrez nos annonces exclusives pour coiffeurs et esthéticiennes.
+    </span>
+  </motion.div>
+</div>
+
+      <div className="relative overflow-hidden rounded-[2.5rem] bg-[#0f172a] p-8 md:p-12 shadow-2xl border border-white/5 min-h-[450px] md:min-h-[350px] flex items-center transition-all duration-700">
         
-        {/* Effet de fond lumineux dynamique */}
-        <div className={`absolute top-0 right-0 w-96 h-80 rounded-full blur-[100px] -mr-32 -mt-32 transition-colors duration-1000 ${slides[index].accentColor}`} />
+        {/* Effet de fond lumineux dynamique (Gradient radial) */}
+        <div className={`absolute top-0 right-0 w-full h-full bg-gradient-to-br ${slides[index].accentColor} to-transparent opacity-40 transition-colors duration-1000`} />
         
-        <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
           
-          {/* Zone de texte animée */}
-          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+          {/* ZONE TEXTE */}
+          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left order-2 md:order-1">
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
-                initial={{ x: -30, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                exit={{ x: 20, opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
                 className="flex flex-col items-center md:items-start"
               >
-                <div className="bg-white/5 backdrop-blur-md p-4 rounded-2xl w-fit mb-6 border border-white/10">
+                <div className="bg-white/5 backdrop-blur-xl p-3 md:p-4 rounded-2xl w-fit mb-6 border border-white/10 shadow-inner">
                   {slides[index].icon}
                 </div>
-                <h2 className="text-white font-black text-3xl md:text-5xl uppercase tracking-tighter mb-4 leading-[1.1]">
+                
+                <h2 className="text-white font-black text-2xl md:text-4xl uppercase tracking-tighter mb-4 leading-tight">
                   {slides[index].title}
                 </h2>
-                <p className="text-slate-400 text-sm md:text-lg max-w-md font-medium mb-8">
+                
+                <p className="text-slate-400 text-sm md:text-base max-w-sm mb-8 font-medium leading-relaxed">
                   {slides[index].description}
                 </p>
                 
                 <Link
                   to={slides[index].link}
-                  className="bg-white text-[#0f172a] font-black px-8 py-4 rounded-2xl shadow-xl hover:bg-slate-100 transition-all flex items-center gap-3 text-xs uppercase tracking-widest group"
+                  className="bg-white text-slate-950 font-black px-8 py-4 rounded-2xl shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-3 text-[10px] uppercase tracking-widest group"
                 >
                   {slides[index].buttonText}
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
             </AnimatePresence>
           </div>
 
-          {/* ZONE IMAGE (C'est ici qu'on gère le visuel PNG) */}
-          <div className="flex-1 relative flex justify-center items-center h-[200px] md:h-[300px] w-full">
+          {/* ZONE IMAGE */}
+          <div className="flex-1 relative flex justify-center items-center h-[180px] md:h-[280px] w-full order-1 md:order-2">
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
-                initial={{ scale: 0.8, opacity: 0, rotate: -5 }}
-                animate={{ scale: 1, opacity: 1, rotate: 0 }}
-                exit={{ scale: 1.1, opacity: 0 }}
-                transition={{ duration: 0.6, type: "spring" }}
-                className="relative"
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ duration: 0.5, type: "spring", damping: 15 }}
+                className="relative flex justify-center items-center"
               >
-                {/* Cercle décoratif derrière l'image */}
-                <div className={`absolute inset-0 scale-125 blur-3xl opacity-30 rounded-full ${index === 0 ? 'bg-orange-500' : 'bg-pink-500'}`} />
+                {/* Halo lumineux derrière l'image */}
+                <div className={`absolute w-32 h-32 md:w-48 md:h-48 blur-[60px] md:blur-[100px] opacity-60 rounded-full ${slides[index].themeColor} transition-colors duration-1000`} />
                 
                 <img 
                   src={slides[index].imgUrl} 
-                  alt="Matériel de beauté"
-                  className="w-auto h-48 md:h-64 object-contain relative z-20 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-                  // Si vous n'avez pas encore d'images, vous pouvez utiliser des placeholders :
-                  // src={`https://via.placeholder.com/400x400/0f172a/ffffff?text=Image+PNG`}
+                  alt="Promotion Goorco"
+                  className="w-auto h-32 md:h-56 object-contain relative z-20 drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)]"
+                  onError={(e) => { e.target.src = "https://via.placeholder.com/200?text=Goorco"; }}
                 />
               </motion.div>
             </AnimatePresence>
           </div>
         </div>
 
-        {/* Indicateurs de progression */}
-        <div className="absolute bottom-8 left-1/2 md:left-12 transform -translate-x-1/2 md:translate-x-0 flex gap-3">
+        {/* INDICATEURS */}
+        <div className="absolute bottom-6 md:bottom-8 left-1/2 md:left-12 transform -translate-x-1/2 md:translate-x-0 flex gap-2">
           {slides.map((_, i) => (
             <button
               key={i}
               onClick={() => setIndex(i)}
+              aria-label={`Aller au slide ${i + 1}`}
               className={`h-1.5 rounded-full transition-all duration-500 ${
-                i === index ? 'w-12 bg-white' : 'w-3 bg-slate-700'
+                i === index ? 'w-10 bg-white' : 'w-2 bg-white/20 hover:bg-white/40'
               }`}
             />
           ))}
