@@ -62,7 +62,7 @@ const HomePage = () => {
             </button>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-black mb-4 text-slate-900">
+          <h2 className="text-3xl md:text-5xl font-black mb-4 text-blue-500">
             Goor<span className="text-[#ff4da6]">co</span><span className="text-blue-600">.com</span>
           </h2>
 
@@ -164,9 +164,9 @@ const HomePage = () => {
   </div>
   
   {/* Logo Goorco en arrière-plan */}
-  <div className="text-4xl font-black text-rose-200/40 uppercase tracking-tighter select-none">
-    Goorco
-  </div>
+  <h2 className="text-3xl md:text-5xl font-black mb-4 text-blue-600">
+            Goor<span className="text-[#ff4da6]">co</span>
+          </h2>
 </div>
 
      {/* CONTENU DE LA CARTE MODIFIÉ */}
