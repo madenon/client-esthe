@@ -50,25 +50,33 @@ const AdBanner = () => {
       className="max-w-5xl mx-auto px-4 md:px-6 mb-12 select-none"
     >
      {/* SURTITRE ANIMÉ (EFFET MARQUEE) */}
-<div className="overflow-hidden whitespace-nowrap mb-4 w-full border-y border-rose-100 py-1">
-  <motion.div
-    initial={{ x: "100%" }}
-    animate={{ x: "-100%" }}
-    transition={{
-      repeat: Infinity,
-      duration: 20, // Ajuste la vitesse ici (plus c'est haut, plus c'est lent)
-      ease: "linear",
-    }}
-    className="inline-block"
-  >
-   
-    <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-blue-900 font-black px-4">
-      Équipement & Opportunités ! Vous vendez ou cherchez du matériel pro ? 
-      Découvrez nos annonces exclusives pour coiffeurs et esthéticiennes.
-    </span>
-  </motion.div>
-</div>
+{/* BANDEAU DÉFILANT ANIMÉ */}
+<div className="w-full overflow-hidden bg-white/50 border-y border-rose-100 py-2 mb-4">
+  <div className="relative flex max-w-[100vw]">
+    <motion.div
+      initial={{ x: 0 }}
+      animate={{ x: "-50%" }} // On déplace de la moitié car le texte est doublé
+      transition={{
+        repeat: Infinity,
+        duration: 15, // Plus rapide pour le mobile
+        ease: "linear",
+      }}
+      className="flex whitespace-nowrap"
+    >
+      {/* Première occurrence du texte */}
+      <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-blue-900 font-black px-4">
+        Équipement & Opportunités ! Vous vendez ou cherchez du matériel pro ? 
+        Découvrez nos annonces exclusives pour coiffeurs et esthéticiennes. — 
+      </span>
 
+      {/* Deuxième occurrence pour l'effet de boucle infinie sans trou */}
+      <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-blue-900 font-black px-4">
+        Équipement & Opportunités ! Vous vendez ou cherchez du matériel pro ? 
+        Découvrez nos annonces exclusives pour coiffeurs et esthéticiennes. — 
+      </span>
+    </motion.div>
+  </div>
+</div>
       <div className="relative overflow-hidden rounded-[2.5rem] bg-[#0f172a] p-8 md:p-12 shadow-2xl border border-white/5 min-h-[450px] md:min-h-[350px] flex items-center transition-all duration-700">
         
         {/* Effet de fond lumineux dynamique (Gradient radial) */}
