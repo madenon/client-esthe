@@ -93,7 +93,7 @@ const HomePage = () => {
 
           {/* NOUVEAU : FILTRE PAR CATÉGORIE (TRÈS IMPORTANT) */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {['Tous', 'Coiffeur', 'Esthétique', 'Mixte'].map((cat) => (
+            {['Tous', 'Coiffure', 'Esthétique', 'Mixte'].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCat(cat)}
@@ -125,20 +125,22 @@ const HomePage = () => {
       className="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden group hover:shadow-2xl transition-all duration-500 text-slate-800 flex flex-col"
     >
 {/* HEADER DE LA CARTE */}
-<div className="h-32 bg-[#ff4da6]/30 relative flex items-center justify-center overflow-hidden">
+{/* HEADER DE LA CARTE - Fond Rose par défaut */}
+<div className="h-32 bg-rose-100/50 relative flex items-center justify-center overflow-hidden">
   
   {/* CONTENEUR DES BADGES (Haut Gauche) */}
   <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
-    {/* Badge Urgent */}
+    
+    {/* Badge Urgent : Rouge */}
     {offer.isUrgent && (
-      <div className="bg-red-500 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 animate-pulse">
+      <div className="bg-white text-red-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-sm animate-pulse">
         <Zap size={12} fill="currentColor" /> Urgent
       </div>
     )}
 
-    {/* NOUVEAU : Badge Favorite en Vert */}
+    {/* Badge Favorite : Bleu */}
     {offer.isFavorite && (
-      <div className="bg-emerald-500 text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-lg">
+      <div className="bg-white text-blue-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-sm">
         <Heart size={12} fill="currentColor" /> Favorite
       </div>
     )}
@@ -150,16 +152,19 @@ const HomePage = () => {
       size={14} 
       className={`transition-all duration-300 cursor-pointer ${
         offer.isFavorite 
-          ? "text-red-200 fill-red-200 scale-110" 
-          : "text-slate-500 group-hover:text-red-200"
+          ? "text-blue-500 fill-blue-500 scale-110" // Le cœur devient bleu s'il est favori
+          : "text-slate-400 group-hover:text-red-400"
       }`} 
     />
-    <span className={`text-xs font-bold ${offer.isFavorite ? "text-red-400" : "text-slate-500"}`}>
+    <span className={`text-xs font-bold ${offer.isFavorite ? "text-blue-600" : "text-slate-500"}`}>
       {offer.likes}
     </span>
   </div>
   
-  <div className="text-4xl font-black text-slate-200 uppercase tracking-tighter">Goorco</div>
+  {/* Logo en arrière-plan (Rose discret) */}
+  <div className="text-4xl font-black text-rose-200/50 uppercase tracking-tighter select-none">
+    Goorco
+  </div>
 </div>
 
       {/* CONTENU DE LA CARTE */}

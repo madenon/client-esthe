@@ -4,9 +4,9 @@ export const jobOffers = [
  { 
     id: 1, 
     zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Urgent : Coiffeur assidu", 
-    description: "Besoin urgent de coiffeur assidu et patient qui habite a Yopougon Maroc ou aux alentours.", 
+    category: "Coiffure", 
+    title: "Urgent : Coiffure assidu", 
+    description: "Besoin urgent de Coiffure assidu et patient qui habite a Yopougon Maroc ou aux alentours.", 
     location: "Yopougon Maroc", 
     salary: "À débattre",
     whatsapp: "2250596132058", 
@@ -20,9 +20,9 @@ export const jobOffers = [
   { 
     id: 8, 
     zone: "Abidjan", 
-    category: "Coiffeur", 
+    category: "Coiffure", 
     title: "Expert(e) en Perruques & Customisation", 
-    description: "Recherche d'un(e) coiffeur(se) spécialisé(e) dans la customisation et la pose de perruques. Disponibilité immédiate.", 
+    description: "Recherche d'un(e) Coiffure(se) spécialisé(e) dans la customisation et la pose de perruques. Disponibilité immédiate.", 
     location: "Bingerville", 
     salary: "100.000 FCFA",
     whatsapp: "2250596132058", 
@@ -36,7 +36,7 @@ export const jobOffers = [
   { 
     id: 2, 
     zone: "Abidjan", 
-    category: "Coiffeur", 
+    category: "Coiffure", 
     title: "Besoin coiffeuse et prothésiste", 
     description: "J’ai besoin d’une coiffeuse qui maitrise bien les poses et une prothésiste ongulaire qui maîtrise toutes les techniques.", 
     location: "Yopougon", 
@@ -68,7 +68,7 @@ export const jobOffers = [
   { 
     id: 4, 
     zone: "Intérieur", 
-    category: "Coiffeur", 
+    category: "Coiffure", 
     title: "Coiffeuse à Bassam", 
     description: "Besoin d'une coiffeuse à Bassam avec dortoir disponible immédiatement.", 
     location: "Grand-Bassam", 
@@ -101,7 +101,7 @@ export const jobOffers = [
   { 
     id: 5, 
     zone: "Abidjan", 
-    category: "Coiffeur", 
+    category: "Coiffure", 
     title: "Coiffeuse experte en poses", 
     description: "Besoin d'une coiffeuse à abatta qui maîtrise surtout les pose perruque. Heure : 9h a 20h 30.", 
     location: "Abatta", 
@@ -118,9 +118,9 @@ export const jobOffers = [
   { 
     id: 6, 
     zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Coiffeur professionnel", 
-    description: "Besoin d'un coiffeur professionnel à abatta. Heure : 9h a 20h 30.", 
+    category: "Coiffure", 
+    title: "Coiffure professionnel", 
+    description: "Besoin d'un Coiffure professionnel à abatta. Heure : 9h a 20h 30.", 
     location: "Abatta", 
     salary: "60.000 FCFA",
     whatsapp: "2250596132058", 
@@ -133,9 +133,9 @@ export const jobOffers = [
   { 
     id: 7, 
     zone: "Intérieur", 
-    category: "Coiffeur", 
-    title: "Urgent : Coiffeur avec dortoir", 
-    description: "Besoin urgement d'un coiffeur à sikasso département de grand lahou avec dortoir.", 
+    category: "Coiffure", 
+    title: "Urgent : Coiffure avec dortoir", 
+    description: "Besoin urgement d'un Coiffure à sikasso département de grand lahou avec dortoir.", 
     location: "Grand-Lahou, Sikasso", 
     salary: "À débattre",
     whatsapp: "2250596132058", 
@@ -165,9 +165,9 @@ export const jobOffers = [
   { 
     id: 12, 
     zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "Coiffeur - Treichville", 
-    description: "Recherche coiffeur pour salon. Libre gérance possible.", 
+    category: "Coiffure", 
+    title: "Coiffure - Treichville", 
+    description: "Recherche Coiffure pour salon. Libre gérance possible.", 
     location: "Treichville / Marcory", 
     salary: "70.000 FCFA",
     whatsapp: "2250596132058", 
@@ -225,7 +225,7 @@ export const jobOffers = [
   { 
     id: 16, 
     zone: "Abidjan", 
-    category: "Coiffeur", 
+    category: "Coiffure", 
     title: "Coiffeuse Perruques & Tresses", 
     description: "Maîtrise parfaite des poses et tresses pour salon.", 
     location: "Yopougon", 
@@ -242,7 +242,7 @@ export const jobOffers = [
     zone: "Abidjan", 
     category: "Mixte", 
     title: "Multi-postes Faya Cité SIR", 
-    description: "Recherche apprenti (50k), prothésiste (70k) et coiffeur (80k).", 
+    description: "Recherche apprenti (50k), prothésiste (70k) et Coiffure (80k).", 
     location: "Faya Cité SIR", 
     salary: "50.000 - 80.000 FCFA",
     whatsapp: "2250596132058", 
@@ -300,7 +300,7 @@ export const testimonials = [
   {
     id: 4,
     name: "Bakayoko Moussa",
-    role: "Coiffeur Homme",
+    role: "Coiffure Homme",
     content: "L'interface est super simple. J'ai postulé à Yopougon et j'ai commencé le lendemain. Un gain de temps énorme.",
     rating: 5,
     avatar: "https://i.pravatar.cc/150?u=moussa"
@@ -340,7 +340,7 @@ export const testimonials = [
   {
     id: 9,
     name: "Emmanuel Goli",
-    role: "Apprenti Coiffeur",
+    role: "Apprenti Coiffure",
     content: "Même pour un débutant, il y a des opportunités. J'ai trouvé un salon qui accepte de me former à Marcory.",
     rating: 4,
     avatar: "https://i.pravatar.cc/150?u=emmanuel"
@@ -388,7 +388,7 @@ export const testimonials = [
   {
     id: 15,
     name: "Abdoulaye Sidibé",
-    role: "Coiffeur Polyvalent",
+    role: "Coiffure Polyvalent",
     content: "Habitant à Bouaké, j'avais peur de ne rien trouver, mais il y a des offres pour tout le pays !",
     rating: 5,
     avatar: "https://i.pravatar.cc/150?u=abdou"
