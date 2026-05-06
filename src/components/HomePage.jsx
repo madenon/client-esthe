@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Heart, Zap, Search, ShieldCheck, Globe, Volume2, Users, Briefcase, MessageCircle, MapPin } from 'lucide-react';
+import { Heart, Zap, Search, Users, Briefcase, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { jobOffers as initialOffers, jobOffers } from '../apis/datas';
