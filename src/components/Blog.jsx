@@ -160,11 +160,11 @@ const Blog = () => {
             </div>
           </section>
           <section className="p-6 md:p-10">
-            <div className="max-w-4xl mx-auto px-6 mb-16">
+            <div className="max-w-5xl mx-auto px-6 mb-16">
   <img 
-    src="/bl.png" 
+    src="/entre.png" 
     alt="" 
-    className="w-full h-[400px] md:h-[410px] object-cover rounded-2xl"
+    className="w-full h-[500px] md:h-[610px] object-cover rounded-2xl"
   />
 </div>
        

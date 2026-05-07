@@ -203,14 +203,14 @@ const HomePage = () => {
                 fill="currentColor"
                 size={24}
               />
-              Comment réussir son entretien d'embauche ?
+              Comment  savoir en 6 minutes si le coiffeur  va rester  2 ans ou  2 semaines ?
             </h3>
 
 <div className="max-w-4xl mx-auto px-6 mb-16">
   <img 
-    src="/bl.png" 
+    src="/entre.png" 
     alt="" 
-    className="w-full h-[400px] md:h-[410px] object-cover rounded-2xl"
+    className="w-full h-[500px] md:h-[980px] object-cover rounded-2xl"
   />
 </div>
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 mb-6">
