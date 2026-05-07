@@ -189,6 +189,8 @@ const HomePage = () => {
         </div>
       </section>
 
+      
+
       <section className="max-w-4xl mx-auto px-6 mb-16">
         <div className='relative overflow-hidden bg-[#111] px-6 py-14 md:px-12'>
 
@@ -229,8 +231,17 @@ const HomePage = () => {
         </div>
       </section>
 
-      <AdBanner />
 
+      <AdBanner />
+{/* IMAGE DU BAS : Format bandeau plus petit */}
+<div className="max-w-4xl mx-auto px-6 mb-16">
+  <img 
+    src="/bl.png" 
+    alt="" 
+    className="w-full h-[500px] md:h-[570px] object-cover rounded-2xl"
+  />
+</div>
+      
       <div className="max-w-6xl mx-auto px-6">
         <AnimatePresence mode="wait">
           {currentOffers.length > 0 ? (

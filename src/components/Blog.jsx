@@ -153,7 +153,7 @@ const Blog = () => {
             {/* DEUXIÈME PHOTO : L'ARTISAN EN SALON */}
             <div className="mb-8 overflow-hidden rounded-2xl border border-[#ececec]">
                <img 
-                src="/api/placeholder/800/500" 
+                src="/bl.png" 
                 alt="Coiffeur travaillant dans son salon" 
                 className="h-full w-full object-cover"
               />
