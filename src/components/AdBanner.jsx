@@ -15,7 +15,7 @@ const AdBanner = () => {
       description: "Trouvez des bacs, fauteuils et séchoirs professionnels d'occasion à prix réduits.",
       buttonText: "Parcourir l'Espace Vente",
       link: "/espace-de-vente",
-      imgUrl: "/model1.png",
+      imgUrl: "/iv.png",
       accentColor: "from-rose-200/30",
       themeColor: "bg-rose-500"
     },
@@ -26,7 +26,7 @@ const AdBanner = () => {
       description: "Votre salon change de look ? Publiez gratuitement vos annonces de matériel pro ici.",
       buttonText: "Publier une annonce",
       link: "/espace-de-vente",
-      imgUrl: "/model.png",
+      imgUrl: "/ive.png",
       accentColor: "from-blue-600/30",
       themeColor: "bg-blue-500"
     }
@@ -118,11 +118,11 @@ const AdBanner = () => {
                 transition={{ duration: 0.5, type: "spring", damping: 15 }}
                 className="relative flex justify-center items-center"
               >
-                <div className={`absolute w-32 h-32 md:w-48 md:h-48 blur-[60px] opacity-60 rounded-full ${slides[index].themeColor} transition-colors duration-1000`} />
+                <div className={`absolute w-64 h-64 md:w-48 md:h-48 blur-[60px] opacity-60 rounded-full ${slides[index].themeColor} transition-colors duration-1000`} />
                 <img 
                   src={slides[index].imgUrl} 
                   alt="Vente matériel"
-                  className="w-auto h-44 md:h-56 object-contain relative z-20 drop-shadow-2xl"
+                  className="w-64  h-44 md:h-56  rounded-md relative z-20 drop-shadow-2xl"
                   onError={(e) => { e.target.src = "https://via.placeholder.com/200?text=Goorco"; }}
                 />
               </motion.div>
