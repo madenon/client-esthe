@@ -1,4 +1,5 @@
 import { FaPhoneAlt, FaMapMarkerAlt, FaFacebookF, FaTiktok } from 'react-icons/fa';
+import { FaMailchimp } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -84,6 +85,10 @@ const Footer = () => {
                 <span className="text-sm font-medium">+212 7 82 61 70 02</span>
               </div>
               <div className="flex items-center gap-3">
+                <FaMailchimp size={14} className="text-slate-500" />
+                <span className="text-xs text-slate-400 italic">eleodedieu@gmail.com</span>
+              </div>
+               <div className="flex items-center gap-3">
                 <FaMapMarkerAlt size={14} className="text-slate-500" />
                 <span className="text-xs text-slate-400 italic">Casablanca</span>
               </div>
