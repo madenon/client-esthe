@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { MapPin, Clock, ShoppingCart, ShieldCheck, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const EspaceVente = () => {
    const articles = [
@@ -173,10 +174,10 @@ return (
                     </span>
                   </div>
 
-                  <button className="bg-slate-900 hover:bg-rose-600 text-white px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 transition-all active:scale-95 shadow-sm">
+                  <Link to="/contact" className="bg-slate-900 hover:bg-rose-600 text-white px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center gap-2 transition-all active:scale-95 shadow-sm">
                     <ShoppingCart size={15} />
                     Contact
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
