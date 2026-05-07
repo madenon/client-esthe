@@ -190,7 +190,7 @@ const HomePage = () => {
       </section>
 
       <section className="max-w-4xl mx-auto px-6 mb-16">
-        <div className="bg-gradient-to-br from-blue-300 to-blue-400 rounded-[2.5rem] p-8 md:p-12 shadow-2xl shadow-blue-900/20 relative overflow-hidden group">
+        <div className='relative overflow-hidden bg-[#111] px-6 py-14 md:px-12'>
 
           <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
 
@@ -221,7 +221,7 @@ const HomePage = () => {
 
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 bg-[#ff4da6]/40 hover:bg-white hover:text-[#ff4da6] text-white px-8 py-4 rounded-xl font-black text-[13px] uppercase tracking-widest transition-all shadow-lg active:scale-95"
+              className="inline-flex items-center gap-2 bg-[#ff4da6] hover:bg-white hover:text-[#ff4da6] text-white px-8 py-4 rounded-xl font-black text-[13px] uppercase tracking-widest transition-all shadow-lg active:scale-95"
             >
               Lire la suite des conseils
             </Link>

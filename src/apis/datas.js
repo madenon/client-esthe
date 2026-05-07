@@ -245,7 +245,7 @@ export const jobOffers = [
     whatsapp: "2250779161504",
     likes: 31,
     isUrgent: true,
-    isFavorite: true,
+    isFavorite: false,
     hasDortoir: false,
     isPremium: true,
     date: "2026-05-07",

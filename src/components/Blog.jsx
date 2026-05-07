@@ -4,7 +4,6 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-[#faf9f7] px-3 py-6 font-sans">
       <article className="mx-auto max-w-4xl overflow-hidden rounded-[24px] border border-[#e7e7e7] bg-white shadow-sm">
-
         {/* HEADER */}
         <header className="relative overflow-hidden bg-[#111] px-6 py-14 md:px-12">
           <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full bg-[#B85C38]/10" />
@@ -29,14 +28,13 @@ const Blog = () => {
           </h1>
 
           <p className="mt-5 max-w-2xl font-serif text-lg italic leading-8 text-white/50">
-            Le guide Goorco pour bâtir une équipe solide,
-            fidèle et rentable en Côte d’Ivoire.
+            Le guide Goorco pour bâtir une équipe solide, fidèle et rentable en
+            Côte d’Ivoire.
           </p>
         </header>
 
         {/* CONTENT */}
         <div className="px-5 py-10 md:px-12 md:py-14">
-
           {/* STATS */}
           <section className="mb-12">
             <div className="grid overflow-hidden rounded-2xl border border-[#ececec] md:grid-cols-3">
@@ -69,27 +67,34 @@ const Blog = () => {
               ))}
             </div>
 
+          {/* PREMIÈRE PHOTO : L'HOMME PENSIF */}
+<div className="mt-10 overflow-hidden rounded-2xl border border-[#ececec]">
+  <img
+    src="/blog.png"
+    alt="Coiffeur réfléchissant dans son salon"
+    className="w-full h-auto object-cover"
+  />
+</div>
+
             <p className="mt-8 text-[16px] leading-9 text-[#333]">
-              ✂️ Ton salon est plein. Les clients affluent.
-              Tu as la vision, les idées, les moyens.
-              Et pourtant tu stagnes.
+              ✂️ Ton salon est plein. Les clients affluent. Tu as la vision, les
+              idées, les moyens. Et pourtant tu stagnes.
             </p>
 
             <div className="mt-7 rounded-r-2xl border-l-4 border-[#B85C38] bg-[#FDF6F2] p-6">
               <p className="font-serif text-[17px] italic leading-9 text-[#7A3520]">
-                “J’ai des coiffeurs, mais pas de coiffeurs fiables,
-                pros, autonomes. Je refuse des clients.
-                Je repousse des projets. Je me retrouve seul à tout faire,
-                et l’équipe que je rêve de construire reste un rêve.”
+                “J’ai des coiffeurs, mais pas de coiffeurs fiables, pros,
+                autonomes. Je refuse des clients. Je repousse des projets. Je me
+                retrouve seul à tout faire, et l’équipe que je rêve de
+                construire reste un rêve.”
               </p>
             </div>
 
             <p className="mt-7 text-[15px] leading-9 text-[#444]">
-              Ça te parle ? Normal. En Côte d’Ivoire,
-              80% du recrutement se fait au bouche-à-oreille + WhatsApp.
-              Zéro process, zéro filtre.
-              Résultat : tu passes ta journée à éteindre des incendies
-              au lieu de bâtir.
+              Ça te parle ? Normal. En Côte d’Ivoire, 80% du recrutement se
+              fait au bouche-à-oreille + WhatsApp. Zéro process, zéro filtre.
+              Résultat : tu passes ta journée à éteindre des incendies au lieu
+              de bâtir.
             </p>
           </section>
 
@@ -103,40 +108,32 @@ const Blog = () => {
               </span>
 
               <h2 className="font-serif text-2xl font-bold text-[#111]">
-                Le vrai blocage : mentalité et formation,
-                pas la main-d’œuvre
+                Le vrai blocage : mentalité et formation, pas la main-d’œuvre
               </h2>
             </div>
 
             <div className="rounded-2xl border border-[#ececec] bg-white p-7">
               <p className="text-[15px] leading-9 text-[#333]">
-                Le marché CI n’a pas un manque de coiffeurs.
-                Il a un manque de coiffeurs qui veulent rester,
-                apprendre et respecter le client.
+                Le marché CI n’a pas un manque de coiffeurs. Il a un manque de
+                coiffeurs qui veulent rester, apprendre et respecter le client.
               </p>
 
               <p className="mt-6 text-[15px] leading-9 text-[#333]">
-                Beaucoup veulent le résultat sans passer
-                par l’apprentissage.
-                Ils maîtrisent 2 coupes,
-                demandent 150k/mois,
-                puis partent pour 20k de plus
-                dès que l’occasion se présente.
+                Beaucoup veulent le résultat sans passer par l’apprentissage. Ils
+                maîtrisent 2 coupes, demandent 150k/mois, puis partent pour 20k
+                de plus dès que l’occasion se présente.
               </p>
 
               <div className="mt-6 rounded-2xl border-l-4 border-[#B85C38] bg-[#FDF6F2] p-5">
                 <p className="leading-8 font-semibold text-[#7A3520]">
-                  Toi tu veux bâtir un empire.
-                  Eux veulent un salaire.
-                  Le mismatch est là.
+                  Toi tu veux bâtir un empire. Eux veulent un salaire. Le
+                  mismatch est là.
                 </p>
               </div>
 
               <p className="mt-6 text-[15px] leading-9 text-[#333]">
-                Rester en mode “j’attends le coiffeur parfait”
-                = rester bloqué.
-                Le coiffeur parfait n’existe pas.
-                Il se fabrique.
+                Rester en mode “j’attends le coiffeur parfait” = rester bloqué.
+                Le coiffeur parfait n’existe pas. Il se fabrique.
               </p>
             </div>
           </section>
@@ -153,8 +150,17 @@ const Blog = () => {
               </h2>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2">
+            {/* DEUXIÈME PHOTO : L'ARTISAN EN SALON */}
+            <div className="mb-8 overflow-hidden rounded-2xl border border-[#ececec]">
+               <img 
+                src="/api/placeholder/800/500" 
+                alt="Coiffeur travaillant dans son salon" 
+                className="h-full w-full object-cover"
+              />
+              {/* Remplace le src par le chemin de ton image image_edaff6.jpg */}
+            </div>
 
+            <div className="grid gap-5 md:grid-cols-2">
               {/* CARD 1 */}
               <div className="rounded-2xl border border-[#f0d5cc] bg-[#FDFAF9] p-6 transition hover:shadow-xl">
                 <span className="text-[11px] font-bold uppercase tracking-wide text-[#B85C38]">
@@ -162,18 +168,14 @@ const Blog = () => {
                 </span>
 
                 <p className="mt-4 text-[14px] leading-8 text-[#444]">
-                  Un senior à 180k/mois qui bouge tous les 2 mois
-                  coûte plus cher qu’un junior à former.
+                  Un senior à 180k/mois qui bouge tous les 2 mois coûte plus
+                  cher qu’un junior à former.
                 </p>
 
                 <p className="mt-4 text-[14px] leading-8 text-[#444]">
-                  Vise surtout :
-                  2-3 ans d’expérience,
-                  attitude correcte,
-                  proximité du salon
-                  et envie d’apprendre
-                  le lissage,
-                  le gel et le tissage.
+                  Vise surtout : 2-3 ans d’expérience, attitude correcte,
+                  proximité du salon et envie d’apprendre le lissage, le gel et
+                  le tissage.
                 </p>
               </div>
 
@@ -184,22 +186,18 @@ const Blog = () => {
                 </span>
 
                 <p className="mt-4 text-[14px] leading-8 text-[#444]">
-                  Pas besoin de CV de 2 pages.
-                  Fais venir la candidate
-                  et teste-la directement.
+                  Pas besoin de CV de 2 pages. Fais venir la candidate et
+                  teste-la directement.
                 </p>
 
                 <div className="mt-5 rounded-xl bg-white p-4 italic leading-8 text-[#185FA5]">
-                  “Fais-moi un dégradé bas sur cette tête.
-                  Je regarde la propreté,
-                  la vitesse et la tenue du ciseau.”
+                  “Fais-moi un dégradé bas sur cette tête. Je regarde la
+                  propreté, la vitesse et la tenue du ciseau.”
                 </div>
 
                 <p className="mt-4 text-[14px] leading-8 text-[#444]">
-                  Si elle refuse ou dit :
-                  “je n’ai pas mon matériel”,
-                  c’est mauvais signe.
-                  Un pro s’adapte.
+                  Si elle refuse ou dit : “je n’ai pas mon matériel”, c’est
+                  mauvais signe. Un pro s’adapte.
                 </p>
               </div>
             </div>
@@ -213,32 +211,29 @@ const Blog = () => {
               <div className="space-y-5">
                 <div className="rounded-xl bg-[#faf9f7] p-5">
                   <p className="font-semibold text-[#111]">
-                    “La dernière fois que le patron t’a corrigée,
-                    tu as fait quoi ?”
+                    “La dernière fois que le patron t’a corrigée, tu as fait
+                    quoi ?”
                   </p>
 
                   <p className="mt-2 text-sm leading-7 text-[#666]">
-                    Bon signe :
-                    “J’ai écouté, j’ai refait.”
+                    Bon signe : “J’ai écouté, j’ai refait.”
                   </p>
                 </div>
 
                 <div className="rounded-xl bg-[#faf9f7] p-5">
                   <p className="font-semibold text-[#111]">
-                    “Client demande une coupe que tu connais pas,
-                    tu fais quoi ?”
+                    “Client demande une coupe que tu connais pas, tu fais quoi
+                    ?”
                   </p>
 
                   <p className="mt-2 text-sm leading-7 text-[#666]">
-                    Bon signe :
-                    “Je propose autre chose et je me renseigne.”
+                    Bon signe : “Je propose autre chose et je me renseigne.”
                   </p>
                 </div>
               </div>
 
               <p className="mt-6 text-[15px] leading-8 text-[#333]">
-                En CI, l’attitude reste.
-                La technique se forme.
+                En CI, l’attitude reste. La technique se forme.
               </p>
             </div>
           </section>
@@ -256,22 +251,18 @@ const Blog = () => {
             </div>
 
             <div className="overflow-hidden rounded-2xl border border-[#ececec]">
-
               {[
                 {
                   title: "Forme avec tes méthodes",
-                  text:
-                    "Documente 3 coupes phares, 1 protocole d’accueil et 1 standard d’hygiène. Même 2 pages A4 suffisent.",
+                  text: "Documente 3 coupes phares, 1 protocole d’accueil et 1 standard d’hygiène. Même 2 pages A4 suffisent.",
                 },
                 {
                   title: "Attire des motivés",
-                  text:
-                    "Un gars motivé qui habite Yopougon vaut parfois mieux qu’une star à Marcory avec 1h30 de transport.",
+                  text: "Un gars motivé qui habite Yopougon vaut parfois mieux qu’une star à Marcory avec 1h30 de transport.",
                 },
                 {
                   title: "Crée une culture",
-                  text:
-                    "Récompense ponctualité, propreté et satisfaction client. Une petite prime coûte moins cher qu’un client perdu.",
+                  text: "Récompense ponctualité, propreté et satisfaction client. Une petite prime coûte moins cher qu’un client perdu.",
                 },
               ].map((item, i) => (
                 <div
@@ -292,8 +283,7 @@ const Blog = () => {
             </div>
 
             <p className="mt-6 text-[15px] leading-9 text-[#333]">
-              Tant que tu ne délègues pas,
-              tu restes l’employé de ton salon.
+              Tant que tu ne délègues pas, tu restes l’employé de ton salon.
             </p>
           </section>
 
@@ -311,8 +301,7 @@ const Blog = () => {
 
             <div className="rounded-2xl border border-[#ececec] bg-white p-7">
               <p className="text-[15px] leading-9 text-[#333]">
-                Les meilleurs salons de demain
-                ne seront pas ceux qui attendent.
+                Les meilleurs salons de demain ne seront pas ceux qui attendent.
                 Ce seront ceux qui forment.
               </p>
 
@@ -330,16 +319,14 @@ const Blog = () => {
                       {index + 1}
                     </span>
 
-                    <p className="text-[15px] leading-8 text-[#444]">
-                      {item}
-                    </p>
+                    <p className="text-[15px] leading-8 text-[#444]">{item}</p>
                   </div>
                 ))}
               </div>
 
               <p className="mt-7 text-[15px] leading-9 text-[#333]">
-                Ce que tu fais aujourd’hui en urgence,
-                un staff formé le fait demain sans toi.
+                Ce que tu fais aujourd’hui en urgence, un staff formé le fait
+                demain sans toi.
               </p>
             </div>
           </section>
@@ -355,12 +342,9 @@ const Blog = () => {
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-8 text-white/70">
-              Arrête d’attendre.
-              Crée ton système de recrutement + formation
-              en 15 min par candidat.
-              Les salons qui passent au niveau supérieur
-              sont ceux qui bâtissent l’équipe
-              qu’ils n’ont jamais trouvée.
+              Arrête d’attendre. Crée ton système de recrutement + formation en
+              15 min par candidat. Les salons qui passent au niveau supérieur
+              sont ceux qui bâtissent l’équipe qu’ils n’ont jamais trouvée.
             </p>
 
             <button className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#25D366] px-8 py-4 text-sm font-bold text-white transition hover:scale-[1.02] hover:bg-[#1ebe5d] md:w-auto">
@@ -368,7 +352,6 @@ const Blog = () => {
               Contacte-nous sur WhatsApp
             </button>
           </section>
-
         </div>
       </article>
     </div>
