@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { testimonials } from '../apis/datas'; // Utilise ton fichier de données
@@ -11,7 +10,7 @@ const Temoignage = () => {
         {/* EN-TÊTE DE LA SECTION */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tighter">
-            La parole à nos <span className="text-blue-600">Talents</span>
+           Témoignages <span className="text-blue-600">et Avis</span>
           </h2>
           <div className="w-20 h-1.5 bg-[#ff4da6] mx-auto mt-4 rounded-full"></div>
           <p className="text-slate-500 mt-6 max-w-2xl mx-auto font-medium">

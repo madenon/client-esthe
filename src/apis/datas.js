@@ -17,53 +17,238 @@ export const jobOffers = [
     isPremium: false,
     date: "2024-05-18"
   },
-  { 
-    id: 8, 
-    zone: "Abidjan", 
-    category: "Coiffure", 
-    title: "Expert(e) en Perruques & Customisation", 
-    description: "Recherche d'un(e) Coiffure(se) spécialisé(e) dans la customisation et la pose de perruques. Disponibilité immédiate.", 
-    location: "Bingerville", 
-    salary: "100.000 FCFA",
-    whatsapp: "2250596132058", 
-    likes: 45,
-    isUrgent: false,
-    isFavorite: true, // Ajouté
-    hasDortoir: false,
-    isPremium: true,
-    date: "2024-05-17"
-  },
-  { 
-    id: 2, 
-    zone: "Abidjan", 
-    category: "Coiffure", 
-    title: "Besoin coiffeuse et prothésiste", 
-    description: "J’ai besoin d’une coiffeuse qui maitrise bien les poses et une prothésiste ongulaire qui maîtrise toutes les techniques.", 
-    location: "Yopougon", 
-    salary: "90.000 FCFA",
-    whatsapp: "2250596132058",
-    likes: 34,
+   {
+    id: 111,
+    zone: "Abidjan",
+    category: "Prothésie",
+    title: "Recherche Prothésiste Ongulaire",
+    description:
+      "Je cherche une prothésiste pour emploi immédiat au nouveau CHU.",
+    location: "Angré CHU",
+    salary: "À négocier",
+    whatsapp: "2250700508392",
+    likes: 12,
     isUrgent: true,
-    isFavorite: false, // Ajouté
+    isFavorite: false,
     hasDortoir: false,
     isPremium: false,
-    date: "2024-05-16"
+    date: "2026-05-07",
   },
-  { 
-    id: 3, 
-    zone: "Abidjan", 
-    category: "Esthétique", 
-    title: "Besoin de 2 filles (Pédicure/Soins)", 
-    description: "Besoin de 2 filles pour faire pédicure manucure et soins de visage à Yop maroc et Treichville. De 8h à 20h.", 
-    location: "Yopougon / Treichville", 
-    salary: "80.000 FCFA",
-    whatsapp: "2250596132058", 
-    likes: 56,
+
+  {
+    id: 2,
+    zone: "Abidjan",
+    category: "Esthétique",
+    title: "Recherche Technicienne de Cils",
+    description:
+      "Recherche technicienne de cils urgent pour un salon de beauté.",
+    location: "Cocody",
+    salary: "À négocier",
+    whatsapp: "2250799665342",
+    likes: 18,
+    isUrgent: true,
+    isFavorite: true,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2026-05-07",
+  },
+
+  {
+    id: 300,
+    zone: "Abidjan",
+    category: "Recherche d'emploi",
+    title: "Prothésiste & Technicienne Cils Disponible",
+    description:
+      "Jeune dame polyvalente recherche un emploi. Elle maîtrise la prothésie ongulaire, les cils et les sourcils.",
+    location: "Angré",
+    salary: "À négocier",
+    whatsapp: "2250777344290",
+    likes: 25,
     isUrgent: false,
     isFavorite: true,
     hasDortoir: false,
     isPremium: false,
-    date: "2024-05-15"
+    date: "2026-05-07",
+  },
+
+  {
+    id: 400,
+    zone: "Abidjan",
+    category: "Coiffure",
+    title: "Besoin Coiffeuse et Aide Coiffeuse",
+    description:
+      "Recherche une coiffeuse et une aide coiffeuse maîtrisant les tresses et les nattes.",
+    location: "Angré CHU",
+    salary: "À négocier",
+    whatsapp: "2250779762679",
+    likes: 16,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2026-05-07",
+  },
+
+  {
+    id: 52,
+    zone: "Abidjan",
+    category: "Business",
+    title: "Salon de Coiffure à Vendre",
+    description:
+      "Salon de coiffure à vendre en bon état ou disponible en gestion libre.",
+    location: "Abidjan",
+    salary: "À négocier",
+    whatsapp: "",
+    likes: 10,
+    isUrgent: false,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "2026-05-07",
+  },
+
+  {
+    id: 60,
+    zone: "Abidjan",
+    category: "Recherche d'emploi",
+    title: "Coiffeur Professionnel Recherche Salon",
+    description:
+      "Coiffeur professionnel recherche un salon avec dortoir.",
+    location: "Port-Bouët / Grand-Bassam",
+    salary: "À négocier",
+    whatsapp: "2250507564428",
+    likes: 22,
+    isUrgent: false,
+    isFavorite: true,
+    hasDortoir: true,
+    isPremium: false,
+    date: "2026-05-07",
+  },
+
+  {
+    id: 70,
+    zone: "Abidjan",
+    category: "Vente / Coiffure",
+    title: "Recherche Travail en Magasin ou Salon",
+    description:
+      "Recherche du travail dans la vente en magasin ou dans un salon de coiffure.",
+    location: "Abidjan",
+    salary: "À négocier",
+    whatsapp: "2250787321090",
+    likes: 14,
+    isUrgent: false,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2026-05-07",
+  },
+
+  {
+    id: 80,
+    zone: "Abidjan",
+    category: "Coiffure",
+    title: "Besoin Coiffeuse et Coiffeur",
+    description:
+      "Recherche une coiffeuse et un coiffeur pour un salon.",
+    location: "Yopougon Académie",
+    salary: "À négocier",
+    whatsapp: "2250142517776",
+    likes: 20,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2026-05-07",
+  },
+
+  {
+    id: 90,
+    zone: "Abidjan",
+    category: "Coiffure",
+    title: "Coiffeur(se) Professionnel(le) Perruques",
+    description:
+      "Besoin urgent d'une coiffeuse ou d'un coiffeur professionnel maîtrisant les poses de perruques.",
+    location: "Bingerville",
+    salary: "150.000 FCFA",
+    whatsapp: "2250710752338",
+    likes: 47,
+    isUrgent: true,
+    isFavorite: true,
+    hasDortoir: false,
+    isPremium: true,
+    date: "2026-05-07",
+  },
+
+  {
+    id: 101,
+    zone: "Abidjan",
+    category: "Coiffure",
+    title: "Coiffeur Professionnel Disponible",
+    description:
+      "Coiffeur professionnel disponible cherche un barber avec possibilité de dortoir.",
+    location: "Abidjan",
+    salary: "À négocier",
+    whatsapp: "2250505800053",
+    likes: 28,
+    isUrgent: false,
+    isFavorite: false,
+    hasDortoir: true,
+    isPremium: false,
+    date: "2026-05-07",
+  },
+
+  {
+    id: 101,
+    zone: "Abidjan",
+    category: "Recherche d'emploi",
+    title: "Coiffeuse Recherche Travail avec Logement",
+    description:
+      "Je suis une coiffeuse et je recherche du travail dans un salon avec logement.",
+    location: "Abidjan",
+    salary: "À négocier",
+    whatsapp: "2250150962273",
+    likes: 19,
+    isUrgent: false,
+    isFavorite: true,
+    hasDortoir: true,
+    isPremium: false,
+    date: "2026-05-07",
+  },
+
+  {
+    id: 102,
+    zone: "Abidjan",
+    category: "Prothésie",
+    title: "Prothésiste Disponible après Formation",
+    description:
+      "Prothésiste en fin de formation disponible uniquement dans la zone de Angré.",
+    location: "Angré",
+    salary: "À négocier",
+    whatsapp: "2250715416616",
+    likes: 15,
+    isUrgent: false,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2026-05-07",
+  },
+
+  {
+    id: 103,
+    zone: "Abidjan",
+    category: "Coiffure",
+    title: "Recherche Coiffeuse et Prothésiste Ongulaire",
+    description:
+      "Recherche une coiffeuse et une prothésiste ongulaire pour un salon sérieux.",
+    location: "Yopougon Maroc",
+    salary: "À négocier",
+    whatsapp: "2250779161504",
+    likes: 31,
+    isUrgent: true,
+    isFavorite: true,
+    hasDortoir: false,
+    isPremium: true,
+    date: "2026-05-07",
   },
   { 
     id: 4, 
@@ -297,100 +482,12 @@ export const testimonials = [
     rating: 4,
     avatar: "https://i.pravatar.cc/150?u=dorcas"
   },
-  {
-    id: 4,
-    name: "Bakayoko Moussa",
-    role: "Coiffure Homme",
-    content: "L'interface est super simple. J'ai postulé à Yopougon et j'ai commencé le lendemain. Un gain de temps énorme.",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?u=moussa"
-  },
-  {
-    id: 5,
-    name: "Marie-Louise Kouamé",
-    role: "Spécialiste Tresses",
-    content: "J'adore le système de badges 'Urgent'. Ça permet de savoir quelles offres nécessitent une réponse immédiate.",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?u=marielouise"
-  },
-  {
-    id: 6,
-    name: "Jean-Pierre Yao",
-    role: "Propriétaire Spa",
-    content: "Enfin une plateforme dédiée à nos métiers ! Goorco centralise tout ce dont on a besoin pour gérer nos équipes.",
-    rating: 4,
-    avatar: "https://i.pravatar.cc/150?u=jp"
-  },
-  {
-    id: 7,
-    name: "Tidiane Diabaté",
-    role: "Prothésiste Ongulaire",
-    content: "La visibilité sur les salaires dès l'annonce évite les mauvaises surprises. Très transparent, j'apprécie beaucoup.",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?u=tidiane"
-  },
-  {
-    id: 8,
-    name: "Fatou Diop",
-    role: "Maquilleuse Pro",
-    content: "J'ai trouvé une mission premium à Assinie grâce au site. Les offres sont vraiment de qualité.",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?u=fatou"
-  },
-  {
-    id: 9,
-    name: "Emmanuel Goli",
-    role: "Apprenti Coiffure",
-    content: "Même pour un débutant, il y a des opportunités. J'ai trouvé un salon qui accepte de me former à Marcory.",
-    rating: 4,
-    avatar: "https://i.pravatar.cc/150?u=emmanuel"
-  },
-  {
-    id: 10,
-    name: "Christelle N'Guessan",
-    role: "Gérante de Barbier",
-    content: "Goorco est devenu mon outil numéro 1 pour le recrutement. Simple, efficace et très bien ciblé sur la Côte d'Ivoire.",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?u=christelle"
-  },
-  {
-    id: 11,
-    name: "Oumar Traoré",
-    role: "Spécialiste Coloration",
-    content: "Le filtre par zone est super pratique. J'habite à Bingerville et j'ai trouvé juste à côté de chez moi.",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?u=oumar"
-  },
-  {
-    id: 12,
-    name: "Syntiche Boni",
-    role: "Technicienne de Cils",
-    content: "Super expérience ! Le site est fluide et les recruteurs répondent vraiment vite sur WhatsApp.",
-    rating: 4,
-    avatar: "https://i.pravatar.cc/150?u=syntiche"
-  },
-  {
-    id: 13,
-    name: "Patrick Kouassi",
-    role: "Manager Salon de Luxe",
-    content: "On sent que la plateforme comprend les besoins du secteur. Les profils sont vérifiés et sérieux.",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?u=patrick"
-  },
-  {
-    id: 14,
-    name: "Esther Toure",
-    role: "Experte Perruques",
-    content: "Inscrite le matin, contactée l'après-midi. Je n'avais jamais vu un recrutement aussi rapide à Abidjan.",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?u=esther"
-  },
-  {
-    id: 15,
-    name: "Abdoulaye Sidibé",
-    role: "Coiffure Polyvalent",
-    content: "Habitant à Bouaké, j'avais peur de ne rien trouver, mais il y a des offres pour tout le pays !",
-    rating: 5,
-    avatar: "https://i.pravatar.cc/150?u=abdou"
-  }
+  
+
+ 
 ];
+
+
+
+
+

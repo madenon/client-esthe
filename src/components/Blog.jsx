@@ -1,191 +1,348 @@
-import React from 'react';
 
 const Blog = () => {
   return (
-    <div style={{ background: '#faf9f7', minHeight: '100vh', padding: '20px 10px', fontFamily: "'DM Sans', sans-serif" }}>
+    <div className="min-h-screen bg-[#faf9f7] px-3 py-6 font-sans">
+      <article className="mx-auto max-w-4xl overflow-hidden rounded-[24px] border border-[#e7e7e7] bg-white">
 
-      {/* SECTION CSS POUR LE RESPONSIVE */}
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap');
-        
-        .card-hover { transition: box-shadow 0.2s; }
-        .card-hover:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.07); }
-        .btn-wa { transition: background 0.2s, transform 0.15s; }
-        .btn-wa:hover { background: #128C7E !important; transform: scale(1.03); }
-        .q-card { transition: box-shadow 0.2s; }
-        .q-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+        {/* HEADER */}
+        <header className="relative overflow-hidden bg-[#111] px-6 py-14 md:px-12">
+          <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full bg-[#B85C38]/10" />
+          <div className="absolute bottom-0 left-20 h-20 w-20 rounded-full bg-[#B85C38]/10" />
 
-        /* Classes de grilles adaptatives */
-        .responsive-grid-3 {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 1px;
-        }
+          <div className="mb-8 flex items-center gap-4">
+            <div className="h-[1px] flex-1 bg-white/10" />
 
-        .responsive-grid-2 {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 14px;
-        }
-
-        /* AJUSTEMENTS MOBILE (Écrans inférieurs à 600px) */
-        @media (max-width: 600px) {
-          .responsive-grid-3, .responsive-grid-2 {
-            grid-template-columns: 1fr !important; /* Force le passage à une seule colonne */
-          }
-          .blog-container {
-            border-radius: 0 !important;
-            border: none !important;
-          }
-          .blog-header {
-            padding: 40px 20px !important;
-          }
-          .blog-content {
-            padding: 30px 16px !important;
-          }
-          .stat-item {
-            border-bottom: 1px solid #eee;
-          }
-        }
-      `}</style>
-
-      <article className="blog-container" style={{ maxWidth: 740, margin: '0 auto', background: '#fff', borderRadius: 20, border: '0.5px solid #e5e5e5', overflow: 'hidden' }}>
-
-        {/* EN-TÊTE */}
-        <header className="blog-header" style={{ background: '#111', padding: '48px 48px 40px', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', top: -40, right: -40, width: 180, height: 180, borderRadius: '50%', background: 'rgba(184,92,56,0.12)' }} />
-          <div style={{ position: 'absolute', bottom: -20, left: 60, width: 80, height: 80, borderRadius: '50%', background: 'rgba(184,92,56,0.07)' }} />
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 28 }}>
-            <div style={{ height: 1, background: 'rgba(255,255,255,0.15)', flex: 1 }} />
-            <span style={{ fontSize: 10, fontWeight: 500, letterSpacing: '.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', textAlign: 'center' }}>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-white/40">
               Guide Recrutement · Goorco
             </span>
-            <div style={{ height: 1, background: 'rgba(255,255,255,0.15)', flex: 1 }} />
+
+            <div className="h-[1px] flex-1 bg-white/10" />
           </div>
 
-          <h1 style={{
-            fontFamily: "'Playfair Display', serif",
-            fontSize: 'clamp(24px, 5vw, 38px)',
-            fontWeight: 900,
-            lineHeight: 1.18,
-            letterSpacing: '-.02em',
-            margin: '0 0 16px',
-            color: '#fff',
-            position: 'relative'
-          }}>
-            Recruter en salon de coiffure et esthétique en Côte d'Ivoire :{' '}
-            <em style={{ fontStyle: 'italic', color: '#E07A52' }}>attitude</em>
-            {' '}ou compétences déjà acquises ?
+          <h1 className="relative font-serif text-3xl font-black leading-tight tracking-[-0.03em] text-white md:text-5xl">
+            Ton salon de coiffure ne grandit pas ?{" "}
+            <span className="italic text-[#E07A52]">
+              Le problème, c’est l’équipe,
+            </span>{" "}
+            pas le local
           </h1>
 
-          <p style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', color: 'rgba(255,255,255,0.45)', fontSize: 16, margin: 0 }}>
-            Le guide Goorco pour éviter les mauvais recrutements et bâtir une équipe stable
+          <p className="mt-5 max-w-2xl font-serif text-lg italic leading-8 text-white/50">
+            Le guide Goorco pour bâtir une équipe solide,
+            fidèle et rentable en Côte d’Ivoire.
           </p>
         </header>
 
-        <div className="blog-content" style={{ padding: '40px 48px 56px' }}>
+        {/* CONTENT */}
+        <div className="px-5 py-10 md:px-12 md:py-14">
 
-          {/* INTRODUCTION AVEC STATS */}
-          <section style={{ marginBottom: 40 }}>
-            <div className="responsive-grid-3" style={{ background: '#e8e8e8', border: '0.5px solid #e8e8e8', borderRadius: 14, overflow: 'hidden', marginBottom: 28 }}>
+          {/* STATS */}
+          <section className="mb-12">
+            <div className="grid overflow-hidden rounded-2xl border border-[#ececec] md:grid-cols-3">
               {[
-                { n: '9/10',   label: 'salons perdent temps & argent en recrutement' },
-                { n: '50+',    label: 'candidatures non qualifiées par annonce' },
-                { n: '3 sem.', label: 'avant la première démission en moyenne' },
-              ].map((s, i) => (
-                <div key={i} className="stat-item" style={{ background: '#fff', padding: '18px 14px' }}>
-                  <div style={{ fontFamily: "'Playfair Display', serif", fontSize: 32, fontWeight: 900, color: '#B85C38', lineHeight: 1 }}>{s.n}</div>
-                  <div style={{ fontSize: 12, color: '#999', marginTop: 4 }}>{s.label}</div>
+                {
+                  number: "80%",
+                  label: "des recrutements se font sans vrai processus",
+                },
+                {
+                  number: "150k",
+                  label: "salaires demandés avec peu d’expérience",
+                },
+                {
+                  number: "3 sem.",
+                  label: "avant un départ ou une démission",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="border-b border-[#ececec] bg-white p-6 last:border-b-0 md:border-b-0 md:border-r last:md:border-r-0"
+                >
+                  <h3 className="font-serif text-4xl font-black text-[#B85C38]">
+                    {item.number}
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-7 text-[#777]">
+                    {item.label}
+                  </p>
                 </div>
               ))}
             </div>
 
-            <p style={{ fontSize: 16, lineHeight: 1.8, margin: '0 0 14px', color: '#222' }}>
-              En Côte d'Ivoire, <strong>9 salons sur 10</strong> perdent du temps et de l'argent sur le recrutement.
-              Annonces postées sur Facebook, 50 candidatures non qualifiées, no-show à l'entretien, démission après 3 semaines.
+            <p className="mt-8 text-[16px] leading-9 text-[#333]">
+              ✂️ Ton salon est plein. Les clients affluent.
+              Tu as la vision, les idées, les moyens.
+              Et pourtant tu stagnes.
             </p>
-            <div style={{ background: '#FDF6F2', borderLeft: '3px solid #B85C38', padding: '20px 24px', borderRadius: '0 10px 10px 0' }}>
-              <p style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: 700, color: '#7A3520', fontSize: 15, lineHeight: 1.7, margin: 0 }}>
-                Chez Goorco, on accompagne les salons d'Abidjan, Yopougon, Cocody et Marcory à recruter plus vite et plus juste.
+
+            <div className="mt-7 rounded-r-2xl border-l-4 border-[#B85C38] bg-[#FDF6F2] p-6">
+              <p className="font-serif text-[17px] italic leading-9 text-[#7A3520]">
+                “J’ai des coiffeurs, mais pas de coiffeurs fiables,
+                pros, autonomes. Je refuse des clients.
+                Je repousse des projets. Je me retrouve seul à tout faire.”
+              </p>
+            </div>
+
+            <p className="mt-7 text-[15px] leading-9 text-[#444]">
+              Ça te parle ? Normal. En Côte d’Ivoire,
+              80% du recrutement se fait au bouche-à-oreille + WhatsApp.
+              Zéro process, zéro filtre.
+              Résultat : tu passes ta journée à éteindre des incendies
+              au lieu de bâtir.
+            </p>
+          </section>
+
+          <div className="mb-12 h-[1px] bg-[#f1f1f1]" />
+
+          {/* SECTION 1 */}
+          <section className="mb-14">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#B85C38] text-sm font-bold text-white">
+                1
+              </span>
+
+              <h2 className="font-serif text-2xl font-bold text-[#111]">
+                Le vrai blocage : mentalité et formation
+              </h2>
+            </div>
+
+            <div className="rounded-2xl border border-[#ececec] bg-white p-7">
+              <p className="text-[15px] leading-9 text-[#333]">
+                Le marché CI n’a pas un manque de coiffeurs.
+                Il a un manque de coiffeurs qui veulent rester,
+                apprendre et respecter le client.
+              </p>
+
+              <p className="mt-6 text-[15px] leading-9 text-[#333]">
+                Beaucoup veulent le résultat sans passer
+                par l’apprentissage. Ils maîtrisent 2 coupes,
+                demandent 150k/mois, puis partent pour 20k de plus.
+              </p>
+
+              <div className="mt-6 rounded-2xl border-l-4 border-[#B85C38] bg-[#FDF6F2] p-5">
+                <p className="leading-8 font-semibold text-[#7A3520]">
+                  Toi tu veux bâtir un empire.
+                  Eux veulent un salaire.
+                  Le mismatch est là.
+                </p>
+              </div>
+
+              <p className="mt-6 text-[15px] leading-9 text-[#333]">
+                Rester en mode “j’attends le coiffeur parfait”
+                = rester bloqué.
+                Le coiffeur parfait n’existe pas.
+                Il se fabrique.
               </p>
             </div>
           </section>
 
-          <div style={{ height: 1, background: '#f0f0f0', margin: '0 0 36px' }} />
+          {/* SECTION 2 */}
+          <section className="mb-14">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#111] text-sm font-bold text-white">
+                2
+              </span>
 
-          {/* SECTION 1 - PROFILS */}
-          <section style={{ marginBottom: 40 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
-              <span style={{ background: '#B85C38', color: '#fff', width: 28, height: 28, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, fontWeight: 700, flexShrink: 0 }}>1</span>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, margin: 0, color: '#111' }}>
-                Les 2 profils d'entretien
+              <h2 className="font-serif text-2xl font-bold text-[#111]">
+                Passe de “recruter” à “former”
               </h2>
             </div>
 
-            <div className="responsive-grid-2">
-              <div className="card-hover" style={{ border: '0.5px solid #f0d5cc', borderLeft: '3px solid #B85C38', padding: '22px', borderRadius: 14, background: '#FDFAF9' }}>
-                <h3 style={{ fontSize: 10, fontWeight: 600, color: '#B85C38', textTransform: 'uppercase', marginBottom: 10 }}>Le profil "déjà compétent"</h3>
-                <p style={{ fontSize: 13, lineHeight: 1.7, color: '#444' }}>Opérationnel dès le jour 1.</p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 10 }}>
-                  <span style={{ fontSize: 12, color: '#3B6D11' }}>✅ Pas besoin de former.</span>
-                  <span style={{ fontSize: 12, color: '#A32D2D' }}>❌ Coûte cher.</span>
-                </div>
+            <div className="grid gap-5 md:grid-cols-2">
+
+              {/* CARD 1 */}
+              <div className="rounded-2xl border border-[#f0d5cc] bg-[#FDFAF9] p-6 transition hover:shadow-xl">
+                <span className="text-[11px] font-bold uppercase tracking-wide text-[#B85C38]">
+                  Arrête d’attendre le profil prêt
+                </span>
+
+                <p className="mt-4 text-[14px] leading-8 text-[#444]">
+                  Un senior à 180k/mois qui bouge tous les 2 mois
+                  coûte plus cher qu’un junior à former.
+                </p>
+
+                <p className="mt-4 text-[14px] leading-8 text-[#444]">
+                  Cherche surtout :
+                  attitude correcte,
+                  proximité du salon,
+                  envie d’apprendre le lissage,
+                  le gel et le tissage.
+                </p>
               </div>
 
-              <div className="card-hover" style={{ border: '0.5px solid #b5d4f4', borderLeft: '3px solid #185FA5', padding: '22px', borderRadius: 14, background: '#F5F9FE' }}>
-                <h3 style={{ fontSize: 10, fontWeight: 600, color: '#185FA5', textTransform: 'uppercase', marginBottom: 10 }}>Le profil "qui apprend"</h3>
-                <p style={{ fontSize: 13, lineHeight: 1.7, color: '#444' }}>Veut progresser et s'adapter.</p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginTop: 10 }}>
-                  <span style={{ fontSize: 12, color: '#3B6D11' }}>✅ Plus loyal.</span>
-                  <span style={{ fontSize: 12, color: '#854F0B' }}>⚠️ 2-3 semaines de formation.</span>
+              {/* CARD 2 */}
+              <div className="rounded-2xl border border-[#b5d4f4] bg-[#F5F9FE] p-6 transition hover:shadow-xl">
+                <span className="text-[11px] font-bold uppercase tracking-wide text-[#185FA5]">
+                  Crée un test pratique
+                </span>
+
+                <p className="mt-4 text-[14px] leading-8 text-[#444]">
+                  Pas besoin de CV de 2 pages.
+                  Fais venir la candidate et teste-la directement.
+                </p>
+
+                <div className="mt-5 rounded-xl bg-white p-4 italic leading-8 text-[#185FA5]">
+                  “Fais-moi un dégradé bas sur cette tête.
+                  Je regarde la propreté,
+                  la vitesse et la tenue du ciseau.”
                 </div>
               </div>
             </div>
-          </section>
 
-          <div style={{ height: 1, background: '#f0f0f0', margin: '36px 0' }} />
+            {/* ATTITUDE */}
+            <div className="mt-6 rounded-2xl border border-[#ececec] bg-white p-7">
+              <h3 className="mb-5 font-serif text-xl font-bold text-[#111]">
+                Filtre l’attitude en 2 questions
+              </h3>
 
-          {/* SECTION TABLEAU RESPONSIVE */}
-          <section style={{ marginBottom: 40 }}>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: 22, fontWeight: 700, margin: '0 0 16px', color: '#111' }}>3. Grille de notation</h2>
-            <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', borderRadius: 14, border: '0.5px solid #e8e8e8' }}>
-              <table style={{ width: '100%', minWidth: '500px', borderCollapse: 'collapse', fontSize: 13 }}>
-                <thead style={{ background: '#faf9f7' }}>
-                  <tr>
-                    {['Critère', 'Poids', "Ce qu'on note"].map((h, i) => (
-                      <th key={i} style={{ padding: '12px 16px', fontSize: 10, fontWeight: 500, textTransform: 'uppercase', color: '#aaa', borderBottom: '0.5px solid #e8e8e8', textAlign: 'left' }}>{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { c: 'Attitude', p: '40%', d: 'Accepter une correction' },
-                    { c: 'Technique', p: '30%', d: 'Test pratique sur place' },
-                    { c: 'Fiabilité', p: '20%', d: 'Ponctualité' },
-                  ].map((row, i) => (
-                    <tr key={i} style={{ borderBottom: '0.5px solid #f0f0f0' }}>
-                      <td style={{ padding: '13px 16px', fontWeight: 500, color: '#111' }}>{row.c}</td>
-                      <td style={{ padding: '13px 16px', color: '#B85C38' }}>{row.p}</td>
-                      <td style={{ padding: '13px 16px', color: '#666' }}>{row.d}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+              <div className="space-y-5">
+                <div className="rounded-xl bg-[#faf9f7] p-5">
+                  <p className="font-semibold text-[#111]">
+                    “La dernière fois que le patron t’a corrigée,
+                    tu as fait quoi ?”
+                  </p>
+
+                  <p className="mt-2 text-sm leading-7 text-[#666]">
+                    Bon signe :
+                    “J’ai écouté, j’ai refait.”
+                  </p>
+                </div>
+
+                <div className="rounded-xl bg-[#faf9f7] p-5">
+                  <p className="font-semibold text-[#111]">
+                    “Client demande une coupe que tu connais pas,
+                    tu fais quoi ?”
+                  </p>
+
+                  <p className="mt-2 text-sm leading-7 text-[#666]">
+                    Bon signe :
+                    “Je propose autre chose et je me renseigne.”
+                  </p>
+                </div>
+              </div>
+
+              <p className="mt-6 text-[15px] leading-8 text-[#333]">
+                En CI, l’attitude reste.
+                La technique se forme.
+              </p>
             </div>
-            <p style={{ fontSize: 11, color: '#aaa', marginTop: 8, textAlign: 'right' }}>← Balayez pour voir tout le tableau sur mobile</p>
           </section>
 
-          {/* FOOTER CTA */}
-          <footer style={{ textAlign: 'center' }}>
-            <button className="btn-wa" style={{
-                background: '#25D366', color: '#fff', border: 'none', borderRadius: 50,
-                padding: '16px 36px', fontSize: 13, fontWeight: 700, cursor: 'pointer',
-                display: 'inline-flex', alignItems: 'center', gap: 10, width: '100%', justifyContent: 'center'
-              }}>
+          {/* SECTION 3 */}
+          <section className="mb-14">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#B85C38] text-sm font-bold text-white">
+                3
+              </span>
+
+              <h2 className="font-serif text-2xl font-bold text-[#111]">
+                Bâtis ton système, pas juste ton équipe
+              </h2>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-[#ececec]">
+
+              {[
+                {
+                  title: "Forme avec tes méthodes",
+                  text:
+                    "Documente 3 coupes phares, 1 protocole d’accueil et 1 standard d’hygiène.",
+                },
+                {
+                  title: "Attire des motivés",
+                  text:
+                    "Un gars motivé qui habite Yopougon vaut parfois mieux qu’une star à Marcory.",
+                },
+                {
+                  title: "Crée une culture",
+                  text:
+                    "Récompense ponctualité, propreté et satisfaction client.",
+                },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className={`p-6 ${
+                    i !== 2 ? "border-b border-[#f1f1f1]" : ""
+                  } ${i % 2 === 0 ? "bg-white" : "bg-[#faf9f7]"}`}
+                >
+                  <h3 className="text-lg font-semibold text-[#111]">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-2 text-[14px] leading-8 text-[#555]">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* SECTION 4 */}
+          <section className="mb-14">
+            <div className="mb-6 flex items-center gap-3">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#111] text-sm font-bold text-white">
+                4
+              </span>
+
+              <h2 className="font-serif text-2xl font-bold text-[#111]">
+                Ton salon devient un centre de talents
+              </h2>
+            </div>
+
+            <div className="rounded-2xl border border-[#ececec] bg-white p-7">
+              <p className="text-[15px] leading-9 text-[#333]">
+                Les meilleurs salons de demain ne seront pas
+                ceux qui attendent.
+                Ce seront ceux qui forment.
+              </p>
+
+              <div className="mt-8 space-y-4">
+                {[
+                  "Tu arrêtes de refuser des clients.",
+                  "Tu passes de gérant à dirigeant.",
+                  "Ton salon devient une référence.",
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-4 rounded-xl bg-[#faf9f7] p-5"
+                  >
+                    <span className="mt-1 flex h-7 w-7 items-center justify-center rounded-full bg-[#B85C38] text-xs font-bold text-white">
+                      {index + 1}
+                    </span>
+
+                    <p className="text-[15px] leading-8 text-[#444]">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-7 text-[15px] leading-9 text-[#333]">
+                Ce que tu fais aujourd’hui en urgence,
+                un staff formé le fait demain sans toi.
+              </p>
+            </div>
+          </section>
+
+          {/* CTA */}
+          <section className="rounded-[28px] bg-[#111] px-6 py-12 text-center md:px-12">
+            <h2 className="font-serif text-3xl font-black leading-tight text-white md:text-5xl">
+              Ton salon ne grandit pas à cause du local.
+              <br />
+              <span className="text-[#E07A52]">
+                Il grandit quand ton équipe grandit.
+              </span>
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-8 text-white/70">
+              Arrête d’attendre.
+              Crée ton système de recrutement + formation
+              en 15 min par candidat.
+            </p>
+
+            <button className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[#25D366] px-8 py-4 text-sm font-bold text-white transition hover:scale-[1.02] hover:bg-[#1ebe5d]">
               Contacte-nous sur WhatsApp
             </button>
-          </footer>
+          </section>
 
         </div>
       </article>
