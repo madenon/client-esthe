@@ -210,7 +210,7 @@ const HomePage = () => {
   <img 
     src="/entre.png" 
     alt="" 
-    className="w-full h-[500px] md:h-[980px] object-cover rounded-2xl"
+    className="w-full h-[400px] md:h-[980px] object-cover rounded-2xl"
   />
 </div>
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 mb-6">

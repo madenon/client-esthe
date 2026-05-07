@@ -17,7 +17,7 @@ const EspaceVente = () => {
       id: 3,
       category: "Accessoires",
       title: "Lot de 10 têtes malléables cheveux naturels",
-      price: "75 000 FCFA",
+      price: "75000 FCFA",
       location: "Plateau",
       usageTime: "Neuf",
       img: "https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?w=400&q=80"
@@ -28,7 +28,7 @@ const EspaceVente = () => {
       id: 9,
       category: "Accessoires",
       title: "Tondeuse 2 en 1 professionnelle avec accessoires",
-      price: "15 000 FCFA",
+      price: "15000 FCFA",
       location: "Plateau",
       usageTime: "Neuf",
       img: "/ton.png"
@@ -38,7 +38,7 @@ const EspaceVente = () => {
       id: 5,
       category: "Accessoires",
       title: "Accessoires pour salon de coiffure et esthétique",
-      price: "175 000 FCFA",
+      price: "175000 FCFA",
       location: "Plateau",
       usageTime: "Neuf",
       img: "/lave.png"
@@ -47,17 +47,17 @@ const EspaceVente = () => {
      {
       id: 11,
       category: "Accessoires",
-      title: "Bac a shampoing seconde en  porcelaine",
-      price: "12 500 FCFA",
+      title: " Bac a shampoing seconde en  porcelaine",
+      price: "12500 FCFA",
       location: "Vente",
-      usageTime: "Neuf",
+      usageTime: "Seconde main",
       img: "/fau.png"
     },
      {
       id: 12,
       category: "Accessoires",
       title: "Lot de 10 têtes malléables cheveux naturels",
-      price: "75 000 FCFA",
+      price: "75000 FCFA",
       location: "Plateau",
       usageTime: "Neuf",
       img: "/coi1.png"
@@ -66,7 +66,7 @@ const EspaceVente = () => {
       id: 4,
       category: "Accessoires",
       title: "Bac a shampoing seconde en  porcelaine",
-      price: "12 00 FCFA",
+      price: "12000 FCFA",
       location: "Plateau",
       usageTime: "Neuf",
       img: "/coi2.png"
@@ -75,7 +75,7 @@ const EspaceVente = () => {
       id: 4,
       category: "Accessoires",
       title: "produit de coiffure et esthétique",
-      price: "4 000 FCFA",
+      price: "4000 FCFA",
       location: "Plateau",
       usageTime: "Neuf",
       img: "/pro.png"
@@ -158,9 +158,9 @@ return (
                   </h2>
 
                   <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-1.5 text-slate-500 bg-slate-50 px-2.5 py-1 rounded-lg">
+                    <div className="flex items-center gap-1.5 text-slate-700 bg-slate-50 px-2.5 py-1 rounded-lg">
                       <Clock size={13} />
-                      <span className="text-[11px] font-semibold">{item.usageTime}</span>
+                      <span className="text-[11px] font-semibold font-mono">{item.usageTime}</span>
                     </div>
                   </div>
                 </div>
@@ -169,7 +169,7 @@ return (
                   <div>
                     <span className="text-[10px] block font-bold text-slate-400 uppercase mb-0.5">Offre</span>
                     <span className="text-2xl font-black text-slate-900 leading-none">
-                      {item.price.split(' ')[0]} <span className="text-sm font-bold text-slate-400">FCFA</span>
+                      {item.price}<span className="text-sm font-bold text-slate-400">FCFA</span>
                     </span>
                   </div>
 

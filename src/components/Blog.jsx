@@ -164,7 +164,7 @@ const Blog = () => {
   <img 
     src="/entre.png" 
     alt="" 
-    className="w-full h-[500px] md:h-[610px] object-cover rounded-2xl"
+    className="w-full h-[400px] md:h-[510px] object-cover rounded-2xl"
   />
 </div>
        
