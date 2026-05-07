@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, ShoppingBag, ArrowRight, Scissors, Package } from 'lucide-react';
+import {  ArrowRight, Scissors, Package } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AdBanner = () => {
@@ -15,8 +15,8 @@ const AdBanner = () => {
       description: "Trouvez des bacs, fauteuils et séchoirs professionnels d'occasion à prix réduits.",
       buttonText: "Parcourir l'Espace Vente",
       link: "/espace-de-vente",
-      imgUrl: "/esthe.png", // Assure-toi que ce fichier existe ou utilise une URL Unsplash
-      accentColor: "from-rose-600/30",
+      imgUrl: "/model1.png",
+      accentColor: "from-rose-200/30",
       themeColor: "bg-rose-500"
     },
     {
@@ -26,7 +26,7 @@ const AdBanner = () => {
       description: "Votre salon change de look ? Publiez gratuitement vos annonces de matériel pro ici.",
       buttonText: "Publier une annonce",
       link: "/espace-de-vente",
-      imgUrl: "/esth.png",
+      imgUrl: "/model.png",
       accentColor: "from-blue-600/30",
       themeColor: "bg-blue-500"
     }
@@ -49,7 +49,7 @@ const AdBanner = () => {
       className="max-w-5xl mx-auto px-4 md:px-6 mb-12 select-none"
     >
       {/* BANDEAU DÉFILANT (MARQUEE) */}
-      <div className="w-full overflow-hidden bg-white/50 border-y border-rose-100 py-2 mb-4">
+      <div className="w-full overflow-hidden bg-white border-y border-rose-100 py-2 mb-4">
         <div className="relative flex max-w-[100vw]">
           <motion.div
             initial={{ x: 0 }}
@@ -122,7 +122,7 @@ const AdBanner = () => {
                 <img 
                   src={slides[index].imgUrl} 
                   alt="Vente matériel"
-                  className="w-auto h-32 md:h-56 object-contain relative z-20 drop-shadow-2xl"
+                  className="w-auto h-44 md:h-56 object-contain relative z-20 drop-shadow-2xl"
                   onError={(e) => { e.target.src = "https://via.placeholder.com/200?text=Goorco"; }}
                 />
               </motion.div>
