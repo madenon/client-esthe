@@ -36,6 +36,14 @@ const Blog = () => {
           
           {/* BLOG 1 : TON SALON NE GRANDIT PAS */}
           <section className="p-6 md:p-10">
+            <div className="max-w-4xl mx-auto px-6 mb-16">
+  <img 
+    src="/bl.png" 
+    alt="" 
+    className="w-full h-[400px] md:h-[410px] object-cover rounded-2xl"
+  />
+</div>
+       
             <h2 className="text-xl md:text-2xl font-black text-[#111] leading-tight mb-6">
               Titre : Ton salon de coiffure ne grandit pas ? Le problème, c’est l’équipe, pas le local
             </h2>

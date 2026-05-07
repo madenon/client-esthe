@@ -207,6 +207,14 @@ const HomePage = () => {
             </h3>
 
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 mb-6">
+            {/* IMAGE DU BAS : Format bandeau plus petit */}
+<div className="max-w-4xl mx-auto px-6 mb-16">
+  <img 
+    src="/bl.png" 
+    alt="" 
+    className="w-full h-[400px] md:h-[410px] object-cover rounded-2xl"
+  />
+</div>
               <p className="text-blue-50 italic text-lg leading-relaxed">
                 “J’ai des coiffeurs, mais pas de coiffeurs fiables, pros, autonomes. Je refuse des clients...”
               </p>
@@ -233,14 +241,7 @@ const HomePage = () => {
 
 
       <AdBanner />
-{/* IMAGE DU BAS : Format bandeau plus petit */}
-<div className="max-w-4xl mx-auto px-6 mb-16">
-  <img 
-    src="/bl.png" 
-    alt="" 
-    className="w-full h-[500px] md:h-[570px] object-cover rounded-2xl"
-  />
-</div>
+
       
       <div className="max-w-6xl mx-auto px-6">
         <AnimatePresence mode="wait">
