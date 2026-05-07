@@ -72,15 +72,7 @@ const EspaceVente = () => {
       usageTime: "Neuf",
       img: "/coi2.png"
     },
-    {
-      id: 4,
-      category: "Accessoires",
-      title: "produit de coiffure et esthétique",
-      price: "4000 FCFA",
-      location: "Plateau",
-      usageTime: "Neuf",
-      img: "/pro.png"
-    },
+    
   ];
 
 return (
