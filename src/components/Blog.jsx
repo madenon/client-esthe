@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { MessageCircle, ChevronDown, ChevronUp } from "lucide-react";
 
 const Blog = () => {
@@ -35,93 +35,8 @@ const Blog = () => {
         <div className="bg-white border border-[#e7e7e7] rounded-b-[24px] shadow-sm divide-y divide-[#f1f1f1]">
           
           {/* BLOG 1 : TON SALON NE GRANDIT PAS */}
-          <section className="p-6 md:p-10">
-            <div className="max-w-4xl mx-auto px-6 mb-16">
-  <img 
-    src="/bl.png" 
-    alt="" 
-    className="w-full h-[400px] md:h-[410px] object-cover rounded-2xl"
-  />
-</div>
-       
-            <h2 className="text-xl md:text-2xl font-black text-[#111] leading-tight mb-6">
-              Titre : Ton salon de coiffure ne grandit pas ? Le problème, c’est l’équipe, pas le local
-            </h2>
-            
-            <div className="text-[#444] leading-relaxed space-y-4">
-              <p className="text-lg font-bold">
-                ✂️ Ton salon est plein. Les clients affluent. Tu as la vision, les idées, les moyens. Et pourtant tu stagnes.
-              </p>
-              
-              {!expandedBlog1 ? (
-                <button 
-                  onClick={() => setExpandedBlog1(true)}
-                  className="flex items-center gap-2 text-[#E07A52] font-bold hover:underline"
-                >
-                  Lire la suite <ChevronDown size={18} />
-                </button>
-              ) : (
-                <div className="space-y-6 pt-2">
-                  <p>Hier matin, un patron de salon m’a écrit exactement ça :</p>
-                  <p className="italic bg-[#faf9f7] p-4 rounded-xl border-l-4 border-[#B85C38]">
-                    “J’ai des coiffeurs, mais pas de coiffeurs fiables, pros, autonomes. Je refuse des clients. Je repousse des projets. Je me retrouve seul à tout faire, et l’équipe que je rêve de construire reste un rêve.”
-                  </p>
-                  <p>
-                    Ça te parle ? Normal. En Côte d’Ivoire, 80% du recrutement se fait au bouche-à-oreille + WhatsApp. Zéro process, zéro filtre. Résultat : tu passes ta journée à éteindre des incendies au lieu de bâtir.
-                  </p>
-                  <p>Voici pourquoi, et comment inverser la tendance.</p>
 
-                  <h3 className="font-black text-[#111] text-lg uppercase pt-4">1. Le vrai blocage : mentalité et formation, pas la main-d’œuvre</h3>
-                  <p>Le marché CI n’a pas un manque de coiffeurs. Il a un manque de coiffeurs qui veulent rester, apprendre, et respecter le client.</p>
-                  <p>Beaucoup veulent le résultat sans passer par l’apprentissage. Ils maîtrisent 2 coupes, demandent 150k/mois, et partent pour 20k de plus dès que l’occasion se présente. Toi tu veux bâtir un empire. Eux veulent un salaire. Le mismatch est là.</p>
-                  <p>Rester en mode “j’attends le coiffeur parfait” = rester bloqué. Le coiffeur parfait n’existe pas. Il se fabrique.</p>
-
-                  <h3 className="font-black text-[#111] text-lg uppercase pt-4">2. Passe de “recruter” à “former” : ton seul levier de croissance en CI</h3>
-                  <p>Les salons qui explosent à Abidjan ne trouvent pas des stars. Ils les construisent. Voilà ce qui marche :</p>
-                  <p><strong>*1. Arrête d’attendre le profil prêt à l’emploi*</strong><br />
-                  Un senior à 180k/mois qui bouge tous les 2 mois te coûte plus cher qu’un junior à former. Vise 2-3 ans d’exp, maîtrise des bases, et surtout : attitude ok, habite à 20 min du salon, veut apprendre le lissage, le tissage, le gel.</p>
-                  <p><strong>*2. Crée ton test pratique de 10 min*</strong><br />
-                  Pas de CV de 2 pages. Fais venir la candidate et dis : “Fais-moi un dégradé bas sur cette tête. Je regarde la propreté, la vitesse, la tenue du ciseau.” Si elle refuse ou dit “j’ai pas mon matos”, out. Un pro s’adapte.</p>
-                  <p><strong>*3. Filtre l’attitude en 2 questions*</strong><br />
-                  - “La dernière fois que le patron t’a corrigée, tu as fait quoi ?”<br />
-                  Bon signe : “J’ai écouté, j’ai refait.”<br />
-                  - “Client demande une coupe que tu connais pas, tu fais quoi ?”<br />
-                  Bon signe : “Je propose autre chose et je me renseigne.”<br />
-                  En CI, l’attitude reste. La technique se forme.</p>
-
-                  <h3 className="font-black text-[#111] text-lg uppercase pt-4">3. Bâtis ton système, pas juste ton équipe</h3>
-                  <p>Tant que tu délègues pas, tu restes l’employé de ton salon.</p>
-                  <p><strong>*Forme en interne avec tes méthodes*</strong> : Documente 3 coupes phares, 1 protocole d’accueil, 1 standard d’hygiène. Même 2 pages A4 suffisent.</p>
-                  <p><strong>*Attire des motivés, pas des expérimentés*</strong> : Un gars qui veut apprendre le brésilien et qui habite Yopougon vaut 3 stars qui viennent de Marcory à 1h30 de transport.</p>
-                  <p><strong>*Crée une culture d’excellence*</strong> : Récompense la ponctualité, la propreté, le client satisfait. 5k F CFA de prime par mois pour 0 retard coûte moins cher qu’un client perdu.</p>
-                  <p>Le marché ne te donnera pas l’équipe que tu veux. Fabrique-la.</p>
-
-                  <h3 className="font-black text-[#111] text-lg uppercase pt-4">4. Ton salon devient un centre de talents</h3>
-                  <p>Les meilleurs salons de demain ne seront pas ceux qui attendent. Ce seront ceux qui forment.</p>
-                  <p>Quand tu formes, 3 choses changent :<br />
-                  1. Tu arrêtes de refuser des clients. Ton équipe suit.<br />
-                  2. Tu passes de gérant à dirigeant. Tu délègues l’opérationnel.<br />
-                  3. Ton salon devient une référence. Les bons profils viennent à toi.</p>
-                  <p>Ce que tu fais aujourd’hui en urgence, un staff formé le fait demain sans toi.</p>
-
-                  <div className="bg-[#111] text-white p-6 rounded-2xl my-6">
-                    <p className="font-bold">*En résumé* :</p>
-                    <p className="italic">Ton salon ne grandit pas à cause du local. Il grandit quand ton équipe grandit. Arrête d’attendre. Crée ton système de recrutement + formation en 15 min par candidat. Les salons qui passent au niveau supérieur en CI sont ceux qui bâtissent l’équipe qu’ils n’ont jamais trouvée.</p>
-                  </div>
-
-                  <button 
-                    onClick={() => setExpandedBlog1(false)}
-                    className="flex items-center gap-2 text-[#777] font-bold hover:underline pt-4"
-                  >
-                    Réduire <ChevronUp size={18} />
-                  </button>
-                </div>
-              )}
-            </div>
-          </section>
-
-          {/* BLOG 2 : RECRUTER EN SALON DE COIFFURE ET ESTHÉTIQUE */}
-          <section className="p-6 md:p-10">
+            <section className="p-6 md:p-10">
 
             <img className="w-full h-[400px] md:h-[370px] object-cover rounded-2xl" src="/blimg.jpeg" alt="" />
             <h2 className="text-xl md:text-2xl font-black text-[#111] leading-tight mb-6">
@@ -244,6 +159,93 @@ const Blog = () => {
               )}
             </div>
           </section>
+          <section className="p-6 md:p-10">
+            <div className="max-w-4xl mx-auto px-6 mb-16">
+  <img 
+    src="/bl.png" 
+    alt="" 
+    className="w-full h-[400px] md:h-[410px] object-cover rounded-2xl"
+  />
+</div>
+       
+            <h2 className="text-xl md:text-2xl font-black text-[#111] leading-tight mb-6">
+              Titre : Ton salon de coiffure ne grandit pas ? Le problème, c’est l’équipe, pas le local
+            </h2>
+            
+            <div className="text-[#444] leading-relaxed space-y-4">
+              <p className="text-lg font-bold">
+                ✂️ Ton salon est plein. Les clients affluent. Tu as la vision, les idées, les moyens. Et pourtant tu stagnes.
+              </p>
+              
+              {!expandedBlog1 ? (
+                <button 
+                  onClick={() => setExpandedBlog1(true)}
+                  className="flex items-center gap-2 text-[#E07A52] font-bold hover:underline"
+                >
+                  Lire la suite <ChevronDown size={18} />
+                </button>
+              ) : (
+                <div className="space-y-6 pt-2">
+                  <p>Hier matin, un patron de salon m’a écrit exactement ça :</p>
+                  <p className="italic bg-[#faf9f7] p-4 rounded-xl border-l-4 border-[#B85C38]">
+                    “J’ai des coiffeurs, mais pas de coiffeurs fiables, pros, autonomes. Je refuse des clients. Je repousse des projets. Je me retrouve seul à tout faire, et l’équipe que je rêve de construire reste un rêve.”
+                  </p>
+                  <p>
+                    Ça te parle ? Normal. En Côte d’Ivoire, 80% du recrutement se fait au bouche-à-oreille + WhatsApp. Zéro process, zéro filtre. Résultat : tu passes ta journée à éteindre des incendies au lieu de bâtir.
+                  </p>
+                  <p>Voici pourquoi, et comment inverser la tendance.</p>
+
+                  <h3 className="font-black text-[#111] text-lg uppercase pt-4">1. Le vrai blocage : mentalité et formation, pas la main-d’œuvre</h3>
+                  <p>Le marché CI n’a pas un manque de coiffeurs. Il a un manque de coiffeurs qui veulent rester, apprendre, et respecter le client.</p>
+                  <p>Beaucoup veulent le résultat sans passer par l’apprentissage. Ils maîtrisent 2 coupes, demandent 150k/mois, et partent pour 20k de plus dès que l’occasion se présente. Toi tu veux bâtir un empire. Eux veulent un salaire. Le mismatch est là.</p>
+                  <p>Rester en mode “j’attends le coiffeur parfait” = rester bloqué. Le coiffeur parfait n’existe pas. Il se fabrique.</p>
+
+                  <h3 className="font-black text-[#111] text-lg uppercase pt-4">2. Passe de “recruter” à “former” : ton seul levier de croissance en CI</h3>
+                  <p>Les salons qui explosent à Abidjan ne trouvent pas des stars. Ils les construisent. Voilà ce qui marche :</p>
+                  <p><strong>*1. Arrête d’attendre le profil prêt à l’emploi*</strong><br />
+                  Un senior à 180k/mois qui bouge tous les 2 mois te coûte plus cher qu’un junior à former. Vise 2-3 ans d’exp, maîtrise des bases, et surtout : attitude ok, habite à 20 min du salon, veut apprendre le lissage, le tissage, le gel.</p>
+                  <p><strong>*2. Crée ton test pratique de 10 min*</strong><br />
+                  Pas de CV de 2 pages. Fais venir la candidate et dis : “Fais-moi un dégradé bas sur cette tête. Je regarde la propreté, la vitesse, la tenue du ciseau.” Si elle refuse ou dit “j’ai pas mon matos”, out. Un pro s’adapte.</p>
+                  <p><strong>*3. Filtre l’attitude en 2 questions*</strong><br />
+                  - “La dernière fois que le patron t’a corrigée, tu as fait quoi ?”<br />
+                  Bon signe : “J’ai écouté, j’ai refait.”<br />
+                  - “Client demande une coupe que tu connais pas, tu fais quoi ?”<br />
+                  Bon signe : “Je propose autre chose et je me renseigne.”<br />
+                  En CI, l’attitude reste. La technique se forme.</p>
+
+                  <h3 className="font-black text-[#111] text-lg uppercase pt-4">3. Bâtis ton système, pas juste ton équipe</h3>
+                  <p>Tant que tu délègues pas, tu restes l’employé de ton salon.</p>
+                  <p><strong>*Forme en interne avec tes méthodes*</strong> : Documente 3 coupes phares, 1 protocole d’accueil, 1 standard d’hygiène. Même 2 pages A4 suffisent.</p>
+                  <p><strong>*Attire des motivés, pas des expérimentés*</strong> : Un gars qui veut apprendre le brésilien et qui habite Yopougon vaut 3 stars qui viennent de Marcory à 1h30 de transport.</p>
+                  <p><strong>*Crée une culture d’excellence*</strong> : Récompense la ponctualité, la propreté, le client satisfait. 5k F CFA de prime par mois pour 0 retard coûte moins cher qu’un client perdu.</p>
+                  <p>Le marché ne te donnera pas l’équipe que tu veux. Fabrique-la.</p>
+
+                  <h3 className="font-black text-[#111] text-lg uppercase pt-4">4. Ton salon devient un centre de talents</h3>
+                  <p>Les meilleurs salons de demain ne seront pas ceux qui attendent. Ce seront ceux qui forment.</p>
+                  <p>Quand tu formes, 3 choses changent :<br />
+                  1. Tu arrêtes de refuser des clients. Ton équipe suit.<br />
+                  2. Tu passes de gérant à dirigeant. Tu délègues l’opérationnel.<br />
+                  3. Ton salon devient une référence. Les bons profils viennent à toi.</p>
+                  <p>Ce que tu fais aujourd’hui en urgence, un staff formé le fait demain sans toi.</p>
+
+                  <div className="bg-[#111] text-white p-6 rounded-2xl my-6">
+                    <p className="font-bold">*En résumé* :</p>
+                    <p className="italic">Ton salon ne grandit pas à cause du local. Il grandit quand ton équipe grandit. Arrête d’attendre. Crée ton système de recrutement + formation en 15 min par candidat. Les salons qui passent au niveau supérieur en CI sont ceux qui bâtissent l’équipe qu’ils n’ont jamais trouvée.</p>
+                  </div>
+
+                  <button 
+                    onClick={() => setExpandedBlog1(false)}
+                    className="flex items-center gap-2 text-[#777] font-bold hover:underline pt-4"
+                  >
+                    Réduire <ChevronUp size={18} />
+                  </button>
+                </div>
+              )}
+            </div>
+          </section>
+
+          {/* BLOG 2 : RECRUTER EN SALON DE COIFFURE ET ESTHÉTIQUE */}
+        
         </div>
 
         {/* --- FOOTER --- */}
