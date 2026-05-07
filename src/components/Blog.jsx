@@ -1,8 +1,9 @@
+import { MessageCircle } from "lucide-react";
 
 const Blog = () => {
   return (
     <div className="min-h-screen bg-[#faf9f7] px-3 py-6 font-sans">
-      <article className="mx-auto max-w-4xl overflow-hidden rounded-[24px] border border-[#e7e7e7] bg-white">
+      <article className="mx-auto max-w-4xl overflow-hidden rounded-[24px] border border-[#e7e7e7] bg-white shadow-sm">
 
         {/* HEADER */}
         <header className="relative overflow-hidden bg-[#111] px-6 py-14 md:px-12">
@@ -78,7 +79,8 @@ const Blog = () => {
               <p className="font-serif text-[17px] italic leading-9 text-[#7A3520]">
                 “J’ai des coiffeurs, mais pas de coiffeurs fiables,
                 pros, autonomes. Je refuse des clients.
-                Je repousse des projets. Je me retrouve seul à tout faire.”
+                Je repousse des projets. Je me retrouve seul à tout faire,
+                et l’équipe que je rêve de construire reste un rêve.”
               </p>
             </div>
 
@@ -101,7 +103,8 @@ const Blog = () => {
               </span>
 
               <h2 className="font-serif text-2xl font-bold text-[#111]">
-                Le vrai blocage : mentalité et formation
+                Le vrai blocage : mentalité et formation,
+                pas la main-d’œuvre
               </h2>
             </div>
 
@@ -114,8 +117,11 @@ const Blog = () => {
 
               <p className="mt-6 text-[15px] leading-9 text-[#333]">
                 Beaucoup veulent le résultat sans passer
-                par l’apprentissage. Ils maîtrisent 2 coupes,
-                demandent 150k/mois, puis partent pour 20k de plus.
+                par l’apprentissage.
+                Ils maîtrisent 2 coupes,
+                demandent 150k/mois,
+                puis partent pour 20k de plus
+                dès que l’occasion se présente.
               </p>
 
               <div className="mt-6 rounded-2xl border-l-4 border-[#B85C38] bg-[#FDF6F2] p-5">
@@ -161,10 +167,12 @@ const Blog = () => {
                 </p>
 
                 <p className="mt-4 text-[14px] leading-8 text-[#444]">
-                  Cherche surtout :
+                  Vise surtout :
+                  2-3 ans d’expérience,
                   attitude correcte,
-                  proximité du salon,
-                  envie d’apprendre le lissage,
+                  proximité du salon
+                  et envie d’apprendre
+                  le lissage,
                   le gel et le tissage.
                 </p>
               </div>
@@ -177,7 +185,8 @@ const Blog = () => {
 
                 <p className="mt-4 text-[14px] leading-8 text-[#444]">
                   Pas besoin de CV de 2 pages.
-                  Fais venir la candidate et teste-la directement.
+                  Fais venir la candidate
+                  et teste-la directement.
                 </p>
 
                 <div className="mt-5 rounded-xl bg-white p-4 italic leading-8 text-[#185FA5]">
@@ -185,6 +194,13 @@ const Blog = () => {
                   Je regarde la propreté,
                   la vitesse et la tenue du ciseau.”
                 </div>
+
+                <p className="mt-4 text-[14px] leading-8 text-[#444]">
+                  Si elle refuse ou dit :
+                  “je n’ai pas mon matériel”,
+                  c’est mauvais signe.
+                  Un pro s’adapte.
+                </p>
               </div>
             </div>
 
@@ -245,17 +261,17 @@ const Blog = () => {
                 {
                   title: "Forme avec tes méthodes",
                   text:
-                    "Documente 3 coupes phares, 1 protocole d’accueil et 1 standard d’hygiène.",
+                    "Documente 3 coupes phares, 1 protocole d’accueil et 1 standard d’hygiène. Même 2 pages A4 suffisent.",
                 },
                 {
                   title: "Attire des motivés",
                   text:
-                    "Un gars motivé qui habite Yopougon vaut parfois mieux qu’une star à Marcory.",
+                    "Un gars motivé qui habite Yopougon vaut parfois mieux qu’une star à Marcory avec 1h30 de transport.",
                 },
                 {
                   title: "Crée une culture",
                   text:
-                    "Récompense ponctualité, propreté et satisfaction client.",
+                    "Récompense ponctualité, propreté et satisfaction client. Une petite prime coûte moins cher qu’un client perdu.",
                 },
               ].map((item, i) => (
                 <div
@@ -274,6 +290,11 @@ const Blog = () => {
                 </div>
               ))}
             </div>
+
+            <p className="mt-6 text-[15px] leading-9 text-[#333]">
+              Tant que tu ne délègues pas,
+              tu restes l’employé de ton salon.
+            </p>
           </section>
 
           {/* SECTION 4 */}
@@ -290,16 +311,16 @@ const Blog = () => {
 
             <div className="rounded-2xl border border-[#ececec] bg-white p-7">
               <p className="text-[15px] leading-9 text-[#333]">
-                Les meilleurs salons de demain ne seront pas
-                ceux qui attendent.
+                Les meilleurs salons de demain
+                ne seront pas ceux qui attendent.
                 Ce seront ceux qui forment.
               </p>
 
               <div className="mt-8 space-y-4">
                 {[
-                  "Tu arrêtes de refuser des clients.",
-                  "Tu passes de gérant à dirigeant.",
-                  "Ton salon devient une référence.",
+                  "Tu arrêtes de refuser des clients. Ton équipe suit.",
+                  "Tu passes de gérant à dirigeant. Tu délègues l’opérationnel.",
+                  "Ton salon devient une référence. Les bons profils viennent à toi.",
                 ].map((item, index) => (
                   <div
                     key={index}
@@ -337,9 +358,13 @@ const Blog = () => {
               Arrête d’attendre.
               Crée ton système de recrutement + formation
               en 15 min par candidat.
+              Les salons qui passent au niveau supérieur
+              sont ceux qui bâtissent l’équipe
+              qu’ils n’ont jamais trouvée.
             </p>
 
-            <button className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[#25D366] px-8 py-4 text-sm font-bold text-white transition hover:scale-[1.02] hover:bg-[#1ebe5d]">
+            <button className="mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#25D366] px-8 py-4 text-sm font-bold text-white transition hover:scale-[1.02] hover:bg-[#1ebe5d] md:w-auto">
+              <MessageCircle size={18} />
               Contacte-nous sur WhatsApp
             </button>
           </section>
