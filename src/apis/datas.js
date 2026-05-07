@@ -464,7 +464,7 @@ export const testimonials = [
     role: "Coiffeuse Professionnelle",
     content: "Grâce à Goorco, j'ai trouvé un salon à Angré en moins de 48h. Le contact via WhatsApp est ultra rapide !",
     rating: 5,
-    avatar: "https://i.pravatar.cc/150?u=awa"
+    avatar: "/esthe1.jpeg"
   },
   {
     id: 2,
@@ -472,7 +472,7 @@ export const testimonials = [
     role: "Gérant de Salon",
     content: "Recruter du personnel qualifié était un calvaire. Avec cette plateforme, j'ai accès aux meilleurs profils de la ville.",
     rating: 5,
-    avatar: "https://i.pravatar.cc/150?u=marc"
+    avatar: "/esth2.jpg"
   },
   {
     id: 3,
@@ -480,7 +480,7 @@ export const testimonials = [
     role: "Esthéticienne",
     content: "La section 'Dortoir disponible' m'a vraiment aidée car je venais de l'intérieur du pays. Je recommande !",
     rating: 4,
-    avatar: "https://i.pravatar.cc/150?u=dorcas"
+    avatar: "/esth3.jpg"
   },
   
 
