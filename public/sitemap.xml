@@ -1,49 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Page d'accueil - Mot-clé : Plateforme emploi beauté CI -->
   <url>
-    <loc>https://Goorco-recrutement.ci/</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://www.goorco.com/</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Filtre Tresse / Tissage - Emploi tresseuse Abidjan -->
   <url>
-    <loc>https://Goorco-recrutement.ci/offres/tresse-tissage</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://www.goorco.com/offres/tresse-tissage</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Filtre Onglerie - Emploi prothésiste ongulaire Abidjan -->
   <url>
-    <loc>https://Goorco-recrutement.ci/offres/onglerie-gel</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://www.goorco.com/offres/onglerie-gel</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Filtre Barber - Emploi barber Abidjan -->
   <url>
-    <loc>https://Goorco-recrutement.ci/offres/barber-coupe-homme</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://www.goorco.com/offres/barber-coupe-homme</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Filtre Pose Perruque - Job wig styling CI -->
   <url>
-    <loc>https://Goorco-recrutement.ci/offres/pose-perruque</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://www.goorco.com/offres/pose-perruque</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Filtre Massage - Emploi masseuse Abidjan -->
   <url>
-    <loc>https://Goorco-recrutement.ci/offres/massage-bien-etre</loc>
-    <lastmod>2026-05-03</lastmod>
+    <loc>https://www.goorco.com/offres/massage-bien-etre</loc>
+    <lastmod>2026-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
