@@ -2,11 +2,11 @@ export const jobOffers = [
   
  { 
     id: 10001, 
-    zone: "Abidjan,Intérieur", 
+    zone: "Abidjan", 
     category: "Coiffure", 
     title: "Urgent : Coiffure assidu", 
-    description: " coiffure coupe homme et dame et locs", 
-    location: "Abidjan Maroc", 
+    description: "coiffure coupe homme et dame et locs", 
+    location: "Abidjan ", 
     salary: "À débattre",
     whatsapp: "2250596132058", 
     likes: 12,

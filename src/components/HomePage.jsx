@@ -352,7 +352,7 @@ const HomePage = () => {
                       <h3
                         className={`font-black text-[18px] mb-3 leading-snug transition-colors duration-300 ${
                           offer.isUrgent
-                            ? 'text-red-600'
+                            ? 'text-gray-600'
                             : offer.isFavorite
                             ? 'text-blue-600'
                             : 'text-slate-900'
