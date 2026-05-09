@@ -387,9 +387,9 @@ const HomePage = () => {
                           to={`/offre/${offer.id}`}
                           className={`flex items-center justify-center gap-2 w-full bg-white border-2 font-black py-3.5 rounded-2xl transition-all text-[12px] uppercase tracking-widest ${
                             offer.isUrgent
-                              ? 'border-red-600 text-red-600 hover:bg-red-600 hover:text-white'
-                              : offer.isFavorite
                               ? 'border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
+                              : offer.isFavorite
+                              ? 'border-red-600 text-red-600 hover:bg-red-600 hover:text-white'
                               : 'border-slate-200 text-slate-600 hover:bg-slate-900 hover:text-white hover:border-slate-900'
                           }`}
                         >
