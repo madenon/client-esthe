@@ -1,6 +1,23 @@
 export const jobOffers = [
   
  { 
+    id: 10101, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "Pas de dortoir : Coiffeur pour salon à Gonzaque", 
+    description: "Bonjour je cherche un coiffeur pour mon salon situé à gonzaque Pas de dortoir", 
+    location: "Abidjan ", 
+    salary: "À débattre",
+    whatsapp: "2250596132058", 
+    likes: 12,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+ { 
     id: 10001, 
     zone: "Abidjan", 
     category: "Coiffure", 
