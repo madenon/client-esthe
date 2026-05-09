@@ -260,7 +260,7 @@ const HomePage = () => {
               exit={{ opacity: 0, y: -20 }}
             >
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
 
                 {currentOffers.map((offer) => (
                   <motion.div
@@ -323,15 +323,31 @@ const HomePage = () => {
 
                     <div className="p-7 flex flex-col flex-grow">
 
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider">
-                          {offer.category}
-                        </span>
+                    {/* ... début du p-7 ... */}
+<div className="flex items-center justify-between mb-3">
+  <div className="flex gap-2">
+    <span className="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider">
+      {offer.category}
+    </span>
+    
+    {/* BADGE DE DISPONIBILITÉ */}
+    <span className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider flex items-center gap-1 ${
+      offer.isDisponible !== false 
+        ? 'bg-emerald-100 text-emerald-600' 
+        : 'bg-red-100 text-red-600'
+    }`}>
+      <span className={`w-1.5 h-1.5 rounded-full ${
+        offer.isDisponible !== false ? 'bg-emerald-500 animate-pulse' : 'bg-red-500'
+      }`}></span>
+      {offer.isDisponible !== false ? 'Disponible' : 'Indisponible'}
+    </span>
+  </div>
 
-                        <span className="text-[#10b981] font-black text-sm">
-                          {offer.salary}
-                        </span>
-                      </div>
+  <span className="text-[#10b981] font-black text-sm">
+    {offer.salary}
+  </span>
+</div>
+{/* ... suite du titre ... */}
 
                       <h3
                         className={`font-black text-[18px] mb-3 leading-snug transition-colors duration-300 ${
