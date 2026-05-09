@@ -343,7 +343,7 @@ const HomePage = () => {
     </span>
   </div>
 
-  <span className="text-[#10b981] font-black text-sm">
+  <span className="text-green-900 font-black text-sm underline decoration-green-600 decoration-2 rounded-md px-2 py-1">
     {offer.salary}
   </span>
 </div>
