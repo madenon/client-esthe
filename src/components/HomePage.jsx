@@ -25,7 +25,7 @@ const HomePage = () => {
 
   // PAGINATION
   const [currentPage, setCurrentPage] = useState(1);
-  const offersPerPage = 9;
+  const offersPerPage = 10;
 
   const resultsSectionRef = useRef(null);
 
