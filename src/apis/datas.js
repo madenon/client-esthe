@@ -1,6 +1,60 @@
 export const jobOffers = [
   
- 
+ { 
+    id: 10001, 
+    zone: "Abidjan,Intérieur", 
+    category: "Coiffure", 
+    title: "Urgent : Coiffure assidu", 
+    description: " coiffure coupe homme et dame et locs", 
+    location: "Abidjan Maroc", 
+    salary: "À débattre",
+    whatsapp: "2250596132058", 
+    likes: 12,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+
+   { 
+    id: 10002, 
+    zone: "Intérieur", 
+    category: "Coiffure", 
+    title: "Urgent : Coiffure assidu", 
+    description: "Besoin urgent de Coiffure assidu et patient qui habite a Yopougon Maroc ou aux alentours.", 
+    location: "Bassam", 
+    salary: "À débattre",
+    whatsapp: "2250596132058", 
+    likes: 109,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+    isDisponible: true,
+    date: "2024-05-18"
+  },
+
+    { 
+    id: 10003, 
+    zone: "Intérieur", 
+    category: "Coiffure", 
+    title: "Urgent : Coiffure assidu", 
+    description: "recherche une Esthéticienne polyvalente sur Bassam Qui maîtrise le soin de visage, gommage de corps, massage, pédicure manucure et onglerie. Salaire a discuter. NB pas de dortoire", 
+    location: "Bassam", 
+    salary: "À débattre",
+    whatsapp: "2250596132058", 
+    likes: 109,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+    isDisponible: true,
+    date: "2024-05-18"
+  },
+
+  
  { 
     id: 1, 
     zone: "Abidjan", 
@@ -15,6 +69,8 @@ export const jobOffers = [
     isFavorite: false,
     hasDortoir: false,
     isPremium: false,
+        isDisponible: false,
+
     date: "2024-05-18"
   },
    {
@@ -32,6 +88,8 @@ export const jobOffers = [
     isFavorite: false,
     hasDortoir: false,
     isPremium: false,
+        isDisponible: true,
+
     date: "2026-05-07",
   },
 
