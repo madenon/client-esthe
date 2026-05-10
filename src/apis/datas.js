@@ -1,5 +1,29 @@
 export const jobOffers = [
+
   
+
+
+
+
+
+  
+ { 
+    id: 10111, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "SALON DE COIFFURE / ESTHETIQUE - ABIDJAN", 
+  description: "Inscription gratuite sur Goorco pour déposer votre profi et recevoir les offres d'emploi", 
+    location: "#Goorco #RecrutementBeaute #Abidjan ", 
+    salary: "À débattre",
+    whatsapp: "2250596132058", 
+    likes: 34,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
  { 
     id: 10111, 
     zone: "Abidjan", 
@@ -34,64 +58,15 @@ export const jobOffers = [
      isDisponible: true,
     date: "2024-05-18"
   },
- { 
-    id: 10001, 
-    zone: "Abidjan", 
-    category: "Coiffure", 
-    title: "Urgent : Coiffure assidu", 
-    description: "coiffure coupe homme et dame et locs", 
-    location: "Abidjan ", 
-    salary: "À débattre",
-    whatsapp: "2250596132058", 
-    likes: 12,
-    isUrgent: true,
-    isFavorite: false,
-    hasDortoir: false,
-    isPremium: false,
-     isDisponible: true,
-    date: "2024-05-18"
-  },
- { 
-    id: 1001, 
-    zone: "Intérieur", 
-    category: "Coiffure", 
-    title: "Gérance libre avec recette journalière pour moi", 
-    description: ".Il doit bien maîtriser la coupe et savoir faire les locks.Nous signons un CDD pour une période de trois mois renouvelable Pour lui permettre d'apprécier le marché.Nationalité ivoirienne de préférence.Avoir ses papiers d'identité.Il y'a un dortoir mais c'est lui qui paie le loyer mensuel.", 
-    location: "Localité Touba",
-    salary: "À débattre",
-    whatsapp: "2250596132058", 
-    likes: 12,
-    isUrgent: true,
-    isFavorite: false,
-    hasDortoir: false,
-    isPremium: false,
-     isDisponible: true,
-    date: "2024-05-18"
-  },
 
-   { 
-    id: 10002, 
-    zone: "Intérieur", 
-    category: "Coiffure", 
-    title: "Urgent : Coiffure assidu", 
-    description: "Besoin urgent de Coiffure assidu et patient qui habite ou aux alentours.", 
-    location: "Bassam", 
-    salary: "À débattre",
-    whatsapp: "2250596132058", 
-    likes: 109,
-    isUrgent: true,
-    isFavorite: false,
-    hasDortoir: false,
-    isPremium: false,
-    isDisponible: true,
-    date: "2024-05-18"
-  },
+
+
 
     { 
     id: 10003, 
     zone: "Intérieur", 
     category: "Coiffure", 
-    title: "Urgent : Coiffure assidu", 
+    title: "Esthéticienne", 
     description: "recherche une Esthéticienne polyvalente sur Bassam Qui maîtrise le soin de visage, gommage de corps, massage, pédicure manucure et onglerie. Salaire a discuter. NB pas de dortoire", 
     location: "Bassam", 
     salary: "À débattre",
