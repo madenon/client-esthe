@@ -42,23 +42,7 @@ export const jobOffers = [
      isDisponible: true,
     date: "2024-05-18"
   },
- { 
-    id: 1111, 
-    zone: "Abidjan", 
-    category: "Coiffure", 
-    title: "Besoins de COIFFEUR - SAlon  VIP", 
-  description: "Besoins de COIFFEUR - SAlon  VIP. VILLE DE KORHOGO Gestion LIBRE DORTOIR", 
-    location: "KORHOGO ", 
-    salary: "À débattre",
-    whatsapp: "2250596132058", 
-    likes: 34,
-    isUrgent: true,
-    isFavorite: false,
-    hasDortoir: false,
-    isPremium: false,
-     isDisponible: true,
-    date: "2024-05-18"
-  },
+ 
  { 
     id: 10101, 
     zone: "Abidjan", 
