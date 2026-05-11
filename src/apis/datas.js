@@ -1,13 +1,25 @@
 export const jobOffers = [
-
+{ 
+    id: 10121, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "Particulier Gestion LIBRE   Sans  DORTOIR.", 
+  description: "chercher un coiffeur spécialisé en coiffure Mixte où coiffure homme Dans la commune ABOBO anokoi", 
+    location: "ABOBO ", 
+    salary: "À débattre",
+    whatsapp: "2250596132058", 
+    number: "01-00-34-19-04", 
+    likes: 34,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
   
-
-
-
-
-
-  
- { 
+ 
+  { 
     id: 10111, 
     zone: "Intérieur", 
     category: "Coiffure", 
