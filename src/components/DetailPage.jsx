@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { jobOffers } from '../apis/datas';
 import { MessageCircle, MapPin, ArrowLeft, Calendar, DollarSign, Briefcase } from 'lucide-react';
