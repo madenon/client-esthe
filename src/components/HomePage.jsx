@@ -100,8 +100,8 @@ const HomePage = () => {
   return (
     <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20 text-[#1e293b] relative">
       
-      <section className="px-6 py-12 text-center">
-        <div className="max-w-4xl mx-auto">
+      <section className="px-2 py-12 text-center">
+        <div className="max-w-5xl mx-auto">
 
           <div className="flex items-center justify-center gap-4 mb-8">
             <button
@@ -119,7 +119,7 @@ const HomePage = () => {
             </button>
 
             <button
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${
+              className={`flex items-center gap-2 px-3 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${
                 userRole === 'Employeur'
                   ? 'bg-white text-[#ff4da6]'
                   : 'bg-[#ff4da6] text-white'
@@ -182,7 +182,7 @@ const HomePage = () => {
               <button
                 key={cat}
                 onClick={() => setActiveCat(cat)}
-                className={`px-5 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all border ${
+                className={`px-2 py-2 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all border ${
                   activeCat === cat
                     ? 'bg-blue-600 border-blue-600 text-white'
                     : 'bg-white border-slate-100 text-slate-500 hover:border-blue-200'
@@ -197,8 +197,8 @@ const HomePage = () => {
 
       
 
-      <section className="max-w-4xl mx-auto px-6 mb-16">
-        <div className='relative overflow-hidden bg-[#111] px-6 py-14 md:px-12'>
+      <section className="max-w-5xl mx-auto px-3 mb-16">
+        <div className='relative overflow-hidden bg-[#111] px-3 py-14 md:px-6'>
 
           <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
 
@@ -212,7 +212,7 @@ const HomePage = () => {
               Comment  savoir en 6 minutes si le coiffeur  va rester  2 ans ou  2 semaines ?
             </h3>
 
-<div className="max-w-4xl mx-auto px-6 mb-16">
+<div className="max-w-4xl mx-auto px-3 mb-16">
   <img 
     src="/entre.png" 
     alt="" 
@@ -238,7 +238,7 @@ const HomePage = () => {
 
             <Link
               to="/blog"
-              className="inline-flex items-center gap-2 bg-[#ff4da6] hover:bg-white hover:text-[#ff4da6] text-white px-8 py-4 rounded-xl font-black text-[13px] uppercase tracking-widest transition-all shadow-lg active:scale-95"
+              className="inline-flex items-center gap-2 bg-[#ff4da6] hover:bg-white hover:text-[#ff4da6] text-white px-4 py-4 rounded-xl font-black text-[13px] uppercase tracking-widest transition-all shadow-lg active:scale-95"
             >
               Lire la suite des conseils
             </Link>
@@ -250,7 +250,7 @@ const HomePage = () => {
       <AdBanner />
 
       
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-3">
         <AnimatePresence mode="wait">
           {currentOffers.length > 0 ? (
             <motion.div
