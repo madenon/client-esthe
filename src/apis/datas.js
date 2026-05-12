@@ -3,7 +3,7 @@ export const jobOffers = [
   
     id: 10141, 
     zone: "Abidjan", 
-    category: "Coiffure", 
+    category: "Tresses", 
     title: "Coiffeuses professionnel En tresses", 
   description: "Je suis une coiffeuses professionnel En tresses à  Abata", 
     location: "Abata", 
