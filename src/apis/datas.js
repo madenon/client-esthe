@@ -1,4 +1,25 @@
 export const jobOffers = [
+  { 
+  
+    id: 10130, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "soins de visage", 
+  description: "J'ai besoin d'une fille pour faire pédicure manucure et soins de visage. C'est un salon pour homme", 
+    location: "Treichville ", 
+    salary: "~ 80 000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "+225 0747939892:", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+
+   
 { 
   
     id: 10131, 
@@ -9,7 +30,7 @@ export const jobOffers = [
     location: "ABOBO DOKUI ", 
     salary: "~ 130.000 FCFA",
     whatsapp: "2250596132058", 
-    number: "01-00-34-19-04", 
+    number: "+225 0545488441", 
     likes: 34,
     isUrgent: true,
     isFavorite: false,
