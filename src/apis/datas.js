@@ -1,5 +1,25 @@
 export const jobOffers = [
 { 
+  
+    id: 10131, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "Coiffeuse polyvalente pose perruque ", 
+  description: "Coiffeuse polyvalente pose perruque .tresse natte tissage soins de visage manucure   resident a ABOBO DOKUI recherche emploi     dans les environs salaire ", 
+    location: "ABOBO DOKUI ", 
+    salary: "~ 130.000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "01-00-34-19-04", 
+    likes: 34,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+  
+{ 
     id: 10121, 
     zone: "Abidjan", 
     category: "Coiffure", 
