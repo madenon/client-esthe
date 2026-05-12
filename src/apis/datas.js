@@ -1,6 +1,25 @@
 export const jobOffers = [
   { 
   
+    id: 10141, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "Coiffeuses professionnel En tresses", 
+  description: "Je suis une coiffeuses professionnel En tresses à  Abata", 
+    location: "Abata", 
+    salary: "150 000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "+225 0507890767", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+  { 
+  
     id: 10130, 
     zone: "Abidjan", 
     category: "Coiffure", 
