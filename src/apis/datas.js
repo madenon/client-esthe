@@ -38,6 +38,46 @@ export const jobOffers = [
      isDisponible: true,
     date: "2024-05-18"
   },
+
+
+   { 
+  
+    id: 10181, 
+    zone: "Abidjan", 
+    category: "Tresses", 
+    title: "Gérance libre dortoir", 
+  description: "Pas de dortoir, zone de prédilection Abobobelleville, Abobobaoulé, abobobiabou, Paris village et Angré château limite.", 
+    location: "Abobobelleville,", 
+    salary: "",
+    whatsapp: "2250596132058", 
+    number: "+2250566569181", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+  { 
+  
+    id: 10149, 
+    zone: "Abidjan", 
+    category: "Tresses", 
+    title: "recherche coiffeuse", 
+  description: "Abata Tout mèches,pose perruque, natte, pedicure.. Salaire  mille", 
+    location: "Abatta  ", 
+    salary: "100 000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "+2250757275034", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
   { 
   
     id: 10130, 
