@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Clock, ShieldCheck, Sparkles, MessageCircle } from 'lucide-react';
 
 const EspaceVente = () => {
-  const WHATSAPP_NUMBER = "2250796132058"; // Format international sans le +
+  const WHATSAPP_NUMBER = "2250596132058"; // Format international sans le +
 
   const articles = [
     {
