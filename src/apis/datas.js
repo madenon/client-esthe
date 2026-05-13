@@ -1,6 +1,26 @@
 export const jobOffers = [
   { 
   
+    
+    id: 10151, 
+    zone: "Intérieur", 
+    category: "Coiffure", 
+    title: "Recherche 3 coiffeur 3 barber a yakasse attobrou", 
+  description: "Recherche 3 coiffeur3 barber  a yakasse attobrou competence maitrise du dégrader taper contour dread teinture de couleur. Loyer disponible  salaite 50/50", 
+    location: "Abata", 
+    salary: "salaite 50/50",
+    whatsapp: "2250596132058", 
+    number: "+225 0555027936", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+  { 
+  
     id: 10141, 
     zone: "Abidjan", 
     category: "Tresses", 
