@@ -2,6 +2,26 @@ export const jobOffers = [
   { 
   
     
+    id: 13351, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "Je suis un coiffeur je cherche tu travailles", 
+  description: "Coiffure homme et  locks Je suis Abidjan bingerville J'habite aussi à Gonzague", 
+    location: "bingerville Gonzague", 
+    salary: "!",
+    whatsapp: "2250596132058", 
+    number: "+225 66 56 91 81", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+  { 
+  
+    
     id: 10151, 
     zone: "Intérieur", 
     category: "Coiffure", 
