@@ -8,17 +8,17 @@ const AdBanner = () => {
 
   // 1. Données mises à jour pour l'Espace Vente
   const slides = useMemo(() => [
-    {
-      id: 'slide-1',
-      icon: <Package className="text-rose-400" />,
-      title: <>Matériel de <span className="text-rose-500">Coiffure ?</span></>,
-      description: "Trouvez des bacs, fauteuils et séchoirs professionnels d'occasion à prix réduits.",
-      buttonText: "Parcourir l'Espace Vente",
-      link: "/espace-de-vente",
-      imgUrl: "/iv.png",
-      accentColor: "from-rose-200/30",
-      themeColor: "bg-rose-500"
-    },
+    // {
+    //   id: 'slide-1',
+    //   icon: <Package className="text-rose-400" />,
+    //   title: <>Matériel de <span className="text-rose-500">Coiffure ?</span></>,
+    //   description: "Trouvez des bacs, fauteuils et séchoirs professionnels d'occasion à prix réduits.",
+    //   buttonText: "Parcourir l'Espace Vente",
+    //   link: "/espace-de-vente",
+    //   imgUrl: "/iv.png",
+    //   accentColor: "from-rose-200/30",
+    //   themeColor: "bg-rose-500"
+    // },
     {
       id: 'slide-2',
       icon: <Scissors className="text-blue-400" />,
