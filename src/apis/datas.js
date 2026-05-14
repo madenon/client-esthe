@@ -1,4 +1,46 @@
 export const jobOffers = [
+   { 
+  
+    
+    id: 12351, 
+    zone: "Abidjan", 
+    category: "Formation", 
+    title: "Centre de formation yopougon", 
+  description: "Tu as envie de devenir une prothésiste professionnelle Eden Éden institut beauty Est la pour toiViens recevoir une formation en onglerie make-up et la pose perruque de qualité+un emploi garantie dans les Spa et institut Dans la commune de ton choix Éden institut te rend autonome par son programme de qualité si tu souhaites t'installer à ton propre compte ", 
+    location: "Yopougon", 
+    salary: "Voir admin",
+    whatsapp: "2250596132058", 
+    number: " 0103036116 ", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+
+
+  { 
+  
+    
+    id: 11351, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "Cherche travail salon de coiffure pour être apprenti", 
+  description: "Bonjour à tous je suis un jeune homme qui cherche salon de coiffure pour être apprenti. Je suis vraiment passionné par le métier, j'aimerais apprendre au près d'un coiffeur et travaillé avec lui par la suite", 
+    location: "Yopougon", 
+    salary: "Voir admin",
+    whatsapp: "2250596132058", 
+    number: "0777533101 ", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
   { 
   
     
