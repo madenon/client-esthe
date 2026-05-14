@@ -22,6 +22,26 @@ export const jobOffers = [
   { 
   
     
+    id: 13352, 
+    zone: "Intérieur", 
+    category: "Recherche salon de coiffure pour travail avec dortoire", 
+    title: "Cherche aide coiffeuse", 
+  description: "Coiffeur  barber resident a Yamoussokro. Recherche salon de coiffure pour travail avec dortoire. Salaire ou gerance libre", 
+    location: "Yamoussokro", 
+    salary: "Salaire ou gerance libre",
+    whatsapp: "2250596132058", 
+    number: "+2250555432860", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+  { 
+  
+    
     id: 13351, 
     zone: "Abidjan", 
     category: "Coiffure", 
