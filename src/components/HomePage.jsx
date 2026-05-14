@@ -14,7 +14,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { jobOffers as initialOffers } from '../apis/datas';
 import Temoignage from './Temoignage';
-import AdBanner from './AdBanner';
 
 const HomePage = () => {
   const [activeZone, setActiveZone] = useState(null);
@@ -247,7 +246,6 @@ const HomePage = () => {
       </section>
 
 
-      <AdBanner />
 
       
       <div className="max-w-6xl mx-auto px-3">
