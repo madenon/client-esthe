@@ -196,55 +196,7 @@ const HomePage = () => {
 
       
 
-      <section className="max-w-5xl mx-auto px-3 mb-16">
-        <div className='relative overflow-hidden bg-[#111] px-3 py-14 md:px-6'>
-
-          <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
-
-          <div className="relative z-10">
-            <h3 className="text-white text-xl md:text-2xl font-black mb-6 flex items-center gap-3">
-              <Zap
-                className="text-yellow-400"
-                fill="currentColor"
-                size={24}
-              />
-              Comment  savoir en 6 minutes si le coiffeur  va rester  2 ans ou  2 semaines ?
-            </h3>
-
-<div className="max-w-4xl mx-auto px-3 mb-16">
-  <img 
-    src="/entre.png" 
-    alt="" 
-    className="w-full h-[400px] md:h-[980px] object-cover rounded-2xl"
-  />
-</div>
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 mb-6">
-            {/* IMAGE DU BAS : Format bandeau plus petit */}
-
-              <p className="text-blue-50 italic text-lg leading-relaxed">
-                “J’ai des coiffeurs, mais pas de coiffeurs fiables, pros, autonomes. Je refuse des clients...”
-              </p>
-
-              <p className="text-blue-200 text-xs mt-3 font-bold uppercase tracking-widest">
-                — Un patron de salon
-              </p>
-            </div>
-
-            <p className="text-blue-100 text-[15px] leading-relaxed mb-8 max-w-2xl">
-              Ça te parle ? Normal. En Côte d’Ivoire,
-              80% du recrutement se fait au bouche-à-oreille.
-            </p>
-
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 bg-[#ff4da6] hover:bg-white hover:text-[#ff4da6] text-white px-4 py-4 rounded-xl font-black text-[13px] uppercase tracking-widest transition-all shadow-lg active:scale-95"
-            >
-              Lire la suite des conseils
-            </Link>
-          </div>
-        </div>
-      </section>
-
+    
 
 
       
