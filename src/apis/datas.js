@@ -2,6 +2,26 @@ export const jobOffers = [
   { 
   
     
+    id: 13352, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "Cherche aide coiffeuse", 
+  description: "Bjr besoin urgement d'une aide coiffeuse et d'une coiffeuse à cocody non loin de la rti", 
+    location: "COcody", 
+    salary: "Voir admin",
+    whatsapp: "2250596132058", 
+    number: "0103269672", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+  { 
+  
+    
     id: 13351, 
     zone: "Abidjan", 
     category: "Coiffure", 
