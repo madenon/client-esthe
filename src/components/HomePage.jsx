@@ -77,11 +77,14 @@ const HomePage = () => {
     return matchZone && matchCat && matchSearch;
   });
 
-  // RESET PAGE SI FILTRE
-  useEffect(() => {
-    setCurrentPage(1);
+ useEffect(() => {
+  setCurrentPage(1);
+
+  setTimeout(() => {
     scrollToResults();
-  }, [activeZone, activeCat, searchQuery,currentPage]);
+  }, 100);
+
+}, [activeZone, activeCat, searchQuery]);
 
   // CALCUL PAGINATION
   const indexOfLastOffer = currentPage * offersPerPage;
@@ -96,6 +99,15 @@ const HomePage = () => {
   const totalPages = Math.ceil(
     filteredOffers.length / offersPerPage
   );
+
+  const changePage = (page) => {
+
+  setCurrentPage(page);
+
+  setTimeout(() => {
+    scrollToResults();
+  }, 100);
+};
 
   return (
     <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20 text-[#1e293b] relative">
@@ -201,7 +213,10 @@ const HomePage = () => {
 
 
       
-      <div className="max-w-6xl mx-auto px-3">
+     <div
+  ref={resultsSectionRef}
+  className="max-w-6xl mx-auto px-3"
+>
         <AnimatePresence mode="wait">
           {currentOffers.length > 0 ? (
             <motion.div
@@ -358,9 +373,9 @@ const HomePage = () => {
 
                   <button
                     onClick={() =>
-                      setCurrentPage((prev) =>
-                        Math.max(prev - 1, 1)
-                      )
+                      changePage(
+  Math.max(currentPage - 1, 1)
+)
                     }
                     disabled={currentPage === 1}
                     className="w-11 h-11 rounded-xl bg-white border border-slate-200 flex items-center justify-center disabled:opacity-40"
@@ -372,7 +387,7 @@ const HomePage = () => {
                     <button
                       key={index}
                       onClick={() =>
-                        setCurrentPage(index + 1)
+                        changePage(index + 1)
                       }
                       className={`w-11 h-11 rounded-xl font-black text-sm transition-all ${
                         currentPage === index + 1
@@ -386,9 +401,9 @@ const HomePage = () => {
 
                   <button
                     onClick={() =>
-                      setCurrentPage((prev) =>
-                        Math.min(prev + 1, totalPages)
-                      )
+                     changePage(
+  Math.min(currentPage + 1, totalPages)
+)
                     }
                     disabled={currentPage === totalPages}
                     className="w-11 h-11 rounded-xl bg-white border border-slate-200 flex items-center justify-center disabled:opacity-40"
