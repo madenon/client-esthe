@@ -112,12 +112,12 @@ const HomePage = () => {
   return (
     <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20 text-[#1e293b] relative">
       
-      <section className="px-2 py-12 text-center">
+      <section className="px-0 py-12 text-center">
         <div className="max-w-5xl mx-auto">
 
           <div className="flex items-center justify-center gap-4 mb-8">
             <button
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${
+              className={`flex items-center gap-2 px-1 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${
                 userRole === 'Candidat'
                   ? 'bg-blue-600 text-white'
                   : 'bg-white text-slate-400'
@@ -131,7 +131,7 @@ const HomePage = () => {
             </button>
 
             <button
-              className={`flex items-center gap-2 px-3 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${
+              className={`flex items-center gap-2 px-1 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${
                 userRole === 'Employeur'
                   ? 'bg-white text-[#ff4da6]'
                   : 'bg-[#ff4da6] text-white'
@@ -215,7 +215,7 @@ const HomePage = () => {
       
      <div
   ref={resultsSectionRef}
-  className="max-w-6xl mx-auto px-3"
+  className="max-w-6xl mx-auto px-1"
 >
         <AnimatePresence mode="wait">
           {currentOffers.length > 0 ? (
@@ -240,14 +240,14 @@ const HomePage = () => {
                       <div className="absolute top-4 left-4 flex flex-col gap-2 z-10">
 
                         {offer.isUrgent && (
-                          <div className="bg-red-100 text-red-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-sm animate-pulse border border-red-200">
+                          <div className="bg-red-100 text-red-600 px-1 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-sm animate-pulse border border-red-200">
                             <Zap size={12} fill="currentColor" />
                             Urgent
                           </div>
                         )}
 
                         {offer.isFavorite && (
-                          <div className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-sm border border-blue-200">
+                          <div className="bg-blue-100 text-blue-600 px-1 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter flex items-center gap-1 shadow-sm border border-blue-200">
                             <Heart size={12} fill="currentColor" />
                             Favorite
                           </div>
@@ -309,7 +309,7 @@ const HomePage = () => {
     </span>
   </div>
 
-  <span className="text-orange-600 font-black text-sm underline decoration-green-600 decoration-2 rounded-md px-2 py-1">
+  <span className="text-orange-600 font-black text-sm underline decoration-green-600 decoration-2 rounded-md px-0 py-1">
     {offer.salary}
   </span>
 </div>
