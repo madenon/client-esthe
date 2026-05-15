@@ -80,7 +80,8 @@ const HomePage = () => {
   // RESET PAGE SI FILTRE
   useEffect(() => {
     setCurrentPage(1);
-  }, [activeZone, activeCat, searchQuery]);
+    scrollToResults();
+  }, [activeZone, activeCat, searchQuery,currentPage]);
 
   // CALCUL PAGINATION
   const indexOfLastOffer = currentPage * offersPerPage;
