@@ -251,7 +251,7 @@ const filteredOffers = offers.filter((offer) => {
           </h2>
 
           <div className="flex flex-col md:flex-row items-center gap-4 max-w-2xl mx-auto mb-10">
-           
+   
 
             {/* FILTRE ZONE : On ajoute scrollToResults au clic */}
             <div className="flex bg-blue-300 p-1.5 rounded-2xl shadow-xl shadow-blue-900/10 w-full md:flex-1 border border-slate-200">
@@ -274,23 +274,32 @@ const filteredOffers = offers.filter((offer) => {
             </div>
           </div>
 
-   <div className="flex items-center gap-3 max-w-md mx-auto mb-10">
-  
-  
+          <div className="">
+  {/* Changement de 'items-center' à 'flex-col' pour aligner de haut en bas */}
+  <div className="flex flex-col gap-2 max-w-md mx-auto mb-10">
+    
+    <div>
+      <span className="text-sm font-black text-slate-600 uppercase tracking-wider">
+        Je cherche
+      </span>
+    </div>
+     
+    <select
+      value={serviceFilter}
+      onChange={(e) => setServiceFilter(e.target.value)}
+      className="w-full bg-white border border-slate-200 rounded-2xl px-4 py-4 text-sm font-bold text-slate-600 shadow-xl shadow-blue-900/5 focus:outline-none focus:border-pink-400"
+    >
+      {serviceFilters.map((filter) => (
+        <option key={filter} value={filter}>
+          {`   ${filter}`}
+        </option>
+      ))}
+    </select>
 
-<select
-  value={serviceFilter}
-  onChange={(e) => setServiceFilter(e.target.value)}
-  className="flex-1 bg-white border border-slate-200 rounded-2xl px-4 py-4 text-sm font-bold text-slate-600 shadow-xl shadow-blue-900/5 focus:outline-none focus:border-pink-400"
->
-  {serviceFilters.map((filter) => (
-    <option key={filter} value={filter}>
-      {`Je cherche :   ${filter}`}
-    </option>
-  ))}
-</select>
-
+  </div>
 </div>
+
+
         </div>
       </section>
 
