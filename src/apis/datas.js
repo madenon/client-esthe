@@ -205,7 +205,7 @@ export const jobOffers = [
     location: "bingerville Gonzague", 
     salary: "!",
     whatsapp: "2250596132058", 
-    number: "+225 66 56 91 81", 
+    number: "+2250566569181", 
     likes: 304,
     isUrgent: true,
     isFavorite: false,
