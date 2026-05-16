@@ -251,21 +251,7 @@ const filteredOffers = offers.filter((offer) => {
           </h2>
 
           <div className="flex flex-col md:flex-row items-center gap-4 max-w-2xl mx-auto mb-10">
-            {/* INPUT RECHERCHE : On peut aussi scroller quand l'utilisateur valide ou tape */}
-            <div className="relative w-full md:flex-[1.5]">
-              <Search
-                className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400"
-                size={18}
-              />
-              <input
-                type="text"
-                placeholder="Rechercher (ex: Yopougon, Coiffeuse...)"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onKeyPress={(e) => e.key === "Enter" && scrollToResults()} // Optionnel: Scroll sur Entrée
-                className="w-full bg-white pl-14 pr-6 py-4 rounded-2xl shadow-xl shadow-blue-900/5 border border-slate-200 focus:outline-none focus:border-blue-400 text-sm"
-              />
-            </div>
+           
 
             {/* FILTRE ZONE : On ajoute scrollToResults au clic */}
             <div className="flex bg-blue-600 p-1.5 rounded-2xl shadow-xl shadow-blue-900/5 w-full md:flex-1 border border-slate-200">
