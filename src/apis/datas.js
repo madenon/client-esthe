@@ -1,6 +1,42 @@
 export const jobOffers = [
 
   {
+    id: 295, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Recherche coiffeur", 
+  description: "Gerance libre bouaké recherche coiffeur  barber dortoire disponible", 
+    location: "abidjan", 
+    salary: "",
+    whatsapp: "2250596132058", 
+    number: "+2250757451711", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+  {
+    id: 265, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Recherche un coiffeur ", 
+  description: "Zone  Abidjan songon Categorie coiffure Titre. Recherche un coiffeur Le texte Salon de coiffure à Songon Agban cherche un coiffeur.Consciencieux, professionnel et respectueux. Avec DORTOIR Salaire a discuter ", 
+    location: "abidjan Agban", 
+    salary: "",
+    whatsapp: "2250596132058", 
+    number: "+2250140470971", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+  {
     id: 655, 
     zone: "Abidjan", 
     category: "Coiffeur", 
