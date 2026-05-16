@@ -254,7 +254,7 @@ const filteredOffers = offers.filter((offer) => {
            
 
             {/* FILTRE ZONE : On ajoute scrollToResults au clic */}
-            <div className="flex bg-blue-600 p-1.5 rounded-2xl shadow-xl shadow-blue-900/5 w-full md:flex-1 border border-slate-200">
+            <div className="flex bg-blue-300 p-1.5 rounded-2xl shadow-xl shadow-blue-900/10 w-full md:flex-1 border border-slate-200">
               {["Abidjan", "Intérieur"].map((zone) => (
                 <button
                   key={zone}
