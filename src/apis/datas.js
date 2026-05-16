@@ -97,7 +97,7 @@ export const jobOffers = [
     category: "Formation", 
     title: "urgent 🚨Recherche d'une coiffeuse professionnels ", 
   description: "urgent 🚨je suis à la recherche d'une coiffeuse professionnels pour au solon VIP a bouaké 50000 dortoire disponible Posé peruq place faut ongles tresse gomage ect..", 
-    location: "50000", 
+    location: "bouaké", 
     salary: "50 000 Fcfa",
     whatsapp: "2250596132058", 
     number: "0152394723 ", 
