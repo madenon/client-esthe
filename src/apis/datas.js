@@ -1,6 +1,26 @@
 export const jobOffers = [
 
   {
+    id: 2705, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Coiffeur recherche formation  zone abidjan yopougon", 
+  description: "Salut a tous je suis un jeune passionné par la coiffure homme  et les dreads locks. Je coiffe souvent au quartier mais j'aimerais apprendre auprès d'un professionnel comme aide coiffeur et aussi acquérir plus connaissance et de maîtrise des différents styles de coupe, donc pour toute personne qui a un bon coeur et qui veut et peut me formé. Je précise que j'étais livreur je viens de sortir d'un accident donc j'ai décidé d'apprendre un métier parce-que tous mon argent est resté dans  mes soins. Svp faites parler votre cœur je suis à Yopougon", 
+    location: "yopougon", 
+    salary: "",
+    whatsapp: "2250596132058", 
+    number: " +2250777533101.", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+
+
+  {
     id: 275, 
     zone: "Abidjan", 
     category: "Coiffeur", 
