@@ -6,7 +6,7 @@ export const jobOffers = [
     title: "jeune passionné par la coiffure homme", 
   description: "Salut a tous je suis un jeune passionné par la coiffure homme  et les dreads locks. Je coiffe souvent au quartier mais j'aimerais apprendre auprès d'un professionnel comme aide coiffeur et aussi acquérir plus connaissance et de maîtrise des différents styles de coupe, donc pour toute personne qui a un bon coeur et qui veut et peut me formé, . Je précise que j'étais livreur je viens de sortir d'un accident donc j'ai décidé d'apprendre un métier parce-que tous mon argent est resté dans  mes soins. Svp faites parler votre cœur je suis à Yopougon", 
     location: "Yopougon", 
-    salary: " 50.000 Fcfa",
+    salary: "",
     whatsapp: "2250596132058", 
     number: "+225 0777533101", 
     likes: 304,
