@@ -42,7 +42,7 @@ export const jobOffers = [
     title: "Esthetique Zone interieur titre esthetique ", 
   description: " dortoire non disponible salaire non disponible  titre recherche prothésiste ongulairePour compléter notre équipe, nous recrutons un prothésiste ou une prothésiste ongulaire qui maîtrise  la pédicure, permanent, gel et acrygel et Naïl art  à Bouaké ", 
     location: "Bouaké", 
-    salary: "80 000  -- 120000  Fcfa",
+    salary: "",
     whatsapp: "2250596132058", 
     number: " 0554522544   / 0102239508", 
     likes: 304,
