@@ -1,5 +1,23 @@
 export const jobOffers = [
    {
+    id: 27301, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Salon recherche coiffeur propre ", 
+  description: "Categorie coiffure zone abidjan rivera  salaire a discuter pas de dortoire.    Bonjour institut de beauté situé à la Riviera 2 recherche un coiffeur professionnel avec une bonne hygiène . Intéressé appelez ", 
+    location: "Abidjan Riviera 2 ", 
+    salary: "salaire a discuter",
+    whatsapp: "2250596132058", 
+    number: "+22501 40 43 27 10", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+   {
     id: 27309, 
     zone: "Abidjan", 
     category: "Coiffeur", 
