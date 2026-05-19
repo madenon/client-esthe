@@ -135,6 +135,9 @@ const DetailPage = () => {
                 >
                   Intéressé par cette offre
                 </a>
+                <p className="text-blue-700 text-xs mb-6">
+                  Demandez le contact via WhatsApp en indiquant sa référence  
+                </p>
               </div>
 
               {/* BLOC 2 : PARTAGER (AMIS) */}
