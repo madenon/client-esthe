@@ -1,5 +1,23 @@
 export const jobOffers = [
    {
+    id: 27302, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Recherche esthéticienne professionnel ", 
+  description: "bonjour, besoin d'une esthéticienne professionnelle a Cocody Mermoz salaire a partir de 150.000f  uniquement WhatsApp svp", 
+    location: "Abidjan cocody mermoz ", 
+    salary: "150000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "+2250798996373", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
+   {
     id: 27301, 
     zone: "Abidjan", 
     category: "Coiffeur", 
@@ -1124,9 +1142,6 @@ export const jobOffers = [
   }
 ];
 
-
-
-
 export const testimonials = [
   {
     id: 1,
@@ -1152,9 +1167,7 @@ export const testimonials = [
     rating: 4,
     avatar: "/esth3.jpg"
   },
-  
 
- 
 ];
 
 
