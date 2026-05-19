@@ -433,6 +433,15 @@ const filteredOffers = offers.filter((offer) => {
                       </p>
 
                       <div className="mt-auto">
+  {offer?.img && (
+  <div className="w-full mb-4 overflow-hidden rounded-2xl">
+    <img
+      src={offer.img}
+      alt={offer.title}
+      className="w-full h-52 object-cover rounded-2xl"
+    />
+  </div>
+)}
                         <Link
                           to={`/offre/${offer.id}`}
                           className={`flex items-center justify-center gap-2 w-full bg-white border-2 font-black py-3.5 rounded-2xl transition-all text-[12px] uppercase tracking-widest ${

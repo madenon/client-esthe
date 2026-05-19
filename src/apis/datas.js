@@ -1,4 +1,25 @@
 export const jobOffers = [
+
+ 
+   {
+    id: 27302, 
+    zone: "Abidjan", 
+    category: "Coiffeur", 
+    title: "Salon à vendre", 
+  description: "Salon à vendre ", 
+    location: "Abidjan cocody mermoz ", 
+    salary: "150000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "+2250798996373", 
+    img: "/vds.png", 
+    likes: 304,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+     isDisponible: true,
+    date: "2024-05-18"
+  },
    {
     id: 27302, 
     zone: "Abidjan", 
