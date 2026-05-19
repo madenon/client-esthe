@@ -1,8 +1,9 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { jobOffers } from '../apis/datas';
+import { FaWhatsapp } from "react-icons/fa";
 import { 
-  MessageCircle, MapPin, ArrowLeft, Calendar, 
+  MapPin, ArrowLeft, Calendar, 
   DollarSign, Briefcase, Share2, Users 
 } from 'lucide-react';
 
@@ -121,12 +122,9 @@ const DetailPage = () => {
               {/* BLOC 1 : POSTULER (WHATSAPP) */}
               <div className="p-8 bg-emerald-50 rounded-[2.5rem] border border-emerald-100 flex flex-col items-center text-center">
                 <div className="bg-emerald-500 text-white p-4 rounded-2xl mb-4 shadow-lg shadow-emerald-200">
-                  <MessageCircle size={32} />
+                  <FaWhatsapp size={32} />
                 </div>
-                <h3 className="text-lg font-bold text-emerald-900 mb-2">Prêt à postuler ?</h3>
-                <p className="text-emerald-700 text-xs mb-6">
-                  Envoyez votre candidature directement au recruteur.
-                </p>
+                
                 <a 
                   href={`https://api.whatsapp.com/send?phone=${offer.whatsapp}&text=${encodeURIComponent(
                     `Bonjour, je vous contacte via Goorco.com pour l'offre : ${offer.title}\nLien : ${shareUrl}`
@@ -135,7 +133,7 @@ const DetailPage = () => {
                   rel="noopener noreferrer"
                   className="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-black py-4 rounded-2xl transition-all shadow-md uppercase tracking-widest text-[10px]"
                 >
-                  Postuler via WhatsApp
+                  Intéressé par cette offre
                 </a>
               </div>
 
