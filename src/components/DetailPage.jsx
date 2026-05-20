@@ -1,4 +1,4 @@
-import React from 'react';
+import{ useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { jobOffers } from '../apis/datas';
 import { FaWhatsapp } from "react-icons/fa";
@@ -11,6 +11,11 @@ const DetailPage = () => {
   // 1. Récupération de l'ID et de l'offre
   const { id } = useParams();
   const offer = jobOffers.find((item) => item.id === Number(id));
+
+  // 🔄 Force le défilement tout en haut au chargement de la page de détails
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]); // Se déclenche à chaque fois que l'ID de l'offre change
 
   // 2. Construction de l'URL de l'offre pour le partage
   const shareUrl = `${window.location.origin}/offre/${id}`;
