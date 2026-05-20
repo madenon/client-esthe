@@ -4,7 +4,7 @@ export const jobOffers = [
     id: 27306, 
     zone: "Abidjan", 
     category: "Coiffeur", 
-    title: "Texte salon recherche coiffeur propre", 
+    title: "Salon recherche coiffeur propre", 
   description: " Bonjour institut de beauté situé à la Riviera 2 recherche un coiffeur professionnel avec une bonne hygiène .", 
     location: "La Riviera 2", 
     salary: "salaire a discuter",
