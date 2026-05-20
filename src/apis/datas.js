@@ -41,8 +41,8 @@ export const jobOffers = [
     id: 27302, 
     zone: "Abidjan", 
     category: "Coiffeur", 
-    title: "Salon à vendre", 
-  description: "Categorie esthétique zone abidjan port Bouet salaire a discuter avec ou sans dortoire titre esthéticienne recherche travail  RECHERCHE D'EMPLOI – PROTHÉSISTE ONGULAIR Passionnée et appliquée, je cherche un emploi à Port-Bouët et ses environs.Mes services :Pédicure & ManucurePose classique (comme sur la photo !)Vernis semi-permanent Disponible immédiatement. Contactez-moi   ", 
+    title: "esthéticienne recherche travail", 
+  description: "Categorie esthétique zone abidjan port Bouet salaire a discuter avec ou sans dortoire  esthéticienne recherche travail  RECHERCHE D'EMPLOI – PROTHÉSISTE ONGULAIR Passionnée et appliquée, je cherche un emploi à Port-Bouët et ses environs.Mes services :Pédicure & ManucurePose classique (comme sur la photo !)Vernis semi-permanent Disponible immédiatement. Contactez-moi   ", 
     location: " abidjan port Bouet ", 
     salary: "150000 FCFA",
     whatsapp: "2250596132058", 
@@ -851,23 +851,7 @@ export const jobOffers = [
     date: "2026-05-07",
   },
 
-  {
-    id: 52,
-    zone: "Abidjan",
-    category: "Business",
-    title: "Salon de Coiffure à Vendre",
-    description:
-      "Salon de coiffure à vendre en bon état ou disponible en gestion libre.",
-    location: "Abidjan",
-    salary: "À négocier",
-    whatsapp: "",
-    likes: 10,
-    isUrgent: false,
-    isFavorite: false,
-    hasDortoir: false,
-    isPremium: true,
-    date: "2026-05-07",
-  },
+
 
   {
     id: 60,
