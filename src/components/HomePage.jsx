@@ -171,9 +171,9 @@ const filteredOffers = offers.filter((offer) => {
     ) ||
 
     (
-      serviceFilter === "Salon à Vendre" &&
+      
       (
-        content.includes("salon à vendre") ||
+        
         content.includes("vente salon") ||
         content.includes("fonds de commerce")
       )
@@ -213,11 +213,10 @@ const filteredOffers = offers.filter((offer) => {
     "Apprenant",
     "Formation",
     "Gérance Libre",
-    "Salon à Vendre",
   ];
   return (
     <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20 text-[#1e293b] relative">
-      <section className="px-0 py-12 text-center">
+      <section className="px-0 py-1 text-center">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-center gap-4 mb-8">
             <button
@@ -277,7 +276,7 @@ const filteredOffers = offers.filter((offer) => {
 
           <div className="">
   {/* Changement de 'items-center' à 'flex-col' pour aligner de haut en bas */}
-  <div className="flex flex-col gap-2 max-w-md mx-auto mb-10">
+  <div className="flex flex-col gap-2 max-w-md mx-auto mb-3">
     
     <div>
       <span className="text-sm font-black text-slate-600 uppercase tracking-wider">
