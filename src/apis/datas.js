@@ -1062,6 +1062,94 @@ export const jobOffers = [
     isPremium: true,
     date: "10-Mai-2026",
   },
+
+  { 
+    id: 54, 
+    zone: "Intérieur", 
+    category: "Coiffeuse", 
+    title: "Coiffeuse à Bassam", 
+    description: "Besoin d'une coiffeuse à Bassam avec dortoir disponible immédiatement. Salaire : 60.000f Heure : 9h a 20h 30 ", 
+    location: "Grand-Bassam", 
+    salary: "60.000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "+22505 44 63 91 54", 
+    likes: 28,
+    isUrgent: false,
+    isFavorite: true,
+    hasDortoir: true,
+    isPremium: false,
+    date: "2024-05-14"
+  },
+   { 
+    id: 55, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Recherche Expert Spa & Extensions", 
+    description: "Soins corps/visage et extensions de cils (Russe/Hybride).", 
+    location: "Riviera Mbadon", 
+    salary: "200.000 - 250.000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "22507 67 95 55 55", 
+    likes: 105, // Mis à jour à au moins 12
+    isUrgent: false,
+    isFavorite: true, 
+    hasDortoir: false,
+    isPremium: true,
+    date: "19-Mai-2026"
+  },
+
+   
+  { 
+    id: 56, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "Recherche Coiffeuse experte en poses", 
+    description: "Besoin d'une coiffeuse à abatta qui maîtrise surtout les pose perruque. Heure : 9h a 20h 30.", 
+    location: "Abatta", 
+    salary: "70.000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "+22505 44 63 91 54", 
+    likes: 12,
+    isUrgent: false,
+    hasDortoir: false,
+        isFavorite: true, 
+
+    isPremium: false,
+    date: "2024-05-13"
+  },
+
+  { 
+    id: 57, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Recherche Prothésiste Ongulaire Pro", 
+    description: "besoin de deux prothésiste ongulaire urgemment dans la zone d’abobo baoulé, salaire de départ 70k à négocier", 
+    location: "Abobo Baoulé", 
+    salary: "70.000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "+2250153488797", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "2024-05-06"
+  },
+  { 
+    id: 58, 
+    zone: "Abidjan", 
+    category: "Esthétique", 
+    title: "Expert Spa & Extensions", 
+    description: "Soins corps/visage et extensions de cils (Russe/Hybride).", 
+    location: "Riviera Mbadon", 
+    salary: "200.000 - 250.000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "+22507 67 95 55 55 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "19-Mai-2026"
+  },
 ];
 
 export const testimonials = [
