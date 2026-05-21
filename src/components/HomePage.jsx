@@ -8,6 +8,7 @@ import {
   MapPin,
   ChevronLeft,
   ChevronRight,
+  CalendarDays
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -441,7 +442,19 @@ const filteredOffers = offers.filter((offer) => {
       className="w-full h-52 object-cover rounded-2xl"
     />
   </div>
+  
 )}
+
+ <div className="flex items-center justify-between mb-4">
+    <span className="text-[11px] font-black uppercase tracking-[2px] text-slate-400">
+      Publié le 
+    </span>
+
+<CalendarDays  /> 
+    <span className="bg-slate-100 text-slate-700 px-1 py-1 rounded-xl text-[11px] font-extrabold shadow-sm border border-slate-200">
+      {offer.date}
+    </span>
+  </div>
                         <Link
                           to={`/offre/${offer.id}`}
                           className={`flex items-center justify-center gap-2 w-full bg-white border-2 font-black py-3.5 rounded-2xl transition-all text-[12px] uppercase tracking-widest ${
