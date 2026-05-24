@@ -5,7 +5,7 @@ export const jobOffers = [
   {
     id: 64,
     zone: "Abidjan",
-    category: "Gé",
+    category: "Gérance libre",
     title: "Recherche  gerance  libre  ",
     description:
       "🚨🚨🚨 Un particulier cède un salon de coiffure avec tout le matériel. 📍 Yopougon 40 Prix de cession 💰 900 000 F CFA, y compris : 3 mois de cautio 2 mois d’avance Loyer : 50 000 F CF 📞 01 53 67 29 59",
