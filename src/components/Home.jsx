@@ -13,7 +13,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { jobOffers as initialOffers } from "../apis/datas";
-// import Temoignage from "./Temoignage";
+import Temoignage from "./Temoignage";
 
 const HomePage = () => {
   const [activeZone, setActiveZone] = useState(null);
@@ -244,19 +244,45 @@ const filteredOffers = offers.filter((offer) => {
             </button>
           </div> */}
 
-         
+          <h2 className="text-3xl md:text-5xl font-black mb-4 text-blue-500">
+            Goor
+            <span className="text-[#ff4da6]">co</span>
+            <span className="text-blue-600">.com</span>
+          </h2>
 
-          
+          <div className="flex flex-col md:flex-row items-center gap-4 max-w-2xl mx-auto mb-10">
+   
+
+            {/* FILTRE ZONE : On ajoute scrollToResults au clic */}
+            <div className="flex bg-blue-300 p-1.5 rounded-2xl shadow-xl shadow-blue-900/10 w-full md:flex-1 border border-slate-200">
+              {["Abidjan", "Intérieur"].map((zone) => (
+                <button
+                  key={zone}
+                  onClick={() => {
+                    setActiveZone(activeZone === zone ? null : zone);
+                    scrollToResults(); // <--- ICI on descend
+                  }}
+                  className={`flex-1 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all ${
+                    activeZone === zone
+                      ? "bg-[#1e293b] text-white"
+                      : "text-white hover:text-[#1e293b]"
+                  }`}
+                >
+                  {zone}
+                </button>
+              ))}
+            </div>
+          </div>
 
           <div className="">
   {/* Changement de 'items-center' à 'flex-col' pour aligner de haut en bas */}
   <div className="flex flex-col gap-2 max-w-md mx-auto mb-3">
     
-    {/* <div>
+    <div>
       <span className="text-sm font-black text-slate-600 uppercase tracking-wider">
         Je cherche
       </span>
-    </div> */}
+    </div>
      
     <select
       value={serviceFilter}
@@ -332,10 +358,10 @@ const filteredOffers = offers.filter((offer) => {
                         </span>
                       </div>
 
-                      {/* <h2 className="text-3xl md:text-5xl font-black mb-4 text-blue-600">
+                      <h2 className="text-3xl md:text-5xl font-black mb-4 text-blue-600">
                         Goor
                         <span className="text-[#ff4da6]">co</span>
-                      </h2> */}
+                      </h2>
                     </div>
 
                     <div className="p-7 flex flex-col flex-grow">
@@ -428,7 +454,7 @@ const filteredOffers = offers.filter((offer) => {
       {offer.date}
     </span>
   </div>
-                        {/* <Link
+                        <Link
                           to={`/offre/${offer.id}`}
                           className={`flex items-center justify-center gap-2 w-full bg-white border-2 font-black py-3.5 rounded-2xl transition-all text-[12px] uppercase tracking-widest ${
                             offer.isUrgent
@@ -439,7 +465,7 @@ const filteredOffers = offers.filter((offer) => {
                           }`}
                         >
                           Voir détails offre
-                        </Link> */}
+                        </Link>
                       </div>
                     </div>
                   </motion.div>
@@ -507,7 +533,7 @@ const filteredOffers = offers.filter((offer) => {
         </AnimatePresence>
       </div>
 
-      {/* <Temoignage /> */}
+      <Temoignage />
     </div>
   );
 };
