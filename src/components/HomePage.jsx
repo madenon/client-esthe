@@ -367,9 +367,7 @@ const filteredOffers = offers.filter((offer) => {
                           </span>
                         </div>
 
-                        <span className="text-orange-600 font-black text-sm underline decoration-green-600 decoration-2 rounded-md px-0 py-1">
-                          {offer.salary}
-                        </span>
+                      
                       </div>
                       {/* ... suite du titre ... */}
 
@@ -418,16 +416,7 @@ const filteredOffers = offers.filter((offer) => {
   
 )}
 
- <div className="flex items-center justify-between mb-4">
-    <span className="text-[11px] font-black uppercase tracking-[2px] text-slate-400">
-      Publié le 
-    </span>
-
-<CalendarDays  /> 
-    <span className="bg-slate-100 text-slate-700 px-1 py-1 rounded-xl text-[11px] font-extrabold shadow-sm border border-slate-200">
-      {offer.date}
-    </span>
-  </div>
+ 
                         {/* <Link
                           to={`/offre/${offer.id}`}
                           className={`flex items-center justify-center gap-2 w-full bg-white border-2 font-black py-3.5 rounded-2xl transition-all text-[12px] uppercase tracking-widest ${
