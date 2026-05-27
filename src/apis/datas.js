@@ -19,7 +19,7 @@ export const jobOffers = [
     hasDortoir: false,
     isPremium: false,
     isDisponible: true,
-    date: "15-Mai-2026",
+    date: "27-Mai-2026",
   },
   {
     id: 72,
@@ -37,7 +37,7 @@ export const jobOffers = [
     hasDortoir: false,
     isPremium: false,
     isDisponible: true,
-    date: "15-Mai-2026",
+    date: "27-Mai-2026",
   },
   {
     id: 71,
@@ -56,7 +56,7 @@ export const jobOffers = [
     hasDortoir: false,
     isPremium: false,
     isDisponible: true,
-    date: "15-Mai-2026",
+    date: "27-Mai-2026",
   },
   {
     id: 70,
@@ -75,7 +75,7 @@ export const jobOffers = [
     hasDortoir: false,
     isPremium: false,
     isDisponible: true,
-    date: "15-Mai-2026",
+    date: "27-Mai-2026",
   },
   {
     id: 69,
@@ -94,7 +94,7 @@ export const jobOffers = [
     hasDortoir: false,
     isPremium: false,
     isDisponible: true,
-    date: "15-Mai-2026",
+    date: "27-Mai-2026",
   },
   {
     id: 68,
@@ -113,7 +113,7 @@ export const jobOffers = [
     hasDortoir: false,
     isPremium: false,
     isDisponible: true,
-    date: "15-Mai-2026",
+    date: "27-Mai-2026",
   },
   {
     id: 67,
@@ -132,7 +132,7 @@ export const jobOffers = [
     hasDortoir: false,
     isPremium: false,
     isDisponible: true,
-    date: "15-Mai-2026",
+    date: "27-Mai-2026",
   },
   {
     id: 64,
@@ -151,7 +151,7 @@ export const jobOffers = [
     hasDortoir: false,
     isPremium: false,
     isDisponible: true,
-    date: "15-Mai-2026",
+    date: "27-Mai-2026",
   },
   {
     id: 70,
