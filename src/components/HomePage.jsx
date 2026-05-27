@@ -218,7 +218,7 @@ const filteredOffers = offers.filter((offer) => {
     <div className="bg-[#f0f4f8] min-h-screen font-poppins pb-20 text-[#1e293b] relative">
       <section className="px-0 py-1 text-center">
         <div className="max-w-5xl mx-auto">
-          {/* <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="flex items-center justify-center gap-4 mb-8">
             <button
               className={`flex items-center gap-2 px-1 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-sm ${
                 userRole === "Candidat"
@@ -242,7 +242,7 @@ const filteredOffers = offers.filter((offer) => {
               <Briefcase size={14} />
               <Link to="/espace-recruteur">Espace Recruteur</Link>
             </button>
-          </div> */}
+          </div>
 
           <h2 className="text-3xl md:text-5xl font-black mb-4 text-blue-500">
             Goor
