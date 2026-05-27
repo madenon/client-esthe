@@ -7,11 +7,11 @@ const Navbar = () => {
 
   // Définition des liens de navigation
   const navLinks = [
-    // { name: 'Accueil', href: '/' },
-    // { name: 'Blog', href: '/blog' },
-    // { name: 'Espace de vente', href: '/espace-de-vente' },
-    // { name: 'À propos', href: '/a-propos' },
-    // { name: 'Contact', href: '/contact' },
+    { name: 'Accueil', href: '/' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Espace de vente', href: '/espace-de-vente' },
+    { name: 'À propos', href: '/a-propos' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (

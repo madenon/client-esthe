@@ -1,26 +1,26 @@
 import Layout from './components/Layout';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './components/HomePage';
-// import WhatsAppFloat from './components/WhatsAppFloat';
+import WhatsAppFloat from './components/WhatsAppFloat';
 import About from './components/About';
 import Contact from './components/Contact';
 import Recrutement from './components/Recrutement';
 import CvCandidat from './components/CvCandidat';
 import Blog from './components/Blog';
-// import DetailPage from './components/DetailPage';
+import DetailPage from './components/DetailPage';
 import EspaceVente from './components/EspaceVente';
 
 const App = () => {
   return (
     <Layout>
-      {/* <WhatsAppFloat /> */}
+      <WhatsAppFloat />
       <Routes>
   <Route path='/' element={<HomePage />} />
-  {/* <Route path="/offre/:id" element={<DetailPage />} /> */}
+  <Route path="/offre/:id" element={<DetailPage />} />
   <Route path='/a-propos' element={<About />} />
   <Route path='/espace-candidat' element={<CvCandidat />} />
   <Route path='/espace-recruteur' element={<Recrutement />} />
-  {/* <Route path='/espace-de-vente' element={<EspaceVente />} /> */}
+  <Route path='/espace-de-vente' element={<EspaceVente />} />
   <Route path='/blog' element={<Blog />} />
   <Route path='/contact' element={<Contact />} />
 </Routes>
