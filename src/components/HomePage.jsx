@@ -207,7 +207,7 @@ const filteredOffers = offers.filter((offer) => {
   const serviceFilters = [
     "Tous",
     "Travail",
-    "Coiffeur",
+    "Coiffeuse",
     "Esthéticienne",
     "Barbier",
     "Apprenant",
