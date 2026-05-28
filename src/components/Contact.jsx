@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle, MapPin, Phone, Mail } from 'lucide-react';
 
@@ -8,20 +9,26 @@ const Contact = () => {
       city: "Abidjan, Cocody",
       phone: "+225 05 96 13 20 58",
       whatsapp: "2250596132058",
-      color: "bg-orange-500"
+      color: "bg-orange-500",
+      // À REMPLACER : Mets ici le lien "src" de la carte d'Abidjan (commençant par https://www.google.com/maps/embed...)
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.2957924458873!2d-3.989718425251846!3d5.371761494607148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xffc27f000000001%3A0x7b587a8f11111111!2sCocody%2C%20Abidjan!5e0!3m2!1sfr!2sci!4v1716900000000!5m2!1sfr!2sci"
     },
     {
       country: "Maroc",
       city: "Casablanca, Maarif",
-      phone: "+212 6 00 00 00 00", // Numéro à ajuster
+      phone: "+212 6 00 00 00 00",
       whatsapp: "212600000000",
-      color: "bg-red-600"
+      color: "bg-red-600",
+      // À REMPLACER : Mets ici le lien "src" de la carte de Casablanca (commençant par https://www.google.com/maps/embed...)
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.9484835497207!2d-7.632431724495568!3d33.58073437333804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d29671555555%3A0x5555555555555555!2sMaarif%2C%20Casablanca!5e0!3m2!1sfr!2sma!4v1716900000000!5m2!1sfr!2sma"
     }
   ];
 
+  const [activeMap, setActiveMap] = useState(offices[0].mapUrl);
+  const [selectedOffice, setSelectedOffice] = useState(0);
+
   return (
     <div className="bg-slate-50 min-h-screen font-poppins pb-20">
-      {/* Header Section */}
       <section className="bg-[#0f172a] py-16 px-6 text-center text-white">
         <motion.h1 
           initial={{ opacity: 0, y: -20 }}
@@ -38,7 +45,6 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-6 -mt-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
-          {/* Cartes WhatsApp */}
           <div className="lg:col-span-1 space-y-6">
             {offices.map((office, index) => (
               <motion.div 
@@ -46,7 +52,13 @@ const Contact = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.2 }}
-                className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover:shadow-md transition-shadow"
+                onClick={() => {
+                  setActiveMap(office.mapUrl);
+                  setSelectedOffice(index);
+                }}
+                className={`bg-white rounded-2xl shadow-sm border p-6 cursor-pointer transition-all duration-300 ${
+                  selectedOffice === index ? 'border-blue-500 ring-2 ring-blue-500/10 shadow-md' : 'border-slate-200 hover:shadow-md'
+                }`}
               >
                 <div className={`inline-block px-3 py-1 rounded-full text-white text-[10px] font-bold uppercase mb-4 ${office.color}`}>
                   Bureau {office.country}
@@ -68,6 +80,7 @@ const Contact = () => {
                   href={`https://wa.me/${office.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()} 
                   className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white font-bold py-3 rounded-xl hover:bg-[#20ba5a] transition-all active:scale-95 shadow-lg shadow-green-500/10"
                 >
                   <MessageCircle size={20} />
@@ -77,18 +90,18 @@ const Contact = () => {
             ))}
           </div>
 
-          {/* Google Maps Section */}
+          {/* Section Carte Interactive */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             className="lg:col-span-2 bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden min-h-[450px]"
           >
             <iframe 
-              title="Siège Abidjan"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127110.05731998592!2d-4.05322978586036!3d5.34843420894567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea5311959121%3A0x3a70ba559599665!2sAbidjan%2C%20C%C3%B4te%20d&#39;Ivoire!5e0!3m2!1sfr!2s!4v1714700000000!5m2!1sfr!2s" 
+              title="Géolocalisation Bureaux"
+              src={activeMap} 
               width="100%" 
               height="100%" 
-              style={{ border: 0 }} 
+              style={{ border: 0, minHeight: "450px" }} 
               allowFullScreen="" 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
