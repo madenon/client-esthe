@@ -10,8 +10,8 @@ const Contact = () => {
       phone: "+225 05 96 13 20 58",
       whatsapp: "2250596132058",
       color: "bg-orange-500",
-      // À REMPLACER : Mets ici le lien "src" de la carte d'Abidjan (commençant par https://www.google.com/maps/embed...)
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.2957924458873!2d-3.989718425251846!3d5.371761494607148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xffc27f000000001%3A0x7b587a8f11111111!2sCocody%2C%20Abidjan!5e0!3m2!1sfr!2sci!4v1716900000000!5m2!1sfr!2sci"
+      // LIEN EMBED SÉCURISÉ POUR ABIDJAN, COCODY
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15888.364405378772!2d-3.9877761!3d5.3484224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xffc2f52077ef29d%3A0x6bba843343361bd4!2sCocody%2C%20Abidjan!5e0!3m2!1sfr!2sci!4v1716900000000!5m2!1sfr!2sci"
     },
     {
       country: "Maroc",
@@ -19,11 +19,12 @@ const Contact = () => {
       phone: "+212 6 00 00 00 00",
       whatsapp: "212600000000",
       color: "bg-red-600",
-      // À REMPLACER : Mets ici le lien "src" de la carte de Casablanca (commençant par https://www.google.com/maps/embed...)
-      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.9484835497207!2d-7.632431724495568!3d33.58073437333804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d29671555555%3A0x5555555555555555!2sMaarif%2C%20Casablanca!5e0!3m2!1sfr!2sma!4v1716900000000!5m2!1sfr!2sma"
+      // LIEN EMBED SÉCURISÉ POUR CASABLANCA, MAARIF
+      mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.8463567634346!2d-7.6324838!3d33.5833118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d297af0bf94d%3A0x4460f3ef0f94a8c!2sMaarif%2C%20Casablanca!5e0!3m2!1sfr!2sma!4v1716900000000!5m2!1sfr!2sma"
     }
   ];
 
+  // Grâce à ça, activeMap aura dès le départ le bon lien d'Abidjan
   const [activeMap, setActiveMap] = useState(offices[0].mapUrl);
   const [selectedOffice, setSelectedOffice] = useState(0);
 
