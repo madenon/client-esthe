@@ -164,13 +164,13 @@ const HomePage = () => {
 
           <div className="flex flex-col md:flex-row items-center gap-4 max-w-2xl mx-auto mb-10">
             {/* FILTRE ZONE */}
-            <div className="flex bg-blue-300 p-1.5 rounded-2xl shadow-xl shadow-blue-900/10 w-full md:flex-1 border border-slate-200">
+            <div className="flex bg-gray-600 p-1.5 rounded-2xl shadow-xl shadow-blue-900/10 w-full md:flex-1 border border-slate-200">
               {["Abidjan", "Intérieur"].map((zone) => (
                 <button
                   key={zone}
                   onClick={() => handleZoneChange(zone)}
                   className={`flex-1 py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all ${
-                    activeZone === zone ? "bg-[#1e293b] text-white" : "text-white hover:text-[#1e293b]"
+                    activeZone === zone ? "bg-[#1e293b] text-white" : "text-white hover:text-blue-500"
                   }`}
                 >
                   {zone}
