@@ -118,7 +118,7 @@ export const jobOffers = [
   },
   { 
     id: 84, 
-    zone: "Abidjan", 
+    zone: "Intérieur", 
     category: "Coiffeur", 
     title: "Coiffeur resident a san pedro recherche travail", 
     description: "- Profession : Coiffeur (Homme, Dame, Dreadlocks, S'airé locks) - Type de poste : Gérance libre - Localisation : Bingerville - Besoin : Avec dortoir",
@@ -833,7 +833,7 @@ export const jobOffers = [
     id: 21,
     zone: "Intérieur",
     category: "Esthéticien",
-    title: "Recherche travail ",
+    title: "Recherche travail",
     description:
       "Esthéticien homme sachant faire les ongles gel faux cil pose perruque recherche travail a bouaké ou ailleurs avec dortoire salaire ou gerance libre  de 150.000 a 250000",
     location: "Bouaké",
