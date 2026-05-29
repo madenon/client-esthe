@@ -11,7 +11,7 @@ import {
   CalendarDays
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link, useSearchParams } from "react-router-dom"; // 1. Ajoute useSearchParams
+import { Link, useSearchParams } from "react-router-dom";
 import { jobOffers as initialOffers } from "../apis/datas";
 import Temoignage from "./Temoignage";
 
@@ -23,9 +23,7 @@ const HomePage = () => {
   const [offers, setOffers] = useState(initialOffers);
   const [serviceFilter, setServiceFilter] = useState("Tous");
   
-  // PAGINATION VIA URL
   const [searchParams, setSearchParams] = useSearchParams();
-  // On récupère la page depuis l'URL, sinon par défaut c'est 1
   const currentPage = parseInt(searchParams.get("page") || "1", 10); 
   const offersPerPage = 10;
 
@@ -40,23 +38,23 @@ const HomePage = () => {
     }
   };
 
-  // Met à jour la page dans l'URL
   const changePage = (page) => {
     setSearchParams({ page: page.toString() });
     setTimeout(scrollToResults, 100);
   };
 
+  // ✅ FIX 2 : on calcule newZone avant de setter
   const handleZoneChange = (zone) => {
-    setActiveZone(activeZone === zone ? null : zone);
-    changePage(1); // Utilise la nouvelle fonction pour réinitialiser l'URL
+    const newZone = activeZone === zone ? null : zone;
+    setActiveZone(newZone);
+    changePage(1);
   };
 
   const handleServiceChange = (value) => {
     setServiceFilter(value);
-    changePage(1); // Utilise la nouvelle fonction pour réinitialiser l'URL
+    changePage(1);
   };
 
-  // Fonction favori
   const toggleFavorite = (id) => {
     setOffers(
       offers.map((offer) => {
@@ -72,11 +70,9 @@ const HomePage = () => {
     );
   };
 
-  // =========================
-  // FILTRAGE CALCULÉ À CHAQUE RENDU (Calcul Dérivé)
-  // =========================
   const filteredOffers = offers.filter((offer) => {
-    const matchZone = activeZone ? offer.zone === activeZone : true;
+    // ✅ FIX 3 : trim() pour éviter les espaces invisibles dans les données
+    const matchZone = activeZone ? offer.zone.trim() === activeZone.trim() : true;
     const matchCat = activeCat === "Tous" || offer.category === activeCat;
     const query = searchQuery.toLowerCase();
 
@@ -93,6 +89,7 @@ const HomePage = () => {
       ${offer.location}
     `.toLowerCase();
 
+    // ✅ FIX 1 : "Vente Salon" rattaché à son propre filtre (plus de condition flottante)
     const matchService =
       serviceFilter === "Tous" ||
       (serviceFilter === "Travail" &&
@@ -109,12 +106,12 @@ const HomePage = () => {
         (content.includes("formation") || content.includes("centre"))) ||
       (serviceFilter === "Gérance Libre" &&
         (content.includes("gérance libre") || content.includes("gerance libre"))) ||
-      (content.includes("vente salon") || content.includes("fonds de commerce"));
+      (serviceFilter === "Vente Salon" &&
+        (content.includes("vente salon") || content.includes("fonds de commerce")));
 
     return matchZone && matchCat && matchSearch && matchService;
   });
 
-  // CALCUL PAGINATION
   const indexOfLastOffer = currentPage * offersPerPage;
   const indexOfFirstOffer = indexOfLastOffer - offersPerPage;
   const currentOffers = filteredOffers.slice(indexOfFirstOffer, indexOfLastOffer);
@@ -162,7 +159,6 @@ const HomePage = () => {
           </h2>
 
           <div className="flex flex-col md:flex-row items-center gap-4 max-w-2xl mx-auto mb-10">
-            {/* FILTRE ZONE */}
             <div className="flex bg-gray-600 p-1.5 rounded-2xl shadow-xl shadow-blue-900/10 w-full md:flex-1 border border-slate-200">
               {["Abidjan", "Intérieur"].map((zone) => (
                 <button
@@ -215,7 +211,6 @@ const HomePage = () => {
                     key={offer.id}
                     className="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden group hover:shadow-2xl transition-all duration-500 text-slate-800 flex flex-col"
                   >
-                    {/* En-tête de la carte */}
                     <div className="bg-rose-50 relative flex flex-col items-center overflow-hidden w-full">
                       {offer.isUrgent && (
                         <div className="w-full bg-[#E10600] text-white py-3.5 flex items-center justify-center gap-2 text-xl font-black uppercase tracking-widest shadow-inner">
@@ -251,7 +246,6 @@ const HomePage = () => {
                       </div>
                     </div>
 
-                    {/* Corps de la carte */}
                     <div className="p-7 flex flex-col flex-grow">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex gap-2">
@@ -314,7 +308,6 @@ const HomePage = () => {
                 ))}
               </div>
 
-              {/* PAGINATION */}
               {totalPages > 1 && (
                 <div className="flex items-center justify-center gap-3 mt-14 flex-wrap">
                   <button

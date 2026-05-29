@@ -132,6 +132,26 @@ export const jobOffers = [
     isPremium: true,
     date: "19-Mai-2026"
   },
+
+  {
+    id: 70,
+    zone: "Abidjan",
+    category: "Gérance libre",
+    title: "Recherche un coiffeuse pros",
+    description:
+      " Besoin d’une coiffeuse professionnelle salaire 100 000f Cocody Faya nouveau Gordon ",
+    location: "Abidjan cocody faya  ",
+    salary: "100.000 Fcfa",
+    whatsapp: "2250596132058",
+    number: "+2250140268990",
+    likes: 10,
+    isUrgent: true,
+    isFavorite: false,
+    hasDortoir: false,
+    isPremium: false,
+    isDisponible: true,
+    date: "27-Mai-2026",
+  },
   {
     id: 72,
     zone: "Abidjan",
