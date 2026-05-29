@@ -24,7 +24,10 @@ const HomePage = () => {
   const [serviceFilter, setServiceFilter] = useState("Tous");
   
   const [searchParams, setSearchParams] = useSearchParams();
-  const currentPage = parseInt(searchParams.get("page") || "1", 10); 
+
+  // ✅ Au retour arrière, restaure la dernière page visitée
+  const savedPage = sessionStorage.getItem("lastPage");
+  const currentPage = parseInt(searchParams.get("page") || savedPage || "1", 10);
   const offersPerPage = 10;
 
   const resultsSectionRef = useRef(null);
@@ -39,6 +42,7 @@ const HomePage = () => {
   };
 
   const changePage = (page) => {
+    sessionStorage.setItem("lastPage", page.toString()); // ✅ sauvegarde la page
     setSearchParams({ page: page.toString() });
     setTimeout(scrollToResults, 100);
   };
