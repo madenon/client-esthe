@@ -4,7 +4,7 @@
 export const jobOffers = [
   { 
     id: 77, 
-    zone: "Intérieur", 
+    zone: "Abidjan", 
     category: "Barber", 
     title: "Categorie coiffure barber ", 
     description: " Coiffeur recherche salon avec dortoire salaire 140 .000 pu gerance libre", 

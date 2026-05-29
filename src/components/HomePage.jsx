@@ -11,7 +11,7 @@ import {
   CalendarDays
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom"; // 1. Ajoute useSearchParams
 import { jobOffers as initialOffers } from "../apis/datas";
 import Temoignage from "./Temoignage";
 
@@ -23,13 +23,14 @@ const HomePage = () => {
   const [offers, setOffers] = useState(initialOffers);
   const [serviceFilter, setServiceFilter] = useState("Tous");
   
-  // PAGINATION
-  const [currentPage, setCurrentPage] = useState(1);
+  // PAGINATION VIA URL
+  const [searchParams, setSearchParams] = useSearchParams();
+  // On récupère la page depuis l'URL, sinon par défaut c'est 1
+  const currentPage = parseInt(searchParams.get("page") || "1", 10); 
   const offersPerPage = 10;
 
   const resultsSectionRef = useRef(null);
 
-  // Fonction pour descendre doucement vers les résultats
   const scrollToResults = () => {
     if (resultsSectionRef.current) {
       resultsSectionRef.current.scrollIntoView({
@@ -39,17 +40,20 @@ const HomePage = () => {
     }
   };
 
-  // Centralisation des changements de filtres pour éviter les useEffect
+  // Met à jour la page dans l'URL
+  const changePage = (page) => {
+    setSearchParams({ page: page.toString() });
+    setTimeout(scrollToResults, 100);
+  };
+
   const handleZoneChange = (zone) => {
     setActiveZone(activeZone === zone ? null : zone);
-    setCurrentPage(1); // On réinitialise la page de manière synchrone lors de l'action
-    setTimeout(scrollToResults, 100);
+    changePage(1); // Utilise la nouvelle fonction pour réinitialiser l'URL
   };
 
   const handleServiceChange = (value) => {
     setServiceFilter(value);
-    setCurrentPage(1); // On réinitialise la page ici aussi
-    setTimeout(scrollToResults, 100);
+    changePage(1); // Utilise la nouvelle fonction pour réinitialiser l'URL
   };
 
   // Fonction favori
@@ -115,11 +119,6 @@ const HomePage = () => {
   const indexOfFirstOffer = indexOfLastOffer - offersPerPage;
   const currentOffers = filteredOffers.slice(indexOfFirstOffer, indexOfLastOffer);
   const totalPages = Math.ceil(filteredOffers.length / offersPerPage);
-
-  const changePage = (page) => {
-    setCurrentPage(page);
-    setTimeout(scrollToResults, 100);
-  };
 
   const serviceFilters = [
     "Tous",
