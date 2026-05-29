@@ -2,7 +2,7 @@
 
 export const jobOffers = [
   { 
-    id: 90, 
+    id: 91, 
     zone: "Abidjan", 
     category: "Coiffeur Barber", 
     title: "coiffeur de nationalite beninoise recherche travail", 
