@@ -1,7 +1,38 @@
 
 
-
 export const jobOffers = [
+  { 
+    id: 90, 
+    zone: "Abidjan", 
+    category: "Coiffeur Barber", 
+    title: "coiffeur de nationalite beninoise recherche travail", 
+    description: "Je suis coiffeur beninois je recherche travail salaire ou gerance libre abidjan avec dortoire", 
+    location: "Abidjan", 
+    salary: "salaire ou gérance libre",
+    whatsapp: "2250596132058", 
+    number: "+229 91 84 49 36: 0191844936", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "29-Mai-2026"
+  },
+  { 
+    id: 90, 
+    zone: "Abidjan", 
+    category: "Coiffeur Barber", 
+    title: "Recherche Prothésiste ongulaire (spécialiste press nails) ", 
+    description: "Logement : Aucun dortoir disponible *Localisation :Abidjan Route de Bingerville, Cité Prestige / Cité SIR  ", 
+    location: "Abidjan Route de Bingerville", 
+    salary: "100 000 FCFA",
+    whatsapp: "2250596132058", 
+    number: "+22501 72 33 33 93", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "29-Mai-2026"
+  },
   { 
     id: 77, 
     zone: "Abidjan", 
@@ -16,7 +47,7 @@ export const jobOffers = [
     isUrgent: false,
     hasDortoir: false,
     isPremium: true,
-    date: "19-Mai-2026"
+    date: "29-Mai-2026"
   },
   { 
     id: 79, 
@@ -32,7 +63,7 @@ export const jobOffers = [
     isUrgent: false,
     hasDortoir: false,
     isPremium: true,
-    date: "19-Mai-2026"
+    date: "29-Mai-2026"
   },
   { 
     id: 80, 
@@ -49,7 +80,7 @@ export const jobOffers = [
     isUrgent: false,
     hasDortoir: false,
     isPremium: true,
-    date: "19-Mai-2026"
+    date: "29-Mai-2026"
   },
   { 
     id: 81, 
@@ -66,7 +97,7 @@ export const jobOffers = [
     isUrgent: false,
     hasDortoir: false,
     isPremium: true,
-    date: "19-Mai-2026"
+    date: "29-Mai-2026"
   },
   { 
     id: 82, 
@@ -82,7 +113,7 @@ export const jobOffers = [
     isUrgent: false,
     hasDortoir: false,
     isPremium: true,
-    date: "19-Mai-2026"
+    date: "29-Mai-2026"
   },
   { 
     id: 83, 
@@ -98,7 +129,7 @@ export const jobOffers = [
     isUrgent: false,
     hasDortoir: false,
     isPremium: true,
-    date: "19-Mai-2026"
+    date: "29-Mai-2026"
   },
   { 
     id: 84, 
@@ -114,7 +145,7 @@ export const jobOffers = [
     isUrgent: false,
     hasDortoir: false,
     isPremium: true,
-    date: "19-Mai-2026"
+    date: "29-Mai-2026"
   },
   { 
     id: 84, 
