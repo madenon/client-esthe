@@ -106,7 +106,7 @@ export const jobOffers = [
     category: "Barber", 
     title: "Coiffeur resident a san pedro recherche travail", 
     description: "coiffure zone interieur salaire non préciser avec dortoire   Barber resident a san pedro recherche salon pour travail salaire ou gérance libre avec dortoire",
-    location: "Port Bouet ", 
+    location: "San pedro  ", 
     salary: "salaire ou gérance libre",
     whatsapp: "2250596132058", 
     number: "+225 0556263924", 
@@ -139,7 +139,7 @@ export const jobOffers = [
     title: "Recherche un coiffeuse pros",
     description:
       " BESOIN D'UNE COIFFEUSE PROFESSIONNELLE QUI SAIT BIEN COLER LES PERRUQUES À BINGERVILLE SALAIRE :90.000fr ",
-    location: " Yopougon Azito",
+    location: "Yopougon Azito",
     salary: "90.000 fr ",
     whatsapp: "2250596132058",
     number: "+22505 64 41 62 54/07 17 57 48 93",
