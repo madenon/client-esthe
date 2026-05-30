@@ -17,22 +17,7 @@ export const jobOffers = [
     isPremium: true,
     date: "29-Mai-2026"
   },
-  { 
-    id: 91, 
-    zone: "Abidjan", 
-    category: "Coiffeur", 
-    title: "coiffeur de nationalite beninoise recherche travail", 
-    description: "Bonsoir j'espère que vous allez bien ? je suis coiffeuse j'habite bingerville et je suis à la recherche d'un emploi dans les environs de bingerville s'il vous plaît  je maîtrise les tresses, les Twists,les micros twists, Marley Twist également les nattes de tendance les nortless, reserrages des locks et pour finir les pédicures manucures un peu de tout.... Les poses perruques je ne maîtrise pas très bien ni les tissages. je suis disponible . Merci", 
-    location: "Bingerville", 
-    salary: "100.000  Fcfa",
-    whatsapp: "2250596132058", 
-    number: "+225 0715078534", 
-    likes: 0,
-    isUrgent: false,
-    hasDortoir: false,
-    isPremium: true,
-    date: "29-Mai-2026"
-  },
+ 
   { 
     id: 90, 
     zone: "Abidjan", 
