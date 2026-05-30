@@ -2,6 +2,22 @@
 
 export const jobOffers = [
   { 
+    id: 92, 
+    zone: "Abidjan", 
+    category: "Catégorie", 
+    title: "coiffeur recherche travail zone pourboire", 
+    description: "SALUT JE SUIS COIFFEUR ET JE SUIS CHERCHE SALON POUR TRAVAILLER DANS LES ENVIRON DE PORT BOUËT, PETIT BASSAM, VRIDY CANAL, VRIDY CITÉ ",
+    location: "Abidjan", 
+    salary: "GÉRANT LIBRE",
+    whatsapp: "2250596132058", 
+    number: "+220565139710 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "29-Mai-2026"
+  },
+  { 
     id: 91, 
     zone: "Abidjan", 
     category: "Coiffeur Barber", 
