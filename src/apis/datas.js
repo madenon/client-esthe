@@ -2,7 +2,7 @@
 
 export const jobOffers = [
   { 
-    id: 92, 
+    id: 101, 
     zone: "Abidjan", 
     category: "Coiffeur", 
     title: "Coiffeur", 
@@ -18,7 +18,7 @@ export const jobOffers = [
     date: "29-Mai-2026"
   },
   { 
-    id: 92, 
+    id: 98, 
     zone: "Abidjan", 
     category: "Coiffeur", 
     title: "Coiffeur", 
