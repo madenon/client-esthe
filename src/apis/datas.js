@@ -2,9 +2,25 @@
 
 export const jobOffers = [
   { 
+    id: 104, 
+    zone: "", 
+    category: "Coiffure", 
+    title: "Je suis un coiffeur pro", 
+    description: "Je suis un coiffeur pro  disponible je fait un peu de tout (coupe dame. Coupe homme, tout genre de teinture, locks et fabricant de tiges de locks avec cheveux naturel etc...)voici mon numéro whatsapp  en pv je vous en verrai mes coiffures en images.",
+    location: "", 
+    salary: "",
+    whatsapp: "2250596132058", 
+    number: "+2250103570172 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "29-Mai-2026"
+  },
+  { 
     id: 103, 
     zone: "Intérieur", 
-    category: "Categorie barber Interieur ", 
+    category: "Barber", 
     title: " dortoire disponible salaire a discuté", 
     description: "besoin d'un coiffeur à Yamoussoukro + dortoir un coiffeur Poli je précise  intéressé Apel",
     location: "Yamoussoukro", 
