@@ -2,6 +2,38 @@
 
 export const jobOffers = [
   { 
+    id: 103, 
+    zone: "Intérieur", 
+    category: "Categorie barber Interieur ", 
+    title: " dortoire disponible salaire a discuté", 
+    description: "besoin d'un coiffeur à Yamoussoukro + dortoir un coiffeur Poli je précise  intéressé Apel",
+    location: "Yamoussoukro", 
+    salary: "",
+    whatsapp: "2250596132058", 
+    number: "+2250546202384 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "29-Mai-2026"
+  },
+  { 
+    id: 102, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "Libre pour coiffeuse ", 
+    description: "Salon gerance texte Tu es coiffeuse ou prothésiste j’ai un salon de coiffure dame pr toi en gestion libre .Tu es prothésiste j’ai un espace en gérance libre pour toi . Situé à angre .  appel vite à ce numéro pour visiter l’endroit .",
+    location: "Abidjan angre", 
+    salary: "",
+    whatsapp: "2250596132058", 
+    number: "+220104967087 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "29-Mai-2026"
+  },
+  { 
     id: 101, 
     zone: "Abidjan", 
     category: "Coiffeur", 
