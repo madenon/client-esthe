@@ -2,6 +2,22 @@
 
 export const jobOffers = [
   { 
+    id: 107, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "", 
+    description: "Je suis un coiffeur pro disponible je fait un peu de tout (coupe dame. Coupe homme, tout genre de teinture, locks et les tiges ;voici mon numéro whatsapp",
+    location: "", 
+    salary: "Discuté",
+    whatsapp: "2250596132058", 
+    number: "+2250103570172 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "29-Mai-2026"
+  },
+  { 
     id: 106, 
     zone: "Abidjan", 
     category: "Coiffure", 
