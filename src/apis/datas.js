@@ -2,6 +2,22 @@
 
 export const jobOffers = [
   { 
+    id: 108, 
+    zone: "Abidjan", 
+    category: "Esthétique zone  abidjan Angre", 
+    title: "espace onglerie en gerance libre ", 
+    description: "Tu es coiffeuse ou prothésiste j’ai un salon de coiffure dame pr toi en gestion libre . Tu es prothésiste j’ai un espace en gérance libre pour toi .  appel vite à ce numéro pour visiter l’endroit .",
+    location: "Situé à angre .", 
+    salary: "gérance libre pas de dortoire.",
+    whatsapp: "2250596132058", 
+    number: "+2250104967087 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "29-Mai-2026"
+  },
+  { 
     id: 107, 
     zone: "Abidjan", 
     category: "Coiffure", 
