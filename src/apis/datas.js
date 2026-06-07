@@ -4,6 +4,22 @@ export const jobOffers = [
   { 
     id: 108, 
     zone: "Abidjan", 
+    category: "Coiffure", 
+    title: " Coiffeur maîtrisant la coiffure europeen recherche poste a zone 4", 
+    description: "coiffeur categorie coiffure zone abidjan bietry zone 4  avec dortoir   salaire gérance libre      professionnel maîtrisant coiffure européens  coloration brushing coupe européenne keratine   experience  recherche salon en gerance libre   zone abidjan zone 4 bietry  marcory Blaise Coiffure: ",
+    location: "Situé à angre .", 
+    salary: "gérance libre pas de dortoire.",
+    whatsapp: "2250596132058", 
+    number: "00221774615064 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "07-Juin-2026"
+  },
+  { 
+    id: 108, 
+    zone: "Abidjan", 
     category: "Esthétique zone  abidjan Angre", 
     title: "espace onglerie en gerance libre ", 
     description: "Tu es coiffeuse ou prothésiste j’ai un salon de coiffure dame pr toi en gestion libre . Tu es prothésiste j’ai un espace en gérance libre pour toi .  appel vite à ce numéro pour visiter l’endroit .",
