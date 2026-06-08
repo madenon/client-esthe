@@ -34,7 +34,7 @@ export const jobOffers = [
     date: "07-Juin-2026"
   },
   { 
-    id: 108, 
+    id: 110, 
     zone: "Abidjan", 
     category: "Esthétique zone  abidjan Angre", 
     title: "espace onglerie en gerance libre ", 
