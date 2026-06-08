@@ -2,6 +2,22 @@
 
 export const jobOffers = [
   { 
+    id: 109, 
+    zone: "Intérieur", 
+    category: "Coiffure", 
+    title: "  recherche coiffeuse dortoire disponible 80.000 a 100.000  ", 
+    description: " j'ai besoin d'une coiffeuse à aboiss Tresse et pose perruques, ongle si possible , oui il y a dortoir , 80 mil cme salaire ",
+    location: "Qboisso .", 
+    salary: "80 000   a 100 000Fcfa",
+    whatsapp: "2250596132058", 
+    number: "+225 0757502618 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "07-Juin-2026"
+  },
+  { 
     id: 108, 
     zone: "Abidjan", 
     category: "Coiffure", 
