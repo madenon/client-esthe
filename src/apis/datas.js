@@ -2,6 +2,22 @@
 
 export const jobOffers = [
   { 
+    id: 112, 
+    zone: "Abidjan ", 
+    category: "Coiffure barber", 
+    title: "recherche coiffeuse dortoire disponible 80.000 a 100.000", 
+    description:"Recherche couffeur talentueux a n'dotré texte   Salon de coiffure à  N'DOTRE KOBAKRO  cherche un coiffeur.Consciencieux, professionnel et respectueux. Avec DORTOIR Intéressé appelez-moi",
+    location: "Abobo n'dotré.", 
+    salary: "salaire non defini dortoire disponible",
+    whatsapp: "2250596132058", 
+    number: "+2250769396282 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "07-Juin-2026"
+  },
+  { 
     id: 109, 
     zone: "Intérieur", 
     category: "Coiffure", 
