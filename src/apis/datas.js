@@ -2,7 +2,39 @@
 
 export const jobOffers = [
   { 
-    id: 112, 
+    id: 115, 
+    zone: "Intérieur ", 
+    category: "Coiffure", 
+    title: "coiffeur specialiste dread et coiffure homme recherche emploi", 
+    description:"Nom : Âge : 23 ans Expérience : 10 ans Spécialités : Coiffure homme et dreadlocks Recherche : Poste partout en Côte d'Ivoire avec logement (dortoir) Contact : ",
+    location: "", 
+    salary: "Salaire ou gerance",
+    whatsapp: "2250596132058", 
+    number: "+2250713052165 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "07-Juin-2026"
+  },
+  { 
+    id: 114, 
+    zone: "Abidjan ", 
+    category: "Coiffure", 
+    title: "Salon azito recherche coiffeur pour gerance", 
+    description:" Salon de coiffure mixte situé à yopougon Azito totalement équipé cherche des personnes sérieuses pour une gérance libre intéressé ",
+    location: "abidjan yop azito ", 
+    salary: "Non defini",
+    whatsapp: "2250596132058", 
+    number: "+2250749905229 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "07-Juin-2026"
+  },
+  { 
+    id: 113, 
     zone: "Abidjan ", 
     category: "Coiffure barber", 
     title: "Recherche d'un salon de coiffure", 
