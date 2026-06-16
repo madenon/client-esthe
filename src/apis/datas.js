@@ -2,11 +2,27 @@
 
 export const jobOffers = [
   { 
-    id: 115, 
+    id: 117, 
+    zone: "Intérieur ", 
+    category: "Coiffure", 
+    title: "recherche professionnel polyvalent  pour salon a bassam ", 
+    description:"Je recherche une coiffeuse ou un homme qui c’est très bien fait la coiffure pour femmes tout mèche les pause perruque natte toutes les coiffures et une personne qui fait les Onglerie et rajout fossiles aussi tu métriez ton travail vient travailler il y a un dortoir le salon est à Bassam Intéressé WhatsApp ￼",
+    location: "intérieur  bassam ", 
+    salary: "Salaire non précisé",
+    whatsapp: "2250596132058", 
+    number: "+225 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "16-Juin-2026"
+  },
+  { 
+    id: 116, 
     zone: "Intérieur ", 
     category: "Coiffure", 
     title: "coiffeur specialiste dread et coiffure homme recherche emploi", 
-    description:"Nom : Âge : 23 ans Expérience : 10 ans Spécialités : Coiffure homme et dreadlocks Recherche : Poste partout en Côte d'Ivoire avec logement (dortoir) Contact : ",
+    description:"Nom : Âge : 23 ans Expérience : 10 ans Spécialités : Coiffure homme et dreadlocks Recherche : Poste partout en Côte d'Ivoire avec logement (dortoir) Contact",
     location: "", 
     salary: "Salaire ou gerance",
     whatsapp: "2250596132058", 
@@ -15,7 +31,7 @@ export const jobOffers = [
     isUrgent: false,
     hasDortoir: false,
     isPremium: true,
-    date: "07-Juin-2026"
+    date: "15-Juin-2026"
   },
   { 
     id: 115, 
