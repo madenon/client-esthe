@@ -18,6 +18,22 @@ export const jobOffers = [
     date: "07-Juin-2026"
   },
   { 
+    id: 115, 
+    zone: "Intérieur ", 
+    category: "estheticienne", 
+    title: " estheticienne  masseuses prothésiste ongulaire recherche travail ", 
+    description:"Je suis esthéticienne exercent en soins de visage, gommage de corps(clarifiant et éclaircissant),hammam marocain, lipocavition,Madero thérapie, maquilleuse, prothésiste ongulaire ( permanent,gel, résine,poly gel, double capsule, gainage) extension de cils ( classique, hybride,russe et méga volume) je réside à Bouaké. Je cherche un travail avec dortoir, prétention salariale 160.000 f",
+    location: "", 
+    salary: "160.000 f ou gerance libre",
+    whatsapp: "2250596132058", 
+    number: "+2250788674006 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "07-Juin-2026"
+  },
+  { 
     id: 114, 
     zone: "Abidjan ", 
     category: "Coiffure", 
