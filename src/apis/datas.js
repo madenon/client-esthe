@@ -2,6 +2,22 @@
 
 export const jobOffers = [
   { 
+    id: 119, 
+    zone: "Abidjan", 
+    category: "coiffure pas de dortoire salaire", 
+    title: " salon abobo recherche coiffeuse polyvalente", 
+    description:"Salon a Abobo recrute une coiffeuse professionnelle qui maîtrise très bien les poses perruques et les tresses.salaire 130 mil",
+    location: "Abidjan abobo ", 
+    salary: "130 .000 F cfa",
+    whatsapp: "2250778597010", 
+    number: "+225 ", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "17-Juin-2026"
+  },
+  { 
     id: 117, 
     zone: "Intérieur ", 
     category: "Coiffure", 
@@ -15,18 +31,18 @@ export const jobOffers = [
     isUrgent: false,
     hasDortoir: false,
     isPremium: true,
-    date: "16-Juin-2026"
+    date: "17-Juin-2026"
   },
   { 
-    id: 116, 
-    zone: "Intérieur ", 
-    category: "Coiffure", 
-    title: "coiffeur specialiste dread et coiffure homme recherche emploi", 
-    description:"Nom : Âge : 23 ans Expérience : 10 ans Spécialités : Coiffure homme et dreadlocks Recherche : Poste partout en Côte d'Ivoire avec logement (dortoir) Contact",
-    location: "", 
+    id: 118, 
+    zone: "Abidjan ", 
+    category: "coiffure gerance libre avec dortoire", 
+    title: " coiffeur polyvalent maitrise homme et dame", 
+    description:"Je suis Abidjan  je fait Locks coupe homme et femme et aussi collage de peurruque homme pour les cérémonies et je vais fait tout sorte de teinture couleur c’est pour travailler sous contrat intéressé voici mon numéro ",
+    location: "Abidjan", 
     salary: "Salaire ou gerance",
     whatsapp: "2250596132058", 
-    number: "+2250713052165 ", 
+    number: "+2250173096846 ", 
     likes: 0,
     isUrgent: false,
     hasDortoir: false,
