@@ -2,6 +2,22 @@
 
 export const jobOffers = [
   { 
+    id: 120, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "RECRUTEMENT COIFFEUSE À ANGRÉ Nous recherchons une coiffeuse talentueuse", 
+    description:"🛑 RECRUTEMENT COIFFEUSE À ANGRÉ Nous recherchons une coiffeuse talentueuse, sérieuse et ponctuelle qui sait faire:👉🏽 Nattes, tresses, twists, tissages, poses perruques et coiffures tendanceUn plus pour les soins du visage, pedicure, et gommage du corps Angré 7eme tranche  Si ça t’intéresse Ecrivez directement sur WhatApp #coiffeuse #recrutement #salondecoiffure #ANGRE",
+    location: "Abidjan Angré 7eme tranche  ", 
+    salary: "130 .000 F cfa",
+    whatsapp: "2250778597010", 
+    number: "+225 📱07 99 36 21 78", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "19-Juin-2026"
+  },
+  { 
     id: 119, 
     zone: "Abidjan", 
     category: "coiffure pas de dortoire salaire", 
