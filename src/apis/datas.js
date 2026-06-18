@@ -8,7 +8,7 @@ export const jobOffers = [
     title: "RECRUTEMENT COIFFEUSE À ANGRÉ Nous recherchons une coiffeuse talentueuse", 
     description:"🛑 RECRUTEMENT COIFFEUSE À ANGRÉ Nous recherchons une coiffeuse talentueuse, sérieuse et ponctuelle qui sait faire:👉🏽 Nattes, tresses, twists, tissages, poses perruques et coiffures tendanceUn plus pour les soins du visage, pedicure, et gommage du corps Angré 7eme tranche  Si ça t’intéresse Ecrivez directement sur WhatApp #coiffeuse #recrutement #salondecoiffure #ANGRE",
     location: "Abidjan Angré 7eme tranche  ", 
-    salary: "130 .000 F cfa",
+    salary: "",
     whatsapp: "2250778597010", 
     number: "+225 📱07 99 36 21 78", 
     likes: 0,
