@@ -2,7 +2,23 @@
 
 export const jobOffers = [
   { 
-    id: 120, 
+    id: 121, 
+    zone: "Abidjan", 
+    category: "🛑Categorire", 
+    title: "Recherche coiffeuse talentuese", 
+    description:"salaire a discuté pas de dortoire  Nous recherchons une coiffeuse talentueuse, sérieuse et ponctuelle qui sait faire: 👉🏽 Nattes, tresses, twists, tissages, poses perruques et coiffures tendance Un plus pour les soins du visage, pedicure, et gommage du corps Si ça t’intéresse Ecrivez directement sur WhatApp  #coiffeuse #recrutement #salondecoiffure #ANGRE",
+    location: "zone abidjan aboboté ", 
+    salary: "",
+    whatsapp: "2250778597010", 
+    number: "+225📱07 59 19 30 59", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "19-Juin-2026"
+  },
+  { 
+    id: 121, 
     zone: "Abidjan", 
     category: "Coiffure", 
     title: "RECRUTEMENT COIFFEUSE À ANGRÉ Nous recherchons une coiffeuse talentueuse", 
@@ -11,6 +27,22 @@ export const jobOffers = [
     salary: "",
     whatsapp: "2250778597010", 
     number: "+225 📱07 99 36 21 78", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "19-Juin-2026"
+  },
+  { 
+    id: 120, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "Recherche coiffeur rivera 2 ", 
+    description:"Bonjour besoin d'un coiffeur professionnel a la riviera 2 salaire 100.000f pas de dortoir.  uniquement WhatsApp svp",
+    location: "zone abidjan rivera", 
+    salary: "100.000 Fcfa",
+    whatsapp: "2250778597010", 
+    number: "+2250500522820", 
     likes: 0,
     isUrgent: false,
     hasDortoir: false,
