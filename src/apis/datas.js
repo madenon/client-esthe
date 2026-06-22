@@ -18,6 +18,22 @@ export const jobOffers = [
     date: "19-Juin-2026"
   },
   { 
+    id: 122, 
+    zone: "Abidjan", 
+    category: "🛑Categorire", 
+    title: "Coiffeur cherche  salon a la rivera", 
+    description:"Je suis coiffeur a la recherche d'un salon de coiffure je réside a Cocody Riviera Faya mon numéro",
+    location: "Abidjan rivera", 
+    salary: "non precisé",
+    whatsapp: "2250778597010", 
+    number: "+2250501026582", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "22-Juin-2026"
+  },
+  { 
     id: 121, 
     zone: "Abidjan", 
     category: "Coiffure", 
