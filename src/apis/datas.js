@@ -1,8 +1,38 @@
-
-
 export const jobOffers = [
   { 
-    id: 121, 
+    id: 124, 
+    zone: "Abidjan", 
+    category: "Coiffure ", 
+    title: "nouveau salon recherche coiffure barber", 
+    description:"Un nouveau salon de coiffure moderne ouvre bientôt ses portes à Abobo Sotrapim et recherche un : 💈 COIFFEUR HOMMES EXPÉRIMENTÉ 💈Profil recherché : ✅ Maîtrise des coupes modernes et classiques ✅ Sens de l'accueil et du service client ✅ Sérieux, ponctuel et professionnel ✅ Bonne présentation",
+    location: "Abobo Sotrapim", 
+    salary: "non précisé",
+    whatsapp: "2250778597010", 
+    number: "+(225) 07 78 09 74 59 (225) 01 02 17 21 38", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "23-Juin-2026"
+  },
+  { 
+    id: 123, 
+    zone: "Abidjan", 
+    category: "Coiffure barber zone abidjan akouedo ", 
+    title: "recherche coiffeur a Akouedo", 
+    description:"Besoin d'un coiffeur a akouedo habitez au alentour sera favorable le salaire commence à partir de 80k en fonction des compétences  appel moi  8566 ou whatsapp",
+    location: "Abidjan akouedo ", 
+    salary: "80k Fcfa",
+    whatsapp: "2250778597010", 
+    number: "+225058410", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "23-Juin-2026"
+  },
+  { 
+    id: 122, 
     zone: "Abidjan", 
     category: "🛑Categorire", 
     title: "Recherche coiffeuse talentuese", 
@@ -18,7 +48,7 @@ export const jobOffers = [
     date: "19-Juin-2026"
   },
   { 
-    id: 122, 
+    id: 121, 
     zone: "Abidjan", 
     category: "🛑Categorire", 
     title: "Coiffeur cherche  salon a la rivera", 
