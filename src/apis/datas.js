@@ -1,6 +1,22 @@
 export const jobOffers = [
   { 
-    id: 126, 
+    id: 128, 
+    zone: "Abidjan", 
+    category: "esthétique prothésistes ongulaire", 
+    title: " Recheche un espace a abobo pour gerance libre ", 
+    description:"Je suis une  prothésiste Ongulaire Pro à la recherche d'un Espace à louer dans un salon a abobo ou n'dotré merci",
+    location:"abidjan abobo", 
+    salary: "a discute",
+    whatsapp: "2250778597010", 
+    number: "+(225)0545850649", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "23-Juin-2026"
+  },
+  { 
+    id: 127, 
     zone: "Abidjan", 
     category: "Coiffure barber zone  gerance libre avec dortoire ", 
     title: "salon recherche coiffeur pour gerance ", 
