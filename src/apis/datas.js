@@ -1,5 +1,21 @@
 export const jobOffers = [
   { 
+    id: 129, 
+    zone: "Abidjan", 
+    category: "Coiffure", 
+    title: "", 
+    description:"Salon de Coiffure homme cherche un coiffeur professionnel avec dortoir à la riviera faya ",
+    location:" riviera faya", 
+    salary: "a discute",
+    whatsapp: "2250778597010", 
+    number: "+(225)0576880776", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: true,
+    date: "25-Juin-2026"
+  },
+  { 
     id: 128, 
     zone: "Abidjan", 
     category: "esthétique prothésistes ongulaire", 
