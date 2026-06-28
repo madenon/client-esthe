@@ -1,6 +1,6 @@
 export const jobOffers = [
   { 
-    id: 136, 
+    id: 137, 
     zone: "Abidjan", 
     category: "Coiffure", 
     title: "coiffeuse ou aide coiffeuse", 
