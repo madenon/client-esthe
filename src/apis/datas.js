@@ -5,15 +5,15 @@ export const jobOffers = [
     category: "esthetique", 
     title: "prothésiste onglerie recherche travail", 
     description:"bonsoir mes dames je suis à la recherche d'un travail d' onglerie je suis à la Riviera palmeraie je fais la pédicure manucure les pose capsule et les pres neil mon numéro est le  merci 😘 salaire pas de dortoire ",
-    location:"Zone abidjan Yopougon académie", 
+    location:"Zone abidjan", 
     salary: "",
     whatsapp: "2250778597010", 
     number: "+(225)0140329104", 
     likes: 0,
     isUrgent: true,
     hasDortoir: false,
-    isPremium: true,
-    date: "28-Juin-2026"
+    isPremium: false,
+    date: "09-Juillet-2026"
   },
   { 
     id: 137, 
@@ -28,7 +28,7 @@ export const jobOffers = [
     likes: 0,
     isUrgent: true,
     hasDortoir: false,
-    isPremium: true,
+    isPremium: false,
     date: "28-Juin-2026"
   },
   { 
@@ -44,7 +44,7 @@ export const jobOffers = [
     likes: 0,
     isUrgent: true,
     hasDortoir: false,
-    isPremium: true,
+    isPremium: false,
     date: "28-Juin-2026"
   },
  
@@ -61,7 +61,7 @@ export const jobOffers = [
     likes: 0,
     isUrgent: true,
     hasDortoir: false,
-    isPremium: true,
+    isPremium: false,
     date: "28-Juin-2026"
   },
   { 
@@ -77,7 +77,7 @@ export const jobOffers = [
     likes: 0,
     isUrgent: true,
     hasDortoir: false,
-    isPremium: true,
+    isPremium: false,
     date: "28-Juin-2026"
   },
   { 
