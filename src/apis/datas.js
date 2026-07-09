@@ -10,7 +10,7 @@ export const jobOffers = [
     whatsapp: "2250778597010", 
     number: "+(225)0140329104", 
     likes: 0,
-    isUrgent: true,
+    isUrgent: false,
     hasDortoir: false,
     isPremium: false,
     date: "09-Juillet-2026"
@@ -26,7 +26,7 @@ export const jobOffers = [
     whatsapp: "2250778597010", 
     number: "+(225) 0788404794", 
     likes: 0,
-    isUrgent: true,
+    isUrgent: false,
     hasDortoir: false,
     isPremium: false,
     date: "28-Juin-2026"
@@ -42,7 +42,7 @@ export const jobOffers = [
     whatsapp: "2250778597010", 
     number: "+(225) 0707537639", 
     likes: 0,
-    isUrgent: true,
+    isUrgent: false,
     hasDortoir: false,
     isPremium: false,
     date: "28-Juin-2026"
@@ -59,7 +59,7 @@ export const jobOffers = [
     whatsapp: "2250778597010", 
     number: "+(225) 0700437133", 
     likes: 0,
-    isUrgent: true,
+    isUrgent: false,
     hasDortoir: false,
     isPremium: false,
     date: "28-Juin-2026"
