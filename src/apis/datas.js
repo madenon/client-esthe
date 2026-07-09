@@ -1,5 +1,21 @@
 export const jobOffers = [
   { 
+    id: 138, 
+    zone: "Abidjan", 
+    category: "esthetique", 
+    title: "prothésiste onglerie recherche travail", 
+    description:"bonsoir mes dames je suis à la recherche d'un travail d' onglerie je suis à la Riviera palmeraie je fais la pédicure manucure les pose capsule et les pres neil mon numéro est le  merci 😘 salaire pas de dortoire ",
+    location:"Zone abidjan Yopougon académie", 
+    salary: "",
+    whatsapp: "2250778597010", 
+    number: "+(225)0140329104", 
+    likes: 0,
+    isUrgent: true,
+    hasDortoir: false,
+    isPremium: true,
+    date: "28-Juin-2026"
+  },
+  { 
     id: 137, 
     zone: "Abidjan", 
     category: "Coiffure", 
