@@ -1,5 +1,21 @@
 export const jobOffers = [
   { 
+    id: 161, 
+    zone: "Abidjan", 
+    category: "Coiffure - Femme", 
+    title: "RECHERCHE COIFFEUSE", 
+    description:"Salon situé à Abobo Akekoi recherche une COIFFEUSE PROFESSIONNELLE.Profil : Sérieuse, expérimentée et dynamique.",
+    location:"Abobo Akekoi", 
+    salary: "130000 FR",
+    whatsapp: "2250778597010", 
+    number: "05 64 41 62 54/07 17 57 48 93", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "01-Août-2026"
+  },
+  { 
     id: 160, 
     zone: "Intérieur", 
     category: "Beauté - Onglerie", 
