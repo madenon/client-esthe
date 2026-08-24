@@ -1,4 +1,21 @@
 export const jobOffers = [
+
+  { 
+    id: 162, 
+    zone: "Abidjan", 
+    category: "Coiffure - Femme", 
+    title: "Micro twist et locks", 
+    description:"Poste recherché  1 coiffeur, 1 prothésiste ongulaire, 2 ",
+    location:"Cocody", 
+    salary: "À discuter selon l'expérience",
+    whatsapp: "2250778597010", 
+    number: "+33 6 25 22 78 54", 
+    likes: 0,
+    isUrgent: false,
+    hasDortoir: false,
+    isPremium: false,
+    date: "24-Août-2026"
+  },
   { 
     id: 161, 
     zone: "Abidjan", 
@@ -6,7 +23,7 @@ export const jobOffers = [
     title: "RECHERCHE COIFFEUSE", 
     description:"Salon situé à Abobo Akekoi recherche une COIFFEUSE PROFESSIONNELLE.Profil : Sérieuse, expérimentée et dynamique.",
     location:"Abobo Akekoi", 
-    salary: "130000 FR",
+    salary: "130000 FC",
     whatsapp: "2250778597010", 
     number: "05 64 41 62 54/07 17 57 48 93", 
     likes: 0,
